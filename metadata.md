@@ -2,8 +2,8 @@
 cloud: Document Cloud
 mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/acrobat-services-learn.sv-SE
-hide: true
-source-git-commit: 537a822e25dc45fe7bfcc6944b595c35e168b6e9
+index: true
+source-git-commit: aece8ee067d647d0947134cd71293019e0a13450
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

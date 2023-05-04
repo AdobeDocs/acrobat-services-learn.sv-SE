@@ -7,7 +7,7 @@ level: Beginner
 thumbnail: KT-6674.jpg
 kt: 6674
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: aa5c88fb5725a3d1c50d5c6b73fce7add629b08d
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%
@@ -35,7 +35,9 @@ I den här självstudiekursen lär du dig grunderna i hur du kör din första AP
 Använd självstudiekurserna för att komma igång nedan för att skapa API-uppgifter, hämta exempelfiler och konfigurera miljön.
 
 [Komma igång med PDF Services API och Java](gettingstartedjava.md)
+
 [Komma igång med PDF Services API och .Net](gettingstartednet.md)
+
 [Komma igång med PDF Services API och Node.js](createpdffromhtml.md)
 
 ## Steg 2: Kör export-PDF-åtgärd med exempelfilerna
@@ -76,7 +78,7 @@ PDF skapas i samma katalog.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
-   Till exempel C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
+   Exempel: C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
 
 1. Kör följande kommando::
 

@@ -1,5 +1,5 @@
 ---
-title: Hantera medarbetares erbjudandebrev
+title: Hantera medarbetarnas erbjudandebrev
 description: Lär dig hur du genererar ett erbjudandebrev som kan levereras till en ny medarbetare för underskrift
 role: Developer
 level: Intermediate

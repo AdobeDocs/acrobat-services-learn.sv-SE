@@ -384,7 +384,7 @@ Den resulterande JSON-svarstexten innehåller information om deltagarna.
 
 Beroende på affärsreglerna kan en deadline förhindra deltagarna från att signera avtalet efter ett visst datum. Om avtalet har ett förfallodatum kan du påminna deltagarna när det datumet närmar sig.
 
-Baserat på den avtalsmedlemmarnas information du fick efter samtalet till `/agreements/{agreementId}/members` i det sista avsnittet kan du skicka e-postpåminnelser till alla deltagare som fortfarande inte har signerat avtalet.
+Baserat på den avtalsmedlemsinformation du fick efter samtalet till `/agreements/{agreementId}/members` i det sista avsnittet kan du skicka e-postpåminnelser till alla deltagare som fortfarande inte har signerat avtalet.
 
 En begäran om POST till `/agreements/{agreementId}/reminders` slutpunkten skapar en påminnelse för de angivna deltagarna i ett avtal som identifieras av `agreementId` -parametern.
 

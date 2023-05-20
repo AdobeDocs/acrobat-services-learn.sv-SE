@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ![BANDEROLL MED ANVÄNDNINGSFALL](assets/UseCaseAgreementHero.jpg)
 
-Många affärsprogram och processer kräver dokumentation som förslag och avtal. PDF-dokument gör filerna säkrare och mindre ändringsbara. De har också stöd för digitala signaturer så att kunderna snabbt och enkelt kan fylla i sina dokument. [!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i webbprogrammen.
+Många affärsprogram och processer kräver dokumentation som förslag och avtal. PDF-dokument gör filerna säkrare och mindre ändringsbara. De har också stöd för digitala signaturer så att kunderna snabbt och enkelt kan fylla i sina dokument. [!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i dina webbprogram.
 
 ## Vad du kan lära dig
 

@@ -78,7 +78,7 @@ PDF skapas i samma katalog.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
-   Exempel: C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
+   Till exempel C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
 
 1. Kör följande kommando::
 

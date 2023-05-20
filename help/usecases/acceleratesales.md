@@ -148,7 +148,7 @@ Upprepa de här åtgärderna för några av de andra taggarna i dokumentet, till
 
 I Microsoft Word kan du förhandsgranska det genererade dokumentet baserat på JSON-exempeldata.
 
-1. I dialogrutan *Dokumentgenereringstagg* panel väljer du **[!UICONTROL Generera dokument]**. Första gången kan du uppmanas att logga in med ditt Adobe ID. Välj **[!UICONTROL Logga in]** och slutför uppmaningarna att logga in med dina inloggningsuppgifter.
+1. I dialogrutan *Dokumentgenereringstagg* panel väljer du **[!UICONTROL Generera dokument]**. Första gången kan du uppmanas att logga in med ditt Adobe ID. Välj **[!UICONTROL Logga in]** och slutför instruktionerna för att logga in med dina inloggningsuppgifter.
 
    ![Skärmdump av hur man förhandsgranskar genererat dokument](assets/accsales_6.png)
 

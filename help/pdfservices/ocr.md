@@ -65,7 +65,7 @@ PDF skapas i katalogen src/main/resources.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
-   T.ex., C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-NetSamples
+   T.ex. C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-NetSamples
 
 1. Ändra kataloger igen till katalogen OcrPDF.
 

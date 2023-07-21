@@ -3,10 +3,10 @@ title: Acrobat Sign API Tutorials
 description: Översikt över Acrobat Sign API:er
 type: Tutorial
 role: Developer
-skill: Beginner, Intermediate, Experienced
+level: Beginner, Intermediate, Experienced
 thumbnail: KT-11079.jpg
 exl-id: 79603883-26cd-439c-9cfd-6178c4544b93
-source-git-commit: 744830d00c75c136354ca41893337e6a474d5aed
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 11%

@@ -5,9 +5,9 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-8092.jpg
-kt: 8092
+jira: KT-8092
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 0%
@@ -199,7 +199,7 @@ Om du vill lagra PDF i databastabellen ändrar du överföringsfunktionen. Ersä
   result.writeToStream(writableStream);
 ```
 
-Om du vill skriva innehållet skapar du en WritableStreamBuffer. Med complete-händelsen är det dags att köra SQL-frågan. Paketet node-postgres konverterar automatiskt Buffer-parametern till BYTEA-format. Frågan dirigerar om användaren till /job/{id}, en slutpunkt som skapades senare.
+Om du vill skriva innehållet skapar du en WritableStreamBuffer. Med complete-händelsen är det dags att köra SQL-frågan. Paketet node-postgres konverterar automatiskt Buffer-parametern till BYTEA-format. Frågan omdirigerar användaren till /job/{id}, en slutpunkt som skapas senare.
 
 För PDF Embed API behöver du också en slutpunkt som bara returnerar PDF-innehåll:
 
@@ -220,7 +220,7 @@ För PDF Embed API behöver du också en slutpunkt som bara returnerar PDF-inneh
 
 ## Bädda in PDF
 
-Skapa nu slutpunkten /job/{id} som återger en mall med namnet på den begärda jobbpubliceringen och ett inbäddat PDF.
+Skapa nu /job/{id} slutpunkt, som återger en mall som innehåller namnet på den begärda jobbbokföringen och ett inbäddat PDF.
 
 ```
 router.get('/job/:id', async function(req, res, next) {

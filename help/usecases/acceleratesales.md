@@ -5,9 +5,9 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-10222.jpg
-kt: 10222
+jira: KT-10222
 exl-id: 9430748f-9e2a-405f-acac-94b08ad7a5e3
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '1755'
 ht-degree: 0%

@@ -5,9 +5,9 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-8097.jpg
-kt: 8097
+jira: KT-8097
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 1%
@@ -382,7 +382,7 @@ metaData: { fileName: pdfDocumentName }
 </html>
 ```
 
-Du kan också skapa en controller/previewController.js och klistra in kodfragmenten nedan i den.
+Du kan också skapa filen controller/previewController.js och klistra in kodfragmenten nedan i den.
 
 ```
 const Document = require('../models/document');

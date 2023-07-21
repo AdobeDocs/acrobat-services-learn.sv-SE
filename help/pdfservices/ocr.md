@@ -5,10 +5,10 @@ type: Tutorial
 role: Developer
 level: Beginner
 thumbnail: KT-6677.jpg
-kt: 6677
+jira: KT-6677
 keywords: Hero
 exl-id: 61a9a2d1-94c3-41c2-8f90-a56a938ef245
-source-git-commit: c1937561d607f1eabbc1921d6090858abb13f0d3
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 4%

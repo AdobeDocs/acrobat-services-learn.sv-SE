@@ -3,11 +3,11 @@ title: Adobe PDF Embed API Tutorials
 description: Översikt över Adobe PDF Embed API
 type: Tutorial
 role: Developer
-skill: Beginner, Intermediate, Experienced
+level: Beginner, Intermediate, Experienced
 thumbnail: KT-8117.jpg
 kt: 8117
 exl-id: 2fef89cf-640d-4ff4-9282-070bce8bba78
-source-git-commit: 0c434db1665d4cb6ce6aff6f329e300f22129df9
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%

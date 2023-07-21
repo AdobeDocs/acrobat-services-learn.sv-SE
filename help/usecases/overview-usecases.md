@@ -3,11 +3,11 @@ title: "[!DNL Adobe Acrobat Services] Användningsexempel för API"
 description: Sidan Översikt för [!DNL Adobe Acrobat Services] Användningsexempel för API
 type: Tutorial
 role: Developer
-skill: Beginner, Intermediate, Experienced
+level: Beginner, Intermediate, Experienced
 thumbnail: KT-8115.jpg
-kt: 8115
+jira: KT-8115
 exl-id: 4188897e-f6e6-41ea-be6f-359a3ef0e040
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%

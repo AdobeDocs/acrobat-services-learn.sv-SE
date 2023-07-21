@@ -5,9 +5,9 @@ type: Tutorial
 role: Developer
 level: Beginner
 thumbnail: KT-10382.jpg
-kt: 10382
+jira: KT-10382
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -29,6 +29,7 @@ Befintliga användare av Microsoft Power Automate kan [hämta autentiseringsuppg
 
 >[!IMPORTANT]
 > Om du loggar in för en testversion måste du använda ett Adobe ID och inte ett Enterprise ID. Om du inte prenumererar på Adobe PDF Services API och försöker logga in med ditt Enterprise ID kan du få ett behörighetsfel eftersom ditt företag inte har rätt att använda Adobe PDF Services API. Därför rekommenderar vi att du använder ett kostnadsfritt Adobe ID.
+>
 
 1. När du har loggat in uppmanas du att välja ett namn för dina nya inloggningsuppgifter. Ange ditt *Autentiseringsuppgiftsnamn*.
 1. Markera kryssrutan för att godkänna utvecklarvillkoren.

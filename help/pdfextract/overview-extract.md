@@ -5,9 +5,9 @@ type: Tutorial
 role: Developer
 skill: Beginner, Intermediate, Experienced
 thumbnail: KT-9247.jpg
-kt: 9247
+jira: KT-9247
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: 0c434db1665d4cb6ce6aff6f329e300f22129df9
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

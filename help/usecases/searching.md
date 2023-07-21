@@ -5,9 +5,9 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-8095.jpg
-kt: 8095
+jira: KT-8095
 exl-id: a22230b5-1ff2-4870-84da-f06a904c99e1
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '1364'
 ht-degree: 1%

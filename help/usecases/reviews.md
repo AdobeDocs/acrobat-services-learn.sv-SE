@@ -1,13 +1,14 @@
 ---
 title: Granskningar och godkännanden
-description: Lär dig skapa ett arbetsflöde för granskning och godkännande av dokument för teamsamarbete
+description: Lär dig skapa ett arbetsflöde för dokumentgranskning och godkännande för samarbete i flera team
 type: Tutorial
 role: Developer
 level: Intermediate
+feature: Use Cases
 thumbnail: KT-8094.jpg
 jira: KT-8094
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -16,29 +17,29 @@ ht-degree: 0%
 
 # Granskningar och godkännanden
 
-![BANDEROLL MED ANVÄNDNINGSFALL](assets/UseCaseReviewsHero.jpg)
+![Banderoll för användningsfall](assets/UseCaseReviewsHero.jpg)
 
-Fjärrsamarbete mellan olika team blev nödvändigt för många företag under covid-19-pandemin. [dela och granska digitala dokument](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) utgör en rad utmaningar för team och korsfunktionella resurser.
+Samarbete mellan olika team på distans blev nödvändigt för många företag under covid-19-pandemin. [dela och granska digitala dokument](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) innebär en rad utmaningar för team och resurser med flera funktioner.
 
-Utmaningarna är bland annat att dela dokument i olika filformat, effektivt granska och kommentera innehållet och synkronisera med de senaste redigeringarna. [!DNL Adobe Acrobat Services] API:er är utformade för att programutvecklare ska kunna lösa dessa problem för sina användare.
+Utmaningarna omfattar delning av dokument i olika filformat, effektiv granskning och kommentarer av innehållet samt synkronisering med de senaste redigeringarna. [!DNL Adobe Acrobat Services] API:er är utformade för att programutvecklare ska kunna lösa dessa problem åt sina användare.
 
 ## Vad du kan lära dig
 
-Den här praktiska självstudiekursen visar hur du skapar ett arbetsflöde för granskning och godkännande av dokument i webbapplikationerna Node.js och Express. Om du vill följa med i den här självstudiekursen behöver du lite erfarenhet av Node.js.
+Den här praktiska självstudiekursen visar hur du skapar ett arbetsflöde för dokumentgranskning och godkännande i webbprogrammen Node.js och Express. Om du vill följa den här självstudiekursen behöver du lite erfarenhet av Node.js.
 
 Programmet har följande funktioner:
 
 * Konvertera olika filtyper till PDF
 
-* Aktivera filöverföring
+* Aktivera filöverföringar
 
 * Ge användarna möjlighet att lägga till kommentarer och anteckningar
 
-* Visa PDF tillsammans med de kommentarerna
+* Visa PDF tillsammans med dessa kommentarer
 
 * Aktivera användarprofiler för att identifiera kommentarsförfattare
 
-* Kombinera filer till en PDF som användare kan ladda ned
+* Kombinera filer till en slutlig PDF som användare kan ladda ner
 
 ## Relevanta API:er och resurser
 
@@ -48,19 +49,19 @@ Programmet har följande funktioner:
 
 * [Projektkod](https://github.com/contentlab-io/adobe_reviews_and_approvals)
 
-## Skapa API-uppgifter för Adobe
+## Skapa API-inloggningsuppgifter för Adobe
 
-Innan du startar koden måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API och Adobe PDF Services API. PDF Embed API är kostnadsfritt att använda. PDF Services API är kostnadsfritt att använda i sex månader, sedan kan du byta till en [fördelningsplan](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) med endast \$0,05 per dokumenttransaktion.
+Innan du startar koden måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API och Adobe PDF Services API. PDF Embed API är gratis att använda. PDF Services API kan användas kostnadsfritt i sex månader. Sedan kan du byta till en [plan med förskottsbetalning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) vid endast \$0,05 per dokumenttransaktion.
 
-När du skapar autentiseringsuppgifter för PDF Services API väljer du **Skapa personligt kodexempel** och väljer Node.js som språk. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
+När du skapar autentiseringsuppgifter för PDF Services API väljer du **Skapa personligt kodexempel** och väljer Node.js för språket. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
 
 ## Konfigurera ett projekt och beroenden
 
-Konfigurera Node.js- och Express-projekten för att hantera statiska filer från en mapp med namnet &quot;public&quot;. Du kan ange projektsätt beroende på dina inställningar. Om du vill komma igång snabbt kan du använda [Express-appgenerator](https://expressjs.com/en/starter/generator.html). Eller om du vill hålla det enkelt, kan du [börja från början](https://expressjs.com/en/starter/hello-world.html) och spara koden i en enda JavaScript-fil. I exempelprojektet som är länkat ovan använder du enfilsmetoden och behåller all kod i index.js.
+Konfigurera Node.js och Express Project för att visa statiska filer från mappen public. Du kan ställa in dina projektsätt, beroende på dina preferenser. Du kan använda kommandot [Express-appgenerator](https://expressjs.com/en/starter/generator.html). Eller om du vill hålla saker och ting enkla, kan du [börja från början](https://expressjs.com/en/starter/hello-world.html) och spara koden i en enda JavaScript-fil. I exempelprojektet som är länkat ovan använder du enfilsmetoden och behåller all kod i index.js.
 
-Kopiera `pdftools-api-credentials.json` och `private.key` filer från det personliga kodexemplet till projektets rotkatalog. Lägg också till dem i .gitignore-filen, om du har en, så att dina inloggningsfiler inte oavsiktligt skickas till en databas.
+Kopiera `pdftools-api-credentials.json` och `private.key` filer från den personliga koden till rotkatalogen i projektet. Lägg till dem i .gitignore-filen om du har en sådan, så att dina inloggningsuppgifter inte oavsiktligt skickas till en databas.
 
-Kör sedan `npm install @adobe/documentservices-pdftools-node-sdk` för att installera Node.js SDK för PDF Services. Importera den här modulen och skapa API-autentiseringsobjektet i koden (index.js i exempelprojektet) efter att resten av beroendet har importerats så här:
+Kör sedan `npm install @adobe/documentservices-pdftools-node-sdk` för att installera Node.js SDK för PDF-tjänster. Importera den här modulen och skapa API-inloggningsobjektet i din kod (index.js i ditt exempelprojekt), efter att resten av ditt beroende har importerats så här:
 
 ```
   const PDFToolsSdk = require( "@adobe/documentservices-pdftools-node-sdk" );
@@ -94,13 +95,13 @@ Startkoden ska se ut så här:
   } );
 ```
 
-Nu är du redo att arbeta med [!DNL Acrobat Services] API:er.
+Nu är du redo att arbeta med [!DNL Acrobat Services] API:er
 
 ## Konvertera en fil till PDF
 
-För den första delen av dokumentarbetsflödet måste slutanvändaren ladda upp dokument för delning. Om du vill aktivera det lägger du till en överföringsfunktion och konsoliderar de olika dokumentfilformaten till PDF för att förbereda dem för granskningsprocessen.
+För den första delen av dokumentarbetsflödet måste slutanvändaren ladda upp dokument för att dela dem. För att aktivera detta lägger du till en överföringsfunktion och konsoliderar de olika dokumentfilformaten till PDF för att förbereda dem för granskningsprocessen.
 
-Börja med att skapa en funktion för att konvertera dokument till PDF baserat på [exempelutdrag för PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html). I det här exemplet visas även fragment för många andra viktiga funktioner, inklusive optisk teckenigenkänning (OCR), lösenordsskydd, borttagning och komprimering.
+Börja med att skapa en funktion för att konvertera dokument till PDF baserat på [Exempelutdrag för PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html). I det här exemplet visas även utdrag för många andra viktiga funktioner, inklusive optisk teckenläsning (OCR), lösenordsskydd och borttagning samt komprimering.
 
 ```
 function fileToPDF( filename, outputFilename, callback ) {
@@ -122,20 +123,20 @@ function fileToPDF( filename, outputFilename, callback ) {
   }
 ```
 
-Du kan nu använda den här funktionen för att skapa PDF från överförda dokument.
+Nu kan du använda den här funktionen för att skapa PDF från uppladdade dokument.
 
 ## Hantera filöverföringar
 
-Sedan behöver servern en slutpunkt för filöverföring på webbservern för att ta emot och bearbeta dokumenten.
+Servern behöver sedan en slutpunkt för filöverföring på webbservern för att ta emot och bearbeta dokumenten.
 
-Skapa först en mapp i en uppladdningsmapp och ge den namnet &quot;utkast&quot;. Här sparar du de överförda filerna och de konverterade PDF-filerna. Kör sedan `npm install express-fileupload` Så här installerar du Express-FileUpload-modulen och lägger till mellanvara i Express i koden:
+Skapa först en mapp i en uppladdningsmapp och ge den namnet &quot;utkast&quot;. Här lagras de uppladdade filerna och de konverterade PDF-filerna. Kör sedan `npm install express-fileupload` så här installerar du Express-FileUpload-modulen och lägger till mellanvara i Express i koden:
 
 ```
 const fileUpload = require( "express-fileupload" );
 app.use( fileUpload() );
 ```
 
-Lägg till en `/upload `slutpunkt och spara den överförda filen i utkastmappen med samma filnamn. Anropa sedan den funktion du skrev tidigare för att skapa en PDF-fil av samma dokument om den inte redan är i PDF-format. Du kan skapa ett filnamn för den nya PDF-filen baserat på namnet på det ursprungliga överförda dokumentet:
+Lägg till en `/upload `-slutpunkten och spara den överförda filen i utkastmappen med samma filnamn. Anropa sedan funktionen som du skrev tidigare för att skapa en PDF-fil av samma dokument om den inte redan är i PDF-format. Du kan skapa ett filnamn för den nya PDF-filen baserat på namnet på det ursprungliga överförda dokumentet:
 
 ```
 // Create a PDF file from an uploaded file
@@ -165,7 +166,7 @@ app.post( "/upload", ( req, res ) => {
 
 ## Skapa en överföringssida
 
-Om du vill överföra filer från webbprogrammet skapar du en `index.html` webbsida i mappen uploads. Lägg till ett filöverföringsformulär på sidan som skickar filen till slutpunkten /upload:
+Om du nu vill överföra filer från webbprogrammet skapar du en `index.html` webbsida i mappen uploads. På sidan lägger du till ett filöverföringsformulär som skickar filen till slutpunkten /upload:
 
 ```
 <form ref="uploadForm" 
@@ -177,17 +178,17 @@ Om du vill överföra filer från webbprogrammet skapar du en `index.html` webbs
   </form>
 ```
 
-![Skärmdump av möjligheten att överföra filer på en webbsida](assets/reviews_1.png)
+![Skärmbild av möjligheten att ladda upp filer på en webbsida](assets/reviews_1.png)
 
-Nu kan du överföra dokument till Node.js-servern. Filen sparas i uppladdnings-/utkastmappen och en PDF-formatversion skapas bredvid den.
+Nu kan du överföra dokument till Node.js-servern. Servern sparar filen i mappen uploads/draft och en PDF-formatversion skapas tillsammans med den.
 
-Du är nu redo att bädda in de överförda dokumenten, så använd PDF Embed API för att göra det möjligt för användare att enkelt lägga till kommentarer och anteckningar i dokumenten.
+Du är nu redo att bädda in de uppladdade dokumenten, så använd PDF Embed API för att göra det möjligt för användare att lägga till kommentarer och anteckningar i dokumenten enkelt.
 
 ## Räknar upp PDF-filer
 
-Ett typiskt dokumentarbetsflöde kan innefatta flera dokument, och du måste därför visa en lista med dokument och länka varje dokument till en ny dokumentgranskningssida i programmet.
+Eftersom ett normalt dokumentarbetsflöde kan innehålla flera dokument måste du visa en lista med dokument och länka varje dokument till en ny dokumentgranskningssida i programmet.
 
-Lägg först till slutpunkten /files i serverkoden som hämtar och returnerar en lista över alla PDF-filer som lagras i mappen uploads/draft:
+Lägg först till slutpunkten /files i serverkoden som får och returnerar en lista över alla PDF-filer som lagras i mappen uploads/draft:
 
 ```
 const fs = require( "fs" );
@@ -209,11 +210,11 @@ return res.json( files.filter( f =\> f.endsWith( ".pdf" ) ) );
 } );
 ```
 
-Lägg till en `/download/:file` som ger åtkomst till den överförda PDF-filen för inbäddning på webbsidan.
+Lägg till en `/download/:file` väg som ger åtkomst till den uppladdade PDF-filen för inbäddning på webbsidan.
 
 >[!NOTE]
 >
->I ett produktionsprogram måste du lägga till autentisering och auktorisering för att se till att begäran kommer från en giltig användare och att användaren har åtkomst till dokumentet.
+>I ett produktionsprogram måste du lägga till autentisering och auktorisering för att säkerställa att begäran kommer från en giltig användare och att användaren får åtkomst till dokumentet.
 
 ```
 app.get( "/download/:file", function( req, res ){
@@ -222,11 +223,11 @@ app.get( "/download/:file", function( req, res ){
 });
 ```
 
-Uppdatera sidan index.html med ett fillistelement som fylls vid inläsningen. Varje objekt kan länka till en draft.html-webbsida och du skickar filnamnet till sidan med frågesträngsparametrar.
+Uppdatera sidan index.html med ett fillistelement som fylls vid inläsningen. Varje objekt kan länka till en draft.html-webbsida och du skickar filnamnet till sidan med hjälp av frågesträngsparametrar.
 
 >[!NOTE]
 >
->Du använder jQuery för att lägga till varje objekt, så du måste läsa in jQuery-biblioteket på webbsidan eller lägga till elementet med en annan metod.
+>Du använder jQuery för att lägga till varje objekt, så du måste läsa in jQuery-biblioteket på din webbsida eller lägga till elementet med en annan metod.
 
 ```
   <ul id="filelist">
@@ -259,7 +260,7 @@ Uppdatera sidan index.html med ett fillistelement som fylls vid inläsningen. Va
 
 Du är redo att bädda in och visa PDF-filer i webbprogrammet.
 
-Skapa en webbsida med namnet &quot;draft.html&quot; och lägg till ett div-element på sidan för den inbäddade PDF:
+Skapa en webbsida med namnet &quot;draft.html&quot; och lägg till ett div-element på sidan för den inbäddade PDF-filen:
 
 ```
   <div id="adobe-dc-view"></div>
@@ -271,7 +272,7 @@ Inkludera [!DNL Acrobat Services] bibliotek:
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 ```
 
-I en anpassad skripttagg analyserar du filnamnet från frågesträngsparametrarna så att du vet vilken fil som ska bäddas in på sidan:
+I en anpassad script-tagg läser du filnamnet från frågesträngsparametrarna så att du vet vilken fil som ska bäddas in på sidan:
 
 ```
   <script type="text/javascript">
@@ -280,7 +281,7 @@ I en anpassad skripttagg analyserar du filnamnet från frågesträngsparametrarn
   </script>
 ```
 
-Lägg till en dokumenthändelseavlyssnare för händelsen adobe_dc_view_sdk.ready som läser in den angivna PDF-filen till en inbäddad vy i div-elementet. Använd ditt klient-ID från API-uppgifterna för PDF Embed. Du vill aktivera kommentarer och anteckningar, så bädda in vyn i läget FULL_WINDOW och ställ in alternativet showAnnotationsTools på true.
+Lägg till en dokumenthändelseavlyssnare för händelsen adobe_dc_view_sdk.ready som läser in den angivna PDF-filen till en inbäddad vy i div-elementet. Använd ditt klient-ID från API-uppgifterna för PDF Embed. Du vill aktivera kommentarer och anteckningar, så bädda in vyn i läget FULL_WINDOW och ange alternativet showAnnotationsTools till true.
 
 ```
   document.addEventListener( "adobe_dc_view_sdk.ready", () => { 
@@ -302,7 +303,7 @@ Lägg till en dokumenthändelseavlyssnare för händelsen adobe_dc_view_sdk.read
 
 ## Skapa en användarprofil
 
-Som standard visas kommentarer och anteckningar som &quot;Gäst&quot; i den här vyn. Du kan ange den aktuella granskarens namn för kommentarerna och anteckningarna genom att registrera ett återanrop för användarprofilen i sidkoden för vyn PDF. Följande är en exempelprofil. I ett fullfjädrat program som inkluderar användarautentisering kan den inloggade användarsessionens profilinformation ställas in på det här sättet för att identifiera varje kommentator i dokumentet i granskningsflödet.
+Som standard visas kommentarer och anteckningar som &quot;Gäst&quot; i den här vyn. Du kan ange den aktuella granskarens namn för kommentarerna och anteckningarna genom att registrera ett återanrop för en användarprofil i sidkoden för vyn PDF. Nedan följer ett exempel på en profil. I ett fullfjädrat program som innehåller användarautentisering kan den inloggade användarsessionens profilinformation ställas in på detta sätt för att identifiera varje kommentator i dokumentet i granskningsarbetsflödet.
 
 ```
   adobeDCView.registerCallback(
@@ -325,11 +326,11 @@ Som standard visas kommentarer och anteckningar som &quot;Gäst&quot; i den här
   );
 ```
 
-Din profil identifierar dig som en specifik användare när du ser och kommenterar överförda dokument på den här webbsidan.
+Din profil identifierar dig som en specifik användare när du ser och antecknar i överförda dokument med den här webbsidan.
 
 ## Spara dokumentfeedback
 
-När en användare har kommenterat ett dokument klickar hen på **Spara.** Som standard klickar du på **Spara** hämtar PDF-filen. Ändra den här åtgärden om du vill uppdatera PDF-filen på servern.
+När en användare har kommenterat ett dokument klickar hen på **Spara.** Som standard klickar du **Spara** hämtar den uppdaterade PDF-filen. Ändra den här åtgärden om du vill uppdatera den aktuella PDF-filen på servern.
 
 Lägg till en `/save` slutpunkt till serverkoden som skriver över PDF-filen i mappen uploads/draft:
 
@@ -350,7 +351,7 @@ Lägg till en `/save` slutpunkt till serverkoden som skriver över PDF-filen i m
   } );
 ```
 
-Registrera ett återanrop i PDF-vyn för SAVE_API som överför innehåll till slutpunkten /save. Du kan ändra värdet på autoSaveFrequency så att programmet automatiskt kan spara ändringar på en timer och lägga till ytterligare metadata i den inbäddade filen när den har slutförts, om du vill.
+Registrera ett återanrop i vyn PDF för det SAVE_API som överför innehållet till slutpunkten /save. Du kan ändra värdet för autoSaveFrequency så att programmet automatiskt kan spara ändringar på en timer och inkludera ytterligare metadata i den inbäddade filen när den är klar, om du vill.
 
 ```
   adobeDCView.registerCallback(
@@ -382,13 +383,13 @@ Registrera ett återanrop i PDF-vyn för SAVE_API som överför innehåll till s
   );
 ```
 
-Kommentarer och anteckningar i utkastdokumenten sparas nu på servern. Du kan [läs mer om hur återanrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows) passa in i arbetsflödet. Till exempel [statusåteranrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback) hjälpa till att hantera filkonflikter om flera personer vill granska och kommentera samma dokument samtidigt.
+Kommentarer och anteckningar i utkastdokumenten sparas nu på servern. Du kan [läs mer om hur återanrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows) passa in i ditt arbetsflöde. Till exempel, [statusåteranrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback) hjälper till att hantera filkonflikter om flera personer vill granska och kommentera samma dokument samtidigt.
 
-I det sista steget sammanställer du alla redigerade dokument till en PDF-fil med hjälp av PDF Services API.
+I det sista steget kombinerar du alla redigerade dokument till en PDF-fil med PDF Services API.
 
 ## Kombinera PDF-filer
 
-PDF-kombinationskoden påminner om skapandekoden i PDF, men använder åtgärden CombineFiles och lägger till varje fil som indata.
+Kombinationskoden PDF liknar skapandekoden för PDF, men använder funktionen CombineFiles och lägger till varje fil som indata.
 
 ```
   function combineFilesToPDF( files, outputFilename, callback ) {
@@ -412,9 +413,9 @@ PDF-kombinationskoden påminner om skapandekoden i PDF, men använder åtgärden
  }
 ```
 
-## Ladda ned PDF
+## Ladda ned den slutliga PDF
 
-Lägg till en slutpunkt med namnet /finalize som anropar funktionen för att kombinera alla PDF-filer i `uploads/drafts` mapp till en `Final.pdf` filen och hämtar den sedan.
+Lägg till en slutpunkt som heter /finalize och som anropar funktionen för att kombinera alla PDF-filer i `uploads/drafts` mapp till en `Final.pdf` filen och hämtar den sedan.
 
 ```
   app.get( "/finalize", ( req, res ) => {
@@ -432,18 +433,18 @@ Lägg till en slutpunkt med namnet /finalize som anropar funktionen för att kom
   } );
 ```
 
-Slutligen lägger du till en länk på huvudwebbsidan index.html till denna /finalize -slutpunkt. Med den här länken kan användare hämta resultatet av dokumentarbetsflödet.
+Slutligen lägger du till en länk i huvudwebbsidan index.html till denna /finalize -slutpunkt. Med de här länkarna kan användarna hämta resultatet av dokumentets arbetsflöde.
 
 ```
 <a href="/finalize">Download final PDF</a>
 ```
 
-![Skärmdump av nedladdningen av det slutgiltiga dokumentet](assets/reviews_3.png)
+![Skärmbild av hämtning av det slutliga dokumentet](assets/reviews_3.png)
 
 ## Nästa steg
 
-Den här praktiska självstudiekursen visar hur [!DNL Acrobat Services] API:er integrerar en [arbetsflöde för dokumentdelning och granskning](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) till ett webbprogram. Med programmet kan distansarbetare dela filer och samarbeta med sina kollegor, vilket är särskilt användbart för anställda och underleverantörer som arbetar hemifrån.
+Den här praktiska självstudiekursen visade hur [!DNL Acrobat Services] API:er integrerar en [arbetsflöde för dokumentdelning och granskning](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) till ett webbprogram. Programmet gör det möjligt för distansarbetare att dela filer och samarbeta med sina teammedlemmar, vilket är särskilt användbart för anställda och entreprenörer som arbetar hemifrån.
 
-Du kan använda de här teknikerna för att möjliggöra samarbete i programmet eller utforska [SDK-exempel för PDF Services-nod](https://github.com/adobe/pdftools-node-sdk-samples) och [PDF Embed API-exempel](https://github.com/adobe/pdf-embed-api-samples) på GitHub för inspiration om hur du annars använder Adobe API:er.
+Du kan använda de här teknikerna för att möjliggöra samarbete i ditt program eller utforska [SDK-exempel för PDF Services-nod](https://github.com/adobe/pdftools-node-sdk-samples) och [PDF Embed API-exempel](https://github.com/adobe/pdf-embed-api-samples) på GitHub för inspiration om hur du annars använder Adobe API:er.
 
-Vill du aktivera dokumentdelning och granskning i din egen app? Registrera [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) utvecklarkonto. Få tillgång till Adobe PDF Embed kostnadsfritt och en sexmånaders kostnadsfri testversion av de andra API:erna. Efter testperioden kan du [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för endast \$0,05 per dokumenttransaktion när verksamheten växer.
+Är du redo att aktivera dokumentdelning och granskning i din egen app? Registrera ditt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) utvecklarkonto. Få tillgång till Adobe PDF Embed utan kostnad och få en sex månader lång kostnadsfri provperiod på de andra API:erna. Efter testperioden kan du [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion när företaget växer.

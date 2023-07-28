@@ -1,13 +1,14 @@
 ---
 title: Använda PDF Services API för att exportera PDF till Word, PowerPoint med mera
-description: Lär dig hur du kör PDF Services API-exportåtgärden med exempelfiler för språken Node.js, Java och .Net
+description: Läs om hur du kör PDF Services API-exportåtgärden med hjälp av exempelfiler för språken Node.js, Java och .Net
 type: Tutorial
 role: Developer
 level: Intermediate
+feature: PDF Services API
 thumbnail: KT-6674.jpg
 kt: 6674
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%
@@ -16,9 +17,9 @@ ht-degree: 5%
 
 # Använda PDF Services API för att exportera PDF till Word, PowerPoint med mera
 
-![Skapa PDF Hero-bild](assets/ExportPDF_hero.jpg)
+![SKAPA PDF-HJÄLTEBILD](assets/ExportPDF_hero.jpg)
 
-Adobe PDF Services API konverterar PDF-filer till MS Office, text och bilder med API:er. Det finns många vanliga användningsområden för att låsa upp PDF för redigering och analys av innehåll, och med PDF Services API kan utvecklare enkelt integrera den här funktionen i befintliga system och program. Konvertera PDF-filer till MS Word för att redigera innehåll, godkänna och sedan skicka signaturer för att skapa anpassade kontraktsarbetsflöden. Eller exportera PDF-material till MS Excel-format för fakturering och ekonomiberäkningar eller dataanalys.
+Adobe PDF Services API konverterar PDF-filer till MS Office, text och bilder med API:er. Det finns många vanliga användningssätt för att låsa upp existerande PDF för innehållsredigering och innehållsanalys, och med PDF Services API kan utvecklare enkelt integrera den här funktionen i existerande system och applikationer. Konvertera PDF-filer till MS Word för att redigera innehåll, godkänna och sedan skicka filer för signering för att skapa anpassade kontraktarbetsflöden. Eller exportera PDF-innehåll till MS Excel-format för fakturering och ekonomiska beräkningar eller dataanalys.
 
 Exportåtgärden stöder följande PDF-filkonverteringar:
 
@@ -28,19 +29,19 @@ Exportåtgärden stöder följande PDF-filkonverteringar:
 * PDF till text (RTF)
 * PDF till bild (JPEG, PNG)
 
-I den här självstudiekursen lär du dig grunderna i hur du kör din första API-exportåtgärd för PDF Services med hjälp av exempelfiler för språken Node.js, Java och .Net.
+I den här självstudiekursen får du lära dig grunderna i hur du kör din första API-export av PDF Services med hjälp av exempelfiler för språk som Node.js, Java och .Net.
 
-## Steg 1: Skapa dina inloggningsuppgifter och konfigurera miljön:
+## Steg 1: Skapa dina inloggningsuppgifter och konfigurera din miljö:
 
-Använd självstudiekurserna för att komma igång nedan för att skapa API-uppgifter, hämta exempelfiler och konfigurera miljön.
+Använd självstudiekurserna för att komma i gång nedan för att skapa dina API-uppgifter, hämta exempelfiler och konfigurera din miljö.
 
 [Komma igång med PDF Services API och Java](gettingstartedjava.md)
 
 [Komma igång med PDF Services API och .Net](gettingstartednet.md)
 
-[Komma igång med PDF Services API och Node.js](createpdffromhtml.md)
+[Kom igång med PDF Services API och Node.js](createpdffromhtml.md)
 
-## Steg 2: Kör export-PDF-åtgärd med exempelfilerna
+## Steg 2: Kör åtgärden för att exportera PDF med hjälp av exempelfilerna
 
 **Java**
 
@@ -54,7 +55,7 @@ Använd självstudiekurserna för att komma igång nedan för att skapa API-uppg
 
    `mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.platform.operation.samples.exportpdf.ExportPDFToDOCX`
 
-PDF skapas i katalogen src/main/resources.
+Din PDF skapas i katalogen src/main/resources.
 
 **.NET**
 
@@ -64,13 +65,13 @@ PDF skapas i katalogen src/main/resources.
 
    Till exempel C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-NetSamples
 
-1. Ändra kataloger igen till katalogen ExportPDFtoDocx.
+1. Ändra kataloger igen till ExportPDFtoDocx -katalogen.
 
 1. Kör följande kommando::
 
    `dotnet run ExportPDFToDocx.csproj`
 
-PDF skapas i samma katalog.
+Din PDF skapas i samma katalog.
 
 **Node.js**
 
@@ -78,17 +79,17 @@ PDF skapas i samma katalog.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
-   Exempel: C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
+   Till exempel C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
 
 1. Kör följande kommando::
 
    `node src/ocr/ocr-pdf.js`
 
-PDF skapas på den plats som anges i utdata, som är standardkatalogen pdfServicesSdkResult.
+PDF skapas på den plats som anges i utdata, vilket som standard är katalogen pdfServicesSdkResult.
 
-## Sluttankar
+## Avslutande tankar
 
-Du bör nu ha ett fungerande exempel som kan importeras till dina befintliga program för att starta ett konceptbevis. I var och en av exempelkatalogerna kan du se ytterligare exempel på hur du exporterar PDF-filer till bildformat. På samma sätt som ovan kan du köra provet. Om du vill ändra till ett annat format kan du uppdatera koden till det nya format du vill:
+Du bör nu ha ett fungerande exempel som kan importeras till dina befintliga program för att starta ett koncepttest. I var och en av exempelkatalogerna kan du se ytterligare ett exempel för att exportera PDF-filer till bildformat. I samma steg ovan kan du köra provet också. Om du vill ändra till ett annat format kan du uppdatera koden till det nya format du vill ha:
 
 SupportedTargetFormats.PPTX
 
@@ -100,10 +101,10 @@ Till ett annat format.
 
 ## Resurser och nästa steg
 
-* Mer hjälp och support finns på [[!DNL Adobe Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) användarforum
+* Om du behöver mer hjälp och support går du till [[!DNL Adobe Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) community-forum
 
 * PDF Services API [Dokumentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [Vanliga frågor](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) för PDF Services API-frågor
+* [VANLIGA FRÅGOR](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) för PDF Services API-frågor
 
-* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) frågor om licenser och priser
+* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) för frågor om licenser och priser

@@ -1,48 +1,49 @@
 ---
 title: Adobe PDF Extract API Tutorials
-description: Översikt över Adobe PDF Extract API
+description: Översiktssida för Adobe PDF Extract API
 type: Tutorial
 role: Developer
 skill: Beginner, Intermediate, Experienced
+feature: PDF Extract API
 thumbnail: KT-9247.jpg
 jira: KT-9247
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-# API-självstudier för Adobe PDF Extract
+# Självstudiekurser för Adobe PDF Extract API
 
-![PDF Embed API-banderoll](../assets/pdfextracthero.jpg)
+![Banner för PDF Embed API](../assets/pdfextracthero.jpg)
 
-Lås upp strukturen och innehållselementen i alla PDF med en webbtjänst som drivs av Adobe Sensei maskininlärning.
+Lås upp strukturen och innehållselementen i PDF med en webbtjänst som drivs av Adobe Sensei maskininlärning.
 
 >[!NOTE]
 >
->API:et PDF Extract ingår i API:et för PDF-tjänster.
+>PDF Extract API ingår i PDF Services API.
 
 <table style="table-layout:fixed">
 <tr>
  <td>
    <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html">
-      <img alt="Parsar PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API" src="assets/ParsingPDF_1280.png" />
+      <img alt="Tolka PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API" src="assets/ParsingPDF_1280.png" />
    </a>
     <div>
-   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>Parsar PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API</strong></a>
+   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>Tolka PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API</strong></a>
     </div>
-    <em>Läs om hur PDF Extract-tjänsten i Adobe PDF Services API kan göra det lika enkelt att parsa PDF som att parsa JSON</em>
+    <em>Lär dig hur tjänsten PDF Extract i Adobe PDF Services API kan göra det lika enkelt att parsa PDF som att parsa JSON</em>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>

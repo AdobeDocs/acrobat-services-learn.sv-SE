@@ -1,31 +1,32 @@
 ---
-title: Digital Document Publishing
+title: Digital dokumentpublicering
 description: Lär dig hur du visar inbäddade PDF-dokument på webbsidor med Adobe PDF Embed API
 role: Developer
 level: Intermediate
 type: Tutorial
+feature: Use Cases
 thumbnail: KT-8090.jpg
 jira: KT-8090
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
 
 ---
 
-# Digital dokumentpublicering
+# Publicering av digitala dokument
 
-![BANDEROLL MED ANVÄNDNINGSFALL](assets/UseCaseDigitalHero.jpg)
+![Banderoll för användningsfall](assets/UseCaseDigitalHero.jpg)
 
-Elektroniska dokument finns överallt - i själva verket finns det förmodligen [biljoner PDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world) globalt, och antalet ökar varje dag. Genom att bädda in ett PDF-visningsprogram på dina webbsidor kan du visa dokument utan att behöva designa om HTML och CSS eller hindra åtkomsten till webbplatsen.
+Elektroniska dokument finns överallt - det finns faktiskt förmodligen [biljoner PDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world) globalt, och det antalet stiger varje dag. Genom att bädda in ett PDF-visningsprogram på dina webbsidor kan användarna visa dokument utan att designa om HTML och CSS-kod eller hindra åtkomsten till webbplatsen.
 
-Låt oss utforska ett populärt scenario. Ett företagstjänster [informationsdokument på deras webbplats](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)
-för att ge sammanhang åt deras program och tjänster. Webbplatsens marknadsförare vill få en bättre förståelse för hur användare interagerar med sitt PDF-baserade innehåll och införlivar det med sin webbsida och sitt varumärke. De har beslutat att offentliggöra rapporterna som [skyddat innehåll](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.), som styr vem som kan hämta dem.
+Låt oss utforska ett populärt scenario. Ett företagsposter [informationsdokument på deras webbplats](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)
+för att tillhandahålla kontext för deras program och tjänster. Webbplatsens marknadsförare vill bättre förstå hur användare interagerar med sitt PDF-baserade innehåll och införliva det med sin webbsida och varumärke. De har beslutat att offentliggöra informationsdokumenten som [skyddat innehåll](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.), som styr vem som kan hämta dem.
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudiekursen lär du dig hur du visar inbäddade PDF-dokument på webbsidor med [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html), som är gratis och lätt att använda. I dessa exempel används JavaScript, Node.js, Express.js, HTML och CSS. Du kan visa den fullständiga projektkoden på [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1).
+I den här praktiska självstudiekursen lär du dig visa inbäddade PDF-dokument på webbsidor med [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html), som är gratis och lätt att använda. I dessa exempel används JavaScript, Node.js, Express.js, HTML och CSS. Du kan visa hela projektkoden på [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1).
 
 ## Relevanta API:er och resurser
 
@@ -37,17 +38,17 @@ I den här praktiska självstudiekursen lär du dig hur du visar inbäddade PDF-
 
 ## Skapa en Node Web App
 
-Låt oss börja med att skapa en webbplats med Node.js och Express som använder en snygg mall och erbjuder flera PDF för nedladdning.
+Vi börjar med att skapa en webbplats med Node.js och Express som använder en snygg mall och erbjuder flera PDF för hämtning.
 
 För det första [hämta och installera Node.js](https://nodejs.org/en/download/).
 
-För att enkelt skapa ett Node.js-projekt med en minimal webbprogramstruktur installerar du verktyget för programgenerering `` `express-generator` ``.
+Om du enkelt vill skapa ett Node.js-projekt med en minimal webbprogramstruktur ska du installera verktyget för programgenerering `` `express-generator` ``.
 
 ```
 npm install express-generator -g
 ```
 
-Skapa sedan den nya Express-appen med namnet pdf-app och välj som visningsmotor.
+Skapa sedan den nya Express-appen som heter pdf-app och välj som visningsmotor.
 
 ```
 express pdf-app --view=ejs
@@ -68,82 +69,82 @@ npm start
 
 Öppna slutligen webbplatsen på <http://localhost:3000>.
 
-![Skärmdump av grundläggande webbplats](assets/ddp_1.png)
+![Skärmbild av grundläggande webbplats](assets/ddp_1.png)
 
 Du har nu en grundläggande webbplats.
 
 ## Renderar vitboksdata
 
-För att lägga upp rapporter på webbplatsen definieras och förbereds informationen i vitboken på webbplatsen för att visa dessa dokument. Skapa först en ny \\data-mapp i projektets rot. Informationen om tillgängliga rapporter kommer från en ny fil med namnet [data.json](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/data/data.json)som läggs i datamappen.
+För att lägga upp informationsdokument på webbplatsen definieras och förbereds informationsdokumenten på webbplatsen. Skapa först en ny \\data -mapp i projektets rot. Informationen om tillgängliga informationsdokument kommer från en ny fil som heter [data.json](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/data/data.json), som finns i mappen data.
 
-Om du vill ge webbappen ett snyggt och prydligt utseende installerar du [Bootstrap](https://getbootstrap.com/) och [Font Awesome](https://fontawesome.com/) klientbibliotek.
+Om du vill ge webbappen ett snyggt och polerat utseende installerar du [Bootstrap](https://getbootstrap.com/) och [Font Awesome](https://fontawesome.com/) klientbibliotek.
 
 ```
 npm install bootstrap
 npm install font-awesome
 ```
 
-Öppna filen app.js och inkludera dessa kataloger som källor för statiska filer, placera dem efter den befintliga `` `express.static` `` linje.
+Öppna filen app.js och inkludera dessa kataloger som källor för statiska filer, placera dem efter den befintliga `` `express.static` `` raden.
 
 ```
 app.use(express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
 app.use(express.static(path.join(__dirname, '/node_modules/font-awesome')));
 ```
 
-Om du vill ta med PDF-dokumenten skapar du en mapp med namnet \\pdfs under projektets \\gemensamma mapp. Istället för att skapa PDF och miniatyrbilderna själv kan du kopiera dem från den här [GitHub-databasmapp](https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app/public) till mapparna \\pdfs och \\image.
+Om du vill inkludera PDF-dokumenten skapar du en mapp med namnet \\pdfs under projektets \\gemensamma mapp. I stället för att skapa PDF och miniatyrbilderna själv kan du kopiera dem från det här dokumentet [GitHub-databasmapp](https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app/public) till mapparna \\pdfs och \\image.
 
 Mappen \\public\\pdfs innehåller nu PDF-dokument:
 
-![Skärmdump av PDF-filikon](assets/ddp_2.png)
+![Skärmbild av PDF filikon](assets/ddp_2.png)
 
-Mappen \\public\\images bör innehålla miniatyrbilder för vart och ett av PDF-dokumenten:
+Mappen \\public\\images ska innehålla miniatyrbilderna för vart och ett av PDF-dokumenten:
 
-![Skärmdump av PDF-miniatyrer](assets/ddp_3.png)
+![Skärmbild av PDF-miniatyrbilder](assets/ddp_3.png)
 
-Öppna filen \\routningar\\index.js som innehåller logiken för dirigering av startsidan. Om du vill använda vitboksdata från filen data.json måste du läsa in modulen Node.js som ansvarar för åtkomst till och interaktion med filsystemet. Deklarera sedan `fs` på första raden i filen \\routningar\\index.js, enligt följande:
+Öppna nu filen \\vägar\\index.js, som innehåller logiken för dirigering av startsidan. Om du vill använda whitepaper-data från filen data.json måste du läsa in modulen Node.js som ansvarar för åtkomst till och interaktion med filsystemet. Ange sedan `fs` -konstanten på den första raden i filen \\vägar\\index.js, enligt följande:
 
 ```
 const fs = require('fs');
 ```
 
-Läs och analysera sedan filen data.json och lagra dem i pappersvariabeln:
+Läs och analysera sedan filen data.json och spara dem i pappersvariabeln:
 
 ```
 let rawdata = fs.readFileSync('data/data.json');
 let papers = JSON.parse(rawdata);
 ```
 
-Nu kan du ändra raden för att anropa återgivningsmetoden för indexvyn och skicka papperssamlingen som modell för indexvyn.
+Nu kan du ändra raden så att renderingsmetoden för indexvyn används och skicka papperssamlingen som modell för indexvyn.
 
 ```
 res.render('index', { title: 'Embedding PDF', papers: papers });
 ```
 
-Om du vill återge samlingen med informationsdokument på startsidan öppnar du filen \\views\\index.ejs och ersätter den befintliga koden med koden från projektets [indexfil](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/views/index.ejs).
+Om du vill återge samlingen med informationsdokument på startsidan öppnar du filen \\views\\index.ejs och ersätter den befintliga koden med koden från ditt projekts [indexfil](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/views/index.ejs).
 
-Kör om npm starta och öppna <http://localhost:3000> för att visa din samling med tillgängliga rapporter.
+Kör nu npm start och öppna igen <http://localhost:3000> för att visa din samling med tillgängliga informationsdokument.
 
-![Skärmdump av miniatyrbilder för informationsdokument](assets/ddp_4.png)
+![Skärmbild av miniatyrbilder för informationsdokument](assets/ddp_4.png)
 
-I nästa avsnitt handlar det om att förbättra webbplatsen och använda [PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) för att visa PDF-dokument på webbsidan. PDF Embed API är kostnadsfritt att använda - du behöver bara skaffa en API-uppgift.
+I nästa avsnitt handlar det om att förbättra webbplatsen och använda [PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) för att visa PDF-dokument på webbsidan. PDF Embed API är gratis att använda - du behöver bara få en API-uppgift.
 
-## Hämta en PDF Embed API-uppgift
+## Hämta en PDF Embed API-autentiseringsuppgift
 
-Om du vill få en kostnadsfri inloggnings-API för PDF går du till [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) när du har registrerat dig för ett nytt konto eller loggat in på ditt befintliga konto.
+Om du vill hämta en kostnadsfri API-inloggningsuppgift för PDF går du till [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) sida efter att du har registrerat dig för ett nytt konto eller loggat in på ditt befintliga konto.
 
 Klicka **Skapa nya autentiseringsuppgifter** och därefter **Kom igång:**
 
-![Skärmdump av hur du skapar nya inloggningsuppgifter](assets/ddp_5.png)
+![Skärmbild av hur man skapar nya autentiseringsuppgifter](assets/ddp_5.png)
 
-Nu uppmanas du att registrera dig för ett kostnadsfritt konto om du inte har ett.
+Nu ombeds du att registrera dig för ett kostnadsfritt konto om du inte har ett.
 
-Välj **PDF Embed API** och ange sedan ditt inloggningsnamn och din programdomän. Använd kommandot **localhost** på grund av att webbprogrammet testas lokalt.
+Välj **PDF Embed API** och ange sedan ditt inloggningsnamn och din programdomän. Använd kommandot **localhost** domän på grund av att webbprogrammet testas lokalt.
 
-![Skärmdump av att skapa nya autentiseringsuppgifter för PDF Embed API](assets/ddp_6.png)
+![Skärmbild av att skapa nya autentiseringsuppgifter för PDF Embed API](assets/ddp_6.png)
 
-Klicka på **Skapa autentiseringsuppgifter** för att komma åt dina PDF-uppgifter och få klient-ID (API-NYCKEL).
+Klicka på **Skapa autentiseringsuppgifter** för att komma åt dina inloggningsuppgifter för PDF och hämta klient-ID (API-NYCKEL).
 
-![Skärmdump av hur du kopierar nya inloggningsuppgifter](assets/ddp_7.png)
+![Skärmbild av hur nya inloggningsuppgifter kopieras](assets/ddp_7.png)
 
 Skapa en fil med namnet .ENV i programmets rotmapp i Node.js-projektet och deklarera miljövariabeln för ditt PDF Embed Client ID med API KEY-autentiseringsuppgiften från föregående steg.
 
@@ -151,13 +152,13 @@ Skapa en fil med namnet .ENV i programmets rotmapp i Node.js-projektet och dekla
 PDF_EMBED_CLIENT_ID=**********************************************
 ```
 
-Du använder sedan detta klient-ID för att komma åt PDF Embed API. Installera dotenv-paketet för att komma åt den här miljövariabeln med koden Node.js.
+Du använder sedan detta klient-ID för att komma åt PDF Embed API. Installera dotenv-paketet för att få åtkomst till miljövariabeln med hjälp av koden Node.js.
 
 ```
 npm install dotenv
 ```
 
-Öppna sedan filen app.js och lägg till följande rad högst upp i filen så att Node.js kan läsa in modulen dotenv:
+Öppna nu filen app.js och lägg till följande rad högst upp i filen så att Node.js kan läsa in dotenv-modulen:
 
 ```
 require('dotenv').config();
@@ -165,27 +166,27 @@ require('dotenv').config();
 
 ## Visa PDF i webbappen
 
-Nu kan du använda PDF Embed API för att visa PDF på webbplatsen. Öppna livefilen [Demo av inbäddat API i PDF](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
+Använd nu PDF Embed API för att visa PDF på webbplatsen. Öppna live [Demo av PDF Embed API](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
 
-![Skärmdump av live PDF Embed API-demo](assets/ddp_8.png)
+![Skärmbild av live-demo av PDF Embed API](assets/ddp_8.png)
 
-På den vänstra panelen kan du välja det inbäddningsläge som bäst passar webbplatsens behov:
+På den vänstra panelen kan du välja det inbäddningsläge som bäst passar dina webbplatsbehov:
 
-* **Fullständigt fönster**: PDF täcker hela webbsidans utrymme
+* **Hela fönstret**: PDF täcker hela webbsidans utrymme
 
 * **Storleksanpassad behållare**: PDF visas inuti webbsidan, en sida i taget, i en div med begränsad storlek
 
-* **In-line**: hela PDF visas i en div på webbsidan
+* **In-line**: hela PDF visas i en div inuti webbsidan
 
 * **Ljuslåda**: PDF visas som ett lager ovanpå webbsidan
 
-Vi rekommenderar att du använder det inbyggda inbäddningsläget för rapporter och kodgeneratorn för att bädda in en PDF i programmet.
+Vi rekommenderar att du använder inbäddningsläget In-line för informationsdokument och kodgeneratorn för att sedan bädda in en PDF i programmet.
 
-## Skapa en sida för inbäddat infogat läge
+## Skapa en inbäddningssida i det inbyggda läget
 
-Om du vill bädda in ett PDF-visningsprogram på webbsidan och visa alla sidor samtidigt, skapar du en ny sida med det inbyggda inbäddningsläget.
+Om du vill bädda in ett PDF-visningsprogram på din webbsida och visa alla sidorna samtidigt, skapar du en ny-sida med hjälp av det inbyggda inbäddningsläget.
 
-Skapa en ny vy i filen \\views\\in-line.ejs med EJS-visningsmotorn.
+Skapa en ny vy i filen \\views\\in-line.ejs med EJS-vymotorn.
 
 ```
 <! html DOCTYPE >
@@ -214,7 +215,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 />
 ```
 
-Och sätta kunderna i första rummet.
+Och låt kunderna komma i första hand.
 
 ```
 </p>
@@ -239,7 +240,7 @@ eiusmod tempor incididunt ut labore et dolore</p>
 </html>
 ```
 
-Skapa sedan en knapp för att öppna den infogade vyn genom att ändra \\views\\index.ejs.
+Du ändrar sedan \\views\\index.ejs för att skapa en knapp för att öppna den textbundna vyn.
 
 ```
 <div class="card-body">
@@ -265,14 +266,14 @@ var indexRouter = require('./routes/index');
 var inLineRouter = require('./routes/in-line');
 ```
 
-Lägg sedan till koden efter app.use(&#39;/&#39;, indexRouter); så här associerar du vyn för infogat inbäddningsläge med routern:
+Lägg sedan till koden efter app.use(&#39;/&#39;, indexRouter); för att associera den infogade inbäddningslägesvyn med dess router:
 
 ```
 app.use('/', indexRouter);
 app.use('/in-line', inLineRouter);
 ```
 
-Skapa nu en ny in-line.js -fil under \\routrar för att skapa ny routerlogik. Inkludera Express, en nodmodul som möjliggör en webbprogramserver.
+Skapa nu en ny in-line.js -fil under \\vägar för att skapa ny routerlogik. Inkludera Express, en nodmodul som möjliggör en backend-webbapplikation.
 
 ```
 var express = require('express');
@@ -280,7 +281,7 @@ const fs = require('fs');
 var router = express.Router();
 ```
 
-Skapa sedan en slutpunkt som hanterar GET-begäranden för ett specifikt whitepaper-ID och återger vyn in-line.ejs.
+Skapa sedan en slutpunkt som hanterar GET-förfrågningar för ett specifikt whitepaper-ID och återger vyn in-line.ejs.
 
 ```
 router.all('/:id', function(req, res, next) {
@@ -292,13 +293,13 @@ res.render('in-line', { title: paper.title, paper: paper });
 module.exports = router;
 ```
 
-Titta på [live-demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf) för att automatiskt generera PDF Embed API-kod. Klicka **In-line** från den vänstra panelen:
+Ta en ny titt på [live-demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf) för att automatiskt generera PDF Embed API-kod. Klicka **In-line** från den vänstra panelen:
 
-![Skärmdump av live PDF Embed API-demo](assets/ddp_8.png)
+![Skärmbild av live-demo av PDF Embed API](assets/ddp_8.png)
 
-Klicka **Generera kod** om du vill se HTML-koden som krävs för att visa ett visningsprogram för PDF i behållarstorlek.
+Klicka **Generera kod** om du vill visa HTML-koden som behövs för att visa ett visningsprogram för Behållare i PDF.
 
-![Skärmdump av kodförhandsgranskning](assets/ddp_9.png)
+![Skärmbild av kodförhandsgranskning](assets/ddp_9.png)
 
 Klicka **Kopiera kod** och klistra in koden i filen in-line.ejs.
 
@@ -322,7 +323,7 @@ metaData:{fileName: "Bodea Brochure.pdf"}
 </div>
 ```
 
-Dokumentparametrarna är dock fortfarande hårdkodade. Låt oss ersätta dem med EJS-gafflingens syntax (\&lt;%= someValue %\>) för att återge sidan enligt modelldata i rapporten.
+Dokumentparametrarna är dock fortfarande hårdkodade. Vi ersätter dem med EJS-gafflingens syntax (\&lt;%= someValue %\>) för att återge sidan enligt modelldata i informationsdokumentet.
 
 ```
 <div id="adobe-dc-view" style="width: 800px;"></div>
@@ -342,17 +343,17 @@ embedMode: "IN_LINE"
 
 Kör nu programmet med npm start kommando och öppna webbplatsen på <http://localhost:3000>.
 
-![Skärmdump av miniatyrbilder av PDF-papper](assets/ddp_10.png)
+![Skärmbild av miniatyrbilder av PDF-papper](assets/ddp_10.png)
 
-Välj slutligen ett vitt papper och klicka på **Visa dokument** så här öppnar du en ny sida med det inbäddade PDF:
+Välj till sist ett vitt papper och klicka på **Visa dokument** så här öppnar du en ny sida med den textbundna inbäddade PDF:
 
-![Skärmdump från PDF ](assets/ddp_11.png)
+![Skärmdump från PDF-rapporten ](assets/ddp_11.png)
 
-Observera att alternativen Hämta PDF och Skriv ut PDF nu finns.
+Lägg märke till hur alternativen Hämta PDF och Skriv ut PDF nu finns.
 
-![Skärmdump av nedladdnings- och utskriftsalternativ](assets/ddp_12.png)
+![Skärmbild av hämtnings- och utskriftsalternativ](assets/ddp_12.png)
 
-Du vill kontrollera flaggorna i backend. Senare kan du implementera behörighetskontroller baserat på användaridentitet och begränsa åtkomsten enligt dina affärsregler. Komplexiteten behövs inte här, så vi kan ändra \\routningar\\in-line.js för att inkludera de autentiserade egenskaperna och behörighetsegenskaperna i modellobjektet.
+Du vill kontrollera flaggorna på servern. Senare kan du implementera auktoriseringskontroller baserat på användaridentitet och begränsa åtkomsten enligt dina affärsregler. Komplexiteten behövs inte här, så vi ändrar \\vägar\\in-line.js för att inkludera autentiserade egenskaper och behörighetsegenskaper i modellobjektet.
 
 ```
 let authenticated = false;
@@ -368,7 +369,7 @@ showFullScreen: true
 });
 ```
 
-Ändra sedan \\views\\in-line.ejs så att webbsidan kan återge flaggvärdena som kommer från serverdelen.
+Ändra sedan \\views\\in-line.ejs så att din webbsida kan återge flaggvärden som kommer från backend.
 
 ```
 embedMode: "IN_LINE",
@@ -383,17 +384,17 @@ showFullScreen: false
 }
 ```
 
-Kör sedan programmet igen för att se hur ändringen visas i PDF.
+Kör sedan programmet igen för att se hur den här ändringen visas i PDF.
 
-![Skärmdump av PDF-fil](assets/ddp_13.png)
+![Skärmbild av PDF-fil](assets/ddp_13.png)
 
 ## Skapa spärrat innehåll
 
-Enligt slutanvändarscenariot vill marknadsföraren för företagets webbplats förstå hur användare interagerar med sitt innehåll baserat på PDF och införliva detta med övriga delar av deras webbplats och varumärke.
+Enligt slutanvändarscenariot vill marknadsföraren för bolagets webbplats bättre förstå hur användare interagerar med sitt innehåll som är baserat i PDF och införliva det med det övriga innehållet på sin webbsida och sitt varumärke.
 
-Vi fokuserar på PDF-inbäddning, så du skapar inte någon användarautentiseringsfunktion. Använd istället en enkel betalvägg med ett webbformulär som godkänner användarinformation och sedan visas PDF-dokumentet när användaren skickar in formuläret.
+Vi fokuserar på PDF-inbäddning, så du ska inte skapa en användarautentiseringsfunktion. Istället, bara implementera en enkel, falsk betalvägg med hjälp av ett webbformulär som accepterar viss användarinformation sedan visas PDF dokumentet när användaren skickar formuläret.
 
-Ersätt filen \\routningar\\in-line.js med innehållet nedan för att ge visningsmodellen användarinformation:
+Ersätt filen \\route\\in-line.js med innehållet nedan och förse vymodellen med användarinformation:
 
 ```
 var express = require('express');
@@ -429,7 +430,7 @@ showFullScreen: false
 module.exports = router;
 ```
 
-Ersätt sedan innehållet \\views\\in-line.ejs med koden nedan. Där visas användardataformuläret eller PDF-visningsprogrammet, beroende på om det är en autentiserad användare.
+Ersätt sedan \\views\\in-line.ejs-innehållet med koden nedan. Där visas användardataformuläret eller PDF-visningsprogrammet, beroende på om det är en autentiserad användare.
 
 ```
 <!DOCTYPE html>
@@ -462,7 +463,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 />
 ```
 
-Och sätta kunderna i första rummet.
+Och låt kunderna komma i första hand.
 
 ```
 </p>
@@ -521,15 +522,15 @@ showFullScreen: <%= permissions.showFullScreen %>
 </html>
 ```
 
-![Skärmdump av gating-innehåll](assets/ddp_14.png)
+![Skärmbild av gating-innehåll](assets/ddp_14.png)
 
-Besökare kan nu endast komma åt PDF efter att ha lämnat in sina uppgifter:
+Webbplatsbesökare kan nu endast komma åt PDF efter att ha skickat in sina uppgifter:
 
-![Skärmdump av PDF-innehåll i inbäddat visningsprogram](assets/ddp_15.png)
+![Skärmbild av PDF-innehåll i inbäddat visningsprogram](assets/ddp_15.png)
 
 ## Aktivera händelser
 
-Nu ska vi se hur du enkelt kan integrera PDF Viewer Events med ditt program för att samla in analysdata för marknadsföraren. Om du vill utöka visningsprogrammet med PDF EmbedAPI lägger du till följande kodrader efter att variabeln adobeDCView har deklarerats och innan metoden previewFile anropas:
+Nu ska vi se hur du enkelt kan integrera PDF-visningshändelser med ditt program för att samla in analysdata för marknadsföraren. Om du vill utöka visningsprogrammet med PDF EmbedAPI lägger du till följande kodrader efter att variabeln adobeDCView har deklarerats och innan du anropar metoden previewFile:
 
 ```
 var adobeDCView = new AdobeDC.View({ clientId: "<%=process.env.PDF_EMBED_CLIENT_ID %>", divId: "adobe-dc-view" });
@@ -544,18 +545,18 @@ console.log(event);
 
 Kör nu programmet igen och öppna webbläsarens utvecklarverktyg för att se händelsedata.
 
-![Skärmdump av kod](assets/ddp_16.png)
+![Skärmbild av kod](assets/ddp_16.png)
 
 Du kan skicka dessa data till [Adobe Analytics](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view) eller andra analysverktyg.
 
 ## Nästa steg
 
-[!DNL Acrobat Services] API:er hjälper utvecklare att enkelt lösa problem med digitalpublicering genom ett arbetsflöde som fokuserar på PDF. Du har sett hur du skapar en exempelnodswebbapp för att visa en samling rapporter. Skaffa sedan en [kostnadsfri API-uppgift](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) och begränsad åtkomst till informationsdokumenten, som kan visas i en av fyra [inbäddningslägen](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
+[!DNL Acrobat Services] API:er hjälper utvecklare att enkelt hantera digitala publiceringsproblem genom ett PDF-centrerat arbetsflöde. Du har sett hur du skapar en webbapp med exempelnoder för att visa en samling informationsdokument. Sedan skaffar du en [gratis API-uppgift](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) och begränsad åtkomst till informationsdokumenten, som kan visas i ett av fyra [inbäddningslägen](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
 
-Genom att sätta ihop det här arbetsflödet kan [hypotetisk marknadsförare](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html) samla kontaktinformation i utbyte mot nedladdningar i informationsdokument och visa statistik om vem som interagerar med PDF. Du kan införliva dessa funktioner på webbplatsen för att öka och övervaka användarengagemanget.
+Genom att sätta ihop det här arbetsflödet kan du [hypotetisk marknadsförare](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html) samla in kontaktinformation för kundansvariga i utbyte mot nedladdningar av informationsdokument och visa statistik om vem som interagerar med PDF. Du kan infoga dessa funktioner på din webbplats för att driva och övervaka användarengagemang.
 
-Om du är Angular eller React-utvecklare kan du prova [ytterligare prover](https://github.com/adobe/pdf-embed-api-samples) med hur man integrerar PDF Embed API med React och Angular-projekt.
+Om du är Angular eller React-utvecklare kan du prova [ytterligare prover](https://github.com/adobe/pdf-embed-api-samples) med hur du integrerar PDF Embed API med React och Angular-projekt.
 
-Med Adobe kan ni skapa en heltäckande kundupplevelse med nyskapande lösningar. Checka ut [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) utan kostnad. Testa Adobe PDF Services API med [pay-as-you-gopr](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)[glasyr](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
+Med Adobe kan du bygga upp en komplett kundupplevelse med nyskapande lösningar. Utcheckning [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) kostnadsfritt. Om du vill utforska vad mer du kan göra kan du prova Adobe PDF Services API med [pay-as-you-gopr](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)[glasyr](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
 
 [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) med [!DNL Adobe Acrobat Services] API:er idag.

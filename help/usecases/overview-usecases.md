@@ -1,26 +1,27 @@
 ---
-title: "[!DNL Adobe Acrobat Services] Användningsexempel för API"
-description: Sidan Översikt för [!DNL Adobe Acrobat Services] Användningsexempel för API
+title: "[!DNL Adobe Acrobat Services] API-användningsfall"
+description: Översiktssida för [!DNL Adobe Acrobat Services] API-användningsfall
 type: Tutorial
 role: Developer
 level: Beginner, Intermediate, Experienced
+feature: Use Cases
 thumbnail: KT-8115.jpg
 jira: KT-8115
 exl-id: 4188897e-f6e6-41ea-be6f-359a3ef0e040
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Acrobat Services] Användningsexempel för API
+# [!DNL Adobe Acrobat Services] API-användningsfall
 
 ![[!DNL Acrobat Services] Banderoll för API-användningsfall](../assets/usecaseshero.jpg)
 
-## Vad kan [!DNL Adobe Acrobat Services] API:er gör för mig?
+## Vad kan [!DNL Adobe Acrobat Services] Vad gör API:er för mig?
 
-Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med dessa praktiska användningsfall.
+Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med dessa praktiska användningsfall.
 
 ### [!DNL Acrobat Services] API:er
 
@@ -33,47 +34,47 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="automatelegalworkflows.md"><strong>Automatisera juridiska arbetsflöden</strong></a>
     </div>
-    <em>Lär dig automatisera juridiska arbetsflöden med villkorsstyrt innehåll</em>
+    <em>Lär dig automatisera juridiska arbetsflöden med villkorligt innehåll</em>
     <br>
   </td>
   <td>
       <a href="employeeonboarding.md">
-        <img alt="Modernisera anställdas introduktion" src="assets/employee_thumb.png" />
+        <img alt="Modernisera medarbetarnas introduktion" src="assets/employee_thumb.png" />
       </a>
       <div>
-      <a href="employeeonboarding.md"><strong>Modernisera anställdas introduktion</strong></a>
+      <a href="employeeonboarding.md"><strong>Modernisera medarbetarnas introduktion</strong></a>
       </div>
-      <em>Lär dig modernisera anställdas introduktion</em>
+      <em>Lär dig modernisera medarbetarnas introduktion</em>
       <br>
   </td>
   <td>
       <a href="acceleratesales.md">
-        <img alt="Snabbare försäljningsprocess" src="assets/accsales_thumb.png" />
+        <img alt="Påskynda din försäljningsprocess" src="assets/accsales_thumb.png" />
       </a>
       <div>
-      <a href="acceleratesales.md"><strong>Snabbare försäljningsprocess</strong></a>
+      <a href="acceleratesales.md"><strong>Påskynda din försäljningsprocess</strong></a>
       </div>
-      <em>Få snabbare försäljning genom att integrera dokumentupplevelser</em>
+      <em>Lär dig att öka försäljningen genom att integrera dokumentupplevelser</em>
       <br>
     </td>
     <td>
       <a href="sales.md">
-        <img alt="Hantera försäljningsförslag och kontrakt" src="assets/sales_thumb.png" />
+        <img alt="Hantera försäljningsförslag och avtal" src="assets/sales_thumb.png" />
       </a>
       <div>
-      <a href="sales.md"><strong>Hantera försäljningsförslag och kontrakt</strong></a>
+      <a href="sales.md"><strong>Hantera försäljningsförslag och avtal</strong></a>
       </div>
-      <em>Lär dig skapa ett effektivt arbetsflöde för att automatisera och förenkla offerter</em>
+      <em>Lär dig skapa ett effektivt arbetsflöde för att automatisera och förenkla försäljningsförslag</em>
       <br>
     </td>
 </tr>
 <tr>
   <td>
     <a href="nda.md">
-      <img alt="Skapa en sekretessavtal" src="assets/nda_thumb.png" />
+      <img alt="Skapa ett sekretessavtal" src="assets/nda_thumb.png" />
     </a>
     <div>
-    <a href="nda.md"><strong>Skapa en sekretessavtal</strong></a>
+    <a href="nda.md"><strong>Skapa ett sekretessavtal</strong></a>
     </div>
     <em>Lär dig skapa en dynamisk PDF för sekretessavtal för samarbete</em>
     <br>
@@ -90,12 +91,12 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
   </td>
   <td>
     <a href="offer.md">
-      <img alt="Hantera medarbetarnas offertbrev" src="assets/offer_thumb.png" />
+      <img alt="Hantera erbjudandebrev för medarbetare" src="assets/offer_thumb.png" />
     </a>
     <div>
-    <a href="offer.md"><strong>Hantera medarbetarnas offertbrev</strong></a>
+    <a href="offer.md"><strong>Hantera erbjudandebrev för medarbetare</strong></a>
     </div>
-    <em>Lär dig hur du genererar ett erbjudandebrev som kan levereras till en ny medarbetare för underskrift</em>
+    <em>Lär dig hur du genererar ett erbjudandebrev som kan levereras till en ny anställd för signering</em>
     <br>
   </td>
   <td>
@@ -117,7 +118,7 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="reviews.md"><strong>Granskningar och godkännanden</strong></a>
     </div>
-    <em>Lär dig skapa ett arbetsflöde för granskning och godkännande av dokument för teamsamarbete</em>
+    <em>Lär dig skapa ett arbetsflöde för dokumentgranskning och godkännande för samarbete i flera team</em>
     <br>
   </td>
   <td>
@@ -127,7 +128,7 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="reportcreation.md"><strong>Skapa och redigera rapporter</strong></a>
     </div>
-    <em>Lär dig hur du genererar kundrapporter för PDF på din webbplats</em>
+    <em>Lär dig hur du genererar kundrapporter på din webbplats för PDF</em>
     <br>
   </td>
   <td>
@@ -137,17 +138,17 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="jobposting.md"><strong>Jobbbokföring</strong></a>
     </div>
-    <em>Lär dig utveckla en smidig och enhetlig webbupplevelse för arbetssökande och arbetsgivare</em>
+    <em>Lär dig utveckla en smidig och konsekvent webbupplevelse för arbetssökande och arbetsgivare</em>
     <br>
   </td>
   <td>
     <a href="educationcollab.md">
-      <img alt="Samarbete mellan elever och lärare" src="assets/edu_thumb.png" />
+      <img alt="Samverkan mellan elever och lärare" src="assets/edu_thumb.png" />
     </a>
     <div>
-    <a href="educationcollab.md"><strong>Samarbete mellan studenter och lärare</strong></a>
+    <a href="educationcollab.md"><strong>Samverkan mellan studerande och lärare</strong></a>
     </div>
-    <em>Lär dig skapa en onlineutbildningsplattform som gör det möjligt för lärare och elever att enkelt dela studiematerial i PDF</em>
+    <em>Lär dig skapa en onlineutbildningsplattform som gör det möjligt för lärare och elever att enkelt dela resurser i PDF</em>
     <br>
   </td>
 </tr>
@@ -159,17 +160,17 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="AgreementWorkflowsNodejs.md"><strong>Avtalsarbetsflöden i Node.js</strong></a>
     </div>
-    <em>[!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i webbprogrammen</em>
+    <em>[!DNL Adobe Acrobat Services] Med API:er kan du enkelt införliva PDF-funktioner i dina webbprogram</em>
     <br>
   </td>
   <td>
     <a href="HRAgreementWorkflowsJava.md">
-      <img alt="Arbetsflöden för HR-dokument i Java" src="assets/HRWJ_thumb.png" />
+      <img alt="HR-dokumentarbetsflöden i Java" src="assets/HRWJ_thumb.png" />
     </a>
     <div>
-    <a href="HRAgreementWorkflowsJava.md"><strong>Arbetsflöden för HR-dokument i Java</strong></a>
+    <a href="HRAgreementWorkflowsJava.md"><strong>HR-dokumentarbetsflöden i Java</strong></a>
     </div>
-    <em>[!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i webbapplikationerna för HR</em>
+    <em>[!DNL Adobe Acrobat Services] Med API:er kan du enkelt införliva PDF-funktioner i dina HR-webbprogram</em>
     <br>
   </td>
   <td>
@@ -179,11 +180,11 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="FinanceWorkflowsJava.md"><strong>Hantera arbetsflöden för finansiella dokument i Java</strong></a>
     </div>
-    <em>[!DNL Adobe Acrobat Services] innehåller alla verktyg, tjänster och funktioner som behövs för att bearbeta och extrahera data från finansdokument från PDF</em>
+    <em>[!DNL Adobe Acrobat Services] tillhandahåller alla verktyg, tjänster och funktioner som behövs för att bearbeta och extrahera data från finansdokument från PDF</em>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/GrayBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/GrayBanner_Placeholder.png" />
     <div>
     <br>
   </td>
@@ -201,21 +202,21 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
     <div>
     <a href="invoices.md"><strong>Hantera fakturor</strong></a>
     </div>
-    <em>Lär dig hur du automatiskt genererar, lösenordsskyddar och levererar kundfakturor</em>
+    <em>Lär dig skapa, lösenordsskydda och leverera kundfakturor automatiskt</em>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
@@ -228,26 +229,26 @@ Se hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med de
 <tr>
    <td>
     <a href="ddppdfembedapi.md">
-      <img alt="Digital dokumentpublicering" src="assets/ddp_thumb.png" />
+      <img alt="Publicering av digitala dokument" src="assets/ddp_thumb.png" />
     </a>
     <div>
-    <a href="ddppdfembedapi.md"><strong>Digital dokumentpublicering</strong></a>
+    <a href="ddppdfembedapi.md"><strong>Publicering av digitala dokument</strong></a>
     </div>
     <em>Lär dig hur du visar inbäddade PDF-dokument på webbsidor med Adobe PDF Embed API</em>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>

@@ -1,12 +1,13 @@
 ---
 title: Skapa en inbäddningslänk
-description: Lär dig hur du skapar en inbäddningslänk för OAuth, som är den metod som programmet får behörigheter för användare
+description: Lär dig hur du skapar en inbäddningslänk för OAuth, vilket är metoden som programmet får behörigheter för användare
 type: Tutorial
 role: Developer
 level: Beginner
+feature: Acrobat Sign API
 thumbnail: KT-11073.jpg
 exl-id: 6fc50cc7-bb65-4d4b-9e4f-3b4a3ab8adab
-source-git-commit: 0c434db1665d4cb6ce6aff6f329e300f22129df9
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

@@ -1,22 +1,23 @@
 ---
 title: Adobe PDF Services API Tutorials
-description: Översikt över API-självstudiekurser för Adobe PDF-tjänster
+description: Översiktssida för självstudiekurser om Adobe PDF Services API
 type: Tutorial
 role: Developer
 level: Beginner, Intermediate, Experienced
+feature: PDF Services API
 thumbnail: KT-8116.jpg
 jira: KT-8116
 exl-id: 81410fe4-7a2c-43a9-b497-b7423f9821ec
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
-# API-självstudiekurser för Adobe PDF-tjänster
+# Självstudiekurser för Adobe PDF Services API
 
-![API-banderoll för PDF Services](../assets/pdfserviceshero.jpg)
+![API-banderoll för PDF-tjänster](../assets/pdfserviceshero.jpg)
 
 <table style="table-layout:fixed">
 <tr>
@@ -37,7 +38,7 @@ ht-degree: 0%
     <div>
    <a href="getting-credentials-power-automate.md"><strong>Hämtar autentiseringsuppgifter för [!DNL Microsoft Power Automate]</strong></a>
     </div>
-    <em>Lär dig hur du hämtar inloggningsuppgifter för att börja använda eller testa [!DNL Adobe PDF Services]</em>
+    <em>Lär dig få inloggningsuppgifter för att börja använda eller testa [!DNL Adobe PDF Services]</em>
     <br>
   </td>
   <td>
@@ -47,7 +48,7 @@ ht-degree: 0%
     <div>
    <a href="create-workflow-power-automate.md"><strong>Skapa ditt första arbetsflöde i [!DNL Microsoft Power Automate]</strong></a>
     </div>
-    <em>Lär dig hur du använder [!DNL Adobe PDF Services] koppling in [!DNL Microsoft Power Automate]</em>
+    <em>Läs om hur du använder [!DNL Adobe PDF Services] anslutaringång [!DNL Microsoft Power Automate]</em>
     <br>
   </td>
   <td>
@@ -55,9 +56,9 @@ ht-degree: 0%
       <img alt="Skapa en PDF från HTML eller MS Office på några minuter med PDF Services API och Node.js" src="assets/PDFServices_GettingStartedNode_thumb.jpg" />
    </a>
     <div>
-   <a href="createpdffromhtml.md"><strong>Skapa en PDF från HTML eller [!DNL MS Office] på några minuter med PDF Services API och Node.js</strong></a>
+   <a href="createpdffromhtml.md"><strong>Skapa en PDF från HTML eller [!DNL MS Office] om några minuter med PDF Services API och Node.js</strong></a>
     </div>
-    <em>[!DNL Adobe PDF Services API] som ger utvecklare möjlighet att fritt välja mellan flera kraftfulla PDF-manipuleringstjänster för att tillgodose behoven i komplexa affärsflöden</em>
+    <em>[!DNL Adobe PDF Services API] som ger utvecklare fritt omfång att välja mellan flera kraftfulla PDF-manipuleringstjänster för att uppfylla behoven av komplicerade affärsarbetsflöden</em>
     <br>
   </td>
 </tr>
@@ -67,9 +68,9 @@ ht-degree: 0%
       <img alt="Använda PDF Services API för att exportera PDF till Word, PowerPoint med mera" src="assets/PDFServices_ExportPDF_thumb.jpg" />
    </a>
     <div>
-   <a href="exportpdf.md"><strong>Utnyttja [!DNL PDF Services API] att exportera PDF till [!DNL Word], [!DNL PowerPoint]med mera</strong></a>
+   <a href="exportpdf.md"><strong>Anpassning [!DNL PDF Services API] för att exportera PDF till [!DNL Word], [!DNL PowerPoint], och mer</strong></a>
     </div>
-    <em>Så här kör du [!DNL PDF Services API] exportåtgärd med exempelfiler för språken Node.js, Java och .Net</em>
+    <em>Lär dig hur du kör [!DNL PDF Services API] exportåtgärd med hjälp av exempelfiler för språk av typen Node.js, Java och .Net</em>
     <br>
   </td>
    <td>
@@ -79,17 +80,17 @@ ht-degree: 0%
     <div>
    <a href="gettingstartedjava.md"><strong>Komma igång med Adobe PDF Services API och Java</strong></a>
     </div>
-    <em>Utvecklare kan komma igång på bara några minuter med de färdiga exempelfilerna för att komma åt alla tillgängliga webbtjänster</em>
+    <em>Utvecklare kan komma igång på bara några minuter med att köra exempelfiler som finns för att komma åt alla tillgängliga webbtjänster</em>
     <br>
   </td>
    <td>
    <a href="ocr.md">
-      <img alt="Använda Adobe PDF Services API för OCR PDF-filer" src="assets/PDFServices_OCR_Thumb.jpg" />
+      <img alt="Använda Adobe PDF Services API för att OCR PDF-filer" src="assets/PDFServices_OCR_Thumb.jpg" />
    </a>
     <div>
-   <a href="ocr.md"><strong>Använda [!DNL Adobe PDF Services API] till OCR PDF-filer</strong></a>
+   <a href="ocr.md"><strong>Använder [!DNL Adobe PDF Services API] till OCR PDF-filer</strong></a>
     </div>
-    <em>Med OCR (Optical Character Recognition) kan du låsa upp skannad PDF för att extrahera text och skapa sökbara filer</em>
+    <em>Med OCR (Optical Character Recognition) kan du låsa upp skannade PDF för att extrahera text och skapa sökbara filer</em>
     <br>
   </td>
   <td>
@@ -99,7 +100,7 @@ ht-degree: 0%
     <div>
    <a href="gettingstartednet.md"><strong>Komma igång med [!DNL Adobe PDF Services API] och .Net</strong></a>
     </div>
-    <em>[!DNL Adobe PDF Services API] som ger utvecklare möjlighet att fritt välja mellan flera kraftfulla PDF-manipuleringstjänster för att tillgodose behoven i komplexa affärsflöden</em>
+    <em>[!DNL Adobe PDF Services API] som ger utvecklare fritt omfång att välja mellan flera kraftfulla PDF-manipuleringstjänster för att uppfylla behoven av komplicerade affärsarbetsflöden</em>
     <br>
   </td>
 </tr>

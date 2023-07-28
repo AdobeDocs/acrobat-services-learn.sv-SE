@@ -4,10 +4,11 @@ description: Lär dig hur du automatiskt genererar och skyddar juridiska dokumen
 role: Developer
 level: Intermediate
 type: Tutorial
+feature: Use Cases
 thumbnail: KT-8097.jpg
 jira: KT-8097
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 1%
@@ -16,21 +17,21 @@ ht-degree: 1%
 
 # Hantera juridiska avtal
 
-![BANDEROLL MED ANVÄNDNINGSFALL](assets/UseCaseLegalHero.jpg)
+![Banderoll för användningsfall](assets/UseCaseLegalHero.jpg)
 
-Digitaliseringen medför utmaningar. Idag har de flesta organisationer många typer av [juridiska kontrakt](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html) att de måste skapa, redigera, godkänna och ha signerat av olika parter. Dessa juridiska avtal kräver ofta unika anpassningar och varumärken. Organisationer kan också behöva spara dem i ett skyddat format när de har signerats för att skydda dem. För att göra allt detta behöver de en robust lösning för dokumentgenerering och -hantering.
+Digitaliseringen ger upphov till utmaningar. Idag har de flesta organisationer många typer av [juridiska avtal](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html) måste skapa, redigera, godkänna och ha signerats av olika parter. Dessa juridiska avtal kräver ofta unik anpassning och varumärkning. Organisationer kan också behöva spara dem i ett skyddat format när de har signerats för att skydda dem. För att kunna göra allt detta behöver de en robust lösning för dokumentgenerering och -hantering.
 
-Många lösningar erbjuder viss dokumentgenerering, men kan inte anpassa indata och villkorsstyrd logik, t.ex. satser som bara gäller specifika scenarier. Att manuellt uppdatera ett företags juridiska mallar är en utmaning och felbenägen uppgift eftersom dessa dokument blir allt mer omfattande. Behovet av att automatisera dessa processer är stort.
+Många lösningar erbjuder viss dokumentgenerering, men kan inte anpassa dataindata och villkorlig logik, t.ex. satser som bara gäller specifika scenarier. Att manuellt uppdatera ett företags juridiska mallar är utmanande och felbenäget eftersom dessa dokument blir mer omfattande. Behovet av att automatisera dessa processer är stort.
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudiekursen kan du utforska funktionerna i [[!DNL Adobe Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) i genereringen av anpassade inmatningsfält i dokument. Du kan även utforska hur du enkelt konverterar dessa genererade dokument till ett skyddat portabelt dokumentformat (PDF) för att förhindra datamanipulation.
+I den här praktiska självstudien utforskar du funktionerna i [[!DNL Adobe Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) vid generering av anpassade inmatningsfält i dokument. Utforska också hur du enkelt konverterar de genererade dokumenten till ett skyddat portabelt dokumentformat (PDF) för att förhindra datamanipulation.
 
-Den här självstudiekursen innehåller lite programmering när du utforskar konvertering av kontrakt till PDF. För att följa med effektivt [Microsoft Word](https://www.microsoft.com/en-us/download/office.aspx) och [Node.js](https://nodejs.org/) bör vara installerat på datorn. En grundläggande förståelse av Node.js och [ES6-syntax](https://www.w3schools.com/js/js_es6.asp) rekommenderas också.
+I den här självstudiekursen får du lära dig lite programmering när du utforskar hur du konverterar avtal till PDF. För att följa efter effektivt måste [Microsoft Word](https://www.microsoft.com/en-us/download/office.aspx) och [Node.js](https://nodejs.org/) bör vara installerat på datorn. En grundläggande förståelse för Node.js och [ES6-syntax](https://www.w3schools.com/js/js_es6.asp) Det rekommenderas också.
 
 ## Relevanta API:er och resurser
 
-* [Adobe-API för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* [Adobe-dokumentgenererings-API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
 * [PDF Embed API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
@@ -40,19 +41,19 @@ Den här självstudiekursen innehåller lite programmering när du utforskar kon
 
 ## Skapa ett malldokument
 
-Du kan skapa juridiska dokument med Microsoft Word-programmet eller genom att hämta Adobe [exempel på Word-mallar](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade). Ändå är det inte lätt att anpassa indata och signera dessa dokument digitalt utan att använda vissa hjälpverktyg som [Adobe-tillägg för dokumentgenereringstaggar](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin) för Microsoft Word.
+Du kan skapa juridiska dokument med Microsoft Word-programmet eller genom att hämta Adobe [exempel på Word-mallar](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade). Det är fortfarande inte lätt att anpassa indata och signera dessa dokument digitalt utan att använda vissa hjälpverktyg som [Tillägget Adobe Document Generation Tagger](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin) för Microsoft Word.
 
-Document Generation Tagger är ett Microsoft Word-tillägg som har gjorts för att göra dokumentanpassningen sömlös med hjälp av taggar. Det gör det möjligt att skapa dynamiska fält i dokumentmallar som fylls dynamiskt med JSON-data.
+Taggen för dokumentgenerering är ett Microsoft Word-tillägg, som är gjort för att göra dokumentanpassning sömlöst med hjälp av taggar. Det gör det möjligt att skapa dynamiska fält i dokumentmallar som fyller dynamiskt med JSON-data.
 
-![Skärmdump av hur man lägger till Adobe Document Generation Tagger i Word](assets/legal_1.png)
+![Skärmbild av hur man lägger till taggen Adobe Document Generation i Word](assets/legal_1.png)
 
-För att illustrera användningen av dokumentgenereringstaggen installerar du det här tillägget och skapar sedan en JSON-datamodell, som används i taggning av ett enkelt juridiskt kontraktsdokument.
+För att illustrera användningen av dokumentgenereringstagg installerar du det här tillägget och skapar sedan en JSON-datamodell, som används i taggning av ett enkelt juridiskt avtalsdokument.
 
-Installera dokumentgenereringstaggen i Word genom att klicka på **Infoga** och klicka sedan på **Mina tillägg**. På menyn Office-tillägg söker du efter &quot;Adobe Document Generation&quot; och klickar sedan på **Lägg till** och följ processen. Dessa steg visas i skärmbilden ovan.
+Installera dokumentgenereringstaggen i Word genom att klicka på **Infoga** och sedan i gruppen Tillägg klickar du på **Mina tillägg**. På Office-tilläggsmenyn söker du efter &quot;Adobe-dokumentgenerering&quot; och klickar sedan på **Lägg till** och följ processen. Du kan se dessa steg i skärmdumpen ovan.
 
-När du har installerat tillägget Document Generation Tagger for Word skapar du en enkel JSON-datamodell för att tagga det giltiga dokumentet.
+När du har installerat tillägget Dokumentgenereringstagg för Word skapar du en enkel JSON-datamodell för att tagga det juridiska dokumentet.
 
-Om du vill fortsätta öppnar du valfri redigerare, skapar en fil som heter Agreement.json och klistrar in kodfragmentet nedan i JSON-filen som du skapade.
+Öppna valfri redigerare och skapa en fil som heter Agreement.json. Klistra sedan in kodfragmentet nedan i JSON-filen som du skapade.
 
 ```
 {
@@ -70,35 +71,35 @@ Om du vill fortsätta öppnar du valfri redigerare, skapar en fil som heter Agre
 }
 ```
 
-När du har sparat JSON-dokumentet importerar du det till tillägget Dokumentgenereringstagg. Importera dokumentet genom att klicka på **Dokumentgenerering** i Adobe längst upp till höger på Word-skärmen, vilket visas på skärmbilden nedan.
+När du har sparat detta JSON-dokument importerar du det till taggningstillägget för dokumentgenerering. Importera dokumentet genom att klicka på **Dokumentgenerering** i Adobe överst till höger på Word-skärmen, som visas på skärmbilden nedan.
 
-![Skärmdump av tillägget Adobe Document Generation Tagger i Word](assets/legal_2.png)
+![Skärmbild av taggningstillägget Adobe Document Generation i Word](assets/legal_2.png)
 
-En video visas som du kan använda som vägledning. Du kan titta på det eller gå direkt till taggningsfältet genom att klicka på **Kom igång**. Efter klickning **Kom igång** visas ett överföringsformulär. Klicka **Överför JSON-fil** och välj den JSON-fil som du just skapade. När importen är klar klickar du på **Generera tagg** för att generera taggarna.
+Detta visar en video som hjälper dig. Du kan titta på det eller gå direkt till taggningsfältet genom att klicka på **Kom igång**. Efter att du klickat **Kom igång** visas ett överföringsformulär. Klicka **Överför JSON-fil** och välj JSON-filen du just skapade. När importen är klar klickar du på **Generera tagg** för att generera taggarna.
 
-När du har importerat och genererat märkord kan du lägga till dem i dokumentet. Om du vill lägga till dem placerar du markören på exakt den plats där du vill att taggen ska visas. Välj sedan en tagg från dokumentgenererings-API:et och klicka på **Infoga text**. Skärmbilden nedan beskriver den här proceduren.
+När du har importerat och genererat märkord kan du lägga till dem i dokumentet. Om du vill lägga till dem placerar du markören på exakt den plats där du vill att taggen ska visas. Välj sedan en tagg från dokumentgenererings-API:t och klicka på **Infoga text**. I skärmbilden nedan beskrivs den här proceduren.
 
-![Skärmdump av att lägga till taggar i dokument](assets/legal_3.png)
+![Skärmbild av hur du lägger till taggar i dokument](assets/legal_3.png)
 
-Förutom de grundläggande taggar som skapas med den importerade JSON-datamodellen kan du även använda avancerade funktioner för fler alternativ, till exempel bilder, villkorlig logik, beräkningar, upprepade element och villkorliga fraser. Du kommer åt dessa funktioner genom att klicka på **Avancerat** på panelen Dokumentgenereringstagg. Du kan se detta i skärmbilden nedan.
+Förutom de grundläggande taggar som skapas med den importerade JSON-datamodellen kan du även använda avancerade funktioner för fler alternativ, som bilder, villkorlig logik, beräkningar, upprepade element och villkorliga fraser. Du kommer åt dessa funktioner genom att klicka på **Avancerat** i panelen Dokumentgenereringstagg. Du kan se detta i skärmbilden nedan.
 
-![Skärmdump av fliken Advanced i taggen Adobe Document Generation](assets/legal_4.png)
+![Skärmbild av fliken Avancerat för taggen för dokumentgenerering i Adobe](assets/legal_4.png)
 
-Dessa avancerade funktioner skiljer sig inte från de grundläggande taggarna. Om du vill inkludera villkorlig logik markerar du den del av dokumentet som ska fyllas i. Konfigurera sedan den regel som avgör vilken tagg som ska infogas.
+Dessa avancerade funktioner skiljer sig inte från de grundläggande taggarna. Om du vill använda villkorlig logik markerar du den del av dokumentet som du vill fylla i. Konfigurera sedan regeln som bestämmer hur taggen ska infogas.
 
-För att ytterligare illustrera, till exempel i avtalet, finns det ett avsnitt som du bara vill inkludera villkorligt. I fältet Välj innehållstyp väljer du **avsnitt.** I fältet Välj poster väljer du det alternativ som avgör om det villkorliga avsnittet ska visas. Välj önskad villkorsoperator och ange värdet som du testar för i fältet Värde . Klicka sedan på **Infoga villkor.** Skärmbilden nedan visar den här processen.
+För att ytterligare illustrera, säg i avtalet, det finns ett avsnitt som du vill inkludera, bara villkorligt. I fältet Välj innehållstyp väljer du **Avsnitt.** I fältet Välj poster väljer du det alternativ som avgör om det villkorliga avsnittet ska visas. Välj önskad villkorsoperator och ange värdet som du vill testa för i fältet Värde. Klicka sedan på **Infoga villkor.** Skärmbilden nedan visar denna process.
 
-![Skärmdump av att infoga villkorsstyrt innehåll](assets/legal_5.png)
+![Skärmbild av infogning av villkorligt innehåll](assets/legal_5.png)
 
-För beräkningar väljer du antingen Aritmetisk eller Aggregering och sedan den relevanta första posten, operatorn och den andra posten som ska användas baserat på de malltaggar som är tillgängliga. Klicka sedan på **Infoga beräkning**.
+För beräkningar väljer du antingen Aritmetisk eller Aggregering och sedan inkluderar du den relevanta första posten, operatorn och den andra posten som ska användas baserat på de malltaggar som är tillgängliga. Klicka sedan på **Infoga beräkning**.
 
-Juridiska avtal kräver dessutom ofta underskrifter av de inblandade parterna. Du kan infoga en e-signatur med hjälp av Adobe Sign-texttaggar som finns precis under avsnittet &quot;Numeriska beräkningar&quot;. Om du vill inkludera e-signaturen måste du ange antalet mottagare och välja **Signerare** och fälttypen i listrutorna. När du är klar klickar du på **Infoga Adobe Sign-texttagg** för att slutföra processen.
+Juridiska avtal kräver dessutom ofta underskrifter av de inblandade parterna. Du kan infoga en e-signatur med Adobe Sign-texttaggar som finns direkt under avsnittet &quot;Numeriska beräkningar&quot;. Om du vill inkludera e-signaturen måste du ange antalet mottagare och välja **Undertecknare** och fälttypen i listrutorna. När du är klar klickar du på **Infoga Adobe Sign-texttagg** för att slutföra processen.
 
-Spara juridiska dokument i skyddat format för att säkerställa dataintegriteten. Med [!DNL Acrobat Services] API:er kan du snabbt omvandla dokument till PDF-format. Du kan skapa ett enkelt Express Node.js-program, integrera Document Generation API i det och använda det här programmet för att konvertera taggade dokument från Word till PDF.
+Spara juridiska dokument i ett skyddat format för att säkerställa dataintegriteten. med [!DNL Acrobat Services] Med API:er kan du snabbt omvandla dokument till PDF-format. Du kan skapa ett enkelt Express Node.js -program, integrera dokumentgenererings-API i det och använda det här enkla programmet för att konvertera det taggade dokumentet från Word- till PDF-format.
 
 ## Projektinställningar
 
-Först konfigurerar du mappstrukturen för programmet Node.js. I det här exemplet anropar du det här enkla programmet AdobeLegalContractAPI. Du kan hämta källkoden [här](https://github.com/agavitalis/adobe_legal_contracts.git).
+Först konfigurerar du mappstrukturen för programmet Node.js. I det här exemplet anropar du det här enkla programmet, AdobeLegalContractAPI. Du kan hämta källkoden [här](https://github.com/agavitalis/adobe_legal_contracts.git).
 
 ### Katalogstruktur
 
@@ -123,17 +124,17 @@ AdobeLegalContractAPI
 -----index.js
 ```
 
-Ovanför finns en enkel Node.js-programstruktur för ditt program. Fortsätt nu med installationen av de nödvändiga npm-paketen.
+Ovanför finns en enkel Node.js programstruktur för ditt program. Fortsätt nu med installationen av de nödvändiga npm-paketen.
 
 ### Paketinstallation
 
-Installera de nödvändiga paketen med kommandot npm install enligt kodfragmentet nedan:
+Installera de nödvändiga paketen med hjälp av kommandot npm install enligt kodfragmentet nedan:
 
 ```
 npm install express body-parser morgan multer hbs path config mongoose
 ```
 
-När du har installerat paketen ska du se till att innehållet i filen package.json liknar kodfragmentet nedan:
+När du har installerat paketen ser du till att innehållet i filen package.json är som kodfragmentet nedan:
 
 ```
 ###package.json
@@ -172,41 +173,41 @@ När du har installerat paketen ska du se till att innehållet i filen package.j
 }
 ```
 
-I dessa kodfragment installerade du programberoenden, inklusive mallmotorn Handlebars för vyn.
+I dessa kodfragment installerade du programberoendena, inklusive mallmotorn Handlebars för vyn.
 
-Fokus i den här självstudiekursen ligger främst på att använda [[!DNL Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/) för att konvertera dokument till PDF. Därför finns det inte en steg-för-steg-process för hur man skapar denna Node.js applikation. Du kan dock hämta den fullständiga fungerande Node.js -programkoden på [GitHub](https://github.com/agavitalis/adobe_legal_contracts.git).
+Det primära fokus i den här självstudiekursen är på att använda [[!DNL Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/) för att konvertera dokument till PDF. Därför finns det inte en steg-för-steg-process för hur du skapar denna Node.js program. Du kan dock hämta den fullständiga fungerande Node.js -programkoden på [GitHub](https://github.com/agavitalis/adobe_legal_contracts.git).
 
 ## Integrera [!DNL Adobe Acrobat Services] API:er i ett Node.js-program
 
-[!DNL Adobe Acrobat Services] API:er är molnbaserade, tillförlitliga tjänster som är utformade för smidig hantering av dokument. Det erbjuder tre API:er:
+[!DNL Adobe Acrobat Services] API:er är molnbaserade tillförlitliga tjänster som är utformade för smidig manipulering av dokument. Det erbjuder tre API:er:
 
 * Adobe PDF Services API
 
 * Adobe PDF Embed API
 
-* Adobe-API för dokumentgenerering
+* Adobe-dokumentgenererings-API
 
-Du behöver inloggningsuppgifter för att använda [!DNL Acrobat Services] API:er (skiljer sig från dina inloggningsuppgifter för PDF Embed API). Om du inte har giltiga inloggningsuppgifter [registrera](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK) och slutför arbetsflödet enligt bilden i skärmbilden nedan. Njut av en [kostnadsfri provperiod på sex månader och sedan betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html), endast 0,05 USD per dokumenttransaktion.
+Du behöver inloggningsuppgifter för att använda [!DNL Acrobat Services] API:er (som skiljer sig från dina inloggningsuppgifter för PDF Embed API). Om du inte har giltiga uppgifter [registrera](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK) och slutför arbetsflödet enligt bilden på skärmbilden nedan. Njut av en [Testa kostnadsfritt i sex månader och betala allteftersom](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html), bara $0,05 per dokumenttransaktion.
 
-![Skärmdump av att skapa nya inloggningsuppgifter](assets/legal_6.png)
+![Skärmbild av att skapa nya autentiseringsuppgifter](assets/legal_6.png)
 
-När registreringen är klar hämtas ett kodexempel automatiskt till datorn så att du kan komma igång. Du kan extrahera det här kodexemplet och följa med. Glöm inte att kopiera filerna pdftools-api-credentials.json och private.key från det extraherade kodexemplet till Node.js-projektets rotkatalog. Autentiseringsuppgifterna krävs innan du kan komma åt [!DNL Acrobat Services] API-slutpunkter. Du kan också hämta SDK-exempel med dina personliga inloggningsuppgifter så att du inte behöver uppdatera nyckeln i exempelkoden.
+När registreringen är klar hämtas ett kodexempel automatiskt till din dator så att du kan komma igång. Du kan extrahera kodexemplet och hänga med. Glöm inte att kopiera filerna pdftools-api-credentials.json och private.key från det extraherade kodexemplet till Node.js-projektets rotkatalog. Autentiseringsuppgifterna krävs innan du får åtkomst [!DNL Acrobat Services] API-slutpunkter. Du kan även hämta SDK-exempel med dina personliga inloggningsuppgifter, så att du inte behöver uppdatera nyckeln i exempelkoden.
 
-Installera nu Adobe PDF Services Node SDK genom att köra ```npm install \--save @adobe/documentservices-pdftools-node-sdk``` -kommandot med terminalen i programmets rotkatalog. När den har installerats kan du använda [!DNL Acrobat Services] API:er för att hantera dokument i programmet.
+Installera nu Adobe PDF Services-nodens SDK genom att köra ```npm install \--save @adobe/documentservices-pdftools-node-sdk``` -kommandot med hjälp av terminalen i programmets rotkatalog. När det är klart installerat kan du använda [!DNL Acrobat Services] API:er för att ändra dokument i ditt program.
 
 ## Skapa ett PDF-dokument
 
-[!DNL Acrobat Services] API:er stöder skapande av PDF från Microsoft Office-dokument (Word, Excel och PowerPoint) och andra [filformat som stöds](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf) som .txt, .rtf, .bmp, .jpeg, gif, .tiff och .png. Du kan enkelt konvertera juridiska avtal från andra filformat till PDF med Acrobat Service API:er.
+[!DNL Acrobat Services] API:er stöder skapande av PDF från Microsoft Office-dokument (Word, Excel och PowerPoint) och andra [filformat som stöds](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf) som .txt, .rtf, .bmp, .jpeg, gif, .tiff och .png. Du kan enkelt konvertera juridiska avtal från något annat filformat till PDF med hjälp av Acrobat Service API:er.
 
-Adobe Document Generation API möjliggör konvertering till en Word-fil eller PDF. Du kan t.ex. använda en Word-mall för att skapa ett kontrakt, inklusive rödmarkering för att markera redigerad text. Konvertera det sedan till en PDF och använd PDF Services API för att skydda dokumentet med ett lösenord, skicka det för signering med mera.
+Adobe-dokumentgenererings-API:t aktiverar konvertering till en Word-fil eller PDF. Du kan t.ex. använda en Word-mall för att generera ett kontrakt, som inbegriper omjustering för att markera redigerad text. Konvertera det sedan till en PDF och använd PDF Services API för att skydda dokumentet med ett lösenord, skicka det för signering och mer.
 
-Det finns ett formulär för att överföra ett dokument för omvandling med hjälp av PDF-dokument från de tillgängliga filformat som stöds [!DNL Acrobat Services].
+Det finns ett formulär för att överföra ett dokument för omvandling med hjälp av PDF-dokument från de tillgängliga filformaten som stöds [!DNL Acrobat Services].
 
-Det utformade överföringsformuläret visas i skärmbilden nedan och du kan komma åt HTML- och CSS-filerna på [GitHub](https://github.com/agavitalis/adobe_legal_contracts.git).
+Uppladdningsformuläret visas i skärmbilden nedan och du kommer åt HTML- och CSS-filerna på [GitHub](https://github.com/agavitalis/adobe_legal_contracts.git).
 
-![Skärmdump av uppladdning av formulär](assets/legal_7.png)
+![Skärmbild av formuläröverföring](assets/legal_7.png)
 
-Nu lägger du till följande kodfragment i filen /createPDFController.js. Med den här koden hämtas det överförda dokumentet och omvandlas till PDF. [!DNL Acrobat Services] sparar den överförda originalfilen och den omvandlade filen i olika mappar.
+Lägg nu till följande kodfragment till filen Controller /createPDFController.js (styrenheter). Med den här koden hämtas det överförda dokumentet och omvandlas till PDF. [!DNL Acrobat Services] sparar den ursprungliga överförda filen och den transformerade filen i olika mappar.
 
 ```
 ###controllers/createPDFController.js
@@ -275,17 +276,17 @@ console.log('Exception encountered while executing operation', err);
 module.exports = { createPDF, createPDFPost };
 ```
 
-Ovanstående kodfragment krävde dokumentmodellen och [!DNL Acrobat Services] Node SDK som du tidigare installerade. Det finns två funktioner:
+Ovanstående kodfragment krävde dokumentmodellen och [!DNL Acrobat Services] Nod-SDK som du tidigare installerade. Det finns två funktioner:
 
-* createPDF visar överföringsdokumentformuläret.
+* createPDF visar formuläret för uppladdning av dokument.
 
-* createPDFPost omvandlar det överförda dokumentet till ett PDF.
+* createPDFPost omvandlar det uppladdade dokumentet till en PDF.
 
-Funktionerna sparar de omformade PDF-dokumenten i katalogen views/output, där du kan hämta dem till datorn.
+De omvandlade PDF-dokumenten sparas i visnings- respektive utdatakatalogen där du kan hämta dem till din dator.
 
-Du kan också förhandsvisa den omformade PDF-filen med det kostnadsfria inbäddade API:t PDF. Med hjälp av PDF Embed API kan du skapa Adobe-autentiseringsuppgifter [här](https://www.adobe.com/go/dcsdks_credentials) (som skiljer sig från [!DNL Acrobat Services] uppgifter) och registrera tillåtna domäner för åtkomst till API:et. Följ proceduren och generera API-uppgifter för PDF Embed för programmet. Du kan också kolla in demonstrationen [här](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf), från vilken du enkelt kan generera koder för att komma igång snabbt.
+Du kan också förhandsgranska den omformade PDF-filen med det kostnadsfria PDF Embed API. Med PDF Embed API kan du generera inloggningsuppgifter för Adobe [här](https://www.adobe.com/go/dcsdks_credentials) (skiljer sig från din [!DNL Acrobat Services] uppgifter) och registrera tillåtna domäner för åtkomst till API:et. Följ proceduren och generera API-inloggningsuppgifter för PDF Embed för ditt program. Du kan också kolla in demonstrationen [här](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf), som du enkelt kan generera koder från för att komma igång snabbt.
 
-Tillbaka till programmet, skapa list.hbs- och preview.hbs-filer i visningsmappen i ditt program och klistra in kodfragmentet nedan i list.hbs- respektive preview.hbs-filerna.
+Tillbaka till programmet, skapa list.hbs- och preview.hbs-filer i visningsmappen i ditt program och klistra in kodfragmentet nedan i list.hbs- respektive preview.hbs-filer.
 
 ```
 ###views/list.hbs
@@ -382,7 +383,7 @@ metaData: { fileName: pdfDocumentName }
 </html>
 ```
 
-Du kan också skapa filen controller/previewController.js och klistra in kodfragmenten nedan i den.
+Skapa även en fil från controller/previewController.js och klistra in kodfragmenten nedan i den.
 
 ```
 const Document = require('../models/document');
@@ -414,16 +415,16 @@ res.download(document.url);
 module.exports = {listFiles, previewPDF, downloadPDF };
 ```
 
-I kontrollfilen ovan finns det tre funktioner, listFiles, previewPDF och downloadPDF. Funktionen listFiles listar alla PDF-filer som hittills har genererats med [!DNL Acrobat Services] API:er. Med funktionen previewPDF kan du förhandsvisa PDF-filer med hjälp av PDF Embed API, medan funktionen downloadPDF låter dig ladda ned den genererade PDF-filen till datorn. I skärmbilden nedan visas ett exempel på förhandsvisningen i PDF med API:t för inbäddning i PDF.
+I kontrollenhetsfilen ovan finns det tre funktioner, listFiles, previewPDF och downloadPDF. Funktionen listFiles listar alla PDF-filer som hittills har genererats med [!DNL Acrobat Services] API:er Med funktionen previewPDF kan du förhandsgranska PDF-filer med PDF Embed API, medan funktionen downloadPDF låter dig ladda ner den genererade PDF-filen till datorn. I skärmbilden nedan visas ett exempel på förhandsvisningen i PDF med PDF Embed API.
 
-![Skärmdump av PDF preview](assets/legal_8.png)
+![Skärmbild av förhandsgranskning av PDF](assets/legal_8.png)
 
 ## Sammanfattning
 
-I den här praktiska självstudiekursen taggar du ett dokument med tillägget Microsoft Word för dokumentgenereringstaggar. Integrerat [!DNL Acrobat Services] API:er till ett Node.js-program och konverterade ett taggat dokument till ett nedladdningsbart PDF-format, även om du också kunde ha skapat det juridiska avtalet direkt till PDF. Slutligen använde du Adobe PDF Embed API för att förhandsgranska det genererade PDF för verifiering och signering.
+I den här praktiska självstudiekursen taggade du ett dokument med tillägget Microsoft Word för dokumentgenereringstaggning. Sedan integrerat [!DNL Acrobat Services] API:er till ett Node.js-program och konverterade ett taggat dokument till ett hämtbart PDF-format, även om du också kunde ha skapat det juridiska avtalet direkt till PDF. Slutligen använde du Adobe PDF Embed API för att förhandsgranska den genererade PDF för verifiering och signering.
 
-Det färdiga programmet gör det mycket enklare att tagga [mallar för juridiskt bindande kontrakt](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html) med dynamiska fält konverterar du dem till PDF, förhandsgranskar dem och signerar dem med [!DNL Acrobat Services] API:er. Istället för att lägga tid på att skapa ett unikt kontrakt kan teamet automatiskt skicka rätt kontrakt till varje kund och sedan lägga mer tid på att utveckla verksamheten.
+Det färdiga programmet gör det mycket enklare att tagga [mallar för juridiska avtal](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html) med dynamiska fält, konvertera dem till PDF, förhandsgranska och signera dem med [!DNL Acrobat Services] API:er Istället för att lägga tid på att skapa ett unikt avtal kan teamet automatiskt skicka rätt avtal till varje kund och sedan lägga mer tid på att utveckla företaget.
 
-Organisationer använder [!DNL Adobe Acrobat Services] API:er för deras fullständighet och användarvänlighet. Bäst av allt, du kan njuta av en [sex månaders kostnadsfri testversion och sedan betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html). Du betalar bara för det du använder. Dessutom är PDF Embed API alltid kostnadsfritt.
+Organisationer använder [!DNL Adobe Acrobat Services] API:er för fullständighet och användarvänlighet. Bäst av allt, du kan njuta av en [sex månaders kostnadsfri provperiod och sedan betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html). Du betalar bara för det du använder. Dessutom är PDF Embed API alltid gratis.
 
-Vill du öka produktiviteten genom att förbättra dokumentflödet? [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) idag.
+Är du redo att öka produktiviteten genom att förbättra dokumentflödet? [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) idag.

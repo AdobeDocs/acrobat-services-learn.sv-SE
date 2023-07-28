@@ -1,19 +1,20 @@
 ---
-title: Acrobat Sign API Tutorials
-description: Översikt över Acrobat Sign API:er
+title: ACROBAT SIGN API TUTORIALS
+description: Översiktssida för Acrobat Sign API:er
 type: Tutorial
 role: Developer
 level: Beginner, Intermediate, Experienced
+feature: Acrobat Sign API
 thumbnail: KT-11079.jpg
 exl-id: 79603883-26cd-439c-9cfd-6178c4544b93
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 11%
 
 ---
 
-# Acrobat Sign API-självstudiekurser
+# Självstudiekurser om Acrobat Sign API
 
 ![Acrobat Sign API-banderoll](../assets/acrobatsignhero.png)
 
@@ -34,26 +35,26 @@ Med Acrobat Sign API:er kan du skapa program och bädda in Acrobat Sign-gränssn
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/WhiteBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>
   </td>
 </tr>
 </table>
 
-## Snabbstartsguide för att bädda in Acrobat Sign
+## Snabbstartsguide till Acrobat Sign Embed
 
-Lär dig hur du kommer igång med att bädda in OEM-versionen av Acrobat Sign i programmet. Den här guiden är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
+Lär dig hur Kom igång med att bädda in OEM-versionen av Acrobat Sign i ditt program. Den här guiden är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
 
 <table style="table-layout:fixed">
 <tr>
@@ -64,7 +65,7 @@ Lär dig hur du kommer igång med att bädda in OEM-versionen av Acrobat Sign i 
     <div>
    <a href="sign-up-developer-account.md"><strong>Registrera dig för ett utvecklarkonto</strong></a>
     </div>
-    <em>Lär dig hur du registrerar dig för ett utvecklarkonto för Acrobat Sign, som är fullt aktiverat med funktionerna Sign och API</em>
+    <em>Läs hur du registrerar dig för ett utvecklarkonto för Acrobat Sign som är fullt aktiverat med Sign- och API-funktioner</em>
     <br>
   </td>
   <td>
@@ -84,7 +85,7 @@ Lär dig hur du kommer igång med att bädda in OEM-versionen av Acrobat Sign i 
     <div>
    <a href="creating-an-embed-link.md"><strong>Skapa en inbäddningslänk</strong></a>
     </div>
-    <em>Lär dig hur du skapar en inbäddningslänk för OAuth, som är den metod som programmet får behörigheter för användare</em>
+    <em>Lär dig hur du skapar en inbäddningslänk för OAuth, vilket är metoden som programmet får behörigheter för användare</em>
     <br>
   </td>
   <td>
@@ -94,7 +95,7 @@ Lär dig hur du kommer igång med att bädda in OEM-versionen av Acrobat Sign i 
     <div>
    <a href="generating-an-access-token.md"><strong>Genererar en åtkomsttoken</strong></a>
     </div>
-    <em>Lär dig hur du skapar en åtkomsttoken som kan användas med Acrobat Sign API</em>
+    <em>Lär dig hur du genererar en åtkomsttoken som kan användas med Acrobat Sign API</em>
     <br>
   </td>
 </tr>
@@ -106,21 +107,21 @@ Lär dig hur du kommer igång med att bädda in OEM-versionen av Acrobat Sign i 
     <div>
    <a href="creating-a-transient-document.md"><strong>Skapa ett övergående dokument</strong></a>
     </div>
-    <em>Lär dig hur du skapar ett övergående dokument som kan användas med Acrobat Sign AP</em>
+    <em>Lär dig skapa ett tillfälligt dokument som kan användas med Acrobat Sign-åtkomstpunkten</em>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/GrayBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/GrayBanner_Placeholder.png" />
     <div>
     <br>
   </td>
    <td>
-    <img alt="Mellanrum" src="../assets/GrayBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/GrayBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="../assets/GrayBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="../assets/GrayBanner_Placeholder.png" />
     <div>
     <br>
   </td>

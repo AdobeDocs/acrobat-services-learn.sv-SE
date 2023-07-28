@@ -1,13 +1,14 @@
 ---
 title: "[!DNL Adobe Acrobat Services] API Tutorials"
-description: Sidan Översikt för [!DNL Adobe Acrobat Services]
+description: Översiktssida för [!DNL Adobe Acrobat Services]
 type: Tutorial
 role: Developer
 level: Beginner, Intermediate, Experienced
+feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API
 thumbnail: KT-7463.jpg
 jira: KT-7463
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 2%
@@ -18,7 +19,7 @@ ht-degree: 2%
 
 ![[!DNL Acrobat Services] Banderoll](assets/acrobatserviceshero.jpg)
 
-[!DNL Adobe Acrobat Services] har fem huvudsakliga API:er: den [!DNL Adobe PDF Services API]skall [!DNL Adobe PDF Embed API]skall [!DNL Adobe Document Generation API]skall [!DNL Adobe PDF Extract API] och [!DNL Adobe PDF Accessibility Auto-Tag API]. De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett betalt erbjudande. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. Med dem kan ni leverera enklare, snabbare och varumärkesanpassade upplevelser så att ni kan styra användarinteraktionen med era dokument, effektivisera arbetsflödena i PDF och främja användning och lagring. Dessa självstudiekurser hjälper dig att komma igång och leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er.
+[!DNL Adobe Acrobat Services] har fem huvudsakliga API:er: [!DNL Adobe PDF Services API]skall [!DNL Adobe PDF Embed API]skall [!DNL Adobe Document Generation API]skall [!DNL Adobe PDF Extract API] och [!DNL Adobe PDF Accessibility Auto-Tag API]. De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett erbjudande mot betalning. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. De hjälper dig att leverera enklare, snabbare och varumärkesanpassade upplevelser så att du kan styra användarinteraktionen med dina dokument, effektivisera arbetsflöden i PDF och främja användning och kvarhållning. Dessa självstudiekurser hjälper dig att komma igång med att leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er
 
 <table style="table-layout:fixed">
 <tr>
@@ -51,16 +52,16 @@ ht-degree: 2%
   </td>
  <td>
    <a href="usecases/overview-usecases.md">
-      <img alt="[!DNL Adobe Acrobat Services] Användningsexempel för API" src="assets/usecasescard.png" />
+      <img alt="[!DNL Adobe Acrobat Services] API-användningsfall" src="assets/usecasescard.png" />
    </a>
   </td>
   <td>
-    <img alt="Mellanrum" src="assets/GrayBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="assets/GrayBanner_Placeholder.png" />
     <div>
     <br>
   </td>
   <td>
-    <img alt="Mellanrum" src="assets/GrayBanner_Placeholder.png" />
+    <img alt="Avgränsare" src="assets/GrayBanner_Placeholder.png" />
     <div>
     <br>
   </td>

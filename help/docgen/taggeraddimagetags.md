@@ -1,12 +1,13 @@
 ---
 title: Lägga till bildtaggar
-description: Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med Adobe Document Generation Tagger för att dynamiskt överföra bilder till dokument med Adobe Document Generation API
+description: Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med taggen för att generera dokument i Adobe för att dynamiskt överföra bilder till dokument med API:et för att generera dokument i Adobe
 type: Tutorial
 role: Developer
 level: Beginner
+feature: Document Generation API
 thumbnail: 332114.jpg
 exl-id: 5c5dae3f-815e-4039-ad57-ad3fa6e97853
-source-git-commit: 49c64965668518fc33539914db1b50132a40ee34
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -15,6 +16,6 @@ ht-degree: 0%
 
 # Lägga till bildtaggar
 
-Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med Adobe Document Generation Tagger för att dynamiskt överföra bilder till dokument med Adobe Document Generation API.
+Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att dynamiskt överföra bilder till dokument med API:et för dokumentgenerering i Adobe.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332114?hidetitle=true)

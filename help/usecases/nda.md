@@ -1,48 +1,49 @@
 ---
-title: Skapa en sekretessavtal
+title: Skapa ett sekretessavtal
 description: Lär dig skapa en dynamisk PDF för sekretessavtal för samarbete
 role: Developer
 level: Intermediate
 type: Tutorial
+feature: Use Cases
 thumbnail: KT-8098.jpg
 jira: KT-8098
 exl-id: f4ec0182-a46e-43aa-aea3-bf1d19f1a4ec
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 3%
 
 ---
 
-# Skapa en sekretessavtal
+# Skapa ett sekretessavtal
 
-![BANDEROLL MED ANVÄNDNINGSFALL](assets/UseCaseNDAHero.jpg)
+![Banderoll för användningsfall](assets/UseCaseNDAHero.jpg)
 
-Organisationer samarbetar med externa medverkande för att bygga sina tjänster och produkter. Ett sekretessavtal är en viktig del av dessa samarbeten. Det binder alla parter från att lämna ut konfidentiell information som kan skada någon av enheterna.
+Organisationer samarbetar med externa bidragsgivare för att bygga upp sina tjänster och produkter. Ett sekretessavtal är en viktig del av dessa samarbeten. Det binder alla parter från att lämna ut konfidentiell information som kan skada någon av enheterna.
 
-Det vanligaste NDA-formatet är ett PDF-dokument. Organisationer förbereder en sekretessavtal och skickar det till alla parter. Sedan, när alla har skrivit under, initierar de kontraktet. Manuell PDF-generering i ett höghastighetsteam fördröjer utvecklingen.
+Det vanligaste NDA-formatet är PDF-dokument. Organisationer förbereder ett sekretessavtal och skickar det till alla parter. Sedan, när alla har undertecknat, de initiera kontraktet. I ett höghastighetsteam saktar manuellt skapande av PDF ner utvecklingen.
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudiekursen beskrivs hur du skapar en specialiserad Microsoft Word NDA-mall för ditt företag. Adobe kostnadsfria tillägg för Microsoft Word, [Adobe-dokumentgenereringstagg](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)infogar &quot;taggar&quot; för att ange de dynamiska värdena. Lär dig hur du skickar JSON-data till mallen och skapar ett dynamiskt PDF. PDF som blir resultatet kan skickas med e-post eller visas för dina medarbetare i webbläsaren, beroende på dina affärskrav och mål. Du behöver bara uppleva Node.js, JavaScript, Express.js, HTML och CSS.
+I den här praktiska självstudiekursen beskrivs hur du skapar en specialiserad Microsoft Word NDA-mall för ditt företag. Adobe kostnadsfria tillägg för Microsoft Word, [TAGG FÖR GENERERING AV Adobe-DOKUMENT](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo), infogar &quot;taggar&quot; för att mata in de dynamiska värdena. Lär dig skicka JSON-data till mallen och skapa ett dynamiskt PDF. PDF som skapas kan skickas med e-post eller visas för dina medarbetare i deras webbläsare, beroende på dina affärsbehov och mål. Häng med! Du behöver bara uppleva lite med Node.js, JavaScript, Express.js, HTML och CSS.
 
 ## Relevanta API:er och resurser
 
-Med [!DNL Adobe Acrobat Services], kan du skapa PDF-dokument snabbt med hjälp av dynamiska data. [!DNL Acrobat Services] innehåller en uppsättning PDF-verktyg, inklusive Adobe Document Generation API för automatisering [Skapa sekretessavtal](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html).
+med [!DNL Adobe Acrobat Services]kan du skapa PDF-dokument snabbt med hjälp av dynamiska data. [!DNL Acrobat Services] har en uppsättning PDF-verktyg för automatisering, inklusive dokumentgenererings-API för Adobe [Skapa sekretessavtal](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html).
 
-* [Adobe-API för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* [Adobe-dokumentgenererings-API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
-* [Adobe-dokumentgenereringstagg](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)
+* [TAGG FÖR GENERERING AV Adobe-DOKUMENT](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)
 
 * [Projektkod](https://github.com/afzaal-ahmad-zeeshan/adobe-docugen-sample)
 
-* [[!DNL Acrobat Services] tangenter](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred)
+* [[!DNL Acrobat Services] nycklar](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred)
 
 ## Skapa JSON-modellen
 
-Microsoft Word-mallen beror på JSON-modellen, så du skapar den först. I självstudiekursen använder du en grundläggande JSON-struktur som innehåller företagsinformation, till exempel kontaktinformation.
+Microsoft Word-mallen beror på JSON-modellen, så du måste skapa den först. I självstudiekursen använder du en grundläggande JSON-struktur som innehåller företagsinformation, till exempel kontaktinformation.
 
 ```
 {
@@ -68,43 +69,43 @@ Microsoft Word-mallen beror på JSON-modellen, så du skapar den först. I själ
 }
 ```
 
-Du använder den här strukturen i Microsoft Word för att skapa en mall. Dessa data kan komma från vilken datakälla som helst, så länge de är i JSON-format. För enkelhetens skull skapar du flera filer i Node.js-programmet, men ditt användningsfall kan kräva en databasanslutning för att hämta leverantörsinformation.
+Du använder den här strukturen i Microsoft Word för att skapa en mall. Dessa data kan komma från vilken datakälla som helst, bara de är i JSON-format. För enkelhetens skull skapar du flera filer i programmet Node.js, men ditt användningsfall kan kräva en databasanslutning för att hämta leverantörsinformation.
 
 ## Skapa Microsoft Word-mallen
 
-Skapa NDA-mallen i ett Microsoft Word-dokument. Adobe PDF Services API förväntar sig att Microsoft Word-dokumentet innehåller taggar där tjänsten kan mata in värden från JSON-dokument. Även om mallen är densamma för alla begäranden till Adobe ändras dynamiken i JSON. Med hjälp av dessa taggar kan du skapa PDF-dokument för alla leverantörer i det här fallet, med hjälp av en enda Microsoft Word-mall och snabba upp processen genom att automatisera genereringen av NDA-dokument.
+Skapa NDA-mallen i ett Microsoft Word-dokument. Adobe PDF Services API förväntar sig att Microsoft Word-dokumentet innehåller taggar där tjänsten kan mata in värden från JSON-dokument. Även om mallen är densamma för alla förfrågningar till Adobe, ändras dynamiken i JSON. Med hjälp av dessa taggar kan du skapa PDF-dokument för alla leverantörer i det här fallet genom att använda en enda Microsoft Word-mall och påskynda processen genom att automatisera genereringen av NDA-dokument.
 
-Du kan installera [kostnadsfritt tillägg för dokumentgenereringstaggar](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo) till Microsoft Word. Om du tillhör en organisation kan du begära att Microsoft Office-administratören installerar det kostnadsfria tillägget för alla.
+Du kan installera [Kostnadsfritt tillägg för taggning för dokumentgenerering](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo) till Microsoft Word. Om du ingår i ett företag kan du begära att din Microsoft Office-administratör installerar det kostnadsfria tillägget för alla.
 
-När du har installerat tillägget hittar du det på fliken Hem under kategorin Adobe. Öppna fliken genom att välja **Dokumentgenerering**:
+När du har installerat tillägget hittar du det på fliken Hem under kategorin Adobe. För att öppna fliken väljer du **Dokumentgenerering**:
 
-![Skärmdump av tillägget Dokumentgenerering i Word](assets/nda_1.png)
+![Skärmbild av dokumentgenereringstillägget i Word](assets/nda_1.png)
 
 På fliken kan du överföra JSON-exempeldokumentet. Det här dokumentet kan vara ett exempel eftersom du bara använder det för att skapa en Microsoft Word-mall.
 
-![Skärmdump av exempeldata i tillägget Dokumentgenerering](assets/nda_2.png)
+![Skärmbild av exempeldata i tillägget för dokumentgenerering](assets/nda_2.png)
 
-Välj **Generera taggar** för att visa objekt som du kan använda i mallen. Här är de egenskaper som har extraherats från JSON-strukturen och som är klara att användas i mallen:
+Välj **Generera taggar** för att visa objekt som du kan använda i mallen. Här är egenskaperna som extraherats från JSON-strukturen och är klara att användas i mallen:
 
-![Skärmdump av texttaggar i tillägget Dokumentgenerering](assets/nda_3.png)
+![Skärmbild av texttaggar i dokumentgenereringstillägget](assets/nda_3.png)
 
-Det här är funktionerna från `authorizedSigner` fält. Andra fält kapslas in och du kan expandera vyn i Microsoft Word. Tillägget har även avancerade dataalternativ, till exempel tabeller, listor, beräknade värden med mera.
+Det här är funktionerna från `authorizedSigner` område. Andra fält kapslas och du kan expandera vyn i Microsoft Word. Tillägget erbjuder även avancerade dataalternativ, till exempel tabeller, listor, beräknade värden och mycket mer.
 
 ## Skapa taggarna
 
-Skapa en mall eller importera en [befintlig mall](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade) till Microsoft Word. När du har konfigurerat dokumentet lägger du till taggar i varje fält genom att klicka på motsvarande token i tillägget.
+Du kan skapa en mall eller importera en [befintlig mall](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade) till Microsoft Word. När du har konfigurerat dokumentet lägger du till taggar i varje fält genom att klicka på motsvarande token i tillägget.
 
 Följande mall i en Microsoft Word-fil:
 
 ![Skärmbild av exempelmall](assets/nda_4.png)
 
-Den här filen innehåller flera taggar. När du kör programmet fylls dessa fält i med leverantörsinformationen.
+Den här filen innehåller flera taggar. När du kör programmet fylls dessa fält med leverantörsinformationen.
 
-Dokumentgenereringstaggen kan integreras med Adobe Sign API. På grund av integreringen kan du automatiskt skapa Sign-texttaggar så att det genererade dokumentet sedan kan skickas till Adobe Sign för signering.
+Taggen för dokumentgenerering kan integreras med Adobe Sign API. På grund av denna integrering kan du automatiskt skapa Sign-texttaggar så att det genererade dokumentet sedan kan skickas till Adobe Sign för signering.
 
-## Generera sekretessavtal för leverantörer
+## Genererar sekretessavtal för leverantörer
 
-I exempelprogrammet förberedde du mappar för in- och utdata. Som tidigare nämnts använder du JSON-filer, så att det finns två filer som visar de tillgängliga leverantörerna i systemet. Filerna visas i ett formulär som skrivs ut i webbläsaren:
+I exempelprogrammet har du förberett mappar för in- och utdata. Som tidigare nämnts använder du JSON-filer så att det finns två filer för att visa de tillgängliga leverantörerna i systemet. Filerna visas i ett formulär som skrivs ut i webbläsaren:
 
 ```
 <h1><b>NDA</b>: Generate for vendor.</h1>
@@ -124,7 +125,7 @@ Den här koden genererar följande användargränssnitt (UI) i webbläsaren:
 
 ![Skärmbild av användargränssnittet Skapa NDA](assets/nda_5.png)
 
-När administratören markerar en person använder appen Adobe PDF Services för att generera sekretessavtal när användaren är på språng.
+När administratören väljer en person använder appen Adobe PDF-tjänster för att generera sekretessavtal var som helst.
 
 ```
 async function compileDocFile(json, inputFile, outputPdf) {
@@ -170,23 +171,23 @@ res.status(500).render("crash", { error: error });
 }
 ```
 
-Du kan visa [den fullständiga provkoden](https://github.com/afzaal-ahmad-zeeshan/adobe-docugen-sample) på GitHub.
+Du kan visa [fullständig exempelkod](https://github.com/afzaal-ahmad-zeeshan/adobe-docugen-sample) på GitHub.
 
-I den här koden används ett JSON-dokument och Microsoft Word-mallen i API-anropet till [!DNL Adobe Acrobat Services] SDK. I svaret får du utdata och sparar dem i programmets filsystem. Du kan vidarebefordra det genererade dokumentet till dina kunder via e-post eller visa en förhandsgranskning i webbläsaren med hjälp av det kostnadsfria [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+I den här koden används ett JSON-dokument och Microsoft Word-mallen i API-anropet till [!DNL Adobe Acrobat Services] SDK. I svaret får du utdata och sparar dem i appens filsystem. Du kan vidarebefordra det genererade dokumentet till dina kunder via e-post eller visa en förhandsgranskning i webbläsaren med hjälp av det kostnadsfria [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
 
 Detta anrop skapar följande NDA-dokument:
 
-![Skärmdump av NDA-dokumentförhandsgranskningen](assets/nda_6.png)
+![Skärmbild av NDA-dokumentförhandsgranskning](assets/nda_6.png)
 
-[!DNL Adobe Acrobat Services] API:er infogar innehåll för att skapa ett PDF-dokument. Utan dessa verktyg kan du behöva skriva koden för att bearbeta Office-dokument och arbeta med raw PDF-filformat. Med hjälp av Adobe PDF Services kan du utföra alla dessa steg med ett enda API-anrop.
+[!DNL Adobe Acrobat Services] API:er infogar innehåll för att skapa ett PDF-dokument. Utan de här verktygen kan du behöva skriva koden för att bearbeta Office-dokument och arbeta med raw PDF-filformat. Med hjälp av Adobe PDF-tjänster kan du utföra alla dessa steg med ett enda API-anrop.
 
-Använd nu [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html) begära underskrifter på sekretessavtal och leverera det slutgiltiga, signerade dokumentet till alla parter. Adobe Sign meddelar dig [använda en webhook](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md). När du lyssnar på den här webhooken kan du hämta status för sekretessavtal.
+Använd nu [ADOBE SIGN API](https://www.adobe.io/apis/documentcloud/sign.html) begära signaturer för kärnavvecklingsbyråerna och leverera det slutgiltiga, signerade dokumentet till alla parter. Adobe Sign meddelar dig [med en webhook](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md). När du lyssnar på den här webhooken kan du hämta kärnavvecklingsbyråns status.
 
-Om du vill veta mer om Adobe Sign-processen kan du [läsa dokumentationen](https://www.adobe.io/apis/documentcloud/sign/docs.html) eller läs det här detaljerade blogginlägget.
+För en mer ingående redogörelse för Adobe Sign-processen, [läsa dokumentationen](https://www.adobe.io/apis/documentcloud/sign/docs.html) eller läs det här detaljerade blogginlägget.
 
 ## Nästa steg
 
-I den här praktiska självstudiekursen användes taggen Adobe Document Generation för att dynamiskt generera PDF-dokument med Microsoft Word-mallar och JSON-datafiler. Tillägget hjälpte till att [automatiskt skapa sekretessavtal](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html) anpassat för varje part och samla sedan in signaturer med Sign API.
+I den här praktiska självstudiekursen användes taggen för dokumentgenerering i Adobe för att dynamiskt generera PDF-dokument med Microsoft Word-mallar och JSON-datafiler. Tillägget hjälpte till att [skapa sekretessavtal automatiskt](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html) anpassat för varje part och samla sedan in signaturer med Sign API.
 
-Du kan använda dessa tekniker för att dynamiskt skapa egna sekretessavtal eller andra dokument, vilket frigör teamets tid att fokusera på produktivt arbete. Utforska [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) för att hitta API:er och SDK:er för önskat språk och runtime så att du kan lägga till PDF-funktioner direkt i programmen och snabbt skapa PDF-dokument. [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) med en sex månader lång kostnadsfri testversion sedan
-[betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för endast 0,05 USD per dokumenttransaktion.
+Du kan använda de här teknikerna för att dynamiskt skapa egna sekretessavtal eller andra dokument, vilket frigör tid för teamet att fokusera på produktivt arbete. Utforska [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) för att hitta API:er och SDK:er för önskat språk och körningsmiljö så att du kan lägga till PDF-funktioner direkt i dina program och snabbt skapa PDF-dokument. [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) med en sex månader lång kostnadsfri provperiod sedan
+[betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för endast $0,05 per dokumenttransaktion.

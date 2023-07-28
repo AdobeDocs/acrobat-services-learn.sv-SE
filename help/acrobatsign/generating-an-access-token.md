@@ -1,12 +1,13 @@
 ---
-title: Generera en åtkomsttoken
-description: Lär dig hur du skapar en åtkomsttoken som kan användas med Acrobat Sign API
+title: Genererar en åtkomsttoken
+description: Lär dig hur du genererar en åtkomsttoken som kan användas med Acrobat Sign API
 type: Tutorial
 role: Developer
 level: Beginner
+feature: Acrobat Sign API
 thumbnail: KT-11075.jpg
 exl-id: c68afd4b-4143-4ea5-ad44-de1fa46e3f30
-source-git-commit: 0c434db1665d4cb6ce6aff6f329e300f22129df9
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 # Genererar en åtkomsttoken
 
-Lär dig hur du skapar en åtkomsttoken som kan användas med Acrobat Sign API.
+Lär dig hur du genererar en åtkomsttoken som kan användas med Acrobat Sign API.
 
 >[!NOTE]
 >

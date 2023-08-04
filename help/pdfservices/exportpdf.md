@@ -1,14 +1,14 @@
 ---
 title: Använda PDF Services API för att exportera PDF till Word, PowerPoint med mera
 description: Läs om hur du kör PDF Services API-exportåtgärden med hjälp av exempelfiler för språken Node.js, Java och .Net
-type: Tutorial
+feature: PDF Services API
 role: Developer
 level: Intermediate
-feature: PDF Services API
+type: Tutorial
+jira: KT-6674
 thumbnail: KT-6674.jpg
-kt: 6674
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%

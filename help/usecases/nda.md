@@ -1,14 +1,14 @@
 ---
 title: Skapa ett sekretessavtal
 description: Lär dig skapa en dynamisk PDF för sekretessavtal för samarbete
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-8098.jpg
 jira: KT-8098
+thumbnail: KT-8098.jpg
 exl-id: f4ec0182-a46e-43aa-aea3-bf1d19f1a4ec
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 3%

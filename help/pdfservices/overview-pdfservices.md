@@ -1,14 +1,14 @@
 ---
 title: Adobe PDF Services API Tutorials
 description: Översiktssida för självstudiekurser om Adobe PDF Services API
-type: Tutorial
+feature: PDF Services API
 role: Developer
 level: Beginner, Intermediate, Experienced
-feature: PDF Services API
-thumbnail: KT-8116.jpg
+type: Tutorial
 jira: KT-8116
+thumbnail: KT-8116.jpg
 exl-id: 81410fe4-7a2c-43a9-b497-b7423f9821ec
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%

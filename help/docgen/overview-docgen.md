@@ -1,14 +1,14 @@
 ---
 title: API för dokumentgenerering i Tutorials
 description: Översikt av självstudiekurserna för dokumentgenererings-API
-type: Tutorial
+feature: Document Generation API
 role: Developer
 level: Beginner, Intermediate, Experienced
-feature: Document Generation API
+type: Tutorial
+jira: 7480
 thumbnail: KT-7480.jpg
-kt: 7480
 exl-id: 519a41a2-33af-4022-8919-2cb69995c46c
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%

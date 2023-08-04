@@ -1,13 +1,13 @@
 ---
 title: Skapa ett övergående dokument
-description: Lär dig skapa ett tillfälligt dokument som kan användas med Acrobat Sign API.
-type: Tutorial
+description: Lär dig hur du skapar ett tillfälligt dokument som kan användas med Acrobat Sign API
+feature: Acrobat Sign API
 role: Developer
 level: Beginner
-feature: Acrobat Sign API
+type: Tutorial
 thumbnail: KT-11076.jpg
 exl-id: fddd5745-afa4-4ce8-b94d-c78254d7fb00
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%

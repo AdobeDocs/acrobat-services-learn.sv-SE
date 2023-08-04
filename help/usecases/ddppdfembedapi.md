@@ -1,14 +1,14 @@
 ---
 title: Digital dokumentpublicering
 description: Lär dig hur du visar inbäddade PDF-dokument på webbsidor med Adobe PDF Embed API
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-8090.jpg
 jira: KT-8090
+thumbnail: KT-8090.jpg
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%

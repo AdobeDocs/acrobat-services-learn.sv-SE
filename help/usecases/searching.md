@@ -1,14 +1,14 @@
 ---
 title: Söka och indexera
 description: Lär dig hur du skapar sökbara PDF-filer från skannade dokument
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-8095.jpg
 jira: KT-8095
+thumbnail: KT-8095.jpg
 exl-id: a22230b5-1ff2-4870-84da-f06a904c99e1
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1364'
 ht-degree: 1%

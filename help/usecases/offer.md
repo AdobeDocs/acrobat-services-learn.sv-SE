@@ -1,14 +1,14 @@
 ---
 title: Hantera brev om anställningserbjudande
 description: Lär dig hur du genererar ett erbjudandebrev som kan levereras till en ny anställd för signering
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-8096.jpg
 jira: KT-8096
+thumbnail: KT-8096.jpg
 exl-id: 92f955f0-add5-4570-aa3a-ea63055dadb2
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 2%
@@ -53,7 +53,7 @@ Generera sedan autentiseringsuppgifter för att få åtkomst till API:et. Autent
 
 Klicka på **[!UICONTROL Generera nyckelpar]** knapp. Du kan hämta en config.zip -fil. Zippa upp arkivfilen. Det innehåller två filer: certificate_pub.crt och private.key. Se till att den senare hålls säker, eftersom den innehåller dina privata inloggningsuppgifter och kan användas för att generera falska dokument om du inte kan kontrollera.
 
-Klicka på **[!UICONTROL Nästa]**. Nej, aktiverar åtkomst till API:et för generering av PDF. På fliken **[!UICONTROL Välj produktprofiler]** skärm, kontrollera **[!UICONTROL Enterprise PDF Services Developer]** och klicka på **[!UICONTROL Spara konfigurerat API]** knapp. Nu är du redo att börja använda API:et.
+Klicka på **[!UICONTROL Nästa]**. Nej, aktiverar åtkomst till API:et för generering av PDF. På fliken **[!UICONTROL Välj produktprofiler]** skärm, kontrollera **[!UICONTROL Enterprise PDF Services Developer]** och klicka på **[!UICONTROL Spara konfigurerat API]** -knappen. Nu är du redo att börja använda API:et.
 
 ## Konfigurera projektet
 
@@ -248,7 +248,7 @@ Välkommen
 
 Spara dokumentet som &quot;OfferLetter-Template.docx&quot; i en mapp som heter &quot;resources&quot; (resurser) i projektets rot. Observera de tre Xs:en i dokumentet. Dessa XS är tillfälliga platshållare för din JSON-information. Även om du kan ersätta de här platshållarna med en särskild syntax för att göra det, innehåller Adobe ett Word-tillägg som gör det enklare. Gå till Adobe för att installera tillägget [Tillägg för taggning för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin) -plats.
 
-Klicka på den nya mallen i Erbjudandebrev **Dokumentgenerering** knapp. En sidopanel öppnas. Klicka på **Kom igång**. Du får ett textområde som du vill klistra in i JSON-exempeldata. Kopiera JSON-kodavsnittet &quot;offer-data&quot; ovanifrån till textområdet. Det ska se ut så här:
+Klicka på den nya mallen i Erbjudandebrev **Dokumentgenerering** -knappen. En sidopanel öppnas. Klicka på **Kom igång**. Du får ett textområde som du vill klistra in i JSON-exempeldata. Kopiera JSON-kodavsnittet &quot;offer-data&quot; ovanifrån till textområdet. Det ska se ut så här:
 
 ![Skärmbild av bokstav och kod](assets/offer_3.png)
 

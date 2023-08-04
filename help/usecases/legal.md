@@ -1,14 +1,14 @@
 ---
 title: Hantera juridiska avtal
 description: Lär dig hur du automatiskt genererar och skyddar juridiska dokument med anpassad datainmatning
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-8097.jpg
 jira: KT-8097
+thumbnail: KT-8097.jpg
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 1%

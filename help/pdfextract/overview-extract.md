@@ -3,12 +3,12 @@ title: Adobe PDF Extract API Tutorials
 description: Översiktssida för Adobe PDF Extract API
 feature: PDF Extract API
 role: Developer
-skill: Beginner, Intermediate, Experienced
+level: Beginner, Intermediate, Experienced
 type: Tutorial
 jira: KT-9247
 thumbnail: KT-9247.jpg
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: 382518232e804a5a64504bead419e6b822df42c0
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

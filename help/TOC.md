@@ -7,7 +7,8 @@ feature-set: Acrobat Services
 feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API
 role: Developer
 level: Beginner, Intermediate, Experienced
-source-git-commit: 382518232e804a5a64504bead419e6b822df42c0
+auto-video-transcripts: true
+source-git-commit: eb396a3960f49881fcb94df83765a9bc8eee284c
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 7%

@@ -8,16 +8,14 @@ type: Tutorial
 jira: KT-8089
 thumbnail: KT-8089.jpg
 exl-id: ae1cd9db-9f00-4129-a2a1-ceff1c899a83
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: 2f01f306f5d13bfbaa61442e0e7a89537a62c33c
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2054'
 ht-degree: 2%
 
 ---
 
 # Komma igång med Adobe Sign API
-
-![Banderoll för användningsfall](assets/UseCaseStartedHero.jpg)
 
 [ACROBAT SIGN API](https://www.adobe.io/apis/documentcloud/sign.html) är ett bra sätt att förbättra sättet du hanterar signerade avtal på. Utvecklare kan enkelt integrera sina system med Sign API, som ger ett tillförlitligt och enkelt sätt att ladda upp dokument, skicka dem för signering, skicka påminnelser och samla in e-signaturer.
 
@@ -65,7 +63,7 @@ I ovanstående exempel är ett svar med värdet som åtkomstpunkt.
 
 ## Ladda upp ett tillfälligt dokument
 
-Med Adobe Sign kan du skapa olika flöden som förbereder dokument för signaturer eller datainsamling. Oavsett programmets flöde måste du först överföra ett dokument, som bara är tillgängligt i sju dagar. De efterföljande API-anropen måste sedan referera till det här tillfälliga dokumentet.
+Med Adobe Sign kan du skapa olika flöden som förbereder dokument för signaturer eller datainsamling. Oavsett programmets flöde måste du först överföra ett dokument som bara är tillgängligt i sju dagar. De efterföljande API-anropen måste sedan referera till det här tillfälliga dokumentet.
 
 Dokumentet överförs med en begäran om POST till `/transientDocuments` slutpunkt. Multipart-begäran består av filnamnet, en filström och dokumentfilens MIME-typ (media). Slutpunktssvaret innehåller ett ID som identifierar dokumentet.
 

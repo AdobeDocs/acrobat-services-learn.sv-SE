@@ -8,16 +8,14 @@ type: Tutorial
 jira: KT-8115
 thumbnail: KT-8115.jpg
 exl-id: 4188897e-f6e6-41ea-be6f-359a3ef0e040
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
 # [!DNL Adobe Acrobat Services] API-användningsfall
-
-![[!DNL Acrobat Services] Banderoll för API-användningsfall](../assets/usecaseshero.jpg)
 
 ## Vad kan [!DNL Adobe Acrobat Services] Vad gör API:er för mig?
 

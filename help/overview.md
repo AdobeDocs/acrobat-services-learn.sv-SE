@@ -8,16 +8,14 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '121'
 ht-degree: 2%
 
 ---
 
 # [!DNL Adobe Acrobat Services] API-självstudiekurser
-
-![[!DNL Acrobat Services] Banderoll](assets/acrobatserviceshero.jpg)
 
 [!DNL Adobe Acrobat Services] har fem huvudsakliga API:er: [!DNL Adobe PDF Services API]skall [!DNL Adobe PDF Embed API]skall [!DNL Adobe Document Generation API]skall [!DNL Adobe PDF Extract API] och [!DNL Adobe PDF Accessibility Auto-Tag API]. De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett erbjudande mot betalning. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. De hjälper dig att leverera enklare, snabbare och varumärkesanpassade upplevelser så att du kan styra användarinteraktionen med dina dokument, effektivisera arbetsflöden i PDF och främja användning och kvarhållning. Dessa självstudiekurser hjälper dig att komma igång med att leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er
 

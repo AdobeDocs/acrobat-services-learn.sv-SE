@@ -8,16 +8,14 @@ type: Tutorial
 jira: KT-8116
 thumbnail: KT-8116.jpg
 exl-id: 81410fe4-7a2c-43a9-b497-b7423f9821ec
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
 
 # Självstudiekurser för Adobe PDF Services API
-
-![API-banderoll för PDF-tjänster](../assets/pdfserviceshero.jpg)
 
 <table style="table-layout:fixed">
 <tr>

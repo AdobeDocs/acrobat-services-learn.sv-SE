@@ -8,10 +8,10 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
+source-git-commit: c64f1519438addb4081469afaed811fbf03ac88e
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 7%
+source-wordcount: '213'
+ht-degree: 3%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 7%
    + [Använda Adobe PDF Services API för att OCR PDF-filer](pdfservices/ocr.md)
 + API för dokumentgenerering {#docgen}
    + [Översikt](docgen/overview-docgen.md)
+   + [Automatisera dokumentgenerering](docgen/automate-doc-gen.md)
    + Skapa mallar {#docgentemplates}
       + [Översikt över taggen för dokumentgenerering i Adobe](docgen/taggeroverview.md)
       + [Lägga till texttaggar](docgen/taggeraddtexttags.md)
@@ -42,7 +43,7 @@ ht-degree: 7%
 + PDF Embed API {#pdfembed}
    + [Översikt](pdfembed/overview-embed.md)
    + [Styr din onlineupplevelse i PDF och samla in analyser](pdfembed/controlpdfexperience.md)
-+ Acrobat Sign-API {#acrobatsign}
++ ACROBAT SIGN API {#acrobatsign}
    + [Översikt](acrobatsign/overview-sign.md)
    + [Komma igång med Adobe Sign API](acrobatsign/signapi.md)
    + OEM/Inbäddad partner {#oem}

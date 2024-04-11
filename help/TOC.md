@@ -8,9 +8,9 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: e35377fb467aac8581a5f81d2efb74fb442a6dc5
+source-git-commit: 073dc25717c22ef238bc81338223945b9fee2ef7
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '226'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,9 @@ ht-degree: 3%
       + [Lägga till tabeller och listtaggar](docgen/taggertables.md)
       + [Ställa in numeriska beräkningstaggar](docgen/taggercalculations.md)
       + [Ange villkorligt innehåll](docgen/taggerconditional.md)
++ PDF Accessibility Auto-Tag API {#pdfaccessibility}
+   + [Översikt](pdfaccessibility/overview-accessibility.md)
+   + [Tagga dokument automatiskt för tillgänglighet](pdfaccessibility/automatically-add-tags.md)
 + PDF Extract API {#pdfextract}
    + [Översikt](pdfextract/overview-extract.md)
    + [Automatisera extrahering av innehåll](pdfextract/automate-content-extraction.md)

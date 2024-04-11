@@ -8,16 +8,16 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
+source-git-commit: c130591ed32bb1aab457556938fc994756e8b04a
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '125'
 ht-degree: 2%
 
 ---
 
 # [!DNL Adobe Acrobat Services] API-självstudiekurser
 
-[!DNL Adobe Acrobat Services] har fem huvudsakliga API:er: [!DNL Adobe PDF Services API]skall [!DNL Adobe PDF Embed API]skall [!DNL Adobe Document Generation API]skall [!DNL Adobe PDF Extract API] och [!DNL Adobe PDF Accessibility Auto-Tag API]. De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett erbjudande mot betalning. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. De hjälper dig att leverera enklare, snabbare och varumärkesanpassade upplevelser så att du kan styra användarinteraktionen med dina dokument, effektivisera arbetsflöden i PDF och främja användning och kvarhållning. Dessa självstudiekurser hjälper dig att komma igång med att leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er
+[!DNL Adobe Acrobat Services] har sex huvudsakliga API:er: [!DNL Adobe PDF Services API]skall [!DNL Adobe PDF Embed API]skall [!DNL Adobe Document Generation API]skall [!DNL Adobe PDF Accessibility Auto-Tag API],den [!DNL Adobe PDF Extract API]och [!DNL Adobe PDF Accessibility Auto-Tag API]. De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett erbjudande mot betalning. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. De hjälper dig att leverera enklare, snabbare och varumärkesanpassade upplevelser så att du kan styra användarinteraktionen med dina dokument, effektivisera arbetsflöden i PDF och främja användning och kvarhållning. Dessa självstudiekurser hjälper dig att komma igång med att leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er
 
 <table style="table-layout:fixed">
 <tr>
@@ -32,18 +32,23 @@ ht-degree: 2%
    </a>
   </td>
   <td>
-   <a href="pdfextract/overview-extract.md">
-      <img alt="PDF Extract API" src="assets/pdfextractcard.png" />
+   <a href="pdfaccessibility/overview-accessibility.md">
+      <img alt="PDF Accessibility Auto-Tag API" src="assets/PDFAccessibility.png" />
    </a>
   </td>
   <td>
-   <a href="pdfembed/overview-embed.md">
-      <img alt="Komma igång med Adobe PDF Tools API och Java" src="assets/pdfembedcard.png" />
+   <a href="pdfextract/overview-extract.md">
+      <img alt="PDF Extract API" src="assets/pdfextractcard.png" />
    </a>
   </td>
 </tr>
 <tr>
   <td>
+   <a href="pdfembed/overview-embed.md">
+      <img alt="Komma igång med Adobe PDF Tools API och Java" src="assets/pdfembedcard.png" />
+   </a>
+  </td>
+ <td>
    <a href="acrobatsign/overview-sign.md">
       <img alt="Acrobat Sign-API" src="assets/acrobatsigncard.png" />
    </a>
@@ -52,11 +57,6 @@ ht-degree: 2%
    <a href="usecases/overview-usecases.md">
       <img alt="[!DNL Adobe Acrobat Services] API-användningsfall" src="assets/usecasescard.png" />
    </a>
-  </td>
-  <td>
-    <img alt="Avgränsare" src="assets/GrayBanner_Placeholder.png" />
-    <div>
-    <br>
   </td>
   <td>
     <img alt="Avgränsare" src="assets/GrayBanner_Placeholder.png" />

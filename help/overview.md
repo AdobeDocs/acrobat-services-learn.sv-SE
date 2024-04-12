@@ -8,16 +8,25 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: eee88418f6d94c1f35ba05b23ab7fea6a5f54847
+source-git-commit: cdbefd8bd0d4b65e0d34e5bbf74065f80faf20e1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '122'
 ht-degree: 2%
 
 ---
 
 # [!DNL Adobe Acrobat Services] API-självstudiekurser
 
-[!DNL Adobe Acrobat Services] har sex huvudsakliga API:er: [!DNL Adobe PDF Services API]skall [!DNL Adobe PDF Embed API]skall [!DNL Adobe Document Generation API]skall [!DNL Adobe PDF Electronic Seal API]skall [!DNL Adobe PDF Extract API]och [!DNL Adobe PDF Accessibility Auto-Tag API]. De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett erbjudande mot betalning. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. De hjälper dig att leverera enklare, snabbare och varumärkesanpassade upplevelser så att du kan styra användarinteraktionen med dina dokument, effektivisera arbetsflöden i PDF och främja användning och kvarhållning. Dessa självstudiekurser hjälper dig att komma igång med att leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er
+[!DNL Adobe Acrobat Services] har sex huvudsakliga API:er:
+
+* [!DNL Adobe PDF Services API]
+* [!DNL Adobe PDF Embed API]
+* [!DNL Adobe Document Generation API]
+* [!DNL Adobe PDF Electronic Seal API]
+* [!DNL Adobe PDF Extract API]
+* [!DNL Adobe PDF Accessibility Auto-Tag API]
+
+De två senare API:erna och deras SDK:er paketeras i [!DNL Adobe PDF Services API] som en del av ett erbjudande mot betalning. [!DNL PDF Embed API] är ett kostnadsfritt erbjudande. Dessa API:er automatiserar generering, ändring och omvandling av dokumentinnehåll via en uppsättning moderna molnbaserade webbtjänster. De hjälper dig att leverera enklare, snabbare och varumärkesanpassade upplevelser så att du kan styra användarinteraktionen med dina dokument, effektivisera arbetsflöden i PDF och främja användning och kvarhållning. Dessa självstudiekurser hjälper dig att komma igång med att leverera enklare, snabbare varumärkesupplevelser med [!DNL Adobe Acrobat Services] API:er
 
 <table style="table-layout:fixed">
 <tr>

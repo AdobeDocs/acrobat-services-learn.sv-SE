@@ -1,14 +1,15 @@
 ---
-title: Tutorials för automatisk taggning av Adobe PDF-tillgänglighet
-description: Översiktssida för Adobe Accessibility Auto-Tag
+title: API-Tutorials för automatisk taggning av Adobe PDF-tillgänglighet
+description: Översiktssida för API-självstudiekurser för Adobe Accessibility Auto-Tag
 feature: PDF Services API
 role: Developer
 level: Beginner, Intermediate, Experienced
 type: Tutorial
 jira: KT-15327
-source-git-commit: 7bc199a7bacb9dcbf1fa90031bfb128dd31109f2
+exl-id: dfd018a7-8e1f-4c00-9e1f-6b7b8435fbfa
+source-git-commit: 175259d209d0cd61a7bbcd1f8dc9bd21d2f60130
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '88'
 ht-degree: 0%
 
 ---

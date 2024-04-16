@@ -4,11 +4,11 @@ breadcrumb-title: "[!DNL Acrobat Services]"
 user-guide-description: Läs mer om [!DNL Adobe Acrobat Services]
 solution: Acrobat Services
 feature-set: Acrobat Services
-feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API
+feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API, PDF Accessibility Auto-Tag API, PDF Electronic Seal API, PDF Extract API
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: 794e4418a6cbff45b75775121404f239aa41f8e0
+source-git-commit: 255a2425fcde4443d8502a92aa0274fac30f7279
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 3%

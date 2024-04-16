@@ -1,14 +1,14 @@
 ---
 title: "[!DNL Adobe Acrobat Services] API Tutorials"
 description: Översiktssida för [!DNL Adobe Acrobat Services]
-feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API
+feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API, PDF Electronic Seal API, PDF Extract API, PDF Accessibility Auto-Tag API
 role: Developer
 level: Beginner, Intermediate, Experienced
 jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: cdbefd8bd0d4b65e0d34e5bbf74065f80faf20e1
+source-git-commit: 255a2425fcde4443d8502a92aa0274fac30f7279
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 2%

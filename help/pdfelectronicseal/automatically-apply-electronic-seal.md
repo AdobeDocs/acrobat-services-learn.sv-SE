@@ -1,12 +1,13 @@
 ---
 title: Använd automatiskt ett elektroniskt sigill
 description: Lär dig hur du använder en manipuleringssäker sigill på PDF i stor skala
-feature: PDF Services API
+feature: PDF Electronic Seal API
 role: Developer
 level: Beginner
 type: Tutorial
 jira: KT-15033
-source-git-commit: cdbefd8bd0d4b65e0d34e5bbf74065f80faf20e1
+exl-id: 178cd894-cdb1-4595-a68f-20d9a14199b8
+source-git-commit: 255a2425fcde4443d8502a92aa0274fac30f7279
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%

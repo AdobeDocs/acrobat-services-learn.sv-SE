@@ -1,12 +1,13 @@
 ---
 title: Adobe PDF Electronic Seal API Tutorials
 description: Översiktssida för självstudiekurser för Adobe PDF Electronic Seal API
-feature: PDF Services API
+feature: PDF Electronic Seal API
 role: Developer
 level: Beginner, Intermediate, Experienced
 type: Tutorial
 jira: KT-15330
-source-git-commit: 765e02998f91bf37a6f2df7eb63c550c4af15d1f
+exl-id: 74198c86-505b-4321-923e-0079e3d767cd
+source-git-commit: 255a2425fcde4443d8502a92aa0274fac30f7279
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 1%

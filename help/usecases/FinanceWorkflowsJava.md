@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-7482
 thumbnail: KT-7482.jpg
 exl-id: 3bdc2610-d497-4a54-afc0-8b8baa234960
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: 558bd677d3b357a98488ada9dda1054bb21b81af
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Alla dessa exempel finns i [GitHub-exempel](https://github.com/adobe/pdfservices
 
 Nästa, i [!DNL Spring Boot], du kan hämta en fil med hjälp av sökvägen eller strömmen där filen laddas upp. Varje åtgärd du utför måste initieras och en indatafilsökväg måste anges. I den här självstudiekursen använder du de offentligt tillgängliga PDF-rapporterna från [Blackrock](https://www.blackrock.com/us/individual/products/investment-funds). Du kan använda vilken källa som helst, inklusive dina egna rapporter.
 
-Börja med att hämta [FileRef](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/io/FileRef.html) -objekt från filen. För enkelhetens skull bör du fokusera på filerna via strängsökvägen. Nedan visas en åtgärd för att konvertera en fil i sökvägen från PDF till Excel:
+Börja med att hämta FileRef-objektet från filen. För enkelhetens skull bör du fokusera på filerna via strängsökvägen. Nedan visas en åtgärd för att konvertera en fil i sökvägen från PDF till Excel:
 
 ```
 ExecutionContext executionContext = ExecutionContext.create(credentials);
@@ -143,7 +143,7 @@ try {
 
 Med den här koden genereras ett PDF-dokument av rapporten i Excel-format.
 
-Innan du levererar PDF till dina kunder kan du skydda den med ett lösenord. Skapa en annan åtgärd som hanterar detta skydd åt dig, [ProtectPDFOperation](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/ProtectPDFOperation.html)och använd sedan [ProtectPDFOoptions](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/options/protectpdf/package-summary.html) för att lägga till lösenordet i dokumentet.
+Innan du levererar PDF till dina kunder kan du skydda den med ett lösenord. Skapa en annan åtgärd som hanterar detta skydd för dig, ProtectPDFOperation, och använd sedan ProtectPDFOoptions för att lägga till lösenordet i dokumentet.
 
 ```
 ProtectPDFOptions options = ProtectPDFOptions.passwordProtectOptionsBuilder()

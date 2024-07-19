@@ -10,14 +10,14 @@ thumbnail: KT-6677.jpg
 exl-id: 61a9a2d1-94c3-41c2-8f90-a56a938ef245
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 4%
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 # Använda Adobe PDF Services API för att OCR PDF-filer
 
-![SKAPA PDF-HJÄLTEBILD](assets/OCR_hero.jpg)
+![Skapa PDF-hjälpbild](assets/OCR_hero.jpg)
 
 Med OCR (Optical Character Recognition) kan du låsa upp skannade PDF för att extrahera text och skapa sökbara filer. Integrera OCR i valfritt dokumentarbetsflöde med hjälp av våra kraftfulla molnbaserade API:er, vilket ger den perfekta lösningen för att arkivera, kopiera text och skapa sökbara dokumentindex. Skapa sökbara arkiv från skannade PDF-databaser för att låsa upp viktig information och spara tid med snabb sökbarhet. Eller tillämpa OCR på ditt PDF från uppladdade skanningar så att du kan redigera dem för användning i arbetsflöden för nybörjare.
 
@@ -37,7 +37,7 @@ Använd självstudiekurserna för att komma i gång nedan för att skapa dina AP
 
 ## Kör OCR-exemplet i exempelfilerna
 
-Vår OCR-åtgärd tillåter engelska som standard, men ger även stöd för tyska, franska, danska och [övriga språk](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#ocr-with-explicit-language). Standardspråket är en-us locale.
+Vår OCR-åtgärd stöder engelska som standard, men även tyska, franska, danska och [andra språk](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#ocr-with-explicit-language). Standardspråket är en-us locale.
 
 När du skickar alternativ med OCR-åtgärd, inklusive specifika språkinställningar, accepterar metoden också parametern &quot;type&quot; som har två alternativ:
 
@@ -47,13 +47,13 @@ När du skickar alternativ med OCR-åtgärd, inklusive specifika språkinställn
 
 **Java**
 
-1. Öppna kommandotolken.
+1. Öppna en kommandotolk.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
    T.ex. C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-java-samples>.
 
-1. Kör följande kommando::
+1. Kör följande kommando:
 
    `mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.platform.operation.samples.ocrpdf.OcrPDF`
 
@@ -61,7 +61,7 @@ Din PDF skapas i katalogen src/main/resources.
 
 **.NET**
 
-1. Öppna kommandotolken.
+1. Öppna en kommandotolk.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
@@ -69,7 +69,7 @@ Din PDF skapas i katalogen src/main/resources.
 
 1. Ändra kataloger igen till OcrPDF-katalogen.
 
-1. Kör följande kommando::
+1. Kör följande kommando:
 
    `dotnet run OcrPDF.csproj`
 
@@ -77,13 +77,13 @@ Din PDF skapas i samma katalog.
 
 **Node.js**
 
-1. Öppna kommandotolken.
+1. Öppna en kommandotolk.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
    T.ex. C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
 
-1. Kör följande kommando::
+1. Kör följande kommando:
 
    `node src/ocr/ocr-pdf.js`
 
@@ -95,14 +95,14 @@ I de här enkla stegen med hjälp av exempelfilerna bör du ha ett fungerande ex
 
 Härifrån kan du helt enkelt ersätta dina in- och utfiler som finns i exemplet för att använda din egen PDF för att slutföra ditt konceptbevis för ditt eget användningsfall.
 
-![Konceptbevis](assets/OCR_poc.png)
+![Koncepttest](assets/OCR_poc.png)
 
 ## Resurser och nästa steg
 
-* För ytterligare hjälp och support, gå till Adobe [[!DNL Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) community-forum
+* Om du vill ha mer hjälp och support kan du gå till användarforumet för [[!DNL Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) i Adobe
 
 * PDF Services API [Dokumentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [VANLIGA FRÅGOR](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) för PDF Services API-frågor
+* [Vanliga frågor](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) om API-frågor för PDF-tjänster
 
-* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) för frågor om licenser och priser
+* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) om du har frågor om licenser och priser

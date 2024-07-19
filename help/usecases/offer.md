@@ -10,8 +10,8 @@ thumbnail: KT-8096.jpg
 exl-id: 92f955f0-add5-4570-aa3a-ea63055dadb2
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1714'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Erbjudandebrev till anställda är en av de första upplevelser som anställda h
 
 ## Vad du kan lära dig
 
-Den här praktiska självstudiekursen går igenom hur du konfigurerar ett Node Express-projekt som visar ett webbformulär som en användare kan fylla i med information om anställda. De här uppgifterna använder [!DNL Acrobat Services] över webben för att skapa ett erbjudandebrev som PDF som kan levereras till en kund för signering med Adobe Sign API.
+Den här praktiska självstudiekursen går igenom hur du konfigurerar ett Node Express-projekt som visar ett webbformulär som en användare kan fylla i med information om anställda. De här uppgifterna använder [!DNL Acrobat Services] på webben för att generera ett erbjudandebrev som PDF som kan levereras till en kund för signering med Adobe Sign API.
 
 ## Relevanta API:er och resurser
 
@@ -33,7 +33,7 @@ Den här praktiska självstudiekursen går igenom hur du konfigurerar ett Node E
 
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
-* [Tillägg för taggning för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)
+* [Tillägg för taggningsord för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)
 
 * [Projektexempel](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html)
 
@@ -41,23 +41,23 @@ Den här praktiska självstudiekursen går igenom hur du konfigurerar ett Node E
 
 [Node.js](https://nodejs.org/) är programmeringsplattformen. Den levereras med en enorm uppsättning bibliotek, såsom Express-webbservern. [Hämta Node.js](https://nodejs.org/en/download/) och följ stegen för att installera den här fantastiska utvecklingsmiljön med öppen källkod.
 
-Om du vill använda Adobe-dokumentgenererings-API i Node.js går du till [API för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) webbplats för att komma åt ditt konto eller registrera dig för ett nytt. Ditt konto är [i sex månader och sedan betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara $0,05 per dokumentöverföring, så att du kan testa det riskfritt sedan bara betala när ditt företag växer.
+Om du vill använda Adobe-dokumentgenererings-API:t i Node.js går du till webbplatsen [Dokumentgenererings-API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) för att få åtkomst till ditt konto eller registrera dig för ett nytt. Ditt konto är [kostnadsfritt i sex månader. Sedan kan du betala löpande](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara $0,05 per dokumenttransaktion, så du kan testa det riskfritt och sedan bara betala när företaget växer.
 
-När du har loggat in på [Adobe Developer Console](https://console.adobe.io/)klickar du på **[!UICONTROL Skapa ett nytt projekt]**. Projektet heter som standard &quot;Projekt 1&quot;. Klicka på **[!UICONTROL Redigera projekt]** och ändra namnet till &quot;Generator för erbjudandebrev&quot;. I mitten av skärmen finns en **[!UICONTROL Kom igång med ditt nya projekt]** -sektionen. Så här aktiverar du säkerhet i ett projekt:
+När du har loggat in på [Adobe Developer Console](https://console.adobe.io/) klickar du på **[!UICONTROL Skapa nytt projekt]**. Projektet heter som standard &quot;Projekt 1&quot;. Klicka på knappen **[!UICONTROL Redigera projektet]** och ändra namnet till &quot;Generator för erbjudandebrev&quot;. I mitten av skärmen finns avsnittet **[!UICONTROL Kom igång med ditt nya projekt]**. Så här aktiverar du säkerhet i ett projekt:
 
-Klicka **Lägg till API**. Du ser ett antal API:er att välja mellan. I dialogrutan **[!UICONTROL Filtrera efter produkt]** -sektionen väljer du **[!UICONTROL Document Cloud]** och klicka sedan på **[!UICONTROL Nästa]**.
+Klicka på **Lägg till API**. Du ser ett antal API:er att välja mellan. I avsnittet **[!UICONTROL Filtrera efter produkt]** väljer du **[!UICONTROL Document Cloud]** och klickar sedan på **[!UICONTROL Nästa]**.
 
-Generera sedan autentiseringsuppgifter för att få åtkomst till API:et. Autentiseringsuppgifterna är i form av en JSON-webbtoken ([JWT](https://jwt.io/)): en öppen standard för säker kommunikation. Om du känner till JWT och redan har genererat nycklar kan du överföra din offentliga nyckel här. Alternativt fortsätter du genom att välja **Alternativ 1** om du vill att Adobe ska generera nycklarna åt dig.
+Generera sedan autentiseringsuppgifter för att få åtkomst till API:et. Autentiseringsuppgifterna har formen av en JSON-webbtoken ([JWT](https://jwt.io/)): en öppen standard för säker kommunikation. Om du känner till JWT och redan har genererat nycklar kan du överföra din offentliga nyckel här. Du kan också fortsätta genom att välja **Alternativ 1** så att Adobe kan generera nycklarna åt dig.
 
-![Skärmbild av att generera autentiseringsuppgifter](assets/offer_1.png)
+![Skärmbild av generering av autentiseringsuppgifter](assets/offer_1.png)
 
-Klicka på **[!UICONTROL Generera nyckelpar]** knapp. Du kan hämta en config.zip -fil. Zippa upp arkivfilen. Det innehåller två filer: certificate_pub.crt och private.key. Se till att den senare hålls säker, eftersom den innehåller dina privata inloggningsuppgifter och kan användas för att generera falska dokument om du inte kan kontrollera.
+Klicka på knappen **[!UICONTROL Generera nyckelpar]**. Du kan hämta en config.zip -fil. Zippa upp arkivfilen. Det innehåller två filer: certificate_pub.crt och private.key. Se till att den senare hålls säker, eftersom den innehåller dina privata inloggningsuppgifter och kan användas för att generera falska dokument om du inte kan kontrollera.
 
-Klicka på **[!UICONTROL Nästa]**. Nej, aktiverar åtkomst till API:et för generering av PDF. På fliken **[!UICONTROL Välj produktprofiler]** skärm, kontrollera **[!UICONTROL Enterprise PDF Services Developer]** och klicka på **[!UICONTROL Spara konfigurerat API]** -knappen. Nu är du redo att börja använda API:et.
+Klicka på **[!UICONTROL Nästa]**. Nej, aktiverar åtkomst till API:et för generering av PDF. På skärmen **[!UICONTROL Välj produktprofiler]** kontrollerar du **[!UICONTROL Enterprise PDF Services-utvecklare]** och klickar på knappen **[!UICONTROL Spara konfigurerat API]**. Nu är du redo att börja använda API:et.
 
 ## Konfigurera projektet
 
-Konfigurera ett nodprojekt som ska köra din kod. I det här exemplet används [Visual Studio Code](https://code.visualstudio.com/) (VS-kod) som redigerare. Skapa en mapp med namnet &quot;letter-generator&quot; och öppna den i VS-kod. Från **[!UICONTROL Fil]** -menyn väljer du **[!UICONTROL Avslutning]** \> **[!UICONTROL Ny terminal]** för att öppna ett skal i den här mappen. Kontrollera att Node är installerat och att det finns en sökväg genom att ange följande:
+Konfigurera ett nodprojekt som ska köra din kod. I det här exemplet används [Visual Studio Code](https://code.visualstudio.com/) (VS Code) som redigerare. Skapa en mapp med namnet &quot;letter-generator&quot; och öppna den i VS-kod. På menyn **[!UICONTROL Arkiv]** väljer du **[!UICONTROL Terminal]** \> **[!UICONTROL Ny terminal]** för att öppna ett skal i den här mappen. Kontrollera att Node är installerat och att det finns en sökväg genom att ange följande:
 
 ```
 node -v
@@ -73,9 +73,10 @@ Initiera först projektet med hjälp av Node Package Manager (npm). Skriv in fö
 npm init
 ```
 
-Du får några frågor om ditt nodprojekt. Du kan hoppa över de flesta av dessa frågor, men se till att projektnamnet är &quot;brev-generator&quot; och startpunkten är **index.js**. Välj **Ja** för att slutföra projektinitieringen.
+Du får några frågor om ditt nodprojekt. Du kan hoppa över de flesta av dessa frågor, men se till att projektnamnet är &quot;letter-generator&quot; och att startpunkten är **index.js**. Välj **Ja** för att slutföra projektinitieringen.
 
-Du har nu en package.json-fil. Noden använder den här filen för att organisera projektet. Innan du skapar index.js måste du lägga till Adobe-bibliotek med följande kommando:
+Du har nu en package.json-fil. Noden använder den här filen för att organisera projektet. Innan du skapar index.js måste du lägga till Adobe-bibliotek med följande
+kommando:
 
 ```
 npm install --save @adobe/documentservices-pdftools-node-sdk
@@ -115,7 +116,7 @@ console.log(`Candidate offer letter app listening on port ${port}!`)
 });
 ```
 
-Observera att get-flödet returnerar ett **index.html** fil. Vi skapar en HTML-fil med det namnet och följande enkla formulär. Du kan lägga till CSS-format och andra designelement senare som du vill. Den här blanketten innehåller kandidatens grundläggande information för att skapa ett välkomstbrev:
+Observera att GET-vägen returnerar en **index.html**-fil. Vi skapar en HTML-fil med det namnet och följande enkla formulär. Du kan lägga till CSS-format och andra designelement senare som du vill. Den här blanketten innehåller kandidatens grundläggande information för att skapa ett välkomstbrev:
 
 ```
 <!DOCTYPE html>
@@ -159,11 +160,11 @@ Kör webbservern med följande kommando:
 node app.js
 ```
 
-Du bör se meddelandet &quot;Kandidatens erbjudandebrev app lyssnar på port 8000&quot;. Om du öppnar din webbläsare på <http://localhost:8000/>bör formuläret se ut så här:
+Du bör se meddelandet &quot;Kandidatens erbjudandebrev app lyssnar på port 8000&quot;. Om du öppnar webbläsaren till <http://localhost:8000/> ska formuläret se ut så här:
 
 ![Skärmbild av webbformulär](assets/offer_2.png)
 
-Lägg märke till att formuläret postar på sig själv. Om du fyller i data och klickar på **Generera brev,** Du bör se följande information på konsolen:
+Lägg märke till att formuläret postar på sig själv. Om du fyller i data och klickar på **Generera brev** bör du se följande information på konsolen:
 
 ```
 Got body: { firstname: 'John',
@@ -238,7 +239,7 @@ console.log('Exception encountered while executing operation', err);
 }
 ```
 
-Det finns mycket kod att packa upp där. Låt oss ta huvuddelen först: `documentMergeOperation`. I det här avsnittet tar du dina JSON-data och sammanfogar dem med en Word-dokumentmall. Du kan använda [exempel på webbplatsen Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade) som referens, men låt oss göra ett eget enkelt exempel. Öppna Word och skapa ett nytt tomt dokument. Du kan anpassa den så mycket du vill, men du har åtminstone något som detta:
+Det finns mycket kod att packa upp där. Låt oss ta huvuddelen först: `documentMergeOperation`. I det här avsnittet tar du dina JSON-data och sammanfogar dem med en Word-dokumentmall. Du kan använda [exemplet på Adobe-webbplatsen](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade) som referens, men låt oss ge ett eget enkelt exempel. Öppna Word och skapa ett nytt tomt dokument. Du kan anpassa den så mycket du vill, men du har åtminstone något som detta:
 
 Hej X!
 
@@ -246,23 +247,23 @@ Vi är glada att kunna erbjuda dig en position för $X ett år. Ditt startdatum 
 
 Välkommen
 
-Spara dokumentet som &quot;OfferLetter-Template.docx&quot; i en mapp som heter &quot;resources&quot; (resurser) i projektets rot. Observera de tre Xs:en i dokumentet. Dessa XS är tillfälliga platshållare för din JSON-information. Även om du kan ersätta de här platshållarna med en särskild syntax för att göra det, innehåller Adobe ett Word-tillägg som gör det enklare. Gå till Adobe för att installera tillägget [Tillägg för taggning för dokumentgenerering](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin) -plats.
+Spara dokumentet som &quot;OfferLetter-Template.docx&quot; i en mapp som heter &quot;resources&quot; (resurser) i projektets rot. Observera de tre Xs:en i dokumentet. Dessa XS är tillfälliga platshållare för din JSON-information. Även om du kan ersätta de här platshållarna med en särskild syntax för att göra det, innehåller Adobe ett Word-tillägg som gör det enklare. Om du vill installera tillägget går du till webbplatsen Adobe [Document Generation Tagger Word Add-in](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin).
 
-Klicka på den nya mallen i Erbjudandebrev **Dokumentgenerering** -knappen. En sidopanel öppnas. Klicka på **Kom igång**. Du får ett textområde som du vill klistra in i JSON-exempeldata. Kopiera JSON-kodavsnittet &quot;offer-data&quot; ovanifrån till textområdet. Det ska se ut så här:
+Klicka på den nya **dokumentgenereringsknappen** i OfferLetter-mallen. En sidopanel öppnas. Klicka på **Kom igång**. Du får ett textområde som du vill klistra in i JSON-exempeldata. Kopiera JSON-kodavsnittet &quot;offer-data&quot; ovanifrån till textområdet. Det ska se ut så här:
 
-![Skärmbild av bokstav och kod](assets/offer_3.png)
+![Skärmbild av brev och kod](assets/offer_3.png)
 
-Klicka på **Generera taggar** knapp. En rullgardinsmeny med taggar visas där du kan infoga taggar i motsvarande punkter i dokumentet. Markera det första krysset i dokumentet och välj **[!UICONTROL firstname]**. Klicka **[!UICONTROL Infoga text]** och &quot;Bästa X&quot; ändras till &quot;Bästa ```{{`offer_letter`.firstname}}```&quot;. Det här märkordet har rätt format för `documentMergeOperation`. Fortsätt och lägg till de återstående tre taggarna vid rätt Xs. Glöm inte att spara OfferLetter-template.docx. Det ska se ut så här:
+Klicka på knappen **Generera taggar**. En rullgardinsmeny med taggar visas där du kan infoga taggar i motsvarande punkter i dokumentet. Markera det första krysset i dokumentet och välj **[!UICONTROL förnamn]**. Klicka på **[!UICONTROL Infoga text]** och &quot;Hej X&quot; ändras till &quot;Hej ```{{`offer_letter`.firstname}}```&quot;. Den här taggen har rätt format för `documentMergeOperation`. Fortsätt och lägg till de återstående tre taggarna vid rätt Xs. Glöm inte att spara OfferLetter-template.docx. Det ska se ut så här:
 
 Hej ```{{`offer_letter`.firstname}} {{`offer_letter`.lastname}}```!
 
-Vi är glada att kunna erbjuda dig en position för $ ```{{`offer_letter`.salary}}``` ett år. Ditt startdatum är ```{{`offer_letter`.startdate}}```.
+Vi är glada att kunna erbjuda dig en position på $ ```{{`offer_letter`.salary}}``` per år. Ditt startdatum är ```{{`offer_letter`.startdate}}```.
 
 Välkommen
 
-Nu har Word-mallen en markering som matchar JSON-formatet. Till exempel, ```{{`offer_letter`.`firstname`}}``` i början av Word-dokument ersätts av värdet i avsnittet &quot;förnamn&quot; i JSON-data.
+Nu har Word-mallen en markering som matchar JSON-formatet. Till exempel ersätts ```{{`offer_letter`.`firstname`}}``` i början av Word-dokumentet med värdet i avsnittet &quot;förnamn&quot; i JSON-data.
 
-Tillbaka till ditt `generateLetter` funktion. För att skydda ditt REST-anrop skapar du en ny fil som heter pdftools-api-credentials.json i projektets rotmapp. Klistra in följande JSON-data och justera dem med information från tjänstkontoavsnittet (JWT) i [Developer Console](https://console.adobe.io/).
+Tillbaka till funktionen `generateLetter`. För att skydda ditt REST-anrop skapar du en ny fil som heter pdftools-api-credentials.json i projektets rotmapp. Klistra in följande JSON-data och justera dem med information från tjänstkontoavsnittet (JWT) i [utvecklarkonsolen](https://console.adobe.io/).
 
 ```
 {
@@ -278,19 +279,20 @@ Tillbaka till ditt `generateLetter` funktion. För att skydda ditt REST-anrop sk
 }
 ```
 
-* Klient-ID, klienthemlighet och organisations-ID kan kopieras direkt från **[!UICONTROL Autentiseringsinformation]** -sektionen i konsolen.
+* Klient-ID, klienthemlighet och organisations-ID kan kopieras direkt från avsnittet **[!UICONTROL Autentiseringsinformation]** i konsolen.
 
-* Konto-ID:et är **ID för tekniskt konto**.
+* Konto-ID är **ID för tekniskt konto**.
 
-* Kopiera filen private.key som du genererade tidigare till projektet och ange dess namn i avsnittet private_key_file i filen pdftools-api-credentials.json. Om du vill kan du ange en sökväg till filen med den privata nyckeln här. Kom ihåg att hålla den säker eftersom den kan missbrukas en gång utanför din kontroll.
+* Kopiera filen private.key som du genererade tidigare till projektet och ange dess namn i avsnittet private_key_file i
+filen pdftools-api-credentials.json. Om du vill kan du ange en sökväg till filen med den privata nyckeln här. Kom ihåg att hålla den säker eftersom den kan missbrukas en gång utanför din kontroll.
 
-Om du vill skapa en PDF med JSON-data ifyllda går du tillbaka till **[!UICONTROL Ange kandidatinformation]** webbformulär och publicera vissa data. Det tar en liten stund eftersom dokumentet måste hämtas från Adobe, men du bör ha en fil med namnet OfferLetter.pdf i en ny mapp med namnet output.
+Om du vill skapa en PDF med JSON-data ifyllda går du tillbaka till webbformuläret **[!UICONTROL Ange information om kandidater]** och lägger upp data. Det tar en liten stund eftersom dokumentet måste hämtas från Adobe, men du bör ha en fil med namnet OfferLetter.pdf i en ny mapp med namnet output.
 
 ## Nästa steg
 
 Det var det! Detta är bara början. Om du tittar på avsnittet Avancerat på fliken Dokumentgenerering i Word-tillägget, ser du att inte alla platshållarmarkörer kommer från associerade JSON-data. Du kan också lägga till signaturtaggar. Med dessa taggar kan du ta dokumentet som skapas och överföra det till [Adobe Sign](https://acrobat.adobe.com/ca/en/sign.html) för leverans och signering till den nya medarbetaren. Läs Komma igång med Adobe Sign API och lär dig hur du gör det. Den här processen är liknande eftersom du använder REST-anrop som är skyddade med en JWT-token.
 
-Det sammanfattande dokumentexempel som ges ovan kan användas som grund för en ansökan när en organisation måste [öka säsongsanställning](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html) av anställda på flera platser. Som visas är det huvudsakliga flödet att ta data från kandidater via en onlineansökan. Data används för att fylla i fälten i ett erbjudandebrev och skicka ut det för elektronisk signatur.
+Exemplet med ett enda dokument som anges ovan kan användas som grund för ett program när en organisation måste [öka säsongsrekryteringen](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html) av anställda på flera platser. Som visas är det huvudsakliga flödet att ta data från kandidater via en onlineansökan. Data används för att fylla i fälten i ett erbjudandebrev och skicka ut det för elektronisk signatur.
 
-[!DNL Adobe Acrobat Services] är gratis att använda i sex månader, sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara $0,05 per dokumenttransaktion, så att du kan testa det och skala arbetsflödet för erbjudandebrevet när verksamheten växer. till [kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+[!DNL Adobe Acrobat Services] kan användas kostnadsfritt i sex månader och sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) med bara $0,05 per dokumenttransaktion, så att du kan testa det och skala arbetsflödet för erbjudandebrevet allt eftersom företaget växer. [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
 skapa egna mallar, [registrera ditt utvecklarkonto](https://www.adobe.io/).

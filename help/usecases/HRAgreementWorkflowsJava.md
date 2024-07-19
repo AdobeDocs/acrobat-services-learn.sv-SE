@@ -1,6 +1,6 @@
 ---
 title: HR-dokumentarbetsflöden i Java
-description: "[!DNL Adobe Acrobat Services] Med API:er kan du enkelt införliva PDF-funktioner i dina HR-webbapplikationer."
+description: "[!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i dina HR-webbprogram"
 feature: Use Cases
 role: Developer
 level: Intermediate
@@ -10,8 +10,8 @@ thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 2%
+source-wordcount: '1777'
+ht-degree: 0%
 
 ---
 
@@ -35,17 +35,17 @@ I den här praktiska självstudiekursen får du lära dig hur du implementerar e
 
 ## Genererar API-inloggningsuppgifter
 
-Börja med att registrera dig för den kostnadsfria testversionen av Adobe PDF Services API. Gå till [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [webbplats](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) och klicka på *Kom igång* knapp under *Skapa nya autentiseringsuppgifter*. Den kostnadsfria testversionen innehåller 1 000 dokumenttransaktioner som kan användas under sex månader. På nästa sida (se nedan) väljer du tjänsten (PDF Services API), anger inloggningsnamnet (till exempel HRDocumentWFCredentials) och anger en beskrivning.
+Börja med att registrera dig för den kostnadsfria testversionen av Adobe PDF Services API. Gå till webbplatsen [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) och klicka på knappen *Kom igång* under *Skapa nya autentiseringsuppgifter*. Den kostnadsfria testversionen innehåller 1 000 dokumenttransaktioner som kan användas under sex månader. På nästa sida (se nedan) väljer du tjänsten (PDF Services API), anger inloggningsnamnet (till exempel HRDocumentWFCredentials) och anger en beskrivning.
 
-Välj språk (Java i det här exemplet) och kontrollera *Skapa personliga kodexempel*. Det sista steget säkerställer att kodexempel redan innehåller den förifyllda filen pdftools-api-credentials.json som du använder tillsammans med den privata nyckeln för att autentisera appen i API:et.
+Välj språk (Java i det här exemplet) och markera *Skapa personliga kodexempel*. Det sista steget säkerställer att kodexempel redan innehåller den förifyllda filen pdftools-api-credentials.json som du använder tillsammans med den privata nyckeln för att autentisera appen i API:et.
 
-Klicka till sist på *Skapa autentiseringsuppgifter* knapp. Då genereras autentiseringsuppgifterna och exemplen börjar hämtas automatiskt.
+Klicka till sist på knappen *Skapa autentiseringsuppgifter*. Då genereras autentiseringsuppgifterna och exemplen börjar hämtas automatiskt.
 
-![SKAPA NY INLOGGNINGSSKÄRMBILD](assets/HRWJ_1.png)
+![Skapa nya autentiseringsuppgifter, skärmbild](assets/HRWJ_1.png)
 
 För att säkerställa att inloggningsuppgifterna fungerar ska du öppna de hämtade exemplen. Här använder du IntelliJ IDEA. När du öppnar källkoden frågar den integrerade utvecklingsmiljön (IDE) om motorn för bygget. Maven används i detta exempel, men du kan också arbeta med Gradle, beroende på dina inställningar.
 
-Kör sedan `mvn clean install` Maven mål att bygga burken filer.
+Kör sedan `mvn clean install` Maven-målet för att skapa JAR-filerna.
 
 Kör slutligen exemplet CombinePDF enligt nedan. PDF genereras i utdatamappen.
 
@@ -57,11 +57,11 @@ Med tanke på autentiseringsuppgifterna skapar du programmet. I det här exemple
 
 Konfigurera först projektinställningarna så att Java 8-språket och JAR-förpackningen används (se skärmbild nedan).
 
-![Skärmbild för fjäderinitierare](assets/HRWJ_3.png)
+![Skärmbild för fjäderinitiering](assets/HRWJ_3.png)
 
 För det andra lägger du till Spring Web (från webben) och Thymeleaf (från mallmotorer):
 
-![Skärmdump till annons Spring Web och Thymeleaf](assets/HRWJ_4.png)
+![Skärmbild för att lägga till Spring Web och Thymeleaf](assets/HRWJ_4.png)
 
 När du har skapat projektet går du till filen pom.xml och kompletterar avsnittet Beroenden med pdftools-sdk och log4j-slf4j-impl:
 
@@ -202,9 +202,9 @@ För att återge dynamiskt innehåll används återgivningsmotorn för Thymeleaf
 
 Generera nu PDF-dokumentet som innehåller det virtuella kontraktet genom att dynamiskt fylla i markerade fält efter att persondataformuläret har återgetts. Närmare bestämt måste du fylla i personuppgifterna i det förskapade avtalet.
 
-För enkelhetens skull har du bara ett sidhuvud, en underrubrik och en strängkonstant som lyder: &quot;Detta avtal förbereddes för \&lt;full name=&quot;&quot; of=&quot;&quot; the=&quot;&quot; person=&quot;&quot;>&quot;.
+För enkelhetens skull har du bara ett sidhuvud, en underrubrik och en strängkonstant som lyder: &quot;Detta avtal förbereddes för \&lt;personens fullständiga namn\>&quot;.
 
-För att uppnå detta mål måste man börja med Adobe [Skapa en PDF från Dynamic HTML](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html) exempel. Genom att analysera exempelkoden ser du att den dynamiska HTML-fältpopulationen fungerar på följande sätt.
+Börja med att skapa en PDF från Adobe [Exempel från Dynamic HTML](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html). Genom att analysera exempelkoden ser du att den dynamiska HTML-fältpopulationen fungerar på följande sätt.
 
 Först måste du förbereda HTML, som har statiskt och dynamiskt innehåll. Den dynamiska delen uppdateras med JavaScript. JSON-objektet injiceras i din HTML via PDF Services API.
 
@@ -242,7 +242,7 @@ Sedan hämtar du JSON-egenskaperna med hjälp av JavaScript-funktionen som anrop
 
 Sedan måste du zippa HTML med alla beroende JavaScript- och CSS-filer. PDF Services API tar inte emot HTML-filer. Istället krävs en zip-fil som indata. I så fall lagrar du den zippade filen på src\\main\\resources\\contract\\index.zip.
 
-Efteråt kan du komplettera `PersonController` med en annan POST som hanterar metodbegäranden:
+Efteråt kan du komplettera `PersonController` med en annan metod som hanterar begäranden om POST:
 
 ```
 @PostMapping("/")
@@ -260,15 +260,15 @@ public String checkPersonInfo(@Valid PersonForm personForm,
 
 Med ovanstående metod skapas ett PDF-avtal med de angivna personuppgifterna och vyn för kontraktsåtgärder återges. Den sistnämnda tillhandahåller länkar till det genererade PDF och för att signera PDF.
 
-Nu ska vi se hur `CreateContract` metoden fungerar (den fullständiga listan finns nedan). Metoden bygger på två fält:
+Nu ska vi se hur metoden `CreateContract` fungerar (den fullständiga listan finns nedan). Metoden bygger på två fält:
 
 * `LOGGER`, från log4j, för att felsöka information om eventuella undantag
 
 * `contractFilePath`, som innehåller filsökvägen till det genererade PDF
 
-Inställningen `CreateContract` -metoden anger autentiseringsuppgifterna och skapar PDF från HTML. Om du vill överföra och fylla i en persons uppgifter i avtalet använder du `setCustomOptionsAndPersonData` helper. Den här metoden hämtar persondata från formuläret och skickar dem sedan till den genererade PDF via JSON-objektet som förklaras ovan.
+Metoden `CreateContract` anger autentiseringsuppgifterna och skapar PDF från HTML. Använd `setCustomOptionsAndPersonData`-hjälpen om du vill överföra och fylla i personens data i avtalet. Den här metoden hämtar persondata från formuläret och skickar dem sedan till den genererade PDF via JSON-objektet som förklaras ovan.
 
-Dessutom `setCustomOptionsAndPersonData` I visas hur du styr PDF genom att inaktivera sidhuvudet och sidfoten. När detta är klart sparar du PDF-filen på output/contract.pdf och raderar eventuellt den tidigare genererade filen.
+I `setCustomOptionsAndPersonData` visas också hur du styr PDF genom att inaktivera sidhuvudet och sidfoten. När detta är klart sparar du PDF-filen på output/contract.pdf och raderar eventuellt den tidigare genererade filen.
 
 ```
 private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
@@ -325,7 +325,7 @@ private static void setCustomOptionsAndPersonData(
 }
 ```
 
-När du skapar avtalet kan du också sammanfoga de dynamiska, personspecifika uppgifterna med fasta avtalsvillkor. Om du vill göra det följer du [Skapa en PDF från statisk HTML](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html) exempel. Du kan även [slå samman två PDF](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-static-html).
+När du skapar avtalet kan du också sammanfoga de dynamiska, personspecifika uppgifterna med fasta avtalsvillkor. Gör det genom att följa exemplet [Skapa en PDF från statisk HTML](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html). Du kan också [sammanfoga två PDF](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-static-html).
 
 ## Visa PDF-filen för hämtning
 
@@ -348,7 +348,7 @@ Du kan nu presentera länken till det genererade PDF som användaren ska hämta.
 </html>
 ```
 
-Sedan implementerar du `downloadContract` metod inom `PersonController` Klass:
+Du implementerar sedan metoden `downloadContract` i klassen `PersonController` på följande sätt:
 
 ```
 @RequestMapping("/pdf")
@@ -376,13 +376,13 @@ När du har kört programmet får du följande flöde. Den första skärmen visa
 
 ![Skärmbild av datavärden](assets/HRWJ_6.png)
 
-När du har klickat på *Skicka* -knappen valideras formuläret och PDF genereras baserat på HTML (resources/contract/index.html). Programmet visar en annan vy (kontraktsuppgifter) där du kan hämta PDF:
+När du klickar på *Skicka* verifieras formuläret och PDF genereras baserat på HTML (resources/contract/index.html). Programmet visar en annan vy (kontraktsuppgifter) där du kan hämta PDF:
 
-![Skärmbild där du kan ladda ner PDF](assets/HRWJ_7.png)
+![Skärmbild där du kan hämta PDF](assets/HRWJ_7.png)
 
 PDF ser, efter rendering i webbläsaren, ut så här. De personuppgifter du har angett sprids nämligen till PDF:
 
-![Skärmdump av PDF renderad med personuppgifter](assets/HRWJ_8.png)
+![Skärmbild av PDF återges med personuppgifter](assets/HRWJ_8.png)
 
 ## Aktivera signaturer och säkerhet
 
@@ -390,9 +390,9 @@ När avtalet är klart kan Adobe Sign lägga till digitala signaturer som repres
 
 Du måste utföra flera steg för att få en auktoriseringstoken:
 
-Registrera först en [utvecklarkonto](https://acrobat.adobe.com/se/sv/sign/developer-form.html).
+Registrera först ett [utvecklarkonto](https://acrobat.adobe.com/se/sv/sign/developer-form.html).
 
-Skapa CLIENT-programmet i [Adobe Sign-portal](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
+Skapa CLIENT-programmet i [Adobe Sign-portalen](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 
 Konfigurera OAuth för programmet enligt beskrivningen [här](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) och [här](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp). Anteckna din klientidentifierare och klienthemlighet. Sedan kan du använda `https://www.google.com` som omdirigerings-URI och följande omfattningar:
 
@@ -404,7 +404,7 @@ Konfigurera OAuth för programmet enligt beskrivningen [här](https://www.adobe.
 
 * agreement_send:account
 
-Förbered en URL enligt följande med ditt klient-ID i stället för \&lt;client_id>:
+Förbered en URL enligt följande med ditt klient-ID i stället för \&lt;CLIENT_ID\>:
 
 ```
 https://secure.eu1.adobesign.com/public/oauth?redirect_uri=https://www.google.com
@@ -413,15 +413,16 @@ https://secure.eu1.adobesign.com/public/oauth?redirect_uri=https://www.google.co
 &scope=user_login:self+agreement_read:account+agreement_write:account+agreement_send:account
 ```
 
-Skriv webbadressen ovan i webbläsaren. Du omdirigeras till google.com och koden visas i adressfältet som kod=\&lt;your_code>, till exempel:
+Skriv webbadressen ovan i webbläsaren. Du omdirigeras till google.com och koden visas i adressfältet som kod=\&lt;DIN_KOD\>, för
+Exempel:
 
 ```
 https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobesign.com/&web_access_point=https://secure.eu1.adobesign.com%2F
 ```
 
-Notera de värden som anges för \&lt;your_code> och api_access_point.
+Notera värdena som anges för \&lt;YOUR_CODE\> och api_access_point.
 
-Om du vill skicka en begäran om HTTP-POST som tillhandahåller åtkomsttoken ska du använda klient-ID:t \&lt;your_code>och api_access_point-värden. Du kan använda [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html) eller cURL:
+Om du vill skicka en begäran om HTTP-POST som tillhandahåller åtkomsttoken ska du använda värdena client ID, \&lt;YOUR_CODE\> och api_access_point. Du kan använda [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html) eller cURL:
 
 ```
 curl --location --request POST "https://**api.eu1.adobesign.com**/oauth/token"
@@ -453,7 +454,7 @@ Anteckna din access_token. Du behöver den för att auktorisera din klientkod.
 
 ## Använda Adobe Sign Java SDK
 
-När du har åtkomsttoken kan du skicka REST API-anrop till Adobe Sign. Du kan förenkla detta genom att använda Adobe Sign Java SDK. Källkoden finns på [Adobe GitHub-lagringsplats](https://github.com/adobe-sign/AdobeSignJavaSdk).
+När du har åtkomsttoken kan du skicka REST API-anrop till Adobe Sign. Du kan förenkla detta genom att använda Adobe Sign Java SDK. Källkoden finns på [Adobe GitHub-lagringsplatsen](https://github.com/adobe-sign/AdobeSignJavaSdk).
 
 Om du vill integrera det här paketet med ditt program måste du klona koden. Skapa sedan Maven-paketet (mvn-paketet) och installera följande filer i projektet (du hittar dem i den tillhörande koden i mappen adobe-sign-sdk):
 
@@ -475,7 +476,7 @@ Om du vill integrera det här paketet med ditt program måste du klona koden. Sk
 
 * target/lib/swagger-annotations-1.5.15.jar
 
-I IntelliJ IDEA kan du lägga till dessa filer som beroenden med *Projektstruktur* (Fil-/projektstruktur).
+I IntelliJ IDEA kan du lägga till dessa filer som beroenden med *Projektstruktur* (fil-/projektstruktur).
 
 ## Skicka PDF för signering
 
@@ -500,9 +501,9 @@ Du är nu redo att skicka avtalet för signering. För att göra detta, först k
 </html>
 ```
 
-Sedan lägger du till en annan styrenhet, `AdobeSignController`, där du implementerar `sendContractMethod` (se medföljande kod). Metoden fungerar på följande sätt:
+Sedan lägger du till en annan kontrollenhet, `AdobeSignController`, där du implementerar `sendContractMethod` (se medföljande kod). Metoden fungerar på följande sätt:
 
-För det första använder `ApiClient` för att hämta API-slutpunkten.
+Först används `ApiClient` för att hämta API-slutpunkten.
 
 ```
 ApiClient apiClient = new ApiClient();
@@ -578,7 +579,7 @@ participantSetInfo.setRole(ParticipantSetInfo.RoleEnum.SIGNER);
 agreementCreationInfo.addParticipantSetsInfoItem(participantSetInfo);
 ```
 
-Slutligen skickar du avtalet med `createAgreement` från Adobe Sign Java SDK:
+Slutligen skickar du avtalet med `createAgreement`-metoden från Adobe Sign Java SDK:
 
 ```
 // Create agreement using the transient document.
@@ -589,9 +590,9 @@ AgreementCreationResponse agreementCreationResponse = agreementsApi.createAgreem
 System.out.println("Agreement sent, ID: " + agreementCreationResponse.getId());
 ```
 
-När du har kört den här koden får du ett e-postmeddelande (till den adress som anges i koden som `<email_address>)` med begäran om avtalssignatur. E-postmeddelandet innehåller hyperlänken som dirigerar mottagare till Adobe Sign-portalen för att utföra signering. Du ser dokumentet i Adobe Sign utvecklarportal (se bilden nedan) och du kan också spåra signeringsprocessen programmatiskt med [getAgreementInfo](https://github.com/adobe-sign/AdobeSignJavaSdk/blob/master/docs/AgreementsApi.md#getAgreementInfo) metod.
+När du har kört den här koden får du ett e-postmeddelande (till adressen som anges i koden som `<email_address>)` med begäran om avtalssignatur. E-postmeddelandet innehåller hyperlänken som dirigerar mottagare till Adobe Sign-portalen för att utföra signering. Du ser dokumentet i Adobe Sign utvecklarportal (se bilden nedan) och du kan också spåra signeringsprocessen programmatiskt med metoden [getAgreementInfo](https://github.com/adobe-sign/AdobeSignJavaSdk/blob/master/docs/AgreementsApi.md#getAgreementInfo).
 
-Slutligen kan du även lösenordsskydda din PDF med hjälp av PDF Services API som visas i dessa [exempel](https://github.com/adobe/pdfservices-java-sdk-samples/tree/master/src/main/java/com/adobe/pdfservices/operation/samples/protectpdf).
+Slutligen kan du även lösenordsskydda din PDF med PDF Services API som visas i dessa [exempel](https://github.com/adobe/pdfservices-java-sdk-samples/tree/master/src/main/java/com/adobe/pdfservices/operation/samples/protectpdf).
 
 ![Skärmbild av kontraktsuppgifter](assets/HRWJ_9.png)
 
@@ -601,4 +602,4 @@ Som du kan se kan du med hjälp av snabbstarterna implementera ett enkelt webbfo
 
 Om du tar exemplet längre kan du skapa formulär som mottagare kan signera på distans och på ett säkert sätt. När du behöver flera signaturer kan du till och med automatiskt dirigera formulär till en rad personer i ett arbetsflöde. Introduktionen av dina anställda har förbättrats och din HR-avdelning kommer att älska dig.
 
-Utcheckning [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) för att lägga till en mängd PDF-funktioner till dina program idag.
+Ta en titt på [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) för att lägga till en mängd PDF-funktioner till dina program i dag.

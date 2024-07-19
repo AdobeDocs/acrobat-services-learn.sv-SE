@@ -35,9 +35,9 @@ Lås upp strukturen och innehållselementen i PDF med en webbtjänst som drivs a
       <img alt="Tolka PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API" src="assets/ParsingPDF_1280.png" />
    </a>
     <div>
-   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>Tolka PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API</strong></a>
+   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>Parsa PDF: Lika enkelt som att arbeta med JSON-data med PDF Extract API</strong></a>
     </div>
-    <em>Lär dig hur tjänsten PDF Extract i Adobe PDF Services API kan göra det lika enkelt att parsa PDF som att parsa JSON</em>
+    <em>Lär dig hur tjänsten PDF Extract i Adobe PDF Services API kan göra det lika enkelt att tolka PDF som att tolka JSON</em>
     <br>
   </td>
   <td>

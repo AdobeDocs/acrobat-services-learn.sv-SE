@@ -10,8 +10,8 @@ thumbnail: KT-8145.jpg
 exl-id: 5871ef8d-be9c-459f-9660-e2c9230a6ceb
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 1%
+source-wordcount: '1343'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Det är fantastiskt när verksamheten blomstrar men produktiviteten blir lidande när det är dags att förbereda alla dessa fakturor. Att skapa fakturor manuellt är tidskrävande, plus att du löper risken att göra ett fel, potentiellt förlora pengar eller reta upp en kund med ett felaktigt belopp.
 
-Tänk på Danielle, till exempel, som jobbar i [redovisningsavdelning](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html) [för ett medicinskt försörjningsföretag](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html). Det är slutet av månaden, så hon hämtar information från flera olika system, dubbelkontrollerar att den är korrekt och formaterar fakturorna. Efter allt det arbetet är hon äntligen redo att konvertera dokumenten till PDF (så att alla kan visa dem utan att köpa specifik programvara) och skicka en personlig faktura till varje kund.
+Tänk dig Danielle som till exempel arbetar på [redovisningsavdelningen](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html) [på ett medicinskt leverantörsföretag](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html). Det är slutet av månaden, så hon hämtar information från flera olika system, dubbelkontrollerar att den är korrekt och formaterar fakturorna. Efter allt det arbetet är hon äntligen redo att konvertera dokumenten till PDF (så att alla kan visa dem utan att köpa specifik programvara) och skicka en personlig faktura till varje kund.
 
 Även när månadsfaktureringen är klar kan Danielle inte komma undan fakturorna. Vissa kunder har faktureringscykler som inte är månatliga, så hon skapar alltid en faktura åt någon. Ibland redigerar en kund sin faktura och betalar för lite. Danielle lägger sedan tid på att felsöka felmatchningen av fakturan. I den här takten måste hon anlita en assistent för att hålla jämna steg med allt arbete!
 
@@ -31,7 +31,7 @@ Det Danielle behöver är ett sätt att generera fakturor snabbt och korrekt, b�
 
 I den här praktiska självstudiekursen får du lära dig hur du använder Adobe dokumentgenererings-API för att automatiskt generera fakturor, lösenordsskydda PDF och leverera en faktura till varje kund. Allt som krävs är lite kunskap om Node.js, JavaScript, Express.js, HTML och CSS.
 
-Den fullständiga koden för det här projektet är [finns på GitHub](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-invoice-generation). Du måste konfigurera den gemensamma katalogen med din mall och rådatamapparna. Under produktionen måste du hämta data från ett externt API. Du kan också utforska den här arkiverade versionen av programmet som innehåller mallresurserna.
+Den fullständiga koden för projektet är [tillgänglig på GitHub](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-invoice-generation). Du måste konfigurera den gemensamma katalogen med din mall och rådatamapparna. Under produktionen måste du hämta data från ett externt API. Du kan också utforska den här arkiverade versionen av programmet som innehåller mallresurserna.
 
 ## Relevanta API:er och resurser
 
@@ -77,7 +77,7 @@ JSON-dokumentet innehåller kundinformation och orderinformation. Använd det h�
 
 ## Skapa en fakturamall
 
-Adobe Document Generation API förväntar sig en Microsoft Word-baserad mall och ett JSON-dokument för att skapa ett dynamiskt PDF- eller Word-dokument. Skapa en Microsoft Word-mall för ditt faktureringsprogram och använd [Kostnadsfritt tillägg för taggning för dokumentgenerering](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo) för att generera malltaggar. Installera tillägget och öppna fliken i Microsoft Word.
+Adobe Document Generation API förväntar sig en Microsoft Word-baserad mall och ett JSON-dokument för att skapa ett dynamiskt PDF- eller Word-dokument. Skapa en Microsoft Word-mall för ditt faktureringsprogram och använd det [kostnadsfria tillägget Tagger för dokumentgenerering](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo) för att generera malltaggarna. Installera tillägget och öppna fliken i Microsoft Word.
 
 ![Skärmbild av taggningstillägget för dokumentgenerering](assets/invoices_1.png)
 
@@ -85,19 +85,19 @@ När du har klistrat in JSON-innehållet i tillägget, enligt ovan, klickar du p
 
 ![Skärmbild av dokumentgenereringens taggningsförfattarmall](assets/invoices_2.png)
 
-Börja skriva fakturamallen i ditt Microsoft Word-dokument. Lämna markören där du måste infoga dynamiska data och välj sedan taggen från tilläggsfönstret i Adobe. Klicka **Infoga text** så att tillägget Adobe Document Generation Tagger kan generera och infoga taggarna. För personlig anpassning infogar vi kundens namn och e-postadress.
+Börja skriva fakturamallen i ditt Microsoft Word-dokument. Lämna markören där du måste infoga dynamiska data och välj sedan taggen från tilläggsfönstret i Adobe. Klicka på **Infoga text** så att tillägget Adobe Document Generation Tagger kan generera och infoga taggarna. För personlig anpassning infogar vi kundens namn och e-postadress.
 
-Gå nu vidare till de data som ändras för varje ny faktura. Välj **Avancerat** fliken för tillägget. Klicka på om du vill se tillgängliga alternativ för att generera en dynamisk tabell baserat på de produkter en kund beställt **Tabeller och listor** .
+Gå nu vidare till de data som ändras för varje ny faktura. Välj fliken **Avancerat** i tillägget. Klicka på **Tabeller och listor** om du vill se de tillgängliga alternativen för att generera en dynamisk tabell baserat på produkterna som en kund beställt.
 
-Välj **Ordning** från den första listrutan. I den andra listrutan väljer du kolumnerna för den här tabellen. I den här självstudiekursen markerar du alla tre kolumner för objektet som ska återge tabellen.
+Välj **Ordning** i den första listrutan. I den andra listrutan väljer du kolumnerna för den här tabellen. I den här självstudiekursen markerar du alla tre kolumner för objektet som ska återge tabellen.
 
 ![Skärmbild av fliken Avancerat för dokumentgenereringstagg](assets/invoices_3.png)
 
-Dokumentgenererings-API:t kan också utföra komplexa åtgärder som att aggregera element i en array. I dialogrutan **Avancerat** -fliken, välj **Numeriska beräkningar** och i **Sammansättning** markerar du det fält där du vill göra beräkningen.
+Dokumentgenererings-API:t kan också utföra komplexa åtgärder som att aggregera element i en array. På fliken **Avancerat** väljer du **Numeriska beräkningar** och på fliken **Aggregering** väljer du fältet där du vill tillämpa beräkningen.
 
-![Skärmbild av dokumentgenerering med numeriska beräkningar](assets/invoices_4.png)
+![Skärmbild av numeriska beräkningar för dokumentgenereringstaggar](assets/invoices_4.png)
 
-Klicka på **Infoga beräkning** för att infoga den här taggen där det behövs i dokumentet. Följande text visas nu i din Microsoft Word-fil:
+Klicka på knappen **Infoga beräkning** för att infoga taggen där det behövs i dokumentet. Följande text visas nu i din Microsoft Word-fil:
 
 ![Skärmbild av taggar i Microsoft Word-dokument](assets/invoices_5.png)
 
@@ -107,7 +107,7 @@ Det här fakturaexemplet innehåller kundinformation, beställda produkter och d
 
 Använd Adobe PDF Services Node.js software development kit (SDK) för att kombinera Microsoft Word- och JSON-dokumenten. Skapa ett Node.js-program för att skapa fakturan med hjälp av dokumentgenererings-API:t.
 
-PDF Services API innehåller dokumentgenereringstjänsten, så du kan använda samma autentiseringsuppgifter för båda. Njut av en [sex månaders kostnadsfri provperiod](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html), betala sedan bara $0,05 per dokumenttransaktion.
+PDF Services API innehåller dokumentgenereringstjänsten, så du kan använda samma autentiseringsuppgifter för båda. Utnyttja en [sex månaders kostnadsfri testperiod](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) och betala sedan bara $0,05 per dokumenttransaktion.
 
 Här är koden för att slå samman PDF:
 
@@ -143,7 +143,7 @@ async function compileDocFile(json, inputFile, outputPdf) {
 } 
 ```
 
-Den här koden hämtar information från det inmatade JSON-dokumentet och inmatningsmallfilen. Sedan skapas en dokumentsammanfogningsåtgärd för att kombinera filerna i en enda PDF-rapport. Slutligen utförs åtgärden med dina API-inloggningsuppgifter. Om du inte redan har dem, [skapa autentiseringsuppgifter](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getting-credentials) (Dokumentgenererings- och PDF Services API använder samma autentiseringsuppgifter).
+Den här koden hämtar information från det inmatade JSON-dokumentet och inmatningsmallfilen. Sedan skapas en dokumentsammanfogningsåtgärd för att kombinera filerna i en enda PDF-rapport. Slutligen utförs åtgärden med dina API-inloggningsuppgifter. Om du inte redan har dem [skapar du autentiseringsuppgifter](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getting-credentials) (samma autentiseringsuppgifter används för dokumentgenererings- och PDF Services-API).
 
 Använd den här koden i Express-routern för att hantera dokumentbegäran:
 
@@ -178,7 +178,7 @@ Den här fakturan innehåller dynamiska data från JSON-dokumentet.
 
 ## Lösenordsskydda fakturor
 
-Eftersom revisorn Danielle är orolig för kunder som ändrar fakturan ska du använda ett lösenord för att begränsa redigeringen. [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html) Du kan automatiskt tillämpa ett lösenord på dokument. Här använder du Adobe PDF Services SDK för att skydda dokument med ett lösenord. Koden är:
+Eftersom revisorn Danielle är orolig för kunder som ändrar fakturan ska du använda ett lösenord för att begränsa redigeringen. [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html) kan automatiskt tillämpa ett lösenord på dokument. Här använder du Adobe PDF Services SDK för att skydda dokument med ett lösenord. Koden är:
 
 ```
 async function applyPassword(password, inputFile, outputFile) {
@@ -218,17 +218,17 @@ async function applyPassword(password, inputFile, outputFile) {
 }
 ```
 
-När du använder den här koden skyddas dokumentet med ett lösenord och en ny faktura överförs till systemet. Mer information om hur den här koden används eller hur du testar den finns i [kodexempel](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-invoice-generation).
+När du använder den här koden skyddas dokumentet med ett lösenord och en ny faktura överförs till systemet. Mer information om hur den här koden används eller hur du testar den finns i [kodexemplet](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-invoice-generation).
 
 När du är klar med fakturan kanske du vill skicka den till klienten automatiskt. Det finns några sätt att åstadkomma automatiskt e-post dina kunder. Det snabbaste sättet är att använda ett e-post-API från tredje part tillsammans med ett hjälpbibliotek som [sendgrid-nodejs](https://github.com/sendgrid/sendgrid-nodejs). Om du redan har tillgång till en SMTP-server kan du använda [nodemailer](https://www.npmjs.com/package/nodemailer) för att skicka e-postmeddelanden via SMTP.
 
 ## Nästa steg
 
-I den här praktiska självstudiekursen har du skapat ett enkelt program för att hjälpa Danielle att redovisa med [fakturering](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html). Med hjälp av PDF Services API och Document Generation SDK har du fyllt i en Microsoft Word-mall med kundorderinformation från ett JSON-dokument, och skapat en PDF-faktura. Du kan sedan lösenordsskydda varje dokument med lösenordsskyddstjänster genom att [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html).
+I den här praktiska självstudiekursen har du skapat en enkel app för att hjälpa Danielle med redovisning med [fakturering](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html). Med hjälp av PDF Services API och Document Generation SDK har du fyllt i en Microsoft Word-mall med kundorderinformation från ett JSON-dokument, och skapat en PDF-faktura. Sedan lösenordsskyddade du varje dokument med lösenordsskyddstjänster av [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html).
 
 Eftersom Danielle kan generera fakturor automatiskt och inte behöver oroa sig för kunder som redigerar sina fakturor, behöver hon inte anlita en assistent för att hjälpa till med allt manuellt arbete. Hon kan använda sin extra tid till att hitta kostnadsbesparingar i leverantörsreskontrafilerna.
 
-Nu när du har sett hur enkelt det är kan du utöka den här appen med andra Adobe-verktyg för att bädda in fakturor på din webbplats. Detta gör till exempel att kunderna kan se sina fakturor eller saldon när som helst. [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) är gratis att använda. Du kan till och med gå vidare till personalavdelningen eller försäljningsavdelningen, hjälpa till att automatisera deras avtal och samla in elektroniska signaturer.
+Nu när du har sett hur enkelt det är kan du utöka den här appen med andra Adobe-verktyg för att bädda in fakturor på din webbplats. Detta gör till exempel att kunderna kan se sina fakturor eller saldon när som helst. [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) är kostnadsfritt att använda. Du kan till och med gå vidare till personalavdelningen eller försäljningsavdelningen, hjälpa till att automatisera deras avtal och samla in elektroniska signaturer.
 
-För att utforska alla möjligheter och börja bygga en egen praktisk app skapar du en kostnadsfri [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) konto för att komma igång idag. Testa gratis i sex månader sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)
+Om du vill utforska alla möjligheter och börja skapa en egen praktisk app skapar du ett kostnadsfritt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-konto så att du kommer igång i dag. Testa kostnadsfritt i sex månader och sedan [betala löpande](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)
 endast $0,05 per dokumenttransaktion när företaget skalas.

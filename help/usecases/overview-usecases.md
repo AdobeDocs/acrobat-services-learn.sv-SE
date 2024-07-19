@@ -1,6 +1,6 @@
 ---
 title: "[!DNL Adobe Acrobat Services] API-användningsfall"
-description: Översiktssida för [!DNL Adobe Acrobat Services] API-användningsfall
+description: Översiktssida för  [!DNL Adobe Acrobat Services] API-användningsfall
 feature: Use Cases
 role: Developer
 level: Beginner, Intermediate, Experienced
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # [!DNL Adobe Acrobat Services] API-användningsfall
 
-## Vad kan [!DNL Adobe Acrobat Services] Vad gör API:er för mig?
+## Vad kan [!DNL Adobe Acrobat Services] API:er göra för mig?
 
-Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet med dessa praktiska användningsfall.
+Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra ditt företag med dessa praktiska användningsfall.
 
 ### [!DNL Acrobat Services] API:er
 
@@ -50,7 +50,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
         <img alt="Påskynda din försäljningsprocess" src="assets/accsales_thumb.png" />
       </a>
       <div>
-      <a href="acceleratesales.md"><strong>Påskynda din försäljningsprocess</strong></a>
+      <a href="acceleratesales.md"><strong>Påskynda försäljningsprocessen</strong></a>
       </div>
       <em>Lär dig att öka försäljningen genom att integrera dokumentupplevelser</em>
       <br>
@@ -72,9 +72,9 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
       <img alt="Skapa ett sekretessavtal" src="assets/nda_thumb.png" />
     </a>
     <div>
-    <a href="nda.md"><strong>Skapa ett sekretessavtal</strong></a>
+    <a href="nda.md"><strong>Skapar ett sekretessavtal</strong></a>
     </div>
-    <em>Lär dig skapa en dynamisk PDF för sekretessavtal för samarbete</em>
+    <em>Lär dig hur du skapar ett dynamiskt PDF för sekretessavtal för samarbete</em>
     <br>
   </td>
   <td>
@@ -92,7 +92,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
       <img alt="Hantera erbjudandebrev för medarbetare" src="assets/offer_thumb.png" />
     </a>
     <div>
-    <a href="offer.md"><strong>Hantera erbjudandebrev för medarbetare</strong></a>
+    <a href="offer.md"><strong>Hantera medarbetarnas erbjudandebrev</strong></a>
     </div>
     <em>Lär dig hur du genererar ett erbjudandebrev som kan levereras till en ny anställd för signering</em>
     <br>
@@ -116,7 +116,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
     <div>
     <a href="reviews.md"><strong>Granskningar och godkännanden</strong></a>
     </div>
-    <em>Lär dig skapa ett arbetsflöde för dokumentgranskning och godkännande för samarbete i flera team</em>
+    <em>Lär dig skapa ett arbetsflöde för granskning och godkännande av dokument för samarbete mellan team</em>
     <br>
   </td>
   <td>
@@ -126,7 +126,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
     <div>
     <a href="reportcreation.md"><strong>Skapa och redigera rapporter</strong></a>
     </div>
-    <em>Lär dig hur du genererar kundrapporter på din webbplats för PDF</em>
+    PDF <em>Lär dig hur du skapar kundrapporter på din webbplats</em>
     <br>
   </td>
   <td>
@@ -134,7 +134,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
       <img alt="Jobbbokföring" src="assets/job_thumb.png" />
     </a>
     <div>
-    <a href="jobposting.md"><strong>Jobbbokföring</strong></a>
+    <a href="jobposting.md"><strong>Jobbannonsering</strong></a>
     </div>
     <em>Lär dig utveckla en smidig och konsekvent webbupplevelse för arbetssökande och arbetsgivare</em>
     <br>
@@ -144,7 +144,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
       <img alt="Samverkan mellan elever och lärare" src="assets/edu_thumb.png" />
     </a>
     <div>
-    <a href="educationcollab.md"><strong>Samverkan mellan studerande och lärare</strong></a>
+    <a href="educationcollab.md"><strong>Samverkan mellan elever och lärare</strong></a>
     </div>
     <em>Lär dig skapa en onlineutbildningsplattform som gör det möjligt för lärare och elever att enkelt dela resurser i PDF</em>
     <br>
@@ -158,7 +158,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
     <div>
     <a href="AgreementWorkflowsNodejs.md"><strong>Avtalsarbetsflöden i Node.js</strong></a>
     </div>
-    <em>[!DNL Adobe Acrobat Services] Med API:er kan du enkelt införliva PDF-funktioner i dina webbprogram</em>
+    <em>[!DNL Adobe Acrobat Services] API:er införlivar enkelt PDF-funktioner i dina webbprogram</em>
     <br>
   </td>
   <td>
@@ -168,7 +168,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
     <div>
     <a href="HRAgreementWorkflowsJava.md"><strong>HR-dokumentarbetsflöden i Java</strong></a>
     </div>
-    <em>[!DNL Adobe Acrobat Services] Med API:er kan du enkelt införliva PDF-funktioner i dina HR-webbprogram</em>
+    <em>[!DNL Adobe Acrobat Services] API:er införlivar enkelt PDF-funktioner i dina HR-webbprogram</em>
     <br>
   </td>
   <td>
@@ -176,7 +176,7 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra din verksamhet 
       <img alt="Hantera arbetsflöden för finansiella dokument i Java" src="assets/FAWJ_thumb.png" />
     </a>
     <div>
-    <a href="FinanceWorkflowsJava.md"><strong>Hantera arbetsflöden för finansiella dokument i Java</strong></a>
+    <a href="FinanceWorkflowsJava.md"><strong>Hantera arbetsflöden för ekonomiska dokument i Java</strong></a>
     </div>
     <em>[!DNL Adobe Acrobat Services] tillhandahåller alla verktyg, tjänster och funktioner som behövs för att bearbeta och extrahera data från finansdokument från PDF</em>
     <br>

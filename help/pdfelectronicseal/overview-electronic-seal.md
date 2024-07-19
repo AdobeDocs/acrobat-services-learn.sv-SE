@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Adobe PDF Electronic Seal API Tutorials
 
-Adobe PDF Electronic Seal API lägger till en elektronisk stämpel i dokument i stor skala med ett certifikat utfärdat av vissa TSP:er (leverantörer av betrodda tjänster) på [Adobe Approved Trust List (AATL)](https://helpx.adobe.com/se/acrobat/kb/approved-trust-list1.html). Den elektroniska stämpeln hjälper till att verifiera handlingars identitet och integritet. Detta kan användas för att e-signera dokument i stor skala och ingår i PDF Services API.
+Adobe PDF Electronic Seal API lägger till en elektronisk stämpel till dokument i stor skala med ett certifikat utfärdat av vissa TSP:er (leverantörer av betrodda tjänster) på [Adobe Approved Trust List (AATL)](https://helpx.adobe.com/se/acrobat/kb/approved-trust-list1.html). Den elektroniska stämpeln hjälper till att verifiera handlingars identitet och integritet. Detta kan användas för att e-signera dokument i stor skala och ingår i PDF Services API.
 
 <table style="table-layout:fixed">
 <tr>

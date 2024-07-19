@@ -63,7 +63,7 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
     <div>
    <a href="taggeroverview.md"><strong>Översikt över taggen för dokumentgenerering i Adobe</strong></a>
     </div>
-    <em>Få en översikt över taggen för dokumentgenerering i Adobe som är utformad för att användas med API:et för dokumentgenerering i Adobe</em>
+    <em>Få en översikt över taggen för dokumentgenerering i Adobe som är utformad för användning med Adobe-API:et för dokumentgenerering</em>
     <br>
   </td>
   <td>
@@ -83,7 +83,7 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
     <div>
    <a href="taggeraddimagetags.md"><strong>Lägga till bildtaggar</strong></a>
     </div>
-    <em>Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med taggen för att generera dokument i Adobe för att dynamiskt överföra bilder till dokument med API:et för att generera dokument i Adobe</em>
+    <em>Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att dynamiskt överföra bilder till dokument med API:et för dokumentgenerering i Adobe</em>
     <br>
   </td>
   <td>
@@ -93,7 +93,7 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
     <div>
    <a href="taggertables.md"><strong>Lägga till tabeller och listtaggar</strong></a>
     </div>
-    <em>Lär dig hur du lägger till register och listtaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att lägga till tabell- eller listrader dynamiskt baserat på data med API:et för dokumentgenerering i Adobe</em>
+    <em>Lär dig hur du lägger till register- och listtaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att lägga till tabell- eller listrader dynamiskt baserat på data med API:et för dokumentgenerering i Adobe</em>
     <br>
   </td>
 </tr>
@@ -103,7 +103,7 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
       <img alt="Ställa in numeriska beräkningstaggar" src="assets/Taggercalculations_thumb.png" />
    </a>
     <div>
-   <a href="taggercalculations.md"><strong>Ställa in numeriska beräkningstaggar</strong></a>
+   <a href="taggercalculations.md"><strong>Ställer in numeriska beräkningstaggar</strong></a>
     </div>
     <em>Lär dig hur du ställer in numeriska beräkningstaggar i Microsoft Word-mallar med Adobe dokumentgenereringstagg för att beräkna aggregeringar eller aritmetiska datavärden med Adobe dokumentgenererings-API</em>
     <br>
@@ -113,9 +113,9 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
       <img alt="Ange villkorligt innehåll" src="assets/Taggerconditional_thumb.png" />
    </a>
     <div>
-   <a href="taggerconditional.md"><strong>Ange villkorligt innehåll</strong></a>
+   <a href="taggerconditional.md"><strong>Ange villkorsstyrt innehåll</strong></a>
     </div>
-    <em>Lär dig hur du anger avsnitt i Microsoft Word-mallar med Adobe dokumentgenereringstagg för att dynamiskt inkludera eller utesluta avsnitt i ett dokument baserat på data med Adobe dokumentgenererings-API</em>
+    <em>Lär dig hur du anger avsnitt i Microsoft Word-mallar med Adobe dokumentgenereringstagg för att dynamiskt inkludera eller exkludera avsnitt i ett dokument baserat på data med Adobe dokumentgenererings-API:t</em>
     <br>
   </td>
   <td>

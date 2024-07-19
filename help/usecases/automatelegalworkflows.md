@@ -10,8 +10,8 @@ thumbnail: KT-10202.jpg
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '2876'
-ht-degree: 1%
+source-wordcount: '2826'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ I den här självstudiekursen används ett juridiskt avtal som varierar från st
 
 Börja med att registrera dig för kostnadsfria autentiseringsuppgifter för Adobe PDF-tjänster:
 
-1. Navigera [här](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) för att registrera dina inloggningsuppgifter.
+1. Gå [hit](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) om du vill registrera dina inloggningsuppgifter.
 1. Logga in med ditt Adobe ID.
 1. Ange ditt inloggningsuppgiftsnamn.
 
@@ -38,9 +38,9 @@ Börja med att registrera dig för kostnadsfria autentiseringsuppgifter för Ado
 1. Välj **[!UICONTROL Skapa autentiseringsuppgifter]**.
 En fil hämtas till datorn med en ZIP-fil som innehåller exempelfilerna, pdfservices-api-credentials.json och private.key för autentisering.
 
-   ![Skärmbild av inloggningsuppgifter](assets/automatelegal_2.png)
+   ![Skärmbild av autentiseringsuppgifter](assets/automatelegal_2.png)
 
-1. Välj **[!UICONTROL Skaffa Microsoft Word-tillägget]** eller gå till [AppSource](https://appsource.microsoft.com/en-cy/product/office/WA200002654) för att installera.
+1. Markera **[!UICONTROL Hämta Microsoft Word-tillägg]** eller gå till [AppSource](https://appsource.microsoft.com/en-cy/product/office/WA200002654) för att installera.
 
    >[!NOTE]
    >
@@ -84,30 +84,30 @@ I informationen finns information om kunden, namnet, vem som undertecknar, i vil
 
 ## Lägg till grundläggande taggar i dokumentet
 
-I det här scenariot används ett dokument med villkor som kan hämtas [här](https://github.com/benvanderberg/adobe-document-generation-samples/blob/main/Agreement/exercise/TermsAndConditions_Sample.docx?raw=true).
+Det här scenariot använder ett villkorsdokument som kan hämtas [här](https://github.com/benvanderberg/adobe-document-generation-samples/blob/main/Agreement/exercise/TermsAndConditions_Sample.docx?raw=true).
 
-![Skärmbild av dokument med villkor](assets/automatelegal_3.png)
+![Skärmbild av dokument om villkor](assets/automatelegal_3.png)
 
-1. Öppna fönstret *TermsAndConditions.docx* Exempeldokument i Microsoft Word.
-1. Om [Dokumentgenerering](https://appsource.microsoft.com/en-cy/product/office/WA200002654) plugin-programmet är installerat, välj **[!UICONTROL Dokumentgenerering]** i menyfliksområdet. Om du inte ser Dokumentgenerering i menyfliksområdet följer du dessa instruktioner.
+1. Öppna exempeldokumentet *TermsAndConditions.docx* i Microsoft Word.
+1. Om plugin-programmet [Dokumentgenerering](https://appsource.microsoft.com/en-cy/product/office/WA200002654) är installerat väljer du **[!UICONTROL Dokumentgenerering]** i menyfliksområdet. Om du inte ser Dokumentgenerering i menyfliksområdet följer du dessa instruktioner.
 1. Välj **[!UICONTROL Kom igång]**.
 1. Kopiera JSON-exempeldata som skrivits ovan till JSON-datafältet.
 
    ![Skärmbild av dokument och JSON-data](assets/automatelegal_4.png)
 
-Gå till *Tagg för dokumentgenerering* för att placera märkord i dokumentet.
+Gå till panelen *Dokumentgenereringstagg* för att placera taggar i dokumentet.
 
 ## Infoga företagsnamnet
 
 1. Markera den text som du vill ersätta. I det här scenariot ersätter du FÖRETAGET i dokumentets första avsnitt.
-1. in *Tagg för dokumentgenerering* söker du efter &quot;namn&quot;.
-1. Välj under Företag *namn*.
+1. Sök efter &quot;name&quot; i *Dokumentgenereringstagg*.
+1. Välj *namn* under Företag.
 
    ![Skärmbild av sökning efter namn i taggen för dokumentgenerering](assets/automatelegal_5.png)
 
 1. Välj **[!UICONTROL Infoga text]**.
 
-En tagg med namnet läggs till `{{company.name}}` eftersom taggen finns under den sökvägen i JSON-filen.
+En tagg med namnet `{{company.name}}` placeras då eftersom taggen finns under den sökvägen i JSON.
 
 ```
 {
@@ -119,7 +119,7 @@ En tagg med namnet läggs till `{{company.name}}` eftersom taggen finns under de
 }
 ```
 
-Upprepa sedan detta steg i avsnittet som öppnar för TEXTEN CUSTOMER. Upprepa **steg 1-4** och ersätter KUND med &quot;namn&quot; under kund. Utdata bör vara `{{customer.name}}`, vilket visar att texten kommer från kundobjektet under.
+Upprepa sedan detta steg i avsnittet som öppnar för TEXTEN CUSTOMER. Upprepa **steg 1-4** och ersätt CUSTOMER med &quot;name&quot; under customer. Utdata ska vara `{{customer.name}}`, vilket återspeglar att texten kommer från kundobjektet under.
 
 Med Adobe dokumentgenererings-API:t kan du också inkludera taggar i sidhuvuden och sidfötter och i precis den ände där rubrikerna för signaturerna ska gå.
 
@@ -127,13 +127,13 @@ Upprepa processen igen med **steg 1-4** för texten FÖRETAG och KUND i sidfoten
 
 ![Skärmbild av att lägga till COMPANY- och CUSTOMER-taggar i sidfoten](assets/automatelegal_6.png)
 
-Slutligen måste du **upprepa steg 1-4** för att ersätta FÖRNAMN och EFTERNAMN under avsnittet Kund på signatursidan med taggarna för `{{customer.signer.firstName}}` och `{{customer.signer.lastName}}` respektive. Oroa dig inte om taggen är lång och flödar om till nästa rad eftersom taggen ersätts när dokumentet skapas.
+Slutligen måste du **upprepa steg 1-4** för att ersätta FÖRNAMN och EFTERNAMN under avsnittet Kund på signatursidan med taggarna för `{{customer.signer.firstName}}` respektive `{{customer.signer.lastName}}`. Oroa dig inte om taggen är lång och flödar om till nästa rad eftersom taggen ersätts när dokumentet skapas.
 
 Början av dokumentet och sidfoten ska se ut ungefär så här:
 
 * Avsnittet Början:
 
-![Skärmbild av början av avsnitt](assets/automatelegal_7.png)
+![Skärmbild av det inledande avsnittet](assets/automatelegal_7.png)
 
 * Sidfot:
 
@@ -149,8 +149,8 @@ Nu när dina taggar är placerade i dokumentet är du redo att förhandsgranska 
 
 Direkt i Microsoft Word kan du förhandsgranska ditt genererade dokument utifrån JSON-exempeldata.
 
-1. in *Tagg för dokumentgenerering*, välj **[!UICONTROL Generera dokument]**.
-1. Första gången kan du uppmanas att logga in med ditt Adobe ID. Välj **[!UICONTROL Logga in]** och slutför uppmaningarna att logga in med dina inloggningsuppgifter.
+1. Välj **[!UICONTROL Generera dokument]** i *Dokumentgenereringstagg*.
+1. Första gången kan du uppmanas att logga in med ditt Adobe ID. Välj **[!UICONTROL Logga in]** och slutför uppmaningarna för att logga in med dina inloggningsuppgifter.
 
    ![Skärmbild av val av knappen Generera dokument](assets/automatelegal_10.png)
 
@@ -168,26 +168,26 @@ I nästa område definierar du bara vissa områden som ska infogas baserat på v
 
 ![Skärmbild av tillståndsspecifik text](assets/automatelegal_13.png)
 
-![Skärmbild av att välja California Disclosure-avsnittet](assets/automatelegal_14.png)
+![Skärmbild av val av California Disclosure-avsnittet](assets/automatelegal_14.png)
 
 1. I dokumentet väljer du avsnittet California Disclosure (Kalifornien) och alla underpunkter.
 
    ![Skärmbild av taggen för villkorligt avsnitt](assets/automatelegal_15.png)
 
-1. in *[!UICONTROL Tagg för dokumentgenerering]*, välj **[!UICONTROL Avancerat]**.
+1. I *[!UICONTROL Dokumentgenereringstaggen]* väljer du **[!UICONTROL Avancerat]**.
 1. Expandera **[!UICONTROL Villkorligt innehåll]**.
-1. in *[!UICONTROL Välj poster]* fält, sök och välj **[!UICONTROL customer.state]**.
-1. in *[!UICONTROL Välj operator]* fält, välj **=**.
-1. in *[!UICONTROL Värde]* fält, typ *CA*.
+1. I fältet *[!UICONTROL Välj poster]* söker du efter och väljer **[!UICONTROL customer.state]**.
+1. I fältet *[!UICONTROL Välj operator]* väljer du **=**.
+1. Skriv *CA* i fältet *[!UICONTROL Värde]*.
 1. Välj **[!UICONTROL Infoga villkor]**.
 
-Avsnittet omsluts nu med en del taggar som kallas villkorstaggar. När du lade till märkorden kan de ha lagt till märkordet conditional-section som en numrerad linje. Du kan ta bort det genom att hoppa över mellanrum före märkordet, annars numreras objekten som om märkordet inte fanns där när dokumentet skapades. Det villkorliga avsnittet avslutas med `{% end-section %}` tagg.
+Avsnittet omsluts nu med en del taggar som kallas villkorstaggar. När du lade till märkorden kan de ha lagt till märkordet conditional-section som en numrerad linje. Du kan ta bort det genom att hoppa över mellanrum före märkordet, annars numreras objekten som om märkordet inte fanns där när dokumentet skapades. Det villkorliga avsnittet avslutas med taggen `{% end-section %}`.
 
 ![Skärmbild av taggen för villkorligt avsnitt](assets/automatelegal_16.png)
 
-**Upprepa steg 1-7** för *Washington Disclosure* avsnitt, ersätta *CA* värde med *WA* för att visa att avsnittet endast visas om kundens delstat är Washington.
+**Upprepa steg 1-7** för avsnittet *Washington Disclosure* och ersätt värdet *CA* med *WA* för att visa att avsnittet endast visas om kundens tillstånd är Washington.
 
-![Skärmbild av taggen för villkorligt avsnitt för WA](assets/automatelegal_17.png)
+![Skärmbild av taggen för villkorsstyrd sektion för WA](assets/automatelegal_17.png)
 
 ## Testning med villkorliga sektioner
 
@@ -195,15 +195,15 @@ När de villkorliga avsnitten är på plats kan du förhandsgranska dokumentet g
 
 När du genererar ett dokument ser du att det avsnitt som ingår bara är det som uppfyller datakriterierna. I exemplet nedan, eftersom delstaten var lika med CA, är endast avsnittet Kalifornien inkluderat.
 
-![Skärmdump av information från California Disclosure](assets/automatelegal_18.png)
+![Skärmbild av information om Kaliforniens avslöjande](assets/automatelegal_18.png)
 
 En annan anmärkningsvärd förändring är att numreringen för det efterföljande avsnittet, Användning av Tjänster och Programvara, har nummer 5. Detta innebär att när Washingtonavsnittet utelämnas fortsätter numreringen.
 
-![Skärmbild av fortsatt numrering](assets/automatelegal_19.png)
+![Skärmbild av den fortsatta numreringen](assets/automatelegal_19.png)
 
 Ändra exempeldata för mallen för att testa om mallen fungerar korrekt när kunden är i delstaten Washington och inte i Kalifornien:
 
-1. in *Tagg för dokumentgenerering*, välj **[!UICONTROL Redigera indata]**.
+1. I *Dokumentgenereringstaggen* väljer du **[!UICONTROL Redigera indata]**.
 
    ![Skärmbild av taggen för dokumentgenerering](assets/automatelegal_20.png)
 
@@ -218,19 +218,19 @@ En annan anmärkningsvärd förändring är att numreringen för det efterfölja
 
 Observera att dokumentet bara innehåller delstatssektionen i Washington.
 
-![Skärmbild av dokument som endast innehåller Wasington State-avsnittet](assets/automatelegal_22.png)
+![Skärmbild av dokument som endast innehåller Wasington-tillståndsavsnittet](assets/automatelegal_22.png)
 
 ## Lägga till en villkorlig mening
 
 Precis som villkorliga avsnitt kan du också ha specifika meningar som ingår när vissa villkor är uppfyllda. I det här exemplet skiljer sig politiken för återvändande mellan Kalifornien och Washington.
 
 1. I avsnitt 3.1 väljer du den första meningen &quot;Vid köp i delstaten Washington måste en returneras via MAIL inom 30 dagar efter den ursprungliga transaktionen för en full återbetalning.&quot;
-1. in *[!UICONTROL Tagg för dokumentgenerering]*, välj **[!UICONTROL Avancerat]**.
+1. I *[!UICONTROL Dokumentgenereringstaggen]* väljer du **[!UICONTROL Avancerat]**.
 1. Expandera **[!UICONTROL Villkorligt innehåll]**.
-1. Under *[!UICONTROL Innehållstyp]*, välj **[!UICONTROL Fras]**.
-1. in *[!UICONTROL Välj poster]* fält, sök och välj **[!UICONTROL customer.state]**.
-1. in *[!UICONTROL Välj operator]* fält, välj **=**.
-1. in *[!UICONTROL Värde]* fält, typ *CA*.
+1. Välj **[!UICONTROL Fras]** under *[!UICONTROL Innehållstyp]*.
+1. I fältet *[!UICONTROL Välj poster]* söker du efter och väljer **[!UICONTROL customer.state]**.
+1. I fältet *[!UICONTROL Välj operator]* väljer du **=**.
+1. Skriv *CA* i fältet *[!UICONTROL Värde]*.
 1. Välj **[!UICONTROL Infoga villkor]**.
 
 Även om namnet på taggen är detsamma, är den största skillnaden mellan fras och avsnitt att en fras har avsnittet inte innehålla nya rader. Villkorsmärkordet och -end-section-märkordet måste finnas i samma stycke.
@@ -244,36 +244,36 @@ Med Acrobat Sign kan du skicka avtal för signering eller bädda in dem på webb
 1. Navigera till den plats där kunden måste signera.
 1. Placera markören där signaturen ska placeras.
 
-   ![Skärmbild av vart signaturen måste gå](assets/automatelegal_24.png)
+   ![Skärmbild av vart signaturen måste ta vägen](assets/automatelegal_24.png)
 
-1. in *[!UICONTROL Tagg för dokumentgenerering]*, välj **[!UICONTROL Adobe Sign]**.
-1. in *[!UICONTROL Ange antal mottagare]* anger du antalet mottagare (i det här exemplet används 2).
-1. in *[!UICONTROL Mottagare]* fält, välj **[!UICONTROL signer-1]**.
-1. in *[!UICONTROL Fält]* text, välj **[!UICONTROL Signatur]**.
-1. Välj **[!UICONTROL Infoga Adobe Sign-texttagg]**.
+1. I *[!UICONTROL Dokumentgenereringstaggen]* väljer du **[!UICONTROL Adobe Sign]**.
+1. Ange antalet mottagare i fältet *[!UICONTROL Ange antalet mottagare]* (i det här exemplet används 2).
+1. I fältet *[!UICONTROL Mottagare]* väljer du **[!UICONTROL Signerare-1]**.
+1. Välj **[!UICONTROL Signatur]** i typen *[!UICONTROL Fält]*.
+1. Markera **[!UICONTROL Infoga Adobe Sign-texttagg]**.
 
    ![Skärmbild av Infoga Adobe Sign-texttagg i dokumentgenereringstaggen](assets/automatelegal_25.png)
 
 >[!NOTE]
 >
->Om **Infoga Adobe Sign-texttagg** knappen verkar saknas, bläddra nedåt.
+>Om knappen **Infoga Adobe Sign-texttagg** saknas bläddrar du nedåt.
 
 Detta placerar ett signaturfält där den första signeraren måste signera.
 
-![Skärmbild av signaturtexttagg](assets/automatelegal_26.png)
+![Skärmbild av signaturens texttagg](assets/automatelegal_26.png)
 
 Placera sedan ett datafält för den signerare som automatiskt fylls i vid signering.
 
 1. Flytta markören till det ställe där datumet ska placeras.
 
-   ![Skärmbild av var datumet ska ligga](assets/automatelegal_27.png)
+   ![Skärmbild av var datumet ska placeras](assets/automatelegal_27.png)
 
 1. Ställ in Fälttyp på Datum.
-1. Välj **[!UICONTROL Infoga Adobe Sign-texttagg]**.
+1. Markera **[!UICONTROL Infoga Adobe Sign-texttagg]**.
 
-Den placerade datumtaggen är ganska lång: `{{Date 3_es_:signer1:date:format(mm/dd/yyyy):font(size=Auto)}}`. Acrobat Sign-texttaggen måste finnas på samma rad, vilket skiljer sig från taggarna för dokumentgenerering. Inställningen `:format()` och `font()` parametrar är valfria, så i det här scenariot kan vi förkorta taggen till `{{Date 3_es_:signer1:date}}`.
+Den placerade datumtaggen är ganska lång: `{{Date 3_es_:signer1:date:format(mm/dd/yyyy):font(size=Auto)}}`. Acrobat Sign-texttaggen måste finnas på samma rad, vilket skiljer sig från taggarna för dokumentgenerering. Parametrarna `:format()` och `font()` är valfria, så i det här scenariot kan vi förkorta taggen till `{{Date 3_es_:signer1:date}}`.
 
-Upprepa stegen ovanför *Företagets signatur* -sektionen. När du gör det måste du ändra fältet Mottagare till **signer-2**, annars tilldelas alla signaturfält samma person.
+Upprepa stegen ovanför avsnittet *Företagssignatur*. När du gör det måste du ändra fältet Mottagare till **Signerare-2**. Annars tilldelas alla signaturfält samma person.
 
 ## Generera ett avtal
 
@@ -281,10 +281,10 @@ Du har nu taggat dokumentet och är klar att använda. I det här nästa avsnitt
 
 Öppna filen pdfservices-node-sdk-samples-master som du hämtade när du registrerade dina inloggningsuppgifter. Bland dessa filer finns filerna pdfservices-api-credentials.json och private.key.
 
-1. Öppna ditt **[!UICONTROL Avslutning]** installera beroenden med `npm install`.
-1. Kopiera ditt prov *data.json* in i *resources* -mappen.
-1. Kopiera Word-mallen som du skapade till *resources* -mappen.
-1. Skapa en ny fil i rotkatalogen i exempelmappen som heter *generate-salesOrder.js*.
+1. Öppna **[!UICONTROL terminalen]** om du vill installera beroenden med `npm install`.
+1. Kopiera exemplet *data.json* till mappen *resources*.
+1. Kopiera Word-mallen som du skapade till mappen *resurser*.
+1. Skapa en ny fil i rotkatalogen i exempelmappen med namnet *generate-salesOrder.js*.
 
    ```
    const PDFServicesSdk = require('@adobe/pdfservices-node-sdk').
@@ -335,7 +335,7 @@ Du har nu taggat dokumentet och är klar att använda. I det här nästa avsnitt
 
 1. Ersätt `<JSON FILE>` med namnet på JSON-filen i /resources.
 1. Ersätt `<INSERT DOCX>` med namnet på DOCX-filen.
-1. Om du vill köra använder du **[!UICONTROL Avslutning]** för att köra nod `generate-salesOrder.js`.
+1. Använd **[!UICONTROL Terminal]** för att köra noden `generate-salesOrder.js`.
 
 Utdatafilen finns i mappen /output och dokumentet har genererats på rätt sätt.
 
@@ -348,7 +348,7 @@ options = new documentMergeOptions.DocumentMergeOptions(jsonDataForMerge,
 documentMergeOptions.OutputFormat.PDF);
 ```
 
-Word:
+Ord:
 
 ```
 options = new documentMergeOptions.DocumentMergeOptions(jsonDataForMerge, documentMergeOptions.OutputFormat.DOCX);
@@ -362,23 +362,23 @@ var outputFileName = path.join('output', 'salesOrder_'+Date.now()+".docx");
 
 ## Skicka avtal för signering
 
-[Adobe Acrobat Sign](https://www.adobe.com/se/sign.html) låter dig skicka avtal till en eller flera mottagare så att de kan visa och signera dokument. Tillsammans med en lättanvänd användarupplevelse att skicka ett dokument för signering, finns REST API:er tillgängliga som låter dig ta Word, PDF, HTML och andra format och skicka dem för signering.
+Med [Adobe Acrobat Sign](https://www.adobe.com/se/sign.html) kan du skicka avtal till en eller flera mottagare så att de kan visa och signera dokument. Tillsammans med en lättanvänd användarupplevelse att skicka ett dokument för signering, finns REST API:er tillgängliga som låter dig ta Word, PDF, HTML och andra format och skicka dem för signering.
 
 Exemplet nedan visar hur du använder REST API-dokumentationssidan för att ta det tidigare genererade dokumentet och skicka det för signering. Börja med att lära dig hur du gör det via webbgränssnittet i Acrobat Sign och sedan hur du gör det med REST API.
 
 ## Skaffa ett Acrobat Sign-konto
 
-Om du inte har något Acrobat Sign-konto registrerar du dig för ett utvecklarkonto och granskar dokumentationen [här](https://developer.adobe.com/adobesign-api/)och välj **Registrera dig för ett utvecklarkonto**. Du uppmanas att fylla i ett formulär och få en bekräftelse via e-post. När du har gjort det dirigeras du till en webbplats där du kan ange ditt lösenord och konto och sedan logga in på Acrobat Sign.
+Om du inte har något Acrobat Sign-konto registrerar du dig för ett utvecklarkonto och granskar dokumentationen [här](https://developer.adobe.com/adobesign-api/) och väljer **Registrera dig för utvecklarkonto**. Du uppmanas att fylla i ett formulär och få en bekräftelse via e-post. När du har gjort det dirigeras du till en webbplats där du kan ange ditt lösenord och konto och sedan logga in på Acrobat Sign.
 
 ## Skicka ett avtal från webbgränssnittet
 
-1. Välj **[!UICONTROL Skicka]** från navigeringsfältet.
+1. Välj **[!UICONTROL Skicka]** i navigeringsfältet.
 
    ![Skärmbild av fliken Skicka i Acrobat Sign](assets/automatelegal_28.png)
 
-1. in *Mottagare* anger du två e-postadresser. Det är bästa praxis att använda en e-postadress som inte är kopplad till ditt Acrobat Sign-konto.
+1. Ange två e-postadresser i fältet *Mottagare*. Det är bästa praxis att använda en e-postadress som inte är kopplad till ditt Acrobat Sign-konto.
 
-   ![Skärmbild av fält för mottagare](assets/automatelegal_29.png)
+   ![Skärmbild av mottagarfält](assets/automatelegal_29.png)
 
 1. Ange ett **[!UICONTROL Avtalsnamn]** och **[!UICONTROL Meddelande]**.
 1. Välj **[!UICONTROL Lägg till filer]** och överför den genererade filen från datorn.
@@ -395,7 +395,7 @@ Om du inte har något Acrobat Sign-konto registrerar du dig för ett utvecklarko
 
 1. Välj **[!UICONTROL Granska och signera]**.
 1. Välj **[!UICONTROL Fortsätt]** för att godkänna användningsvillkoren.
-1. Välj **[!UICONTROL Start]** för att komma till den plats där du måste signera.
+1. Välj **[!UICONTROL Start]** för att gå till den plats där du måste signera.
 
    ![Skärmbild av starttagg](assets/automatelegal_32.png)
 
@@ -405,14 +405,14 @@ Om du inte har något Acrobat Sign-konto registrerar du dig för ett utvecklarko
 
 1. Skriv din signatur.
 
-   ![Skärmbild av skrivande signatur](assets/automatelegal_34.png)
+   ![Skärmbild av den skrivna signaturen](assets/automatelegal_34.png)
 
-1. Välj **[!UICONTROL Tillämpa]**.
+1. Välj **[!UICONTROL Använd]**.
 1. Välj **[!UICONTROL Klicka för att signera]**.
 
 Ett e-postmeddelande skickas till nästa signerare. Upprepa steg 9-16 för att visa och signera för den andra signeraren.
 
-När avtalet har slutförts skickas en signerad kopia av avtalet via e-post till var och en av parterna. Dessutom kan ett signerat avtal hämtas från Acrobat Sign-webbgränssnittet i **Hantera** sidan.
+När avtalet har slutförts skickas en signerad kopia av avtalet via e-post till var och en av parterna. Dessutom kan ett signerat avtal hämtas från webbgränssnittet i Acrobat Sign på sidan **Hantera**.
 
 ![Skärmbild av fliken Hantera i Acrobat Sign](assets/automatelegal_35.png)
 
@@ -421,39 +421,39 @@ Lär dig sedan hur du gör samma scenario via REST API-dokumentation.
 ## Hämta autentiseringsuppgifter
 
 1. Gå till [Acrobat Sign REST-dokumentation](https://secure.na1.adobesign.com/public/docs/restapi/v6).
-1. Expandera *transientDocuments* och [POST /transientDocuments](https://benprojecteddemo.na1.adobesign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument).
-1. Välj **[!UICONTROL OAUTH-ÅTKOMSTTOKEN]**.
+1. Expandera *transientDocuments* och [POSTEN /transientDocuments](https://benprojecteddemo.na1.adobesign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument).
+1. Välj **[!UICONTROL OAUTH ACCESS-TOKEN]**.
 
-   ![Skärmbild av var du kan välja OAUTH ACCESS-TOKEN](assets/automatelegal_36.png)
+   ![Skärmbild av var OAUTH ACCESS-TOKEN ska väljas](assets/automatelegal_36.png)
 
 1. Kontrollera OAUTH-behörigheterna för *agreement_write*, *agreement_sign*, *widget_write* och *library_write*.
 1. Välj **[!UICONTROL Auktorisera]**.
 1. Du uppmanas att logga in med ditt Acrobat Sign-konto via ett popup-fönster. Logga in användare Administratörens användarnamn och lösenord.
 1. Du uppmanas att tillåta åtkomst till REST-dokumentationen. Välj **[!UICONTROL Tillåt åtkomst]**.
 
-En ägartoken läggs sedan till i **Auktorisering** område.
+En ägartoken läggs sedan till i fältet **Auktorisering**.
 
-Du kan läsa mer om hur du skapar en auktoriseringstoken för Acrobat Sign genom att följa stegen som beskrivs [här](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html).
+Om du vill läsa mer om hur du skapar en auktoriseringstoken för Acrobat Sign kan du följa stegen som beskrivs [här](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html).
 
 ## Ladda upp ett tillfälligt dokument
 
 Eftersom auktoriseringstoken läggs till från föregående steg måste du överföra ett dokument för att göra API-anropet:
 
-1. in *Fil* -fältet, överför du PDF-dokumentet som skapades i tidigare steg.
+1. I fältet *Fil* överför du PDF-dokumentet som skapades i tidigare steg.
 
-   ![Skärmbild av var du kan ladda upp PDF](assets/automatelegal_37.png)
+   ![Skärmbild av var PDF ska överföras](assets/automatelegal_37.png)
 
-1. Välj **[!UICONTROL Testa!]**.
-1. in **[!UICONTROL Svarstext]**, kopiera *transientDocumentId* värde.
+1. Välj **[!UICONTROL Prova!]**.
+1. Kopiera värdet *transientDocumentId* i **[!UICONTROL svarstexten]**.
 
-Inställningen *transientDocumentId* används för att referera till ett dokument som lagras tillfälligt i Acrobat Sign så att det kan refereras i efterföljande API-anrop.
+*transientDocumentId* används för att referera till ett dokument som tillfälligt lagras i Acrobat Sign så att det kan refereras i efterföljande API-anrop.
 
 ## Skicka för signering
 
 När ett dokument har överförts måste du skicka avtalet för signering.
 
 1. Expandera avsnittet Avtal och avsnittet POST avtal.
-1. I dialogrutan *AgreementInfo* -fältet, fyll i det med följande JSON:
+1. I fältet *AgreementInfo* fyller du i det med följande JSON:
 
    ```
    {
@@ -488,18 +488,18 @@ När ett dokument har överförts måste du skicka avtalet för signering.
    }
    ```
 
-1. Välj **[!UICONTROL Testa!]**.
+1. Välj **[!UICONTROL Prova!]**.
 
-**POST avtals-API** returnerar ett ID för avtalet. Om du vill hämta en mall för JSON-modellschemat väljer du **Minimalt modellschema**. En fullständig förteckning över parametrar finns i **Fullständigt modellschema** -sektionen.
+**POSTENS avtals-API** returnerar ett ID för avtalet. Om du vill hämta en mall för JSON-modellschemat väljer du **Minimalt modellschema**. En fullständig lista över parametrar finns i avsnittet **Fullständigt modellschema**.
 
 ## Kontrollera avtalets status
 
 När du har ett avtal-ID kan du skicka en avtalsstatus.
 
 1. Expandera **[!UICONTROL GET /agreements/{agreementId}]**.
-1. Eftersom du kan behöva ytterligare OAUTH-omfång ska du välja **[!UICONTROL OAUTH-ACCESS-TOKEN]** igen.
+1. Eftersom du kan behöva ytterligare OAUTH-omfång väljer du **[!UICONTROL OAUTH-ACCESS-TOKEN]** igen.
 1. Kopiera agreementId från det tidigare API-anropssvaret till fältet agreementId.
-1. Välj **[!UICONTROL Testa!]**.
+1. Välj **[!UICONTROL Prova!]**.
 
 Nu har du information om det avtalet.
 
@@ -552,19 +552,19 @@ Nu har du information om det avtalet.
   }
 ```
 
-Den effektivare metoden för att få aviseringar när uppdateringar ändras är via Webhooks, som du kan lära dig mer om [här](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html.
+Den mest effektiva metoden för att få aviseringar när uppdateringar ändras är via Webhooks, som du kan läsa mer om [här](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html.
 
 ## Lagra ett signerat dokument
 
 När dokumentet har signerats kan det hämtas med hjälp av filen GET /agreements/combinedDocument.
 
 1. Expandera **[!UICONTROL GET /agreements/{agreementId}/combinedDocument]**.
-1. Uppsättning **[!UICONTROL agreementId]** till *agreementId* från det tidigare API-anropet.
-1. Välj **[!UICONTROL Testa!]**.
+1. Ange **[!UICONTROL agreementId]** till *agreementId* som tillhandahölls från det tidigare API-anropet.
+1. Välj **[!UICONTROL Prova!]**.
 
 Ytterligare parametrar för att bifoga en granskningsrapport eller stöddokument kan anges med parametrarna attachSupportingDocuments och attachAuditReport.
 
-I dialogrutan **Svarstext**, den kan sedan hämtas till din dator och lagras där du vill.
+I **svarstexten** kan den sedan hämtas till datorn och lagras där du vill.
 
 ## Fler alternativ
 
@@ -585,10 +585,10 @@ Dessutom har Acrobat Sign flera tilläggsfunktioner, till exempel:
 
 ## Ytterligare utbildning
 
-Vill du veta mer? Ta en titt på några andra sätt att använda [!DNL Adobe Acrobat Services]:
+Vill du veta mer? Titta närmare på ytterligare sätt att använda [!DNL Adobe Acrobat Services]:
 
-* Läs mer från [dokumentation](https://developer.adobe.com/document-services/docs/overview/)
+* Läs mer i [dokumentationen](https://developer.adobe.com/document-services/docs/overview/)
 * Se fler självstudiekurser om Adobe Experience League
 * Använd exempelskripten i mappen /src för att se hur du kan använda PDF
-* Följ [Adobe Tech Blog](https://medium.com/adobetech/tagged/adobe-document-cloud) för senaste tips och råd
-* Prenumerera på [Pappersklipp (den månatliga direktströmmen)](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF) för att lära dig mer om automatisering med [!DNL Adobe Acrobat Services].
+* Följ [Adobe Tech-bloggen](https://medium.com/adobetech/tagged/adobe-document-cloud) om du vill ha de senaste tipsen och knepen
+* Prenumerera på [videoklipp på papper (den månatliga liveströmmen)](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF) för att lära dig mer om att automatisera med [!DNL Adobe Acrobat Services].

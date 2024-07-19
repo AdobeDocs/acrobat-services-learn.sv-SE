@@ -10,7 +10,7 @@ thumbnail: KT-8091.jpg
 exl-id: 570a635c-e539-4afc-a475-ecf576415217
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1385'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,14 @@ ht-degree: 0%
 
 Utbildningsinstitutioner använder PDF-dokument för att dela utbildningsmaterial med elever. PDF är ett utbytbart dokumentformat för lärare.
 
-Integrera [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) och [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) i en app ger lärare och elever en enda plattform att undervisa och lära sig på. Din app kan t.ex. göra det möjligt för elever att ställa frågor om sina uppgifter och rapportkort och samarbeta om grupptilldelningar.
+Om du integrerar [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) och [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) i ett program får lärare och elever en enda plattform att undervisa och lära sig på. Din app kan t.ex. göra det möjligt för elever att ställa frågor om sina uppgifter och rapportkort och samarbeta om grupptilldelningar.
 
-Det finns en officiell SDK för Node.js-program för att komma åt PDF Services API. Det gör att du kan konvertera dokument som Microsoft Word och Microsoft Excel till PDF. Du kan också utföra mer avancerade åtgärder som att kombinera flera rapporter, ordna om sidor och skydda PDF. Mer information finns i [produktdokumentation](https://www.adobe.io/apis/documentcloud/dcsdk/).
+Det finns en officiell SDK för Node.js-program för att komma åt PDF Services API. Detta gör att du kan konvertera dokument som Microsoft Word och Microsoft Excel till
+PDF. Du kan också utföra mer avancerade åtgärder som att kombinera flera rapporter, ordna om sidor och skydda PDF. Mer information finns i [produktdokumentationen](https://www.adobe.io/apis/documentcloud/dcsdk/).
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudien lär du dig att skapa en onlineutbildningsplattform som [gör det möjligt för lärare och elever att enkelt dela resurser](https://www.adobe.io/apis/documentcloud/dcsdk/student-teacher-collaboration.html) i PDF. I den här självstudiekursen används en [utbildningsportal](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers) som skapats med JavaScript-körningsmiljön Node.js (Node.js) och PDF.
+I den här praktiska självstudiekursen kan du lära dig skapa en onlineutbildningsplattform som [gör det möjligt för lärare och elever att enkelt dela resurser](https://www.adobe.io/apis/documentcloud/dcsdk/student-teacher-collaboration.html) i PDF. I den här självstudiekursen används en [utbildningsportal](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers) som har skapats med JavaScript-körningen Node.js (Node.js) och PDF.
 
 Utbildningsportalen har följande funktioner:
 
@@ -41,7 +42,7 @@ Utbildningsportalen har följande funktioner:
 
 * Gör det möjligt för elever att lämna kommentarer och hämta dem till sina datorer
 
-Lär dig hur [!DNL Adobe Acrobat Services] ge dina elever en rik upplevelse av PDF. [!DNL Acrobat Services] API:er integreras smidigt i dina befintliga program så att eleverna kan överföra, konvertera och visa filer, göra och spara kommentarer - allt i din nuvarande konfiguration.
+Se hur [!DNL Adobe Acrobat Services] kan ge dina elever en spännande upplevelse med PDF. [!DNL Acrobat Services] API:er integreras sömlöst i dina befintliga program så att eleverna kan överföra, konvertera och visa filer och sedan göra och spara kommentarer - allt i din nuvarande konfiguration.
 
 ## Relevanta API:er och resurser
 
@@ -59,17 +60,18 @@ I lärarnas avsnitt i utbildningsportalen kan lärarna ladda upp dokument som ti
 
 Överförda dokument lagras och visas för eleverna när de öppnar sin webbsida.
 
-Mer information om hur programmet överför filerna finns i [projektkod](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers).
+Information om hur programmet överför filerna finns i [projektkoden](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers).
 
 ## Konvertera dokument till PDF
 
 Eleverna kan konvertera enstaka eller flera dokument av olika typ till PDF, t.ex. Microsoft Word, Excel och PowerPoint, samt andra vanliga text- och bildfiltyper. Utbildningsportalen använder PDF-tjänster för att konvertera filer till PDF.
 
-Om du vill skapa en egen utbildningsportal måste du först skapa dina egna inloggningsuppgifter. [Registrera dig](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) använda PDF Services API kostnadsfritt i sex månader och upp till 1 000 dokumenttransaktioner. Efter det, [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) vid endast \$0,05 per dokumenttransaktion när klassen ökar sina tilldelningar.
+Om du vill skapa en egen utbildningsportal måste du först skapa dina egna inloggningsuppgifter. [Registrera dig](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) för att
+använd PDF Services API kostnadsfritt i sex månader och upp till 1 000 dokumenttransaktioner. Därefter [betalar du per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) med bara \$0,05 per dokumenttransaktion när klassen ökar sina tilldelningar.
 
 När en elev väljer ett dokument från instrumentpanelen ser hen följande:
 
-![Skärmbild av elevavsnittet i utbildningsportalen](assets/edu_2.png)
+![Skärmbild av elevsektionen i utbildningsportalen](assets/edu_2.png)
 
 Eleven väljer helt enkelt dokumenten för konvertering och klickar på **Hämta rapport**.
 
@@ -103,20 +105,20 @@ async function createPdf(rawFile, outputPdf) {
 }
 ```
 
-Exempelkoden anropar `createPdf` -metod i Express-flödeshanteraren för att generera PDF.
+Exempelkoden anropar metoden `createPdf` i Express-flödeshanteraren för att generera PDF.
 
-Mer information om hur den här metoden kallas finns i [projektkoden](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers/blob/master/src/helpers/pdf.js).
+Information om hur metoden anropas finns i [projektkoden](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers/blob/master/src/helpers/pdf.js).
 
 ## Förhandsgranska utbildningsresurserna
 
 Användargränssnittet använder PDF Embed API för att återge PDF i en webbläsare. Detta API är tillgängligt för användning utan kostnad.
 
-PDF Embed API använder andra autentiseringsuppgifter än PDF Services API, så du måste [skapa en autentiseringsuppgift](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+PDF Embed API använder en annan autentiseringsuppgift än PDF Services API, så du måste [skapa en autentiseringsuppgift](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
 innan du kan använda den. Sedan kan du använda PDF Embed helt gratis.
 
 Se till att du anger rätt webbplats-URL i token. Annars kanske du inte kan återge PDF med token.
 
-Användargränssnittet använder [Handtag](https://handlebarsjs.com/) språk för mallar. Då visas PDF i en webbläsare.
+Användargränssnittet använder mallspråket [Handlebars](https://handlebarsjs.com/). Då visas PDF i en webbläsare.
 
 Här är koden för det här steget:
 
@@ -143,25 +145,25 @@ Här är koden för det här steget:
 
 I koden visas utdata från PDF och länken för att hämta PDF-rapporten, som visas i skärmbilden nedan:
 
-![Skärmdump av studentens PDF-förhandsgranskning](assets/edu_3.png)
+![Skärmbild av elevens förhandsgranskning av PDF](assets/edu_3.png)
 
 Eleverna ska kunna ladda ner rapporten eller arbeta med materialet här.
 
 ## Anteckna PDF-dokument
 
-En utbildningsplattform bör ha stöd för grundläggande anteckningar, kommentarer och diskussioner i PDF. PDF Embed API har alla dessa funktioner. Det aktiverar anteckningsstöd med `showAnnotationTools`, så att lärare och elever kan kommentera dokumenten och arkivera kommentarer som en del av PDF.
+En utbildningsplattform bör ha stöd för grundläggande anteckningar, kommentarer och diskussioner i PDF. PDF Embed API har alla dessa funktioner. Detta aktiverar anteckningsstöd med `showAnnotationTools`, vilket gör det möjligt för lärare och elever att kommentera dokumenten och arkivera kommentarer som en del av PDF.
 
-Om du vill aktivera anteckningar i PDF-dokument behöver du bara skicka argumentet `showAnnotationTools` : true to the `previewFile` metod. Då visas anteckningsverktyget i förhandsvisningen i PDF. Det här verktyget kommer du åt från menyn med tre punkter i förhandsvisningens övre högra hörn.
+Om du vill aktivera anteckningar i PDF-dokument behöver du bara skicka argumentet `showAnnotationTools` : true till metoden `previewFile`. Då visas anteckningsverktyget i förhandsvisningen i PDF. Det här verktyget kommer du åt från menyn med tre punkter i förhandsvisningens övre högra hörn.
 
 ![Skärmbild av kommentarverktyg i PDF](assets/edu_4.png)
 
 I de dokument som lärarna har överfört kan eleverna markera text, lägga till kommentarer och så vidare.
 
-![Skärmbild av hur man lägger till kommentarer i PDF](assets/edu_5.png)
+![Skärmbild av hur kommentarer läggs till i PDF](assets/edu_5.png)
 
 I skärmbilden ovan är användaren märkt Gäst, men du kan konfigurera profiler för användare som elever och lärare.
 
-När en elev använder en kommentar visas ett PDF Embed API-meddelande i **Spara** knapp längs den övre banderollen. När du sparar läggs anteckningar till i filen. Prova att klicka **Spara** om du vill se hur filen sparas med anteckningen inbäddad i rapporten.
+När en elev använder en kommentar visar PDF Embed API en **Spara**-knapp längs den övre banderollen. När du sparar läggs anteckningar till i filen. Klicka på **Spara** om du vill se hur filen sparas med anteckningen inbäddad i rapporten.
 
 Elever kan använda anteckningar för att ställa frågor eller dela med sig av sina kommentarer om utbildningsmaterialet.
 
@@ -169,9 +171,9 @@ Elever kan använda anteckningar för att ställa frågor eller dela med sig av 
 
 Det är viktigt för lärare och skolor att se hur eleverna använder onlineplattformar. Det hjälper lärare att hjälpa sina elever med resurser som hjälper dem att utföra sina uppgifter bättre. PDF Embed API kan integreras med analysfunktioner som du kan använda för att mäta alla händelser som äger rum, till exempel när användare öppnar, läser och stänger dokument. Med PDF Services API kan lärarna även inaktivera utskrift, hämtning och filändringar för att bibehålla den akademiska integriteten.
 
-Om du har en [Adobe Analytics](https://www.adobe.io/apis/experiencecloud/analytics.html) licens kan du använda dess [färdig integrering](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfembed/controlpdfexperience.html?lang=en#adobe-analytics). Annars kan du använda återanrop för att integrera PDF-tjänsterna med andra analysleverantörer, till exempel [Google](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfembed/controlpdfexperience.html?lang=en#google-analytics).
+Om du har en [Adobe Analytics](https://www.adobe.io/apis/experiencecloud/analytics.html)-licens kan du använda dess [färdiga integrering](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfembed/controlpdfexperience.html?lang=en#adobe-analytics). Annars kan du använda återanrop för att integrera PDF-tjänsterna med andra analysleverantörer, till exempel [Google](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfembed/controlpdfexperience.html?lang=en#google-analytics).
 
-Om du vill aktivera mätning av dokumenthändelser kopplar du händelsehanterarna med `registerCallback` metod med Adobe DC View-instans. Du kan visa grundläggande måttangivelser i konsolen, t.ex. om du öppnar ett dokument eller läser en sida. Du kan också spara mätvärdena i en logg eller publicera dem i andra analysarkiv.
+Om du vill aktivera mätning av dokumenthändelser kopplar du händelsehanterarna med `registerCallback`-metoden till Adobe DC-vyinstansen. Du kan visa grundläggande måttangivelser i konsolen, t.ex. om du öppnar ett dokument eller läser en sida. Du kan också spara mätvärdena i en logg eller publicera dem i andra analysarkiv.
 
 Här är exempelkoden för att bifoga händelsehanterare:
 
@@ -195,7 +197,7 @@ Här är en skärmdump av webbläsarkonsolen:
 
 Den här skärmbilden visar att eleven öppnade uppdragsfilen och läste den första sidan. Eleven bläddrade antingen inte vidare till ytterligare sidor eller så hade dokumentet bara en sida och laddade sedan ned filen. Du kan samla in dessa mätvärden för att utföra analyser och studera elevernas beteende.
 
-Dessutom [Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) är integrerat med PDF Embed API, så om du har ett abonnemang på Adobe Analytics kan du publicera mätvärdena i abonnemanget. Om du vill publicera mätvärdena i Adobe Analytics behöver du bara skicka ditt svit-ID till PDF Embed API-konstruktorn. (Observera att du måste använda dina inloggningsuppgifter för PDF Embed API, inte dina API-inloggningsuppgifter för PDF Services).
+Dessutom är [Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) integrerat med PDF Embed API, så om du har ett abonnemang på Adobe Analytics kan du publicera mätvärdena i abonnemanget. Om du vill publicera mätvärdena i Adobe Analytics behöver du bara skicka ditt svit-ID till PDF Embed API-konstruktorn. (Observera att du måste använda dina inloggningsuppgifter för PDF Embed API, inte dina API-inloggningsuppgifter för PDF Services).
 
 Här är exempelkod som visar hur du skickar svit-ID till PDF Embed API-konstruktorn:
 
@@ -209,8 +211,8 @@ var adobeDCView = new AdobeDC.View({
 
 ## Nästa steg
 
-I den här praktiska självstudiekursen har vi granskat hur du använder PDF Services API och PDF Embed API för att skapa en utbildningsportal, vilket underlättar effektiv [samarbete mellan elever och lärare](https://www.adobe.io/apis/documentcloud/dcsdk/student-teacher-collaboration.html). Med hjälp av den här portalen kan lärare ladda upp utbildningsmaterial i valfritt format och konvertera det till PDF med hjälp av PDF Services API. Eleverna kan sedan förhandsgranska dessa PDF med hjälp av PDF Embed API.
+I den här praktiska självstudiekursen har vi granskat hur du använder API:et PDF Services och PDF Embed API för att skapa en utbildningsportal, vilket underlättar ett effektivt [samarbete mellan elever och lärare](https://www.adobe.io/apis/documentcloud/dcsdk/student-teacher-collaboration.html). Med hjälp av den här portalen kan lärare ladda upp utbildningsmaterial i valfritt format och konvertera det till PDF med hjälp av PDF Services API. Eleverna kan sedan förhandsgranska dessa PDF med hjälp av PDF Embed API.
 
 Nu när du vet hur du lägger till anteckningar i PDF, arkiverar anteckningarna och spårar användningen av PDF-rapporter kan du börja implementera dessa i dina egna projekt.
 
-Du kan använda [!DNL Adobe Acrobat Services] API:er för att skapa användarvänliga, interaktiva PDF-upplevelser på din webbplats. Använd Adobe PDF Services API kostnadsfritt i sex månader och sedan bara [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) (via AWS eller ett direktavtal) för endast \$0,05 per dokumenttransaktion. Använd Adobe PDF Embed gratis utan tidsbegränsning. Skapa ett kostnadsfritt konto för att [kom igång](https://www.adobe.com/go/dcsdks_credentials) idag.
+Du kan använda [!DNL Adobe Acrobat Services] API:er för att skapa användarvänliga, interaktiva PDF-upplevelser på din webbplats. Använd Adobe PDF Services API kostnadsfritt i sex månader och sedan bara [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) (via AWS eller ett direktavtal) för endast \$0,05 per dokumenttransaktion. Använd Adobe PDF Embed gratis utan tidsbegränsning. Skapa ett kostnadsfritt konto för att [komma igång](https://www.adobe.com/go/dcsdks_credentials) i dag.

@@ -10,24 +10,24 @@ thumbnail: KT-8089.jpg
 exl-id: ae1cd9db-9f00-4129-a2a1-ceff1c899a83
 source-git-commit: 2f01f306f5d13bfbaa61442e0e7a89537a62c33c
 workflow-type: tm+mt
-source-wordcount: '2054'
-ht-degree: 2%
+source-wordcount: '1906'
+ht-degree: 0%
 
 ---
 
 # Komma igång med Adobe Sign API
 
-[ACROBAT SIGN API](https://www.adobe.io/apis/documentcloud/sign.html) är ett bra sätt att förbättra sättet du hanterar signerade avtal på. Utvecklare kan enkelt integrera sina system med Sign API, som ger ett tillförlitligt och enkelt sätt att ladda upp dokument, skicka dem för signering, skicka påminnelser och samla in e-signaturer.
+[Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html) är ett bra sätt att förbättra hur du hanterar signerade avtal. Utvecklare kan enkelt integrera sina system med Sign API, som ger ett tillförlitligt och enkelt sätt att ladda upp dokument, skicka dem för signering, skicka påminnelser och samla in e-signaturer.
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudiekursen förklaras hur utvecklare kan använda Sign API för att förbättra program och arbetsflöden som skapas med [!DNL Adobe Acrobat Services]. [!DNL Acrobat Services] inkluderar [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html), [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) (gratis), och [Adobe-dokumentgenererings-API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html).
+I den här praktiska självstudiekursen beskrivs hur utvecklare kan använda Sign API för att förbättra program och arbetsflöden som skapats med [!DNL Adobe Acrobat Services]. [!DNL Acrobat Services] innehåller [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html), [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) (kostnadsfritt) och [Adobe Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html).
 
-Lär dig mer specifikt hur du inkluderar Acrobat Sign API i programmet för att samla in signaturer och annan information, till exempel information om anställda i ett försäkringsformulär. Allmänna steg med förenklade HTTP-begäranden och -svar används. Du kan implementera de här förfrågningarna på ditt favoritspråk. Du kan skapa en PDF genom att kombinera [[!DNL Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/), överför den till Sign-API:et som en [flyktig](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) och begära slutanvändarsignaturer med hjälp av avtalet eller [widget](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) arbetsflöde.
+Lär dig mer specifikt hur du inkluderar Acrobat Sign API i programmet för att samla in signaturer och annan information, till exempel information om anställda i ett försäkringsformulär. Allmänna steg med förenklade HTTP-begäranden och -svar används. Du kan implementera de här förfrågningarna på ditt favoritspråk. Du kan skapa en PDF med en kombination av [[!DNL Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/), överföra den till Sign-API:et som ett [tillfälligt](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) dokument och begära slutanvändarsignaturer med avtalet eller [widgeten](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md).
 
 ## Skapa ett PDF-dokument
 
-Börja med att skapa en Microsoft Word-mall och spara den som en PDF. Du kan också automatisera pipelinen med dokumentgenererings-API för att överföra en mall som har skapats i Word och sedan generera ett PDF-dokument. Dokumentgenererings-API:t är en del av [!DNL Acrobat Services], [kostnadsfritt i sex månader och sedan betala per överföring för endast 0,05 USD per dokumenttransaktion](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
+Börja med att skapa en Microsoft Word-mall och spara den som en PDF. Du kan också automatisera pipelinen med dokumentgenererings-API för att överföra en mall som har skapats i Word och sedan generera ett PDF-dokument. Dokumentgenererings-API:t ingår i [!DNL Acrobat Services], [kostnadsfritt i sex månader och sedan betala per användning för bara eller $0,05 per dokumenttransaktion](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
 
 I det här exemplet är mallen bara ett enkelt dokument med några fält för undertecknare att fylla i. Namnge fälten nu och infoga sedan de faktiska fälten i den här självstudiekursen.
 
@@ -35,7 +35,7 @@ I det här exemplet är mallen bara ett enkelt dokument med några fält för un
 
 ## Identifierar den giltiga API-åtkomstpunkten
 
-Innan du arbetar med Sign API: [skapa ett kostnadsfritt utvecklarkonto](https://acrobat.adobe.com/ca/en/sign/developer-form.html) Om du vill få tillgång till API:et testar du utbyte och körning av dokument och testar e-postfunktionen.
+Innan du arbetar med Sign-API:et måste du [skapa ett kostnadsfritt utvecklarkonto](https://acrobat.adobe.com/ca/en/sign/developer-form.html) för att få åtkomst till API:et, testa dokumentutbytet och körningen och testa e-postfunktionen.
 
 Adobe distribuerar Acrobat Sign API över hela världen i många driftsättningsenheter som kallas &quot;shards&quot;. Varje shard betjänar en kunds konto, t.ex. NA1, NA2, NA3, EU1, JP1, AU1, IN1 och andra. Delningsnamnen motsvarar geografiska platser. Dessa shards utgör bas-URI:n (åtkomstpunkter) för API-slutpunkterna.
 
@@ -65,7 +65,7 @@ I ovanstående exempel är ett svar med värdet som åtkomstpunkt.
 
 Med Adobe Sign kan du skapa olika flöden som förbereder dokument för signaturer eller datainsamling. Oavsett programmets flöde måste du först överföra ett dokument som bara är tillgängligt i sju dagar. De efterföljande API-anropen måste sedan referera till det här tillfälliga dokumentet.
 
-Dokumentet överförs med en begäran om POST till `/transientDocuments` slutpunkt. Multipart-begäran består av filnamnet, en filström och dokumentfilens MIME-typ (media). Slutpunktssvaret innehåller ett ID som identifierar dokumentet.
+Dokumentet laddas upp med en begäran om POST till slutpunkten `/transientDocuments`. Multipart-begäran består av filnamnet, en filström och dokumentfilens MIME-typ (media). Slutpunktssvaret innehåller ett ID som identifierar dokumentet.
 
 Dessutom kan ditt program ange en återanropsadress för Acrobat Sign till ping, som meddelar programmet när signeringsprocessen är klar.
 
@@ -91,9 +91,9 @@ Dessutom kan ditt program ange en återanropsadress för Acrobat Sign till ping,
 
 Webbformulär (som tidigare kallades signeringswidgetar) är värddokument som alla som har åtkomst kan signera. Exempel på webbformulär är registreringsblad, undantag och andra dokument som många har åtkomst till och signerar online.
 
-Om du vill skapa ett nytt webbformulär med Sign-API:et måste du först överföra ett tillfälligt dokument. Begäran om POST till `/widgets` slutpunkten använder det returnerade `transientDocumentId` .
+Om du vill skapa ett nytt webbformulär med Sign-API:et måste du först överföra ett tillfälligt dokument. Begäran om POST till slutpunkten `/widgets` använder den returnerade `transientDocumentId`.
 
-I det här exemplet är webbformuläret `ACTIVE`, men du kan skapa den i ett av tre olika lägen:
+I det här exemplet är webbformuläret `ACTIVE`, men du kan skapa det i ett av tre olika tillstånd:
 
 * UTKAST - för att stegvis skapa webbformuläret
 
@@ -101,7 +101,7 @@ I det här exemplet är webbformuläret `ACTIVE`, men du kan skapa den i ett av 
 
 * ACTIVE - för att omedelbart vara värd för webbformuläret
 
-Informationen om formulärets deltagare måste också definieras. Inställningen `memberInfos` -egenskapen innehåller data om deltagarna, t.ex. e-post. För närvarande stöder den här uppsättningen inte fler än en medlem. Men eftersom e-postadressen till webbformulärssigneraren är okänd när webbformuläret skapas, ska e-postadressen lämnas tom, som i följande exempel. Inställningen `role` -egenskapen definierar den roll som medlemmarna i `memberInfos` (t.ex. SIGNERARE och GODKÄNNARE).
+Informationen om formulärets deltagare måste också definieras. Egenskapen `memberInfos` innehåller data om deltagarna, t.ex. e-post. För närvarande stöder den här uppsättningen inte fler än en medlem. Men eftersom e-postadressen till webbformulärssigneraren är okänd när webbformuläret skapas, ska e-postadressen lämnas tom, som i följande exempel. Egenskapen `role` definierar rollen som antas av medlemmarna i `memberInfos` (till exempel SIGNER och APPROVER).
 
 ```
   POST /api/rest/v6/widgets HTTP/1.1
@@ -135,7 +135,7 @@ Informationen om formulärets deltagare måste också definieras. Inställningen
   }
 ```
 
-Du kan skapa ett webbformulär som `DRAFT` eller `AUTHORING`och ändrar sedan status när formuläret passerar genom din programpipeline. Om du vill ändra ett webbformulärs tillstånd går du till [PUT /widgets/{widgetId}/state](https://secure.na4.adobesign.com/public/docs/restapi/v6#!/widgets/updateWidgetState) slutpunkt.
+Du kan skapa ett webbformulär som `DRAFT` eller `AUTHORING` och sedan ändra dess tillstånd när formuläret passerar genom din programpipeline. Om du vill ändra ett webbformulärsläge går du till slutpunkten [PUT /widgets/{widgetId}/state](https://secure.na4.adobesign.com/public/docs/restapi/v6#!/widgets/updateWidgetState).
 
 ## Läsa webbformulärets URL
 
@@ -188,29 +188,29 @@ Det här formuläret är ett PDF-dokument som användare kan fylla i. Du måste 
 
 Dokumentet ovan visar inte fälten - än. De läggs till när du definierar vilka fält som samlar in signerarens information samt deras storlek och position.
 
-Gå nu till [Webbformulär](https://secure.na4.adobesign.com/public/agreements/#agreement_type=webform) på sidan Dina avtal och hitta formuläret du skapade.
+Gå nu till fliken [Webbformulär](https://secure.na4.adobesign.com/public/agreements/#agreement_type=webform) på sidan Dina avtal och leta reda på formuläret du skapade.
 
 ![Skärmbild av fliken Hantera i Acrobat Sign](assets/GSASAPI_2.png)
 
-![Skärmbild av fliken Hantera i Acrobat Sign med webbformulär markerat](assets/GSASAPI_3.png)
+![Skärmbild av fliken Hantera i Acrobat Sign med markerade webbformulär](assets/GSASAPI_3.png)
 
-Klicka **Redigera** för att öppna dokumentredigeringssidan. De tillgängliga fördefinierade fälten finns på den högra panelen.
+Klicka på **Redigera** för att öppna dokumentredigeringssidan. De tillgängliga fördefinierade fälten finns på den högra panelen.
 
 ![Skärmbild av redigeringsmiljön för Acrobat Sign-formulär](assets/GSASAPI_4.png)
 
-I redigeraren kan du dra och släppa text- och signaturfält. När du har lagt till alla nödvändiga fält kan du ändra storlek på och justera dem för att finputsa formuläret. Klicka till sist på **Spara** för att skapa formuläret.
+I redigeraren kan du dra och släppa text- och signaturfält. När du har lagt till alla nödvändiga fält kan du ändra storlek på och justera dem för att finputsa formuläret. Klicka slutligen på **Spara** för att skapa formuläret.
 
-![Skärmbild av redigeringsmiljön för Acrobat Sign-formulär med formulärfält tillagda](assets/GSASAPI_5.png)
+![Skärmbild av redigeringsmiljön för Acrobat Sign-formulär med tillagda formulärfält](assets/GSASAPI_5.png)
 
 ## Skicka ett webbformulär för signering
 
 När du har slutfört webbformuläret måste du skicka in det så att användarna kan fylla i och signera det. När du har sparat formuläret kan du visa och kopiera webbadressen och den inbäddade koden.
 
-**Kopiera webbformulärets URL**: Använd denna URL för att skicka användare till en värdversion av avtalet för granskning och signering. Till exempel:
+**Kopiera URL för webbformulär**: Använd denna URL för att skicka användare till en värdversion av avtalet för granskning och signering. Till exempel:
 
 [https://secure.na4.adobesign.com/public/esignWidget?wid=CBFCIBAA3...babw\*](https://secure.na4.adobesign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCndYscuKcDMPiVfQlpaGPb-5D7ebE9NUTQ6x6jK7PIs8HCtTzr3HOx8U6D5qqbabw*)
 
-**Kopiera inbäddningskod för webbformulär**: lägg till avtalet på webbplatsen genom att kopiera och klistra in det i HTML.
+**Kopiera webbformulärets inbäddningskod**: lägg till avtalet på webbplatsen genom att kopiera och klistra in det i HTML.
 
 Till exempel:
 
@@ -234,11 +234,11 @@ Användaren fyller sedan i fälten och signerar formuläret.
 
 Därefter signerar användaren dokumentet med en tidigare lagrad signatur eller med en ny.
 
-![Skärmdump av signeringsupplevelse](assets/GSASAPI_9.png)
+![Skärmbild av signeringsupplevelsen](assets/GSASAPI_9.png)
 
 ![Skärmbild av signatur](assets/GSASAPI_10.png)
 
-När användaren klickar **Tillämpa**, instruerar Adobe dem att öppna sitt e-postmeddelande och bekräfta signaturen. Signaturen förblir väntande tills bekräftelsen kommer.
+När användaren klickar på **Tillämpa** instruerar Adobe användaren att öppna sin e-postadress och bekräfta signaturen. Signaturen förblir väntande tills bekräftelsen kommer.
 
 ![Skärmbild av bara ett steg till](assets/GSASAPI_11.png)
 
@@ -250,7 +250,7 @@ Denna autentisering lägger till multifaktorautentisering och stärker signering
 
 ## Läser slutförda webbformulär
 
-Nu är det dags att hämta de formulärdata som användarna har fyllt i. Inställningen `/widgets/{widgetId}/formData` slutpunkten hämtar data som anges av användaren till ett interaktivt formulär när de signerade formuläret.
+Nu är det dags att hämta de formulärdata som användarna har fyllt i. Slutpunkten `/widgets/{widgetId}/formData` hämtar data som anges av användaren till ett interaktivt formulär när denne signerade formuläret.
 
 ```
 GET /api/rest/v6/widgets/{widgetId}/formData HTTP/1.1
@@ -276,7 +276,7 @@ Som ett alternativ till webbformulär kan du skapa avtal. I följande avsnitt vi
 
 Om du skickar ett dokument till angivna mottagare för signering eller godkännande skapas ett avtal. Du kan spåra status och slutförande av ett avtal med API:er.
 
-Du kan skapa ett avtal med en [tillfälligt dokument](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [biblioteksdokument](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)eller URL. I det här exemplet baseras avtalet på `transientDocumentId`, precis som webbformuläret skapades tidigare.
+Du kan skapa ett avtal med ett [tillfälligt dokument](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [biblioteksdokument](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md) eller URL. I det här exemplet baseras avtalet på `transientDocumentId`, precis som webbformuläret som skapades tidigare.
 
 ```
 POST /api/rest/v6/agreements HTTP/1.1
@@ -317,7 +317,7 @@ I det här exemplet skapas avtalet som IN_PROCESS, men du kan skapa det i ett av
 
 * IN_PROCESS - för att omedelbart skicka avtalet
 
-Om du vill ändra ett avtals tillstånd använder du `PUT /agreements/{agreementId}/state` slutpunkt för att utföra en av de tillåtna lägesövergångarna nedan:
+Om du vill ändra ett avtalstillstånd använder du slutpunkten `PUT /agreements/{agreementId}/state` för att utföra en av de tillåtna tillståndsövergångarna nedan:
 
 * UTKAST TILL REDIGERING
 
@@ -325,7 +325,7 @@ Om du vill ändra ett avtals tillstånd använder du `PUT /agreements/{agreement
 
 * PÅGÅENDE_PROCESS TILL AVBRUTEN
 
-Inställningen `participantSetsInfo` Egenskapen ovan innehåller e-postmeddelanden om personer som förväntas delta i avtalet och vilken åtgärd de utför (signera, godkänna, bekräfta och så vidare). I exemplet ovan finns det bara en deltagare: undertecknaren. Skriftliga signaturer är begränsade till fyra per dokument.
+Egenskapen `participantSetsInfo` ovan innehåller e-postmeddelanden från personer som förväntas delta i avtalet och vilken åtgärd de utför (signera, godkänna, bekräfta och så vidare). I exemplet ovan finns det bara en deltagare: undertecknaren. Skriftliga signaturer är begränsade till fyra per dokument.
 
 När du skapar ett avtal skickas det automatiskt ut för signering i Adobe, till skillnad från webbformulär. Slutpunkten returnerar avtalets unika identifierare.
 
@@ -340,7 +340,7 @@ När du skapar ett avtal skickas det automatiskt ut för signering i Adobe, till
 
 ## Hämtar information om avtalsmedlemmar
 
-När du har skapat ett avtal kan du använda `/agreements/{agreementId}/members` slutpunkt för att hämta information om medlemmar i avtalet. Du kan till exempel kontrollera om en deltagare har signerat avtalet.
+När du har skapat ett avtal kan du använda slutpunkten `/agreements/{agreementId}/members` för att hämta information om medlemmar i avtalet. Du kan till exempel kontrollera om en deltagare har signerat avtalet.
 
 ```
 GET /api/rest/v6/agreements/{agreementId}/members HTTP/1.1
@@ -383,9 +383,9 @@ JSON-svarstexten som skapas innehåller information om deltagarna.
 
 Beroende på affärsreglerna kan en deadline hindra deltagarna från att signera avtalet efter ett visst datum. Om avtalet har ett förfallodatum kan du påminna deltagarna när det datumet närmar sig.
 
-Baserat på den avtalsmedlemmarnas information du fick efter samtalet till `/agreements/{agreementId}/members` slutpunkt i det sista avsnittet kan du utfärda e-postpåminnelser till alla deltagare som fortfarande inte har signerat avtalet.
+Baserat på informationen om avtalsmedlemmarna som du fick efter samtalet till slutpunkten `/agreements/{agreementId}/members` i det sista avsnittet kan du utfärda e-postpåminnelser till alla deltagare som fortfarande inte har signerat avtalet.
 
-En begäran om POST till `/agreements/{agreementId}/reminders` slutpunkt skapar en påminnelse för angivna deltagare i ett avtal som identifieras av `agreementId` -parametern.
+En påminnelsebegäran till slutpunkten `/agreements/{agreementId}/reminders` skapar en POST för de angivna deltagarna i ett avtal som identifieras av parametern `agreementId`.
 
 ```
 POST /agreements/{agreementId}/reminders HTTP/1.1
@@ -417,7 +417,7 @@ När du har publicerat påminnelsen får användarna ett e-postmeddelande med av
 
 ## Läser slutförda avtal
 
-Precis som webbformulär kan du läsa information om avtal som mottagarna har signerat. Inställningen `/agreements/{agreementId}/formData` slutpunkten hämtar data som anges av användaren när denne signerade webbformuläret.
+Precis som webbformulär kan du läsa information om avtal som mottagarna har signerat. Slutpunkten `/agreements/{agreementId}/formData` hämtar data som anges av användaren när webbformuläret signerades.
 
 ```
 GET /api/rest/v6/agreements/{agreementId}/formData HTTP/1.1
@@ -434,10 +434,10 @@ Company Name","CBJCHBCAABAA5Z84zy69q_Ilpuy5DzUAahVfcNZillDt"
 
 Med Acrobat Sign API kan du hantera dokument, webbformulär och avtal. De förenklade men kompletta arbetsflödena som skapas med hjälp av webbformulär och avtal görs på ett allmänt sätt som gör att utvecklare kan implementera dem på valfritt språk.
 
-Du hittar exempel på hur Sign API fungerar i [Användarhandbok för utvecklare för API-användning](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/api_usage.md). Den här dokumentationen innehåller korta artiklar om många av de steg som beskrivs i artikeln samt andra relaterade ämnen.
+Du hittar exempel på hur Sign API fungerar i [användarhandboken för utvecklare av API](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/api_usage.md) om du vill ha en översikt. Den här dokumentationen innehåller korta artiklar om många av de steg som beskrivs i artikeln samt andra relaterade ämnen.
 
-Acrobat Sign API är tillgängligt i flera nivåer [planer för en användare eller flera användare med e-signatur](https://acrobat.adobe.com/se/sv/sign/pricing/plans.html), så att du kan välja en prismodell som passar dina behov bäst. Nu när du vet hur enkelt det är att införliva Sign API i dina appar kan du vara intresserad av andra funktioner som [Acrobat Sign Webhooks](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md), en push-baserad programmeringsmodell. I stället för att kräva att appen utför frekventa kontroller i Acrobat Sign-händelser kan du med webhookar registrera en HTTP-URL som Sign API kör en återanropsbegäran för POST för när en händelse inträffar. Webhookar möjliggör robust programmering genom att driva ditt program med realtids- och direktuppdateringar.
+Acrobat Sign API finns tillgängligt via flera nivåer av [e-signeringsplaner för en eller flera användare](https://acrobat.adobe.com/se/sv/sign/pricing/plans.html), så att du kan välja en prismodell som passar dina behov bäst. Nu när du vet hur enkelt det är att införliva Sign API i dina appar kan du vara intresserad av andra funktioner som [Acrobat Sign Webhooks](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md), en push-baserad programmeringsmodell. I stället för att kräva att appen utför frekventa kontroller i Acrobat Sign-händelser kan du med webhookar registrera en HTTP-URL som Sign API kör en återanropsbegäran för POST för när en händelse inträffar. Webhookar möjliggör robust programmering genom att driva ditt program med realtids- och direktuppdateringar.
 
-Titta på [fördelningspris](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html), när din sex månader långa kostnadsfria provperiod på Adobe PDF-tjänsternas API upphör och det kostnadsfria Adobe PDF Embed API.
+Ta en titt på [fördelningspriset](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html), när din sex månader långa kostnadsfria provperiod på Adobe PDF Services API tar slut, och det kostnadsfria Adobe PDF Embed API.
 
-Kom igång med om du vill lägga till spännande funktioner som automatiskt dokumentskapande och dokumentsignering i programmet [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html).
+Kom igång med [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) om du vill lägga till spännande funktioner som automatiskt dokumentskapande och dokumentsignering i programmet.

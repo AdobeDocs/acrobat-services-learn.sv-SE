@@ -28,9 +28,9 @@ Med Acrobat Sign API:er kan du skapa program och bädda in Acrobat Sign-gränssn
       <img alt="Komma igång" src="assets/GSASAPI_thumb.png" />
     </a>
     <div>
-    <a href="signapi.md"><strong>Komma igång</strong></a>
+    <a href="signapi.md"><strong>Komma i gång</strong></a>
     </div>
-    <em>Lär dig hur du inkluderar Sign API i programmet för att samla in signaturer och annan information</em>
+    <em>Lär dig hur du inkluderar Sign API i ditt program för att samla in signaturer och annan information</em>
     <br>
   </td>
   <td>
@@ -64,7 +64,7 @@ Lär dig hur Kom igång med att bädda in OEM-versionen av Acrobat Sign i ditt p
     <div>
    <a href="sign-up-developer-account.md"><strong>Registrera dig för ett utvecklarkonto</strong></a>
     </div>
-    <em>Läs hur du registrerar dig för ett utvecklarkonto för Acrobat Sign som är fullt aktiverat med Sign- och API-funktioner</em>
+    <em>Lär dig hur du registrerar dig för ett utvecklarkonto för Acrobat Sign som är helt aktiverat med Sign- och API-funktionerna</em>
     <br>
   </td>
   <td>
@@ -82,7 +82,7 @@ Lär dig hur Kom igång med att bädda in OEM-versionen av Acrobat Sign i ditt p
       <img alt="Skapa en inbäddningslänk" src="assets/Creatinganembedlink_1280.png" />
    </a>
     <div>
-   <a href="creating-an-embed-link.md"><strong>Skapa en inbäddningslänk</strong></a>
+   <a href="creating-an-embed-link.md"><strong>Skapar en inbäddningslänk</strong></a>
     </div>
     <em>Lär dig hur du skapar en inbäddningslänk för OAuth, vilket är metoden som programmet får behörigheter för användare</em>
     <br>
@@ -106,7 +106,7 @@ Lär dig hur Kom igång med att bädda in OEM-versionen av Acrobat Sign i ditt p
     <div>
    <a href="creating-a-transient-document.md"><strong>Skapa ett övergående dokument</strong></a>
     </div>
-    <em>Lär dig skapa ett tillfälligt dokument som kan användas med Acrobat Sign-åtkomstpunkten</em>
+    <em>Lär dig skapa ett tillfälligt dokument som kan användas med Acrobat Sign AP</em>
     <br>
   </td>
   <td>

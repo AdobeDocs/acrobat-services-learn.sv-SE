@@ -10,20 +10,20 @@ thumbnail: KT-6676.jpg
 exl-id: 4a8f2119-c464-496b-bdc8-35dd387bef25
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # Komma igång med Adobe PDF Services API och Java
 
-![SKAPA PDF-HJÄLTEBILD](assets/GettingStartedJava_hero.jpg)
+![Skapa PDF-hjälpbild](assets/GettingStartedJava_hero.jpg)
 
 Utvecklare kan komma igång på bara några minuter med att köra exempelfiler som finns för att komma åt alla tillgängliga webbtjänster. I den här självstudiekursen går vi igenom alla steg för att börja köra exempel med hjälp av PDF Services Java SDK:
 
 ## Steg 1: Inhämta autentiseringsuppgifter och hämta exempelfiler
 
-Det första steget är att hämta en autentiseringsuppgift (API-nyckel) för att låsa upp användning. [Registrera dig för en kostnadsfri provperiod här](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) och klicka på Kom igång för att skapa dina nya inloggningsuppgifter.
+Det första steget är att hämta en autentiseringsuppgift (API-nyckel) för att låsa upp användning. [Registrera dig för en kostnadsfri provperiod här](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) och klicka på Kom igång för att skapa dina nya autentiseringsuppgifter.
 
 ![Steg 1](assets/GettingStartedJava_step1.png)
 
@@ -46,7 +46,7 @@ Du får en .zip-fil att hämta som heter PDFToolsSDK-JavaSamples.zip och som kan
 1. Installera [Java 8 eller senare](https://www.oracle.com/java/technologies/javase-downloads.html) om du inte redan har gjort det.
 1. Kör `javac -version` för att verifiera installationen.
 1. Kontrollera att mappen JDK bin ingår i variabeln PATH (metoden varierar beroende på operativsystem).
-1. Installera [Maven](https://maven.apache.org/install.html) använda önskat verktyg om du inte redan har gjort det.
+1. Installera [Maven](https://maven.apache.org/install.html) med önskat verktyg om du inte redan har gjort det.
 
 De personliga exemplen innehåller allt från körklar exempelkod, en inbäddad JSON-fil för autentiseringsuppgifter och förkonfigurerade anslutningar till beroenden.
 
@@ -56,20 +56,20 @@ De personliga exemplen innehåller allt från körklar exempelkod, en inbäddad 
 
 ## Avslutande tankar
 
-Med hjälp av PDF Services API kan du eliminera manuella processer genom att automatisera vanliga arbetsflöden och flytta bearbetningsbördan till molnet. I en värld där alla webbläsare behandlar PDF olika och använder Adobe PDF Embed API tillsammans med PDF Services API, kan du skapa effektiva, tillförlitliga och förutsägbara processer som körs och visas korrekt **varje gång** oberoende av plattform eller enhet.
+Med hjälp av PDF Services API kan du eliminera manuella processer genom att automatisera vanliga arbetsflöden och flytta bearbetningsbördan till molnet. I en värld där alla webbläsare behandlar PDF olika och använder Adobe PDF Embed API tillsammans med PDF Services API, kan du skapa effektiva, tillförlitliga och förutsägbara processer som körs och visas korrekt **varje gång** oavsett plattform eller enhet.
 
 ## Resurser och nästa steg
 
-* För ytterligare hjälp och support, gå till Adobe [[!DNL Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) community-forum
+* Om du vill ha mer hjälp och support kan du gå till användarforumet för [[!DNL Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) i Adobe
 
 * PDF Services API [Dokumentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [VANLIGA FRÅGOR](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) för PDF Services API-frågor
+* [Vanliga frågor](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) om API-frågor för PDF-tjänster
 
-* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) för frågor om licenser och priser
+* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) om du har frågor om licenser och priser
 
 * Relaterade artiklar
 
   [Det nya PDF Services API har ännu fler funktioner för dokumentarbetsflöden](https://community.adobe.com/t5/document-services-apis/new-pdf-tools-api-brings-more-capabilities-for-document-services/m-p/11294170)
 
-  [Juli-utgåvan av [!DNL Adobe Acrobat Services]Angående: PDF Embed och PDF Services](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)
+  [Juli-utgåvan av [!DNL Adobe Acrobat Services]: PDF Embed- och PDF-tjänster](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)

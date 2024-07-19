@@ -10,14 +10,14 @@ thumbnail: KT-7487.jpg
 exl-id: 64ffdacb-d6cb-43e7-ad10-bbd8afc0dbf4
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
 
 # Styr din onlineupplevelse i PDF och samla in analyser
 
-Publicerar din organisation PDF på din webbplats? Lär dig hur du använder Adobe PDF Embed API för att kontrollera utseende, aktivera samarbetsfunktioner och samla in analyser om hur användare interagerar med PDF, inklusive tid på en sida och sökningar. Inled den här praktiska självstudiekursen i fyra delar genom att välja *Komma igång med PDF Embed API*.
+Publicerar din organisation PDF på din webbplats? Lär dig hur du använder Adobe PDF Embed API för att kontrollera utseende, aktivera samarbetsfunktioner och samla in analyser om hur användare interagerar med PDF, inklusive tid på en sida och sökningar. Inled den här praktiska självstudiekursen med fyra delar genom att välja *Komma igång med PDF Embed API*.
 
 <table style="table-layout:fixed">
 <tr>
@@ -34,7 +34,7 @@ Publicerar din organisation PDF på din webbplats? Lär dig hur du använder Ado
         <img alt="Del 2: Lägga till PDF Embed API till en webbsida" src="assets/ControlPDFPart2_thumb.png" />
     </a>
     <div>
-    <a href="controlpdfexperience.md#part2"><strong>Del 2: Lägga till PDF Embed API till en webbsida</strong></a>
+    <a href="controlpdfexperience.md#part2"><strong>Del 2: Lägger till PDF Embed API på en webbsida</strong></a>
     </div>
   </td>
   <td>
@@ -62,8 +62,8 @@ I del 1 lär du dig hur du kommer igång med allt du behöver för delarna 1-3. 
 
 **Vad du behöver**
 
-* Resurser för självstudiekurser [hämtning](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)
-* Adobe ID [hämta en här](https://accounts.adobe.com/se)
+* Självstudieresurser [hämtas](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)
+* Adobe ID [skaffa ett här](https://accounts.adobe.com/se)
 * Webbserver (nod JS, PHP osv.)
 * Arbetskunskaper om HTML / JavaScript / CSS
 
@@ -75,34 +75,34 @@ I del 1 lär du dig hur du kommer igång med allt du behöver för delarna 1-3. 
 
 ### Hämtar autentiseringsuppgifter
 
-1. Gå till [Webbplatsen Adobe.io](https://www.adobe.io/).
-1. Klicka **[!UICONTROL Läs mer]** under Skapa engagerande dokumentupplevelser.
+1. Gå till webbplatsen [Adobe.io](https://www.adobe.io/).
+1. Klicka på **[!UICONTROL Läs mer]** under Skapa engagerande dokumentupplevelser.
 
    ![Skärmbild av knappen Läs mer](assets/ControlPDF_1.png)
 
-   Detta tar dig till [!DNL Adobe Acrobat Services] startsida.
+   Du kommer då till startsidan för [!DNL Adobe Acrobat Services].
 
-1. Klicka **[!UICONTROL Kom igång]** i navigeringsfältet.
+1. Klicka på **[!UICONTROL Kom igång]** i navigeringsfältet.
 
-   Du ser ett alternativ i **Kom igång med [!DNL Acrobat Services] API:er** till **Skapa nya autentiseringsuppgifter** eller **Hantera befintliga autentiseringsuppgifter**.
+   Du ser ett alternativ i **Kom igång med [!DNL Acrobat Services] API:er** för att **skapa nya autentiseringsuppgifter** eller **hantera befintliga autentiseringsuppgifter**.
 
-1. Klicka **[!UICONTROL Kom igång]** knapp under **[!UICONTROL Skapa nya autentiseringsuppgifter]**.
+1. Klicka på knappen **[!UICONTROL Kom igång]** under **[!UICONTROL Skapa nya autentiseringsuppgifter]**.
 
    ![Skärmbild av knappen Kom igång](assets/ControlPDF_2.png)
 
-1. Välj **[!UICONTROL PDF Embed API]** och lägg till valfritt inloggningsnamn och en programdomän i nästa fönster.
+1. Markera alternativknappen **[!UICONTROL PDF Embed API]** och lägg till valfritt inloggningsnamn och en programdomän i nästa fönster.
 
    >[!NOTE]
    >
    >Dessa autentiseringsuppgifter kan bara användas för den programdomän som anges här. Du kan använda vilken domän som helst.
 
-   ![Skärmbild av inloggningsuppgifter](assets/ControlPDF_3.png)
+   ![Skärmbild av autentiseringsuppgifter](assets/ControlPDF_3.png)
 
-1. Klicka **[!UICONTROL Skapa autentiseringsuppgifter]**.
+1. Klicka på **[!UICONTROL Skapa autentiseringsuppgifter]**.
 
    På den sista sidan i guiden får du information om dina klientautentiseringsuppgifter. Lämna det här fönstret öppet så att du kan komma tillbaka till det och kopiera klient-ID:t (API-nyckel) för senare bruk.
 
-1. Klicka **[!UICONTROL Visa dokumentation]** om du vill gå till dokumentationen med detaljerad information om hur du använder detta API.
+1. Klicka på **[!UICONTROL Visa dokumentation]** om du vill gå till dokumentationen med detaljerad information om hur du använder detta API.
 
    ![Skärmbild av knappen Skapa autentiseringsuppgifter](assets/ControlPDF_4.png)
 
@@ -112,21 +112,21 @@ I del 2, du kommer att lära dig hur du enkelt bädda in PDF Embed API i en webb
 
 ### Hämta träningskoden
 
-Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonstrationerna sker i samband med självstudieresurserna. Hämta exempelkod [här](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial).
+Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonstrationerna sker i samband med självstudieresurserna. Hämta exempelkoden [här](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial).
 
 1. Gå till [[!DNL Adobe Acrobat Services] webbplats](https://www.adobe.io/apis/documentcloud/dcsdk/).
 
    ![Skärmbild av [!DNL Adobe Acrobat Services] webbplats](assets/ControlPDF_6.png)
 
-1. Klicka **[!UICONTROL API:er]** i navigeringsfältet går du till **[!UICONTROL PDF Embed API]** i rullgardinsmenyn.
+1. Klicka på **[!UICONTROL API:er]** i navigeringsfältet och gå sedan till sidan **[!UICONTROL PDF Embed API]** i listrutan.
 
-   ![Skärmbild av listrutan PDF Embed API](assets/ControlPDF_7.png)
+   ![Skärmbild av rullgardinsmenyn PDF Embed API](assets/ControlPDF_7.png)
 
-1. Klicka **[!UICONTROL Testa demon]**.
+1. Klicka på **[!UICONTROL Prova demon]**.
 
    Ett nytt fönster visas med utvecklarsandlådan för PDF Embed API.
 
-   ![Skärmdump av Try the demo](assets/ControlPDF_8.png)
+   ![Skärmbild av demon](assets/ControlPDF_8.png)
 
    Här visas alternativen för de olika visningslägena.
 
@@ -134,17 +134,17 @@ Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonst
 
    ![Skärmbild av visningslägen](assets/ControlPDF_9.png)
 
-1. Klicka **[!UICONTROL Hela fönstret]** visningsläge och klicka sedan på **[!UICONTROL Anpassa]** för att slå på och av alternativen.
+1. Klicka på visningsläget **[!UICONTROL Fullständigt fönster]** och klicka sedan på knappen **[!UICONTROL Anpassa]** för att aktivera och inaktivera alternativen.
 
    ![Skärmbild av Anpassa knapp](assets/ControlPDF_10.png)
 
-1. Inaktivera **[!UICONTROL Hämta]** PDF.
-1. Klicka **[!UICONTROL Generera kod]** för att se kodförhandsgranskningen.
-1. Kopiera **[!UICONTROL Klient-ID]** från fönstret Klientautentiseringsuppgifter i del 1.
+1. Inaktivera alternativet **[!UICONTROL Hämta]** PDF.
+1. Klicka på knappen **[!UICONTROL Generera kod]** för att se kodförhandsgranskningen.
+1. Kopiera **[!UICONTROL Klient-ID]** från fönstret Klientautentiseringsuppgifter från del 1.
 
    ![Skärmbild av klient-ID](assets/ControlPDF_11.png)
 
-1. Öppna fönstret **[!UICONTROL Webb]** -> **[!UICONTROL resources]** -> **[!UICONTROL js]** -> **[!UICONTROL dc-config.js]** -filen i kodredigeraren.
+1. Öppna filen **[!UICONTROL Webb]** -> **[!UICONTROL resurser]** -> **[!UICONTROL js]** -> **[!UICONTROL dc-config.js]** i kodredigeraren.
 
    Du ser att variabeln clientID finns där.
 
@@ -160,9 +160,9 @@ Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonst
 
    ![Skärmbild av skript](assets/ControlPDF_12.png)
 
-1. Gå till kodredigeraren och öppna **[!UICONTROL Webb]** -> **[!UICONTROL utöva]** -> **[!UICONTROL index.html]** fil.
+1. Gå till kodredigeraren och öppna filen **[!UICONTROL Webb]** -> **[!UICONTROL övning]** -> **[!UICONTROL index.html]**.
 
-1. Klistra in skriptkoden i `<head>` av filen på rad 18 under kommentaren som lyder: **ATT GÖRA: ÖVNING 1: INFOGA INBÄDDAD API SCRIPT-TAGG**.
+1. Klistra in skriptkoden i `<head>` i filen på rad 18 under kommentaren som säger: **TODO: EXERCISE 1: INSERT EMBED API SCRIPT TAG**.
 
    ![Skärmbild av var skriptkoden ska klistras in](assets/ControlPDF_13.png)
 
@@ -172,13 +172,13 @@ Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonst
    <div id="adobe-dc-view"></div>
    ```
 
-   ![Skärmbild av var kod ska kopieras](assets/ControlPDF_14.png)
+   ![Skärmbild av var koden ska kopieras](assets/ControlPDF_14.png)
 
-1. Gå till kodredigeraren och öppna **[!UICONTROL Webb]** -> **[!UICONTROL utöva]** -> **[!UICONTROL index.html]** igen.
+1. Gå till kodredigeraren och öppna filen **[!UICONTROL Webb]** -> **[!UICONTROL övning]** -> **[!UICONTROL index.html]** igen.
 
-1. Klistra in `<div>` kod i `<body>` av akten på rad 67 under kommentaren som säger **ATT GÖRA: ÖVNING 1: INFOGA PDF INBÄDDNINGS-API-KOD**.
+1. Klistra in `<div>`-koden i `<body>` i filen på rad 67 under kommentaren som säger **TODO: EXERCISE 1: INSERT PDF EMBED API CODE**.
 
-   ![Skärmbild av var kod ska klistras in](assets/ControlPDF_15.png)
+   ![Skärmbild av var koden ska klistras in](assets/ControlPDF_15.png)
 
 1. Gå tillbaka till kodförhandsgranskningen för utvecklarsandlådan och kopiera kodraderna för `<script>` nedan:
 
@@ -194,17 +194,17 @@ Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonst
    </script>
    ```
 
-1. Gå till kodredigeraren och öppna **[!UICONTROL Webb]** -> **[!UICONTROL utöva]** -> **[!UICONTROL index.html]** igen.
+1. Gå till kodredigeraren och öppna filen **[!UICONTROL Webb]** -> **[!UICONTROL övning]** -> **[!UICONTROL index.html]** igen.
 
-1. Klistra in `<script>` kod i `<body>` på rad 68 under rubriken `<div>` tagg.
+1. Klistra in `<script>`-koden i `<body>` i filen på rad 68 under taggen `<div>`.
 
-1. Ändra rad 70 av samma **index.html** -filen för att inkludera variabeln clientID som skapades tidigare.
+1. Ändra rad 70 i samma **index.html**-fil för att inkludera variabeln clientID som skapades tidigare.
 
-   ![Skärmbild av linje 70](assets/ControlPDF_16.png)
+   ![Skärmbild av rad 70](assets/ControlPDF_16.png)
 
-1. Ändra rad 72 av samma **index.html** -filen för att uppdatera platsen för PDF-filen så att den använder en lokal fil.
+1. Ändra rad 72 i samma **index.html**-fil om du vill uppdatera platsen för PDF-filen så att den använder en lokal fil.
 
-   Det finns ett tillgängligt i självstudiekursfilerna i **/resources/pdfs/whitepaper.pdf**.
+   Det finns en i självstudiekursfilerna i **/resources/pdfs/whitepaper.pdf**.
 
 1. Spara dina ändrade filer och förhandsgranska webbplatsen genom att bläddra till **`<your domain>`/Summit21/web/motion/**.
 
@@ -216,12 +216,12 @@ Nu när du har skapat en webbsida där PDF Embed API har renderat ett PDF kan du
 
 ### Hitta dokumentation
 
-Det finns en hel del olika JavaScript-händelser tillgängliga som en del av PDF Embed API. Du kan komma åt dem från [!DNL Adobe Acrobat Services] dokumentation.
+Det finns en hel del olika JavaScript-händelser tillgängliga som en del av PDF Embed API. Du kan komma åt dem från dokumentationen för [!DNL Adobe Acrobat Services].
 
-1. Gå till [dokumentation](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html) -plats.
+1. Gå till webbplatsen [dokumentation](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html).
 1. Granska de olika händelsetyperna som är tillgängliga som en del av API:et. De är användbara som referens och kommer också att vara till hjälp för dina framtida projekt.
 
-   ![Skärmbild av referensguide](assets/ControlPDF_17.png)
+   ![Skärmbild av referensguiden](assets/ControlPDF_17.png)
 
 1. Kopiera exempelkoden på webbplatsen.
 
@@ -247,9 +247,9 @@ Det finns en hel del olika JavaScript-händelser tillgängliga som en del av PDF
    );
    ```
 
-1. Hitta det kodavsnitt som du lade till tidigare som ser ut så här nedan och lägg till koden ovan efter den här koden i **index.html**:
+1. Leta reda på det kodavsnitt som du lade till tidigare och som ser ut så här nedan. Lägg till koden ovan i **index.html**:
 
-   ![Skärmbild av var kod ska klistras in](assets/ControlPDF_19.png)
+   ![Skärmbild av var koden ska klistras in](assets/ControlPDF_19.png)
 
 1. Läs in sidan i webbläsaren och öppna konsolen för att visa konsolutdata från de olika händelserna när du interagerar med visningsprogrammet för PDF.
 
@@ -261,13 +261,13 @@ Det finns en hel del olika JavaScript-händelser tillgängliga som en del av PDF
 
 Nu när du har de händelser som matas ut till console.log ska vi ändra beteendet utifrån vilka händelser som inträffar. För att göra det använder du ett exempel.
 
-1. Gå till **snippets/eventsSwitch.js** och kopiera innehållet i filen i självstudiekurskoden.
+1. Gå till **snippets/eventsSwitch.js** och kopiera innehållet i filen i självstudiekursen.
 
-   ![Skärmbild av var kod ska kopieras](assets/ControlPDF_22.png)
+   ![Skärmbild av var koden ska kopieras](assets/ControlPDF_22.png)
 
 1. Klistra in koden i händelseavlyssnarfunktionen.
 
-   ![Skärmbild av var kod ska klistras in](assets/ControlPDF_23.png)
+   ![Skärmbild av var koden ska klistras in](assets/ControlPDF_23.png)
 
 1. Kontrollera att konsolen matas ut korrekt när sidan har lästs in och att du interagerar med visningsprogrammet för PDF.
 
@@ -279,15 +279,15 @@ Om du vill lägga till Adobe Analytics-support till din läsare kan du följa an
 >
 >Din webbsida måste redan ha Adobe Analytics inläst på sidan i sidhuvudet.
 
-Gå till [Adobe Analytics-dokumentation](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtodata.html#adobe-analytics) och granska om du redan har aktiverat Adobe Analytics på din webbsida. Följ instruktionerna för att konfigurera en reportSuite.
+Gå till [Adobe Analytics-dokumentationen](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtodata.html#adobe-analytics) och granska om Adobe Analytics redan är aktiverat på webbsidan. Följ instruktionerna för att konfigurera en reportSuite.
 
 ### Google Analytics
 
-![Skärmbild som visar hur du integrerar med Google Analytics](assets/ControlPDF_24.png)
+![Skärmbild av hur du integrerar med Google Analytics](assets/ControlPDF_24.png)
 
 Adobe PDF Embed API tillhandahåller färdig integrering med Adobe Analytics. Men eftersom alla händelser finns tillgängliga som JavaScript-händelser går det att integrera med Google Analytics genom att hämta PDF-händelser och använda ga()-funktionen för att lägga till händelsen i Adobe Analytics.
 
-1. Gå till **snippets/eventsSwitchGA.js** för att se hur du kan integrera dig med Google Analytics.
+1. Gå till **snippets/eventsSwitchGA.js** om du vill se hur du kan integrera med Google Analytics.
 1. Granska och använd den här koden som ett exempel om din webbsida spåras med Adobe Analytics och redan är inbäddad på webbsidan.
 
    ![Skärmbild av Adobe Analytics-kod](assets/ControlPDF_25.png)
@@ -298,19 +298,19 @@ I del 4 går du igenom hur du lägger en betalvägg ovanpå din PDF-tittare som 
 
 ### Exempel på betalvägg
 
-Navigera till detta [Exempel på en PDF bakom en betalvägg](https://www3.technologyevaluation.com/research/white-paper/the-forrester-wave-digital-decisioning-platforms-q4-2020.html). I det här exemplet får du lära dig att lägga till interaktivitet utöver en visningsupplevelse i PDF.
+Navigera till [exemplet på en PDF bakom en betalvägg](https://www3.technologyevaluation.com/research/white-paper/the-forrester-wave-digital-decisioning-platforms-q4-2020.html). I det här exemplet får du lära dig att lägga till interaktivitet utöver en visningsupplevelse i PDF.
 
 ### Lägg till betalvägskod
 
 1. Gå till snippets/paywallCode.html och kopiera innehållet.
-1. Sök efter `<!-- TODO: EXERCISE 3: INSERT PAYWALL CODE -->` i exercise/index.html.
+1. Sök efter `<!-- TODO: EXERCISE 3: INSERT PAYWALL CODE -->` på exercise/index.html.
 
-   ![Skärmbild av var kod ska kopieras](assets/ControlPDF_26.png)
+   ![Skärmbild av var koden ska kopieras](assets/ControlPDF_26.png)
 
 1. Klistra in den kopierade koden efter kommentaren.
 1. Gå till **snippets/paywallCode.js** och kopiera innehållet.
 
-   ![Skärmbild av var kod ska klistras in](assets/ControlPDF_27.png)
+   ![Skärmbild av var koden ska klistras in](assets/ControlPDF_27.png)
 
 1. Klistra in koden på den platsen.
 
@@ -318,11 +318,11 @@ Navigera till detta [Exempel på en PDF bakom en betalvägg](https://www3.techno
 
 Nu kan du visa demon.
 
-1. Läs in igen **index.html** på din webbplats.
+1. Läs in **index.html** på nytt på din webbplats.
 1. Bläddra ner till en sida > 2.
 1. Visa dialogrutan för att verifiera användaren efter den andra sidan.
 
-   ![Skärmdump av att titta på demon](assets/ControlPDF_28.png)
+   ![Skärmbild av demon](assets/ControlPDF_28.png)
 
 ## Ytterligare resurser
 

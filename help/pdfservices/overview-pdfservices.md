@@ -10,7 +10,7 @@ thumbnail: KT-8116.jpg
 exl-id: 81410fe4-7a2c-43a9-b497-b7423f9821ec
 source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
     <div>
    <a href="getting-credentials-power-automate.md"><strong>Hämtar autentiseringsuppgifter för [!DNL Microsoft Power Automate]</strong></a>
     </div>
-    <em>Lär dig få inloggningsuppgifter för att börja använda eller testa [!DNL Adobe PDF Services]</em>
+    <em>Lär dig hur du skaffar autentiseringsuppgifter för att börja använda eller prova [!DNL Adobe PDF Services]</em>
     <br>
   </td>
   <td>
@@ -46,7 +46,7 @@ ht-degree: 0%
     <div>
    <a href="create-workflow-power-automate.md"><strong>Skapa ditt första arbetsflöde i [!DNL Microsoft Power Automate]</strong></a>
     </div>
-    <em>Läs om hur du använder [!DNL Adobe PDF Services] anslutaringång [!DNL Microsoft Power Automate]</em>
+    <em>Lär dig hur du använder [!DNL Adobe PDF Services]-anslutningen i [!DNL Microsoft Power Automate]</em>
     <br>
   </td>
   <td>
@@ -54,9 +54,9 @@ ht-degree: 0%
       <img alt="Skapa en PDF från HTML eller MS Office på några minuter med PDF Services API och Node.js" src="assets/PDFServices_GettingStartedNode_thumb.jpg" />
    </a>
     <div>
-   <a href="createpdffromhtml.md"><strong>Skapa en PDF från HTML eller [!DNL MS Office] om några minuter med PDF Services API och Node.js</strong></a>
+   <a href="createpdffromhtml.md"><strong>Skapa en PDF från HTML eller [!DNL MS Office] på några minuter med PDF Services API och Node.js</strong></a>
     </div>
-    <em>[!DNL Adobe PDF Services API] som ger utvecklare fritt omfång att välja mellan flera kraftfulla PDF-manipuleringstjänster för att uppfylla behoven av komplicerade affärsarbetsflöden</em>
+    <em>[!DNL Adobe PDF Services API] som ger utvecklarna möjlighet att välja mellan flera kraftfulla PDF-manipuleringstjänster för att uppfylla behoven i komplicerade affärsarbetsflöden</em>
     <br>
   </td>
 </tr>
@@ -66,9 +66,9 @@ ht-degree: 0%
       <img alt="Använda PDF Services API för att exportera PDF till Word, PowerPoint med mera" src="assets/PDFServices_ExportPDF_thumb.jpg" />
    </a>
     <div>
-   <a href="exportpdf.md"><strong>Anpassning [!DNL PDF Services API] för att exportera PDF till [!DNL Word], [!DNL PowerPoint], och mer</strong></a>
+   <a href="exportpdf.md"><strong>Utnyttja [!DNL PDF Services API] för att exportera PDF till [!DNL Word], [!DNL PowerPoint] och mer</strong></a>
     </div>
-    <em>Lär dig hur du kör [!DNL PDF Services API] exportåtgärd med hjälp av exempelfiler för språk av typen Node.js, Java och .Net</em>
+    <em>Lär dig hur du kör [!DNL PDF Services API]-exporten med hjälp av exempelfiler för språken Node.js, Java och .Net</em>
     <br>
   </td>
    <td>
@@ -78,7 +78,7 @@ ht-degree: 0%
     <div>
    <a href="gettingstartedjava.md"><strong>Komma igång med Adobe PDF Services API och Java</strong></a>
     </div>
-    <em>Utvecklare kan komma igång på bara några minuter med att köra exempelfiler som finns för att komma åt alla tillgängliga webbtjänster</em>
+    <em>Utvecklare kan komma igång på bara några minuter med de tillgängliga exempelfilerna för åtkomst till alla tillgängliga webbtjänster</em>
     <br>
   </td>
    <td>
@@ -86,7 +86,7 @@ ht-degree: 0%
       <img alt="Använda Adobe PDF Services API för att OCR PDF-filer" src="assets/PDFServices_OCR_Thumb.jpg" />
    </a>
     <div>
-   <a href="ocr.md"><strong>Använder [!DNL Adobe PDF Services API] till OCR PDF-filer</strong></a>
+   <a href="ocr.md"><strong>Använda [!DNL Adobe PDF Services API] för att OCR PDF-filer</strong></a>
     </div>
     <em>Med OCR (Optical Character Recognition) kan du låsa upp skannade PDF för att extrahera text och skapa sökbara filer</em>
     <br>
@@ -98,7 +98,7 @@ ht-degree: 0%
     <div>
    <a href="gettingstartednet.md"><strong>Komma igång med [!DNL Adobe PDF Services API] och .Net</strong></a>
     </div>
-    <em>[!DNL Adobe PDF Services API] som ger utvecklare fritt omfång att välja mellan flera kraftfulla PDF-manipuleringstjänster för att uppfylla behoven av komplicerade affärsarbetsflöden</em>
+    <em>[!DNL Adobe PDF Services API] som ger utvecklarna möjlighet att välja mellan flera kraftfulla PDF-manipuleringstjänster för att uppfylla behoven i komplicerade affärsarbetsflöden</em>
     <br>
   </td>
 </tr>

@@ -1,6 +1,6 @@
 ---
 title: Avtalsarbetsflöden i Node.js
-description: "[!DNL Adobe Acrobat Services] API:er införlivar enkelt PDF-funktioner i dina webbprogram"
+description: "[!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i dina webbprogram"
 feature: Use Cases
 role: Developer
 level: Beginner
@@ -11,8 +11,8 @@ keywords: Utvalt
 exl-id: 44a03420-e963-472b-aeb8-290422c8d767
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 1%
+source-wordcount: '2094'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ![Banderoll för användningsfall](assets/UseCaseAgreementHero.jpg)
 
-Många affärsprogram och processer kräver dokumentation som förslag och avtal. PDF-dokument gör filerna säkrare och mindre ändringsbara. De har även stöd för digitala signaturer så att dina kunder snabbt och enkelt kan fylla i sina dokument. [!DNL Adobe Acrobat Services] Med API:er kan du enkelt införliva PDF-funktioner i dina webbprogram.
+Många affärsprogram och processer kräver dokumentation som förslag och avtal. PDF-dokument gör filerna säkrare och mindre ändringsbara. De har även stöd för digitala signaturer så att dina kunder snabbt och enkelt kan fylla i sina dokument. Med [!DNL Adobe Acrobat Services] API:er kan du enkelt införliva PDF-funktioner i dina webbprogram.
 
 ## Vad du kan lära dig
 
@@ -36,25 +36,25 @@ I den här praktiska självstudiekursen lär du dig hur du lägger till PDF-tjä
 
 * [Projektkod](https://github.com/adobe/pdftools-node-sdk-samples)
 
-## Konfigurera [!DNL Adobe Acrobat Services]
+## Konfigurerar [!DNL Adobe Acrobat Services]
 
-Kom igång genom att konfigurera autentiseringsuppgifter som ska användas [!DNL Adobe Acrobat Services]. Registrera ett konto och använd [Node.js Quickstart](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#node-js) för att verifiera att dina inloggningsuppgifter fungerar innan du integrerar funktionen i ett större program.
+Kom igång genom att konfigurera autentiseringsuppgifter för att använda [!DNL Adobe Acrobat Services]. Registrera ett konto och använd [Node.js Quickstart](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#node-js) för att verifiera att dina inloggningsuppgifter fungerar innan du integrerar funktionen i ett större program.
 
-Först måste du skaffa ett utvecklarkonto för Adobe. Sedan, på [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) -sidan, väljer du *Kom igång* under Skapa nya autentiseringsuppgifter. Du kan registrera dig för en kostnadsfri demoversion som innehåller 1 000 dokumenttransaktioner som kan användas under sex månader.
+Först måste du skaffa ett utvecklarkonto för Adobe. På sidan [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) väljer du alternativet *Kom igång* under Skapa nya autentiseringsuppgifter. Du kan registrera dig för en kostnadsfri demoversion som innehåller 1 000 dokumenttransaktioner som kan användas under sex månader.
 
 ![Bild av att skapa nya autentiseringsuppgifter](assets/AWNjs_1.png)
 
 På följande sida Skapa nya autentiseringsuppgifter uppmanas du att välja mellan PDF Embed API och PDF Services API.
 
-Välj *PDF Services API*.
+Markera *PDF Services API*.
 
-Ange ett namn för programmet och markera rutan med etiketten *Skapa personligt kodexempel*. Om du markerar den här rutan bäddas dina inloggningsuppgifter automatiskt in i kodprovet. Om du låter rutan vara avmarkerad måste du manuellt lägga till dina inloggningsuppgifter i programmet.
+Ange ett namn för programmet och markera rutan *Skapa personligt kodexempel*. Om du markerar den här rutan bäddas dina inloggningsuppgifter automatiskt in i kodprovet. Om du låter rutan vara avmarkerad måste du manuellt lägga till dina inloggningsuppgifter i programmet.
 
 Välj *Node.js* för programtypen och klicka på *Skapa autentiseringsuppgifter*.
 
 En stund senare börjar en .zip-fil att hämtas med ett exempelprojekt som innehåller dina inloggningsuppgifter. Node.js-paketet för [!DNL Acrobat Services] ingår redan i exempelprojektkoden.
 
-![Bild på val av API-uppgifter för PDF-tjänster](assets/AWNjs_2.png)
+![Bild av val av API-uppgifter för PDF-tjänster](assets/AWNjs_2.png)
 
 ## Konfigurera exempelprojektet manuellt
 
@@ -154,7 +154,7 @@ router.post('/', (req, res, next) => {
 
 När den här funktionen har körts sparas filen i programmappen för överföring och är tillgänglig för vidare bearbetning.
 
-Konvertera sedan filen från dess ursprungliga format till PDF. Exempelkoden du hämtade tidigare innehåller ett skript med namnet `create-pdf-from-docx.js` för att konvertera ett dokument till PDF. Följande funktion: `convertDocumentToPDF`, tar ett uppladdat dokument och konverterar det till en PDF i en annan mapp:
+Konvertera sedan filen från dess ursprungliga format till PDF. Exempelkoden du hämtade tidigare innehåller ett skript med namnet `create-pdf-from-docx.js` för att konvertera ett dokument till PDF. Följande funktion, `convertDocumentToPDF`, tar ett uppladdat dokument och konverterar det till en PDF i en annan mapp:
 
 ```
 function convertDocumentToPDF(sourcePath, destinationPath)
@@ -232,7 +232,7 @@ htmlToPDFOperation.execute(executionContext)
 });
 ```
 
-Funktionen `setCustomOptions` anger andra PDF-inställningar, till exempel sidstorlek. Här kan du se funktionen ställer in sidstorleken till 11,5 x 11 tum:
+Funktionen `setCustomOptions` anger andra PDF-inställningar, t.ex. sidstorlek. Här kan du se funktionen ställer in sidstorleken till 11,5 x 11 tum:
 
 ```
 const setCustomOptions = (htmlToPDFOperation) => {    
@@ -254,7 +254,7 @@ När du öppnar ett HTML-dokument som innehåller vissa villkor visas följande 
 
 Dokumentets ursprung består av en CSS-fil och en HTML-fil:
 
-![Bild på CSS- och HTML-fil](assets/AWNjs_4.png)
+![Bild av CSS- och HTML-fil](assets/AWNjs_4.png)
 
 När du har bearbetat HTML-filen får du samma text i PDF-format:
 
@@ -262,7 +262,7 @@ När du har bearbetat HTML-filen får du samma text i PDF-format:
 
 ## Lägga till sidor
 
-En annan vanlig åtgärd med PDF-filer är att lägga till sidor i slutet som kan ha standardtext, till exempel en lista med termer. Document Toolkit kan kombinera flera PDF-dokument till ett enda dokument. Om du har en lista över dokumentsökvägar (här i `sourceFileList`) kan du lägga till varje fils filreferenser till ett objekt för en kombinationsåtgärd.
+En annan vanlig åtgärd med PDF-filer är att lägga till sidor i slutet som kan ha standardtext, till exempel en lista med termer. Document Toolkit kan kombinera flera PDF-dokument till ett enda dokument. Om du har en lista med dokumentsökvägar (här i `sourceFileList`) kan du lägga till varje fils filreferenser till ett objekt för en kombinationsåtgärd.
 
 När kombinationsåtgärden utförs tillhandahålls en enda fil med av källinnehållet. Du kan använda `saveAsFile` på objektet för att behålla filen i lagringen.
 
@@ -288,7 +288,7 @@ combineOperation.execute(executionContext)
 
 Du har utfört flera åtgärder på PDF-filer, men i slutändan måste användaren visa dokumenten. Du kan bädda in dokumentet i en webbsida med hjälp av Adobe PDF Embed API.
 
-På sidan som visas i PDF lägger du till en `<div />` element som innehåller dokumentet och ger det ett ID. Du använder detta ID inom kort. Inkludera en lista på webbsidan `<script />` Hänvisning till JavaScript-biblioteket i Adobe:
+Lägg till ett `<div />`-element för dokumentet på sidan som visar PDF och ge det ett ID. Du använder detta ID inom kort. Inkludera en `<script />`-referens till JavaScript-biblioteket i Adobe på webbsidan:
 
 ```
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -300,11 +300,11 @@ Den sista kodbiten du behöver är en funktion som visar dokumentet när Adobe P
 
 ## Andra PDF-alternativ
 
-Inställningen [Demo av Adobe PDF Embed API](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf) Här kan du förhandsgranska de andra alternativen för att bädda in PDF-dokument.
+Med [Adobe PDF Embed API-demon](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf) kan du förhandsgranska andra alternativ för att bädda in PDF-dokument.
 
 ![Bild av alternativ för att bädda in PDF ](assets/AWNjs_7.png)
 
-Du kan slå på och av olika alternativ och omedelbart se hur de återges. När du hittar en kombination du gillar klickar du på *\&lt;/\> Generera kod* för att generera den faktiska HTML-koden med dessa alternativ.
+Du kan slå på och av olika alternativ och omedelbart se hur de återges. Klicka på knappen *\&lt;/\> Generera HTML-kod* när du hittar en kombination som du gillar för att generera den faktiska kodgenereringen med dessa alternativ.
 
 ![Bild av kodförhandsgranskning](assets/AWNjs_8.png)
 
@@ -312,25 +312,26 @@ Du kan slå på och av olika alternativ och omedelbart se hur de återges. När 
 
 När ett dokument är klart kan du lägga till digitala signaturer för godkännande med Adobe Sign. Den här funktionen fungerar lite annorlunda än den funktion du har använt hittills. För digitala signaturer måste ett program konfigureras för att använda OAuth för användarautentisering.
 
-Det första steget när du konfigurerar programmet är att [registrera ansökan](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md) om du vill använda OAuth för Adobe Sign. När du har loggat in går du till skärmen för att skapa program genom att klicka på *Konto* och öppna sedan *ADOBE SIGN API* och klicka på *API-program* för att öppna listan över registrerade ansökningar.
+Det första steget när du konfigurerar programmet är att [registrera programmet](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md) för att använda OAuth för Adobe Sign. När du har loggat in går du till skärmen där du skapar program genom att klicka på *Konto*, öppna avsnittet *Adobe Sign API* och klicka på *API-program* för att öppna listan över registrerade program.
 
-![Bild av första steget när du registrerar din ansökan](assets/AWNjs_9.png)
+![Bild från första steget när du registrerar din app](assets/AWNjs_9.png)
 
 Om du vill skapa en ny programpost klickar du på plusikonen i det övre högra hörnet.
 
-![Bild på plusikonen i det övre högra hörnet på skärmen](assets/AWNjs_10.png)
+![Bild på plusikonen i det övre högra hörnet av skärmen](assets/AWNjs_10.png)
 
-I fönstret som öppnas anger du ett programnamn och ett visningsnamn. Välj *Kund* för domänen klickar du på *Spara*.
+I fönstret som öppnas anger du ett programnamn och ett visningsnamn. Välj *Kund* för domänen och klicka sedan på *Spara*.
 
-![Bild på var du ska ange programnamn och visningsnamn](assets/AWNjs_11.png)
+![Bild på var du kan ange programnamn och visningsnamn](assets/AWNjs_11.png)
 
-När programmet har skapats kan du välja det i listan och klicka på *Konfigurera OAuth för program*. Välj alternativen. Ange programmets URL i Omdirigerings-URL. Här kan du ange flera URL-adresser. För programmet du testar är värdet:
+När programmet har skapats kan du välja det i listan och klicka på *Konfigurera OAuth för programmet*. Välj alternativen. Ange programmets URL i Omdirigerings-URL. Här kan du ange flera URL-adresser. För programmet du testar är värdet:
 
 ```
 http://localhost:3000/signed-in 
 ```
 
-Processen att använda OAuth för att erhålla en token är standard. Programmet dirigerar en användare till en URL för inloggning. När användaren har loggat in omdirigeras användaren tillbaka till programmet med ytterligare information från sidans frågeparametrar.
+Processen att använda OAuth för att erhålla en token är standard. Programmet dirigerar en användare till en URL för inloggning. När användaren har loggat in
+de omdirigeras tillbaka till programmet med ytterligare information i sidans frågeparametrar.
 
 För inloggnings-URL:en måste ditt program skicka ditt klient-ID, din omdirigerings-URL och en lista över de omfattningar som behövs.
 
@@ -348,9 +349,9 @@ Användaren uppmanas att logga in på sitt ID för Adobe Sign. När de har logga
 
 ![Bild på bekräftad åtkomstskärm](assets/AWNjs_12.png)
 
-Om användaren klickar *Tillåt åtkomst* På omdirigerings-URL:en skickar en frågeparameter med namnet code auktoriseringskoden:
+Om användaren klickar på *Tillåt åtkomst* på omdirigerings-URL:en skickar en frågeparameter med namnet code auktoriseringskoden:
 
-https://YourServer.com/?code=**\&lt;authorization_code>**\&amp;api_access_point=https://api.adobesign.com&amp;web_access_point=https://secure.adobesign.com
+https://YourServer.com/?code=**\&lt;authorization_code\>**\&amp;api_access_point=https://api.adobesign.com&amp;web_access_point=https://secure.adobesign.com
 
 Genom att publicera koden på Adobe Sign-servern tillsammans med ditt klient-ID och din klienthemlighet får du en åtkomsttoken för åtkomst till tjänsten. Spara värdena i parametrarna `api_access_point` och `web_access_point`. Dessa värden används för ytterligare begäranden.
 
@@ -368,7 +369,7 @@ request.post(requestURL, {form: { }
 });
 ```
 
-När en signatur krävs för ett dokument måste dokumentet först överföras. Programmet kan överföra dokumentet till `api_access_point` värde som togs emot när OAUTH-token begärdes. Slutpunkten är `/api/rest/v6/transientDocuments`. Data för begäran ser ut så här:
+När en signatur krävs för ett dokument måste dokumentet först överföras. Programmet kan överföra dokumentet till värdet `api_access_point` som togs emot när OAUTH-token begärdes. Slutpunkten är `/api/rest/v6/transientDocuments`. Data för begäran ser ut så här:
 
 ```
 POST /api/rest/v6/transientDocuments HTTP/1.1
@@ -407,9 +408,9 @@ request(uploadRequest, (error, response) => {
 });
 ```
 
-Begäran returnerar en `transientID` värde. Dokumentet har överförts, men har inte skickats än. Om du vill skicka dokumentet använder du `transientID` för att begära att få skicka dokumentet.
+Begäran returnerar ett `transientID`-värde. Dokumentet har överförts, men har inte skickats än. Om du vill skicka dokumentet använder du `transientID` för att begära att dokumentet skickas.
 
-Börja med att skapa ett JSON-objekt som innehåller information om dokumentet som ska signeras. I det följande ska variabeln `transientDocumentId` innehåller ID:t från koden ovan och `agreementDescription` innehåller text som beskriver avtalet som måste signeras. De personer som ska signera dokumentet listas i `participantSetsInfo` efter e-postadress och roll.
+Börja med att skapa ett JSON-objekt som innehåller information om dokumentet som ska signeras. I följande exempel innehåller variabeln `transientDocumentId` ID:t från koden ovan och `agreementDescription` innehåller text som beskriver avtalet som måste signeras. De personer som ska signera dokumentet listas i `participantSetsInfo` efter deras e-postadress och roll.
 
 ```
 var requestBody = {
@@ -438,7 +439,7 @@ Om signerarna glömmer att signera och behöver ett annat e-postmeddelande skick
 
 Om du vill begära att påminnelsen skickas skapar du först ett JSON-objekt som beskriver begäran. Det minimala objektet kräver en lista över deltagar-ID:n och en status för påminnelsen (&quot;AKTIV&quot;, &quot;SLUTFÖRD&quot; eller &quot;AVBRUTEN&quot;).
 
-Begäran kan även innehålla ytterligare information, till exempel ett värde för &quot;anteckning&quot; som visas för användaren. Eller en fördröjning (i timmar) att vänta tills påminnelsen skickas (i `firstReminderDelay`), och en påminnelsefrekvens (i fältet &quot;frequency&quot;), som accepterar värden som DAILY_UNTIL_SIGNED, EVERY_THIRD_DAY_UNTIL_SIGNED eller WEEKLY_UNTIL_SIGNED.
+Begäran kan även innehålla ytterligare information, till exempel ett värde för &quot;anteckning&quot; som visas för användaren. Eller en fördröjning (i timmar) att vänta tills påminnelsen skickas (i `firstReminderDelay`) och en påminnelsefrekvens (i fältet &quot;frequency&quot;), som accepterar värden som DAILY_UNTIL_SIGNED, EVERY_THIRD_DAY_UNTIL_SIGNED eller WEEKLY_UNTIL_SIGNED.
 
 ```
 var requestBody = {
@@ -465,7 +466,7 @@ request(reminderRequest, function (error, response) {
 
 Och det är allt som krävs för att skicka en påminnelsebegäran.
 
-![Bild av webbformulär](assets/AWNjs_13.png)
+![Bild på webbformulär](assets/AWNjs_13.png)
 
 ## Skapa webbformulär
 
@@ -473,7 +474,7 @@ Du kan också använda API:et för Adobe Sign för att skapa webbformulär. Webb
 
 ![Bild av webbformulär på skärmen Hantera i Adobe Sign](assets/AWNjs_14.png)
 
-Om du vill skapa ett webbformulär använder du formuläret `transientDocumentId`. Bestäm en rubrik för formuläret och en status för att initiera det.
+Använd formuläret `transientDocumentId` om du vill skapa ett webbformulär. Bestäm en rubrik för formuläret och en status för att initiera det.
 
 ```
 var requestBody = {
@@ -514,8 +515,8 @@ Nu kan du bädda in eller länka till ditt dokument.
 
 ## Nästa steg
 
-Som du kan se från snabbstarterna och den medföljande koden, är det enkelt att implementera PDF och digitala dokument godkännandeprocesser med hjälp av Node med [!DNL Adobe Acrobat Services] API:er Adobe API:er integreras sömlöst i dina befintliga klientprogram.
+Som du kan se på snabbstarterna och den medföljande koden är det enkelt att implementera PDF och digitala dokumentgodkännandeprocesser med hjälp av noden med API:erna [!DNL Adobe Acrobat Services]. Adobe API:er integreras sömlöst i dina befintliga klientprogram.
 
-Om du vill identifiera de nödvändiga omfången för ett samtal, eller se hur samtalet skapas, kan du skapa exempelsamtal från [Rest API-dokumentation](https://secure.na4.adobesign.com/public/docs/restapi/v6). Inställningen [Snabbstarter](https://github.com/adobe/pdftools-node-sdk-samples) demonstrera även andra funktioner och filformat som [!DNL Adobe Acrobat Services] API:er och processer.
+Om du vill identifiera de nödvändiga omfången för ett anrop eller se hur anropet skapas kan du skapa exempelanrop från [REST API-dokumentationen](https://secure.na4.adobesign.com/public/docs/restapi/v6). [Snabbstarterna](https://github.com/adobe/pdftools-node-sdk-samples) demonstrerar också andra funktioner och filformat för API:erna i [!DNL Adobe Acrobat Services].
 
-Du kan lägga till en mängd PDF-funktioner till dina program, så att användarna snabbt och enkelt kan visa och signera sina dokument och mycket mer. Börja med att kolla in [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) idag.
+Du kan lägga till en mängd PDF-funktioner till dina program, så att användarna snabbt och enkelt kan visa och signera sina dokument och mycket mer. Börja med att kolla in [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) i dag.

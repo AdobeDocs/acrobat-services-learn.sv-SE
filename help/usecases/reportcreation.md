@@ -10,8 +10,8 @@ thumbnail: KT-8093.jpg
 exl-id: 2f2bf1c2-1b33-4eee-9fd2-5d0b77e6b0a9
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1346'
-ht-degree: 1%
+source-wordcount: '1292'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 ![Banderoll för användningsfall](assets/UseCaseReportHero.jpg)
 
-Ekonomi, utbildning, marknadsföring och andra branscher använder PDF för att dela data med sina kunder och intressenter. PDF gör det enkelt att dela interaktiva dokument med tabeller, grafik och interaktivt innehåll i ett format som alla kan visa. [!DNL Adobe Acrobat Services] Med API:er kan dessa företag generera delbara PDF-rapporter från Microsoft Word, Microsoft Excel, grafik och andra olika dokumentformat.
+Ekonomi, utbildning, marknadsföring och andra branscher använder PDF för att dela data med sina kunder och intressenter. PDF gör det enkelt att dela interaktiva dokument med tabeller, grafik och interaktivt innehåll i ett format som alla kan visa. [!DNL Adobe Acrobat Services] API:er hjälper dessa företag att generera delbara PDF-rapporter från Microsoft Word, Microsoft Excel, grafik och andra olika dokumentformat.
 
-Säg dig [driva ett företag för spårning i sociala medier](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html). Dina kunder loggar in på en lösenordsskyddad del av webbplatsen för att se sina kampanjanalyser. Ofta vill de dela denna statistik med sina chefer, aktieägare, givare eller andra intressenter. Hämtningsbara PDF-dokument är ett bra sätt för dina kunder att dela siffror, diagram med mera.
+Säg att du [driver ett spårningsföretag för sociala medier](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html). Dina kunder loggar in på en lösenordsskyddad del av webbplatsen för att se sina kampanjanalyser. Ofta vill de dela denna statistik med sina chefer, aktieägare, givare eller andra intressenter. Hämtningsbara PDF-dokument är ett bra sätt för dina kunder att dela siffror, diagram med mera.
 
-Genom att [PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) till din webbplats, kan du generera PDF rapporter på språng för varje kund. Du kan skapa PDF och sedan kombinera dem till en enda, praktisk rapport som dina kunder kan hämta och skicka vidare till sina intressenter.
+Genom att använda [PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) på din webbplats kan du skapa PDF-rapporter när du är på språng för varje kund. Du kan skapa PDF och sedan kombinera dem till en enda, praktisk rapport som dina kunder kan hämta och skicka vidare till sina intressenter.
 
 ## Vad du kan lära dig
 
@@ -45,7 +45,7 @@ Här har du ett grundläggande Express.js-webbprogram med ett kundrapporteringso
 
 ![Skärmbild av hur du får personliga rapporter](assets/report_1.png)
 
-Du kan hämta det här projektet från [GitHub-databas](https://github.com/afzaal-ahmad-zeeshan/express-adobe-pdf-tools).
+Du kan hämta det här projektet från [GitHub-databasen](https://github.com/afzaal-ahmad-zeeshan/express-adobe-pdf-tools).
 
 Låt oss nu utforska hur vi publicerar rapporterna.
 
@@ -53,7 +53,7 @@ Låt oss nu utforska hur vi publicerar rapporterna.
 
 För att göra det enkelt bör du bara använda den filsystemsbaserade överföringen och bearbetningen här. I Express.js kan du använda modulen fs för att lista alla tillgängliga filer under en katalog.
 
-Aktivera administratören att överföra rapportfiler till servern så att kunderna kan se dem på samma sida. De här filerna kan ha många olika format, t.ex. Microsoft Word, Microsoft Excel, HTML och [andra dataformat]https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf) inklusive grafikfiler. Administratörssidan ser ut så här:
+Aktivera administratören att överföra rapportfiler till servern så att kunderna kan se dem på samma sida. De här filerna kan ha många olika format, t.ex. Microsoft Word, Microsoft Excel, HTML och [andra dataformat]https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf), inklusive grafikfiler. Administratörssidan ser ut så här:
 
 ![Skärmbild av administratörsfunktionen](assets/report_2.png)
 
@@ -78,7 +78,7 @@ Den här koden listar alla filer och visar fillistan.
 
 ## Välja rapporter
 
-På användarsidan har du ett formulär där kunderna kan välja de dokument som de vill inkludera i sin rapport om kampanjer i sociala medier. För enkelhetens skull kan du på exempelsidan bara visa dokumentnamnet och en kryssruta för att markera dokumentet. Man kan välja en enstaka rapport eller flera rapporter som ska kombineras i ett enda PDF-dokument.
+På användarsidan har du ett formulär där kunderna kan välja de dokument som de vill inkludera i sin kampanjrapport för sociala medier. För enkelhetens skull kan du på exempelsidan bara visa dokumentnamnet och en kryssruta för att markera dokumentet. Man kan välja en enstaka rapport eller flera rapporter som ska kombineras i ett enda PDF-dokument.
 
 Om du vill ha ett mer avancerat användargränssnitt kan du även visa en förhandsgranskning av rapporten här.
 
@@ -92,7 +92,7 @@ Använd PDF Services SDK för att skapa PDF-rapporter från dina dataindata. Dat
 $ npm install --save @adobe/documentservices-pdftools-node-sdk
 ```
 
-Innan du börjar måste du ha API-inloggningsuppgifter, [fri från Adobe](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred). Använd din [!DNL Acrobat Services] redogörelse [i sex månader och sedan betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion.
+Innan du startar måste du ha API-inloggningsuppgifter, [gratis från Adobe](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred). Använd ditt [!DNL Acrobat Services]-konto [kostnadsfritt i sex månader och betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion.
 
 Hämta arkivfilen och extrahera JSON-filen för inloggningsuppgifter och den privata nyckeln. I exempelprojektet placerar du filen i src-katalogen.
 
@@ -131,7 +131,7 @@ console.log('Exception encountered while executing operation', err);
 
 I koden ovan läser du autentiseringsuppgifterna och skapar körningskontexten. SDK för PDF-tjänster kräver körningskontexten för att autentisera dina förfrågningar.
 
-Sedan kör du åtgärden Skapa PDF som konverterar raw-dokumenten till PDF-format. Slutligen använder du `outputPdf` -parametern för att kopiera PDF-rapporten. I kodexemplet hittar du den här koden under filen src/helpers/pdf.js. Senare i den här självstudiekursen importerar du PDF-modulen och anropar den här metoden.
+Sedan kör du åtgärden Skapa PDF som konverterar raw-dokumenten till PDF-format. Slutligen använder du parametern `outputPdf` för att kopiera PDF-rapporten. I kodexemplet hittar du den här koden under filen src/helpers/pdf.js. Senare i den här självstudiekursen importerar du PDF-modulen och anropar den här metoden.
 
 Som visas i föregående avsnitt kan dina kunder gå till följande sida för att välja de rapporter som de vill konvertera till PDF:
 
@@ -159,7 +159,7 @@ Den här koden skapar en rapport och delar hämtnings-URL:en med kunden. Här ä
 
 Och här är resultatet PDF:
 
-![Skärmbild av allmän rapport](assets/report_6.png)
+![Skärmbild av generisk rapport](assets/report_6.png)
 
 Kunder kan välja flera filer för att generera en kombinerad rapport. När kunden markerar mer än ett dokument utför du två åtgärder: i det första skapas en partiell PDF för varje dokument och i det andra kombineras de i en PDF-rapport.
 
@@ -209,7 +209,7 @@ res.status(500).render("crash", { error: error });
 }
 ```
 
-Den här koden genererar en kompilerad rapport för flera inmatningsdokument. Den enda tillagda funktionen är `combinePdf` metod som tar en lista med sökvägsnamn för PDF och returnerar ett enda PDF.
+Den här koden genererar en kompilerad rapport för flera inmatningsdokument. Den enda tillagda funktionen är `combinePdf`-metoden som tar en lista över PDF-filsökvägsnamn och returnerar ett enda PDF för utdata.
 
 Nu kan dina kontrollpanelskunder för sociala medier välja aktuella rapporter från sitt konto och hämta dem som en behändig PDF. På den här instrumentpanelen kan de visa hur ledningen och andra intressenter lyckas med sina kampanjer med data, tabeller och diagram i ett allmänt lättöppnat format.
 
@@ -217,6 +217,6 @@ Nu kan dina kontrollpanelskunder för sociala medier välja aktuella rapporter f
 
 Denna praktiska självstudiekurs gick igenom hur man använder PDF Services API för att hjälpa kunder att ladda ner rapporter som är enkla att dela PDF. Du har skapat ett Node.js-program för att visa upp kraften i PDF Services API för rapporterings- och lästjänster för PDF. Programmet visar hur dina kunder kan hämta ett enda rapportdokument eller kombinera och sammanfoga flera dokument till en enda PDF-rapport.
 
-Detta program med Adobe-teknik hjälper dina [kunder med instrumentpaneler för sociala medier](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html) få och dela de rapporter de behöver, utan att oroa sig för om alla mottagare har Microsoft Office eller annan programvara installerad på sin enhet. Du kan använda samma tekniker i ditt eget program till att hjälpa användarna att visa, kombinera och hämta dokument. Eller kolla in Adobe många andra API:er för att lägga till och spåra signaturer och mycket mer.
+Med hjälp av det här Adobe-baserade programmet kan dina [kunder med instrumentpaneler för sociala medier](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html) få och dela de rapporter de behöver, utan att behöva oroa sig för om alla mottagare har Microsoft Office eller annan programvara installerad på sin enhet. Du kan använda samma tekniker i ditt eget program till att hjälpa användarna att visa, kombinera och hämta dokument. Eller kolla in Adobe många andra API:er för att lägga till och spåra signaturer och mycket mer.
 
-Kom igång genom att göra anspråk på din kostnadsfria [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) -konto och sedan skapa engagerande rapporteringsupplevelser för dina anställda och kunder. Njut av ditt konto gratis i sex månader sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) när dina marknadsföringsinsatser utökas, bara \$0,05 per dokumenttransaktion.
+Kom igång genom att göra anspråk på ditt kostnadsfria [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-konto och skapa sedan engagerande rapporteringsupplevelser för dina anställda och kunder. Utnyttja ditt konto kostnadsfritt i sex månader och sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) när dina marknadsföringsinsatser utökas, bara \$0,05 per dokumenttransaktion.

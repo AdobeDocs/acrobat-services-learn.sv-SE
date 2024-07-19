@@ -10,14 +10,14 @@ thumbnail: KT-6674.jpg
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 5%
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
 # Använda PDF Services API för att exportera PDF till Word, PowerPoint med mera
 
-![SKAPA PDF-HJÄLTEBILD](assets/ExportPDF_hero.jpg)
+![Skapa PDF-hjälpbild](assets/ExportPDF_hero.jpg)
 
 Adobe PDF Services API konverterar PDF-filer till MS Office, text och bilder med API:er. Det finns många vanliga användningssätt för att låsa upp existerande PDF för innehållsredigering och innehållsanalys, och med PDF Services API kan utvecklare enkelt integrera den här funktionen i existerande system och applikationer. Konvertera PDF-filer till MS Word för att redigera innehåll, godkänna och sedan skicka filer för signering för att skapa anpassade kontraktarbetsflöden. Eller exportera PDF-innehåll till MS Excel-format för fakturering och ekonomiska beräkningar eller dataanalys.
 
@@ -45,13 +45,13 @@ Använd självstudiekurserna för att komma i gång nedan för att skapa dina AP
 
 **Java**
 
-1. Öppna kommandotolken.
+1. Öppna en kommandotolk.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
    Till exempel C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-java-samples
 
-1. Kör följande kommando::
+1. Kör följande kommando:
 
    `mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.platform.operation.samples.exportpdf.ExportPDFToDOCX`
 
@@ -59,7 +59,7 @@ Din PDF skapas i katalogen src/main/resources.
 
 **.NET**
 
-1. Öppna kommandotolken.
+1. Öppna en kommandotolk.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
@@ -67,7 +67,7 @@ Din PDF skapas i katalogen src/main/resources.
 
 1. Ändra kataloger igen till ExportPDFtoDocx -katalogen.
 
-1. Kör följande kommando::
+1. Kör följande kommando:
 
    `dotnet run ExportPDFToDocx.csproj`
 
@@ -75,13 +75,13 @@ Din PDF skapas i samma katalog.
 
 **Node.js**
 
-1. Öppna kommandotolken.
+1. Öppna en kommandotolk.
 
 1. Ändra kataloger till din exempelkodkatalog.
 
    Till exempel C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
 
-1. Kör följande kommando::
+1. Kör följande kommando:
 
    `node src/ocr/ocr-pdf.js`
 
@@ -101,10 +101,10 @@ Till ett annat format.
 
 ## Resurser och nästa steg
 
-* Om du behöver mer hjälp och support går du till [[!DNL Adobe Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) community-forum
+* Om du vill ha mer hjälp och support går du till communityforumet för [[!DNL Adobe Acrobat Services] API:er](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all)
 
 * PDF Services API [Dokumentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [VANLIGA FRÅGOR](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) för PDF Services API-frågor
+* [Vanliga frågor](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) om API-frågor för PDF-tjänster
 
-* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) för frågor om licenser och priser
+* [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) om du har frågor om licenser och priser

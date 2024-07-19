@@ -1,6 +1,6 @@
 ---
 title: Modernisera medarbetarnas introduktion
-description: Lär dig modernisera medarbetarnas introduktion med [!DNL Adobe Acrobat Services] API:er
+description: Lär dig modernisera medarbetarnas introduktion med  [!DNL Adobe Acrobat Services] API:er
 feature: Use Cases
 role: Developer
 level: Intermediate
@@ -10,8 +10,8 @@ thumbnail: KT-10203.jpg
 exl-id: 0186b3ee-4915-4edd-8c05-1cbf65648239
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1514'
-ht-degree: 1%
+source-wordcount: '1434'
+ht-degree: 0%
 
 ---
 
@@ -19,25 +19,25 @@ ht-degree: 1%
 
 ![Banderoll för användningsfall](assets/usecaseemployeeonboardinghero.jpg)
 
-I en stor organisation kan de anställdas introduktion vara en stor och långsam process. Vanligtvis finns det en blandning av skräddarsydd dokumentation tillsammans med brödplattematerial som måste presenteras och undertecknas av en ny anställd. Denna blandning av skräddarsytt material och material med kokplatta kräver flera steg - vilket tar värdefull tid från människor som är inblandade i processen. [!DNL Adobe Acrobat Services] och Acrobat Sign kan modernisera och automatisera den här metoden, så att du kan frigöra personal inom HR för viktigare uppgifter. Låt oss titta på hur detta uppnås.
+I en stor organisation kan de anställdas introduktion vara en stor och långsam process. Vanligtvis finns det en blandning av skräddarsydd dokumentation tillsammans med brödplattematerial som måste presenteras och undertecknas av en ny anställd. Denna blandning av skräddarsytt material och material med kokplatta kräver flera steg - vilket tar värdefull tid från människor som är inblandade i processen. [!DNL Adobe Acrobat Services] och Acrobat Sign kan modernisera och automatisera den här metoden, så att du kan frigöra HR-personal för viktigare uppgifter. Låt oss titta på hur detta uppnås.
 
 ## Vad är [!DNL Adobe Acrobat Services]?
 
-[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage) är en uppsättning API:er som är relaterade till att arbeta med dokument (och inte bara PDF). I stort sett kan denna uppsättning tjänster delas in i tre huvudkategorier:
+[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage) är en uppsättning API:er som gäller arbete med dokument (och inte bara PDF). I stort sett kan denna uppsättning tjänster delas in i tre huvudkategorier:
 
-* De första är [PDF-tjänster](https://developer.adobe.com/document-services/apis/pdf-services/) uppsättning verktyg. Det här är &quot;nyttometoder&quot; för att arbeta med PDF och andra dokument. I tjänsterna ingår saker som att konvertera till och från PDF, utföra OCR och optimering, sammanfoga och dela PDF och så vidare. Det är verktygslådan för dokumentbearbetning funktioner.
-* [PDF Extract API](https://developer.adobe.com/document-services/apis/pdf-extract/) använder kraftfulla AI-/ML-tekniker för att analysera en PDF och returnera en otrolig mängd information om innehållet. Detta inkluderar text, formatering och positionsinformation och kan även returnera tabelldata i CSV/XLS-format samt hämta bilder.
-* Slutligen [API för dokumentgenerering](https://developer.adobe.com/document-services/apis/doc-generation/) gör att utvecklare kan använda Microsoft Word som en &quot;mall&quot;, blanda med sina data (från vilken källa som helst) och generera dynamiska personliga dokument (PDF och Word).
+* Först är [PDF-tjänsterna](https://developer.adobe.com/document-services/apis/pdf-services/) med verktyg. Det här är &quot;nyttometoder&quot; för att arbeta med PDF och andra dokument. I tjänsterna ingår saker som att konvertera till och från PDF, utföra OCR och optimering, sammanfoga och dela PDF och så vidare. Det är verktygslådan för dokumentbearbetning funktioner.
+* [PDF Extract API](https://developer.adobe.com/document-services/apis/pdf-extract/) använder kraftfulla AI-/ML-tekniker för att analysera en PDF och returnera otroligt mycket information om innehållet. Detta inkluderar text, formatering och positionsinformation och kan även returnera tabelldata i CSV/XLS-format samt hämta bilder.
+* Slutligen, [Document Generation API](https://developer.adobe.com/document-services/apis/doc-generation/) låter utvecklare använda Microsoft Word som en &quot;mall&quot;, blanda med sina data (från valfri källa) och generera dynamiska personliga dokument (PDF och Word).
 
-Utvecklare kan [bli medlem](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) och prova alla dessa tjänster med en kostnadsfri provperiod. Inställningen [!DNL Acrobat Services] plattformen använder ett REST-baserat API men stöder även SDK:er för Node, Java, .NET och Python (endast Extract för närvarande).
+Utvecklare kan [registrera sig](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) och testa alla dessa tjänster med en kostnadsfri provperiod. Plattformen [!DNL Acrobat Services] använder ett REST-baserat API men stöder även SDK:er för Node, Java, .NET och Python (endast Extract för närvarande).
 
-Även om de inte är ett API kan utvecklare också använda det kostnadsfria [PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/), som ger en konsekvent och flexibel visningsupplevelse av dokument med dina webbsidor.
+Även om det inte är ett API kan utvecklare också använda det kostnadsfria [PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/), som ger en konsekvent och flexibel visningsupplevelse av dokument på dina webbsidor.
 
 ## Vad är Acrobat Sign?
 
 [Acrobat Sign](https://www.adobe.com/se/sign.html) är världsledande inom tjänster för elektroniska signaturer. Du kan skicka dokument för signering med olika arbetsflöden, inklusive flera signaturer. Acrobat Sign stöder även arbetsflöden som kräver signaturer och ytterligare information. Alla dessa funktioner stöds av en kraftfull instrumentpanel med ett flexibelt redigeringssystem.
 
-Som med [!DNL Acrobat Services], Acrobat Sign har en [kostnadsfri testversion](https://www.adobe.com/sign.html#sign_free_trial) som gör det möjligt för utvecklare att testa signeringsprocessen både via kontrollpanelen och med ett lättanvänt REST-baserat API.
+Precis som med [!DNL Acrobat Services] har Acrobat Sign en [kostnadsfri provperiod](https://www.adobe.com/sign.html#sign_free_trial) som gör att utvecklare kan testa signeringsprocessen både via instrumentpanelen och med ett lättanvänt REST-baserat API.
 
 ## Ett introduktionsscenario
 
@@ -52,17 +52,17 @@ Nu går vi in på detaljer om hur du gör det.
 
 ## Generera dynamiska dokument
 
-Adobe [Dokumentgenerering](https://developer.adobe.com/document-services/apis/doc-generation/) Med API kan utvecklare skapa dynamiska dokument genom att använda Microsoft Word och ett enkelt mallspråk som bas för att skapa PDF- och Word-dokument. Här är ett exempel på hur detta fungerar.
+Med Adobe [Document Generation](https://developer.adobe.com/document-services/apis/doc-generation/) API kan utvecklare skapa dynamiska dokument med Microsoft Word och ett enkelt mallspråk som grund för att skapa PDF- och Word-dokument. Här är ett exempel på hur detta fungerar.
 
 Låt oss börja med ett Word-dokument som har hårdkodade värden. Du kan formatera dokumentet som du vill, t.ex. som grafik, tabeller osv. Här är det ursprungliga dokumentet.
 
 ![Skärmbild av det första dokumentet](assets/onboarding_1.png)
 
-Dokumentgenerering fungerar genom att lägga till &quot;tokens&quot; i ett Word-dokument som ersätts med dina data. Även om dessa token kan anges manuellt finns det en [Microsoft Word-tillägg](https://developer.adobe.com/document-services/docs/overview/document-generation-api/wordaddin/) som gör detta lättare att göra. Om du öppnar det får du ett verktyg som författare kan använda för att definiera taggar, eller datauppsättningar, som kan användas i ditt dokument.
+Dokumentgenerering fungerar genom att lägga till &quot;tokens&quot; i ett Word-dokument som ersätts med dina data. Även om dessa token kan anges manuellt finns det ett [Microsoft Word-tillägg](https://developer.adobe.com/document-services/docs/overview/document-generation-api/wordaddin/) som gör detta enklare att göra. Om du öppnar det får du ett verktyg som författare kan använda för att definiera taggar, eller datauppsättningar, som kan användas i ditt dokument.
 
 ![Skärmbild av dokumenttagg](assets/onboarding_2.png)
 
-Du kan antingen överföra JSON-information från en lokal fil, kopiera i JSON-text eller välja att fortsätta med ursprungliga data. På så sätt kan du definiera dina taggar ad hoc-baserat på dina särskilda behov. I det här exemplet behövs bara en tagg för namn, roll, lön och plats. Detta görs genom att använda **Skapa tagg** knapp:
+Du kan antingen överföra JSON-information från en lokal fil, kopiera i JSON-text eller välja att fortsätta med ursprungliga data. På så sätt kan du definiera dina taggar ad hoc-baserat på dina särskilda behov. I det här exemplet behövs bara en tagg för namn, roll, lön och plats. Detta görs med knappen **Skapa tagg**:
 
 ![Skärmbild av definition av en tagg](assets/onboarding_3.png)
 
@@ -76,19 +76,19 @@ Med märkorden definierade markerar du texten i dokumentet och ersätter den med
 
 Dokumentgenerering stöder inte bara enkla taggar utan även logiska uttryck. Det andra stycket i dokumentet har en text som endast gäller för personer i Louisiana. Du kan lägga till ett villkorsuttryck genom att gå till fliken Avancerat i dokumenttaggen och definiera ett villkor. Så här definierar du ett enkelt jämlikhetsvillkor, men observera att numeriska jämförelser och andra jämförelsetyper också stöds.
 
-![Skärmbild av tillståndet](assets/onboarding_6.png)
+![Skärmbild av villkoret](assets/onboarding_6.png)
 
 Detta kan sedan infogas och lindas runt stycket:
 
-![Skärmbild av tillståndet i dokument](assets/onboarding_7.png)
+![Skärmbild av tillståndet i dokumentet](assets/onboarding_7.png)
 
-Om du vill testa hur det fungerar väljer du **Generera dokument**. Första gången du gör det måste du logga in med ett Adobe ID. När du har loggat in visas standard-JSON som kan redigeras manuellt.
+Välj **Generera dokument** för att testa hur detta fungerar. Första gången du gör det måste du logga in med ett Adobe ID. När du har loggat in visas standard-JSON som kan redigeras manuellt.
 
 ![Skärmbild av data](assets/onboarding_8.png)
 
 En PDF genereras som sedan kan visas eller hämtas.
 
-![Skärmbild av det genererade PDF](assets/onboarding_9.png)
+![Skärmbild av genererad PDF](assets/onboarding_9.png)
 
 Med Document Tagger kan du snabbt designa och testa, när det är klart och under produktion, men du kan använda en av SDK:erna för att automatisera denna process. Även om den faktiska koden skiljer sig åt beroende på specifika behov, här är ett exempel på hur den här koden ser ut i Node.js:
 
@@ -138,11 +138,11 @@ documentMergeOperation.execute(executionContext)
 
 Kort sagt ställer koden in autentiseringsuppgifter, skapar ett åtgärdsobjekt och ställer in indata och alternativ och anropar sedan åtgärden. Slutligen sparar det resultatet som en PDF. (Resultat kan skrivas ut som Word också.)
 
-Dokumentgenerering stöder mycket mer komplexa användningsfall, inklusive möjligheten att ha helt dynamiska tabeller och bilder. Se [dokumentation](https://developer.adobe.com/document-services/docs/overview/document-generation-api/) för mer information.
+Dokumentgenerering stöder mycket mer komplexa användningsfall, inklusive möjligheten att ha helt dynamiska tabeller och bilder. Mer information finns i [dokumentationen](https://developer.adobe.com/document-services/docs/overview/document-generation-api/).
 
 ## Utföra PDF-åtgärder
 
-Inställningen [PDF Services API](https://developer.adobe.com/document-services/apis/pdf-services/) tillhandahåller en stor uppsättning &quot;nyttoåtgärder&quot; för att arbeta med PDF. Dessa åtgärder omfattar:
+[PDF Services API](https://developer.adobe.com/document-services/apis/pdf-services/) tillhandahåller en stor uppsättning &quot;verktyg&quot;-åtgärder för att arbeta med PDF. Dessa åtgärder omfattar:
 
 * Skapa PDF från Office-dokument
 * Exportera PDF till Office-dokument
@@ -188,11 +188,11 @@ combineFilesOperation.execute(executionContext)
     });
 ```
 
-I den här koden tas de två PDF, de slås samman och resultatet sparas i ett nytt PDF. Enkelt och enkelt! Se [dokument](https://developer.adobe.com/document-services/docs/overview/pdf-services-api/) för exempel på vad som kan göras.
+I den här koden tas de två PDF, de slås samman och resultatet sparas i ett nytt PDF. Enkelt och enkelt! I [dokumenten](https://developer.adobe.com/document-services/docs/overview/pdf-services-api/) finns exempel på vad du kan göra.
 
 ## Signeringsprocessen
 
-I det sista steget i registreringsprocessen måste medarbetaren signera ett avtal som anger att de har läst och godkänner alla policyer som definieras i. [Acrobat Sign](https://www.adobe.com/se/sign.html) stöder många olika arbetsflöden och integrationer, inklusive ett automatiserat via en [API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html). I stort sett kan den sista delen av scenariot kompletteras på följande sätt:
+I det sista steget i registreringsprocessen måste medarbetaren signera ett avtal som anger att de har läst och godkänner alla policyer som definieras i. [Acrobat Sign](https://www.adobe.com/se/sign.html) stöder många olika arbetsflöden och integreringar, inklusive ett automatiserat arbetsflöde via ett [API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html). I stort sett kan den sista delen av scenariot kompletteras på följande sätt:
 
 Designa först dokumentet som innehåller formuläret som behöver signeras. Det finns flera sätt att göra det på, bland annat en visuell bild som är utformad på Adobe Sign användarkontrollpanel. Ett annat alternativ är att använda Word-tillägget för dokumentgenerering för att infoga taggarna åt dig. I det här exemplet begärs en signatur och ett datum.
 
@@ -206,6 +206,6 @@ Mallen kan överföras till Acrobat Sign-kontrollpanelen och sedan användas fö
 
 ## Upplev det själv
 
-Allt som beskrivs i den här artikeln kan testas just nu. Inställningen [!DNL Adobe Acrobat Services] API [kostnadsfri testversion](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) för närvarande får du 1 000 kostnadsfria förfrågningar under en sexmånadersperiod. Acrobat Sign [kostnadsfri testversion](https://www.adobe.com/sign.html#sign_free_trial) låter dig skicka vattenstämplade avtal för teständamål.
+Allt som beskrivs i den här artikeln kan testas just nu. [!DNL Adobe Acrobat Services] API [gratis provperiod](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) ger dig för närvarande 1 000 kostnadsfria förfrågningar under en sexmånadersperiod. Med Acrobat Sign [kostnadsfria testversion](https://www.adobe.com/sign.html#sign_free_trial) kan du skicka vattenstämplade avtal för teständamål.
 
-Har du frågor? Inställningen [supportforum](https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK) övervakas av Adobe utvecklare och support folk varje dag. Om du vill bli mer inspirerad kan du fånga nästa [Pappersklipp](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF) avsnitt. Det hålls regelbundna livemöten med nyheter, demos och samtal med kunder.
+Har du några frågor? [Supportforumet](https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK) övervakas dagligen av Adobe-utvecklare och supportpersoner. Om du vill få mer inspiration kan du titta på nästa [Paper Clips](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)-avsnitt. Det hålls regelbundna livemöten med nyheter, demos och samtal med kunder.

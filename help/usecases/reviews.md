@@ -10,7 +10,7 @@ thumbnail: KT-8094.jpg
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1540'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 ![Banderoll för användningsfall](assets/UseCaseReviewsHero.jpg)
 
-Samarbete mellan olika team på distans blev nödvändigt för många företag under covid-19-pandemin. [dela och granska digitala dokument](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) innebär en rad utmaningar för team och resurser med flera funktioner.
+Samarbete mellan team på distans blev nödvändigt för många företag under covid-19-pandemin. [Att dela och granska digitala dokument](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) innebär en rad utmaningar för team och resurser med flera funktioner.
 
-Utmaningarna omfattar delning av dokument i olika filformat, effektiv granskning och kommentarer av innehållet samt synkronisering med de senaste redigeringarna. [!DNL Adobe Acrobat Services] API:er är utformade för att programutvecklare ska kunna lösa dessa problem åt sina användare.
+Utmaningarna omfattar delning av dokument i olika filformat, effektiv granskning och kommentarer av innehållet samt synkronisering med de senaste redigeringarna. [!DNL Adobe Acrobat Services] API:er har utformats för att programutvecklare ska kunna lösa dessa utmaningar för sina användare.
 
 ## Vad du kan lära dig
 
@@ -51,17 +51,17 @@ Programmet har följande funktioner:
 
 ## Skapa API-inloggningsuppgifter för Adobe
 
-Innan du startar koden måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API och Adobe PDF Services API. PDF Embed API är gratis att använda. PDF Services API kan användas kostnadsfritt i sex månader. Sedan kan du byta till en [plan med förskottsbetalning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) vid endast \$0,05 per dokumenttransaktion.
+Innan du startar koden måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API och Adobe PDF Services API. PDF Embed API är gratis att använda. PDF Services API kan användas kostnadsfritt i sex månader. Sedan kan du växla till en [förskottsbetalningsplan](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) med bara \$0,05 per dokumenttransaktion.
 
-När du skapar autentiseringsuppgifter för PDF Services API väljer du **Skapa personligt kodexempel** och väljer Node.js för språket. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
+När du skapar autentiseringsuppgifter för PDF Services API väljer du alternativet **Skapa personligt kodexempel** och väljer Node.js för språket. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
 
 ## Konfigurera ett projekt och beroenden
 
-Konfigurera Node.js och Express Project för att visa statiska filer från mappen public. Du kan ställa in dina projektsätt, beroende på dina preferenser. Du kan använda kommandot [Express-appgenerator](https://expressjs.com/en/starter/generator.html). Eller om du vill hålla saker och ting enkla, kan du [börja från början](https://expressjs.com/en/starter/hello-world.html) och spara koden i en enda JavaScript-fil. I exempelprojektet som är länkat ovan använder du enfilsmetoden och behåller all kod i index.js.
+Konfigurera Node.js och Express Project för att visa statiska filer från mappen public. Du kan ställa in dina projektsätt, beroende på dina preferenser. Om du vill komma igång snabbt kan du använda [Express-appgeneratorn](https://expressjs.com/en/starter/generator.html). Eller om du vill hålla det enkelt kan du [börja om från början](https://expressjs.com/en/starter/hello-world.html) och behålla koden i en enda JavaScript-fil. I exempelprojektet som är länkat ovan använder du enfilsmetoden och behåller all kod i index.js.
 
-Kopiera `pdftools-api-credentials.json` och `private.key` filer från den personliga koden till rotkatalogen i projektet. Lägg till dem i .gitignore-filen om du har en sådan, så att dina inloggningsuppgifter inte oavsiktligt skickas till en databas.
+Kopiera `pdftools-api-credentials.json`- och `private.key`-filerna från det personliga kodexemplet till rotkatalogen i projektet. Lägg till dem i .gitignore-filen om du har en sådan, så att dina inloggningsuppgifter inte oavsiktligt skickas till en databas.
 
-Kör sedan `npm install @adobe/documentservices-pdftools-node-sdk` för att installera Node.js SDK för PDF-tjänster. Importera den här modulen och skapa API-inloggningsobjektet i din kod (index.js i ditt exempelprojekt), efter att resten av ditt beroende har importerats så här:
+Kör sedan `npm install @adobe/documentservices-pdftools-node-sdk` för att installera Node.js SDK för PDF Services. Importera den här modulen och skapa API-inloggningsobjektet i din kod (index.js i ditt exempelprojekt), efter att resten av ditt beroende har importerats så här:
 
 ```
   const PDFToolsSdk = require( "@adobe/documentservices-pdftools-node-sdk" );
@@ -95,13 +95,13 @@ Startkoden ska se ut så här:
   } );
 ```
 
-Nu är du redo att arbeta med [!DNL Acrobat Services] API:er
+Nu är du redo att arbeta med [!DNL Acrobat Services] API:er.
 
 ## Konvertera en fil till PDF
 
 För den första delen av dokumentarbetsflödet måste slutanvändaren ladda upp dokument för att dela dem. För att aktivera detta lägger du till en överföringsfunktion och konsoliderar de olika dokumentfilformaten till PDF för att förbereda dem för granskningsprocessen.
 
-Börja med att skapa en funktion för att konvertera dokument till PDF baserat på [Exempelutdrag för PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html). I det här exemplet visas även utdrag för många andra viktiga funktioner, inklusive optisk teckenläsning (OCR), lösenordsskydd och borttagning samt komprimering.
+Börja med att skapa en funktion för att konvertera dokument till PDF baserat på [exempelutdraget för PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html). I det här exemplet visas även utdrag för många andra viktiga funktioner, inklusive optisk teckenläsning (OCR), lösenordsskydd och borttagning samt komprimering.
 
 ```
 function fileToPDF( filename, outputFilename, callback ) {
@@ -129,14 +129,14 @@ Nu kan du använda den här funktionen för att skapa PDF från uppladdade dokum
 
 Servern behöver sedan en slutpunkt för filöverföring på webbservern för att ta emot och bearbeta dokumenten.
 
-Skapa först en mapp i en uppladdningsmapp och ge den namnet &quot;utkast&quot;. Här lagras de uppladdade filerna och de konverterade PDF-filerna. Kör sedan `npm install express-fileupload` så här installerar du Express-FileUpload-modulen och lägger till mellanvara i Express i koden:
+Skapa först en mapp i en uppladdningsmapp och ge den namnet &quot;utkast&quot;. Här lagras de uppladdade filerna och de konverterade PDF-filerna. Kör sedan `npm install express-fileupload` för att installera Express-FileUpload-modulen och lägga till mellanvara i Express-koden:
 
 ```
 const fileUpload = require( "express-fileupload" );
 app.use( fileUpload() );
 ```
 
-Lägg till en `/upload `-slutpunkten och spara den överförda filen i utkastmappen med samma filnamn. Anropa sedan funktionen som du skrev tidigare för att skapa en PDF-fil av samma dokument om den inte redan är i PDF-format. Du kan skapa ett filnamn för den nya PDF-filen baserat på namnet på det ursprungliga överförda dokumentet:
+Lägg nu till en `/upload `slutpunkt och spara den överförda filen i mappen utkast med samma filnamn. Anropa sedan funktionen som du skrev tidigare för att skapa en PDF-fil av samma dokument om den inte redan är i PDF-format. Du kan skapa ett filnamn för den nya PDF-filen baserat på namnet på det ursprungliga överförda dokumentet:
 
 ```
 // Create a PDF file from an uploaded file
@@ -166,7 +166,7 @@ app.post( "/upload", ( req, res ) => {
 
 ## Skapa en överföringssida
 
-Om du nu vill överföra filer från webbprogrammet skapar du en `index.html` webbsida i mappen uploads. På sidan lägger du till ett filöverföringsformulär som skickar filen till slutpunkten /upload:
+Om du vill överföra filer från webbprogrammet skapar du nu en `index.html`-webbsida i mappen uploads. På sidan lägger du till ett filöverföringsformulär som skickar filen till slutpunkten /upload:
 
 ```
 <form ref="uploadForm" 
@@ -178,7 +178,7 @@ Om du nu vill överföra filer från webbprogrammet skapar du en `index.html` we
   </form>
 ```
 
-![Skärmbild av möjligheten att ladda upp filer på en webbsida](assets/reviews_1.png)
+![Skärmbild av möjligheten att ladda upp filer på webbsidan](assets/reviews_1.png)
 
 Nu kan du överföra dokument till Node.js-servern. Servern sparar filen i mappen uploads/draft och en PDF-formatversion skapas tillsammans med den.
 
@@ -210,7 +210,7 @@ return res.json( files.filter( f =\> f.endsWith( ".pdf" ) ) );
 } );
 ```
 
-Lägg till en `/download/:file` väg som ger åtkomst till den uppladdade PDF-filen för inbäddning på webbsidan.
+Lägg till en `/download/:file`-väg som ger åtkomst till den överförda PDF-filen för inbäddning på webbsidan.
 
 >[!NOTE]
 >
@@ -254,7 +254,7 @@ Uppdatera sidan index.html med ett fillistelement som fylls vid inläsningen. Va
   </script>
 ```
 
-![Skärmbild av att välja en fil för granskning](assets/reviews_2.png)
+![Skärmbild av val av fil för granskning](assets/reviews_2.png)
 
 ## Bädda in en PDF
 
@@ -266,7 +266,7 @@ Skapa en webbsida med namnet &quot;draft.html&quot; och lägg till ett div-eleme
   <div id="adobe-dc-view"></div>
 ```
 
-Inkludera [!DNL Acrobat Services] bibliotek:
+Inkludera biblioteket [!DNL Acrobat Services]:
 
 ```
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -330,9 +330,9 @@ Din profil identifierar dig som en specifik användare när du ser och antecknar
 
 ## Spara dokumentfeedback
 
-När en användare har kommenterat ett dokument klickar hen på **Spara.** Som standard klickar du **Spara** hämtar den uppdaterade PDF-filen. Ändra den här åtgärden om du vill uppdatera den aktuella PDF-filen på servern.
+När en användare har kommenterat ett dokument klickar hen på **Spara.** Som standard hämtas den uppdaterade PDF-filen när du klickar på **Spara**. Ändra den här åtgärden om du vill uppdatera den aktuella PDF-filen på servern.
 
-Lägg till en `/save` slutpunkt till serverkoden som skriver över PDF-filen i mappen uploads/draft:
+Lägg till en `/save`-slutpunkt till serverkoden som skriver över PDF-filen i mappen uploads/draft:
 
 ```
   // Overwrite the PDF file with latest PDF changes and annotations
@@ -383,7 +383,7 @@ Registrera ett återanrop i vyn PDF för det SAVE_API som överför innehållet 
   );
 ```
 
-Kommentarer och anteckningar i utkastdokumenten sparas nu på servern. Du kan [läs mer om hur återanrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows) passa in i ditt arbetsflöde. Till exempel, [statusåteranrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback) hjälper till att hantera filkonflikter om flera personer vill granska och kommentera samma dokument samtidigt.
+Kommentarer och anteckningar i utkastdokumenten sparas nu på servern. Du kan [läsa mer om hur återanrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows) passar in i ditt arbetsflöde. Till exempel hjälper [statusåteranrop](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback) till att hantera filkonflikter om flera personer vill granska och kommentera samma dokument samtidigt.
 
 I det sista steget kombinerar du alla redigerade dokument till en PDF-fil med PDF Services API.
 
@@ -415,7 +415,7 @@ Kombinationskoden PDF liknar skapandekoden för PDF, men använder funktionen Co
 
 ## Ladda ned den slutliga PDF
 
-Lägg till en slutpunkt som heter /finalize och som anropar funktionen för att kombinera alla PDF-filer i `uploads/drafts` mapp till en `Final.pdf` filen och hämtar den sedan.
+Lägg till slutpunkten /finalize som anropar funktionen för att kombinera alla PDF-filer i mappen `uploads/drafts` till en `Final.pdf`-fil och hämtar den sedan.
 
 ```
   app.get( "/finalize", ( req, res ) => {
@@ -443,8 +443,8 @@ Slutligen lägger du till en länk i huvudwebbsidan index.html till denna /final
 
 ## Nästa steg
 
-Den här praktiska självstudiekursen visade hur [!DNL Acrobat Services] API:er integrerar en [arbetsflöde för dokumentdelning och granskning](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) till ett webbprogram. Programmet gör det möjligt för distansarbetare att dela filer och samarbeta med sina teammedlemmar, vilket är särskilt användbart för anställda och entreprenörer som arbetar hemifrån.
+Den här praktiska självstudiekursen visar hur [!DNL Acrobat Services] API:er integrerar ett [arbetsflöde för dokumentdelning och granskning](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) i ett webbprogram. Programmet gör det möjligt för distansarbetare att dela filer och samarbeta med sina teammedlemmar, vilket är särskilt användbart för anställda och entreprenörer som arbetar hemifrån.
 
-Du kan använda de här teknikerna för att möjliggöra samarbete i ditt program eller utforska [SDK-exempel för PDF Services-nod](https://github.com/adobe/pdftools-node-sdk-samples) och [PDF Embed API-exempel](https://github.com/adobe/pdf-embed-api-samples) på GitHub för inspiration om hur du annars använder Adobe API:er.
+Du kan använda de här teknikerna för att samarbeta i din app eller utforska SDK-exempel för [PDF Services-noder](https://github.com/adobe/pdftools-node-sdk-samples) och [PDF Embed API-exempel](https://github.com/adobe/pdf-embed-api-samples) på GitHub och få inspiration om hur du kan använda Adobe API:er.
 
-Är du redo att aktivera dokumentdelning och granskning i din egen app? Registrera ditt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) utvecklarkonto. Få tillgång till Adobe PDF Embed utan kostnad och få en sex månader lång kostnadsfri provperiod på de andra API:erna. Efter testperioden kan du [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion när företaget växer.
+Är du redo att aktivera dokumentdelning och granskning i din egen app? Registrera ditt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-utvecklarkonto. Få tillgång till Adobe PDF Embed utan kostnad och få en sex månader lång kostnadsfri provperiod på de andra API:erna. Efter testperioden kan du [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion allt eftersom verksamheten växer.

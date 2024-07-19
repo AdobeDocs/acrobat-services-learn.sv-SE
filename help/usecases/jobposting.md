@@ -10,7 +10,7 @@ thumbnail: KT-8092.jpg
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 När du driver en webbplats med flera användare är det viktigt att utforma en upplevelse som säkerställer en smidig upplevelse för alla.
 
-Tänk dig följande scenario: du har en webbplats där arbetsgivare kan [överför jobbbokföringar](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html). För arbetssökande är det bekvämt att enkelt visa alla dokument som rör ett inlägg i ett konsekvent format. Det är dock bekvämt för arbetsgivare att bifoga information i vilket filformat de än råkar ha. Du kan underlätta för båda användartyperna genom att automatiskt konvertera alla uppladdade dokument till PDF och bädda in dem online i inlägget.
+Tänk dig följande scenario: du har en webbplats där arbetsgivare kan [överföra jobbannonser](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html). För arbetssökande är det bekvämt att enkelt visa alla dokument som rör ett inlägg i ett konsekvent format. Det är dock bekvämt för arbetsgivare att bifoga information i vilket filformat de än råkar ha. Du kan underlätta för båda användartyperna genom att automatiskt konvertera alla uppladdade dokument till PDF och bädda in dem online i inlägget.
 
 ## Vad du kan lära dig
 
-Den här praktiska självstudien går igenom ett Node.js-exempel som använder [!DNL Adobe Acrobat Services] och dess [Node.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk) för att lägga till dessa funktioner på en webbplats för jobbpublicering. Detta skapar en webbplats som är lättare att använda och mer attraktiv för både arbetsgivare och arbetssökande. Här är [slutfört](https://github.com/contentlab-io/adobe_job_posting) [projektkod](https://github.com/contentlab-io/adobe_job_posting), om du vill hänga med medan du läser.
+Den här praktiska självstudiekursen går igenom ett Node.js-exempel som använder [!DNL Adobe Acrobat Services] och dess [Node.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk) för att lägga till de här funktionerna på en webbplats för jobbpublicering. Detta skapar en webbplats som är lättare att använda och mer attraktiv för både arbetsgivare och arbetssökande. Här är den [fullständiga](https://github.com/contentlab-io/adobe_job_posting) [projektkoden](https://github.com/contentlab-io/adobe_job_posting), om du vill följa med medan du läser.
 
-Konfigurera ett enkelt Express-baserat Node.js-webbprogram för att starta. [Express](https://expressjs.com/) är ett minimalistiskt ramverk för webbprogram med funktioner som routning och mallning. Koden för programmet finns på [GitHub](https://github.com/contentlab-io/adobe_job_posting). Installera även [PostgreSQL-databas](https://www.postgresql.org/) och ställa in den för att lagra PDF.
+Konfigurera ett enkelt Express-baserat Node.js-webbprogram för att starta. [Express](https://expressjs.com/) är ett minimalistiskt ramverk för webbprogram med funktioner som routning och mallar. Koden för programmet finns på [GitHub](https://github.com/contentlab-io/adobe_job_posting). Installera också [PostgreSQL-databasen](https://www.postgresql.org/) och konfigurera den för att lagra PDF.
 
 ## Relevanta [!DNL Acrobat Services] API:er
 
@@ -37,9 +37,9 @@ Konfigurera ett enkelt Express-baserat Node.js-webbprogram för att starta. [Exp
 
 ## Skapa API-inloggningsuppgifter för Adobe
 
-Först måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API (kostnadsfritt att använda) och Adobe PDF Services API (kostnadsfritt i sex månader sedan) [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion). När du skapar autentiseringsuppgifter för PDF Services API väljer du alternativet &quot;Skapa personligt kodexempel&quot;. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
+Först måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API (kostnadsfritt att använda) och Adobe PDF Services API (kostnadsfritt i sex månader och sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion). När du skapar autentiseringsuppgifter för PDF Services API väljer du alternativet &quot;Skapa personligt kodexempel&quot;. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
 
-Du behöver också en API-nyckel för det kostnadsfria Embed API:et. Från [Projekt](https://console.adobe.io/projects), gå till det projekt du skapade. Klicka sedan på **Lägg till i projekt** och välj **API**. Klicka till sist på **PDF Embed API**.
+Du behöver också en API-nyckel för det kostnadsfria Embed API:et. Gå till projektet du skapade från [Projekt](https://console.adobe.io/projects). Klicka sedan på **Lägg till i projekt** och välj **API**. Klicka till sist på **PDF Embed API**.
 
 Ange domänen för PDF Embed API. API-nyckeln måste vara offentlig (den finns i koden som körs av webbläsaren). Genom att ange en domän ser du till att någon annan i en annan domän inte kan använda API-nyckeln.
 
@@ -84,7 +84,7 @@ router.post('/upload', async function (req, res, next) {
 
 Funktionen är asynkron så att du kan använda nyckelordet await i funktionen, vilket är praktiskt när du anropar metoderna som utför API-anrop.
 
-![Skärmbild av webbplats för jobbannons](assets/jobs_1.png)
+![Skärmbild av webbplatsen för jobbpublicering](assets/jobs_1.png)
 
 ## Använda PDF Services API
 
@@ -95,7 +95,7 @@ const PDFToolsSdk = require('@adobe/documentservices-pdftools-node-sdk');
   const { Readable } = require('stream');
 ```
 
-Precis under importen kan du läsa in API-inloggningsuppgifter och skapa en [körningsinnehåll](https://www.javascripttutorial.net/javascript-execution-context/). Eftersom du kan återanvända en körningskontext för olika åtgärder är det praktiskt att bara göra det en gång.
+Under importen kan du läsa in API-uppgifter och skapa ett [körningsinnehåll](https://www.javascripttutorial.net/javascript-execution-context/). Eftersom du kan återanvända en körningskontext för olika åtgärder är det praktiskt att bara göra det en gång.
 
 ```
   const credentials = PDFToolsSdk.Credentials
@@ -106,7 +106,7 @@ Precis under importen kan du läsa in API-inloggningsuppgifter och skapa en [kö
   const executionContext = PDFToolsSdk.ExecutionContext.create(credentials);
 ```
 
-Gå nu tillbaka till att skriva kod i begärandehanteraren vid kommentaren i `router.post` block. Börja med att konvertera dokumentet till PDF.
+Gå nu tillbaka till att skriva kod i begärandehanteraren vid kommentaren i blocket `router.post`. Börja med att konvertera dokumentet till PDF.
 
 ```
   const createPdfOperation = PDFToolsSdk.CreatePDF.Operation.createNew();
@@ -128,7 +128,7 @@ Den returnerade PDF sparas i en fil och ett enkelt bekräftelsemeddelande skicka
 
 ## Konvertera bilder till text och komprimera PDF
 
-Använd sedan optisk teckenläsning (OCR) för att konvertera bilder till text och komprimera resultatet. Du gör detta med OCR- och CompressPDF-åtgärderna som liknar åtgärden Skapa PDF. Lägg till följande i flödesfilen, i `router.post`:
+Använd sedan optisk teckenläsning (OCR) för att konvertera bilder till text och komprimera resultatet. Du gör detta med OCR- och CompressPDF-åtgärderna som liknar åtgärden Skapa PDF. Lägg till följande i flödesfilen i `router.post`:
 
 ```
   const name = req.body.name;
@@ -221,7 +221,7 @@ För PDF Embed API behöver du också en slutpunkt som returnerar bara PDF-inneh
 
 ## Bädda in PDF
 
-Skapa nu /job/{id} slutpunkt, som återger en mall som innehåller namnet på den begärda jobbpubliceringen och en inbäddad PDF.
+Skapa nu slutpunkten /job/{id}, som återger en mall som innehåller namnet på den begärda jobbpubliceringen och en inbäddad PDF.
 
 ```
 router.get('/job/:id', async function(req, res, next) {
@@ -268,18 +268,18 @@ Det första skriptet är Adobe View SDK, vilket gör det enkelt att bädda in PD
 
 Nu kan du testa hela processen med att överföra ett dokument, omdirigeras till sidan /job/id och visa den inbäddade PDF. Användarna går igenom samma steg för att lägga till jobbannonser eller andra dokument på webbplatsen.
 
-![Skärmbild av hur man testar ett uppladdat PDF-dokument](assets/jobs_2.png)
+![Skärmbild av hur du testar ett uppladdat PDF-dokument](assets/jobs_2.png)
 
-Om du vill se hur det går till att bädda in filer online kan du kolla in det här [live-demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/IN_LINE/Bodea%20Brochure.pdf).
+Se denna [live-demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/IN_LINE/Bodea%20Brochure.pdf) om du vill se hur en inbäddning fungerar.
 
 ## Nästa steg
 
-Den här praktiska självstudiekursen visar hur du använder Node.js med [!DNL Acrobat Services] för att konvertera och ladda upp [jobbannons](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html) i olika format till en PDF. PDF som blev resultatet bäddades sedan in i en webbsida. Nu kan du lägga till samma funktion på din webbplats, vilket gör det lättare för arbetsgivare att ladda upp arbetsbeskrivningar, broschyrer och annat för arbetssökande att hitta. Dessa funktioner hjälper alla att få den information som behövs för att hitta ett drömjobb.
+I den här praktiska självstudiekursen går vi igenom hur du använder Node.js med [!DNL Acrobat Services] för att konvertera en uppladdad [jobbannons](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html) i olika format till en PDF. PDF som blev resultatet bäddades sedan in i en webbsida. Nu kan du lägga till samma funktion på din webbplats, vilket gör det lättare för arbetsgivare att ladda upp arbetsbeskrivningar, broschyrer och annat för arbetssökande att hitta. Dessa funktioner hjälper alla att få den information som behövs för att hitta ett drömjobb.
 
-[!DNL Acrobat Services] hjälper dig att lägga till viktiga funktioner för dokumenthantering på din webbplats eller i ditt program. Om du vill lära dig mer om vad dessa API:er kan göra kan du läsa följande snabbstartsdokumentation:
+[!DNL Acrobat Services] hjälper dig att lägga till viktiga funktioner för dokumenthantering på din webbplats eller i din app. Om du vill lära dig mer om vad dessa API:er kan göra kan du läsa följande snabbstartsdokumentation:
 
 * [PDF Embed API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-För att börja lägga till användarvänliga funktioner för dokumenthantering på din webbplats, [bli medlem för en kostnadsfri provperiod](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html). Adobe PDF Embed API är alltid kostnadsfritt att använda och Adobe PDF Services API är kostnadsfritt i sex månader, sedan är det bara \$0.05 per dokumenttransaktion så du kan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) i takt med att företaget växer.
+Om du vill börja lägga till användarvänliga funktioner för dokumenthantering på din webbplats [registrerar du dig för en kostnadsfri provperiod](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html). Adobe PDF Embed API är alltid kostnadsfritt att använda och Adobe PDF Services API är kostnadsfritt i sex månader. Sedan är det bara \$0,05 per dokumenttransaktion så att du kan [betala allteftersom verksamheten växer](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).

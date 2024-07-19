@@ -1,7 +1,7 @@
 ---
 user-guide-title: "[!DNL Adobe Acrobat Services]"
 breadcrumb-title: "[!DNL Acrobat Services]"
-user-guide-description: Läs mer om [!DNL Adobe Acrobat Services]
+user-guide-description: Läs mer om  [!DNL Adobe Acrobat Services]
 solution: Acrobat Services
 feature-set: Acrobat Services
 feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API, PDF Accessibility Auto-Tag API, PDF Electronic Seal API, PDF Extract API
@@ -28,10 +28,10 @@ ht-degree: 3%
    + [Komma igång med Adobe PDF Services API och Java](pdfservices/gettingstartedjava.md)
    + [Komma igång med Adobe PDF Services API och .Net](pdfservices/gettingstartednet.md)
    + [Använda Adobe PDF Services API för att OCR PDF-filer](pdfservices/ocr.md)
-+ API för dokumentgenerering {#docgen}
++ Dokumentgenererings-API {#docgen}
    + [Översikt](docgen/overview-docgen.md)
    + [Automatisera dokumentgenerering](docgen/automate-doc-gen.md)
-   + Skapa mallar {#docgentemplates}
+   + Skapar mallar {#docgentemplates}
       + [Översikt över taggen för dokumentgenerering i Adobe](docgen/taggeroverview.md)
       + [Lägga till texttaggar](docgen/taggeraddtexttags.md)
       + [Lägga till bildtaggar](docgen/taggeraddimagetags.md)
@@ -44,13 +44,13 @@ ht-degree: 3%
 + PDF Extract API {#pdfextract}
    + [Översikt](pdfextract/overview-extract.md)
    + [Automatisera extrahering av innehåll](pdfextract/automate-content-extraction.md)
-+ API för elektroniskt sigill för PDF {#eseal}
++ PDF Electronic Seal API {#eseal}
    + [Översikt](pdfelectronicseal/overview-electronic-seal.md)
    + [Tillämpa elektroniskt sigill automatiskt](pdfelectronicseal/automatically-apply-electronic-seal.md)
 + PDF Embed API {#pdfembed}
    + [Översikt](pdfembed/overview-embed.md)
    + [Styr din onlineupplevelse i PDF och samla in analyser](pdfembed/controlpdfexperience.md)
-+ ACROBAT SIGN API {#acrobatsign}
++ Acrobat Sign API {#acrobatsign}
    + [Översikt](acrobatsign/overview-sign.md)
    + [Komma igång med Adobe Sign API](acrobatsign/signapi.md)
    + OEM/Inbäddad partner {#oem}

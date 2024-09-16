@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10202
 thumbnail: KT-10202.jpg
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c74a36116349490af29e66fd81ad59c93174c258
 workflow-type: tm+mt
 source-wordcount: '2826'
 ht-degree: 0%
@@ -552,7 +552,7 @@ Nu har du information om det avtalet.
   }
 ```
 
-Den mest effektiva metoden för att få aviseringar när uppdateringar ändras är via Webhooks, som du kan läsa mer om [här](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html.
+Den effektivare metoden för att få aviseringar när uppdateringar ändras är via Webhooks, som du kan läsa mer om [här](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html).
 
 ## Lagra ett signerat dokument
 

@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8115
 thumbnail: KT-8115.jpg
 exl-id: 4188897e-f6e6-41ea-be6f-359a3ef0e040
-source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
+source-git-commit: ad13c28a0c218fc0027afc02445e5ed532c2340d
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
@@ -152,31 +152,31 @@ Lär dig hur [!DNL Adobe Acrobat Services] API:er kan förändra ditt företag m
 </tr>
 <tr>
   <td>
-    <a href="AgreementWorkflowsNodejs.md">
+    <a href="agreementworkflowsnodejs.md">
       <img alt="Avtalsarbetsflöden i Node.js" src="assets/AWNjs_thumb.png" />
     </a>
     <div>
-    <a href="AgreementWorkflowsNodejs.md"><strong>Avtalsarbetsflöden i Node.js</strong></a>
+    <a href="agreementworkflowsnodejs.md"><strong>Avtalsarbetsflöden i Node.js</strong></a>
     </div>
     <em>[!DNL Adobe Acrobat Services] API:er införlivar enkelt PDF-funktioner i dina webbprogram</em>
     <br>
   </td>
   <td>
-    <a href="HRAgreementWorkflowsJava.md">
+    <a href="hragreementworkflowsjava.md">
       <img alt="HR-dokumentarbetsflöden i Java" src="assets/HRWJ_thumb.png" />
     </a>
     <div>
-    <a href="HRAgreementWorkflowsJava.md"><strong>HR-dokumentarbetsflöden i Java</strong></a>
+    <a href="hragreementworkflowsjava.md"><strong>HR-dokumentarbetsflöden i Java</strong></a>
     </div>
     <em>[!DNL Adobe Acrobat Services] API:er införlivar enkelt PDF-funktioner i dina HR-webbprogram</em>
     <br>
   </td>
   <td>
-    <a href="FinanceWorkflowsJava.md">
+    <a href="financeworkflowsjava.md">
       <img alt="Hantera arbetsflöden för finansiella dokument i Java" src="assets/FAWJ_thumb.png" />
     </a>
     <div>
-    <a href="FinanceWorkflowsJava.md"><strong>Hantera arbetsflöden för ekonomiska dokument i Java</strong></a>
+    <a href="financeworkflowsjava.md"><strong>Hantera arbetsflöden för ekonomiska dokument i Java</strong></a>
     </div>
     <em>[!DNL Adobe Acrobat Services] tillhandahåller alla verktyg, tjänster och funktioner som behövs för att bearbeta och extrahera data från finansdokument från PDF</em>
     <br>

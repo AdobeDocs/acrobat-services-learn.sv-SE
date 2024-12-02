@@ -1,6 +1,6 @@
 ---
 title: Hantera arbetsflöden för finansiella dokument i Java
-description: "[!DNL Adobe Acrobat Services] tillhandahåller alla verktyg, tjänster och funktioner som behövs för att bearbeta och extrahera data från finansdokument från PDF"
+description: '[!DNL Adobe Acrobat Services] tillhandahåller alla verktyg, tjänster och funktioner som behövs för att bearbeta och extrahera data från finansdokument från PDF'
 feature: Use Cases
 role: Developer
 level: Intermediate

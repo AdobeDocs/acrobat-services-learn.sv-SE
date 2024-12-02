@@ -1,6 +1,6 @@
 ---
-user-guide-title: "[!DNL Adobe Acrobat Services]"
-breadcrumb-title: "[!DNL Acrobat Services]"
+user-guide-title: '[!DNL Adobe Acrobat Services]'
+breadcrumb-title: '[!DNL Acrobat Services]'
 user-guide-description: Läs mer om  [!DNL Adobe Acrobat Services]
 solution: Acrobat Services
 feature-set: Acrobat Services

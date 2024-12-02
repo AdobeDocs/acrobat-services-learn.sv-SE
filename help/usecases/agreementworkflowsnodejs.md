@@ -1,6 +1,6 @@
 ---
 title: Avtalsarbetsflöden i Node.js
-description: "[!DNL Adobe Acrobat Services] API:er kan enkelt införliva PDF-funktioner i dina webbprogram"
+description: '[!DNL Adobe Acrobat Services] API:er införlivar enkelt PDF-funktioner i dina webbprogram'
 feature: Use Cases
 role: Developer
 level: Beginner

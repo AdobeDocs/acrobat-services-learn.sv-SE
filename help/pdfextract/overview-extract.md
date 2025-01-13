@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-9247
 thumbnail: KT-9247.jpg
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: 63c4b6979a4aaa6698ee00264c4ef59ed6b16148
+source-git-commit: 205dddf21677be6d000627bdc3e024758459e4b9
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -22,7 +22,6 @@ Lås upp strukturen och innehållselementen i PDF med en webbtjänst som drivs a
 >[!NOTE]
 >
 >PDF Extract API ingår i PDF Services API.
-
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">

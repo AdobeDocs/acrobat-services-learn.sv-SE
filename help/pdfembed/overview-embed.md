@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-8117
 thumbnail: KT-8117.jpg
 exl-id: 2fef89cf-640d-4ff4-9282-070bce8bba78
-source-git-commit: 5b505cc0dfb066e1b5c95698cc10a0b68086f015
+source-git-commit: 794a87a86a5e75803f86faa5db3fcdce2bcec79a
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 0%
 # Självstudiekurser i Adobe PDF Embed API
 
 PDF Embed API är ett kostnadsfritt JavaScript API för att bädda in PDF med hög originalåtergivning, aktivera samarbete och se analyser.
-
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -40,7 +39,7 @@ PDF Embed API är ett kostnadsfritt JavaScript API för att bädda in PDF med h�
                     <p class="is-size-6">Lär dig hur du använder Adobe PDF Embed API för att kontrollera utseende, aktivera samarbetsfunktioner och samla in analyser om hur användare interagerar med PDF, inklusive tid på en sida och sökningar</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läsa</span>
                 </a>
             </div>
         </div>
@@ -49,9 +48,8 @@ PDF Embed API är ett kostnadsfritt JavaScript API för att bädda in PDF med h�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api"
-target = "_self" title="Kasta PDF på webben som ett proffs" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/media_17a03bc364d9d4b68dc970c4d1680c81f187acfb0.png?width=400&format=webply&optimize=medium" alt="Kasta PDF på webben som ett proffs"
+                    <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" title="Kasta PDF på webben som ett proffs" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/337602/?quality=12&hidetitle=true&format=jpeg&nocache=1736799089651" alt="Kasta PDF på webben som ett proffs"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -59,13 +57,11 @@ target = "_self" title="Kasta PDF på webben som ett proffs" target="_blank" rel
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api"
-target = "_self" target="_blank" rel="referrer" title="Kasta PDF på webben som ett proffs">Kämpa med PDF på webben som ett proffs</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" target="_self" rel="referrer" title="Kasta PDF på webben som ett proffs">Kämpa med PDF på webben som ett proffs</a>
                     </p>
-                    <p class="is-size-6">Lär dig hur du använder det kostnadsfria Adobe PDF Embed API för att göra det enklare att använda PDF på din webbplats</p>
+                    <p class="is-size-6">Se hur du använder det kostnadsfria Adobe PDF Embed API för att göra det enklare att använda PDF på din webbplats</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api"
-target = "_self" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>

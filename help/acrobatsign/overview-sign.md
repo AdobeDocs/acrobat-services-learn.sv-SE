@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-11079
 thumbnail: KT-11079.jpg
 exl-id: 79603883-26cd-439c-9cfd-6178c4544b93
-source-git-commit: 63c4b6979a4aaa6698ee00264c4ef59ed6b16148
+source-git-commit: 3df27690c677d8ad51e8f26ea95b5da12694f89a
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '305'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ Med Acrobat Sign API:er kan du skapa program och bädda in Acrobat Sign-gränssn
 
 ## Snabbstartsguide till Acrobat Sign Embed
 
-Lär dig hur Kom igång med att bädda in OEM-versionen av Acrobat Sign i ditt program. Den här guiden är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
+Lär dig komma igång med att bädda in OEM-versionen av Acrobat Sign i ditt program. Den här guiden är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
 
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->

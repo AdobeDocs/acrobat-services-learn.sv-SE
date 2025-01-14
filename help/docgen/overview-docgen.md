@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-7480
 thumbnail: KT-7480.jpg
 exl-id: 519a41a2-33af-4022-8919-2cb69995c46c
-source-git-commit: 9235b07277fe642adebc00fade4c10245d4b04bf
+source-git-commit: 0f62890207722245f33be41ad4c77ba68bf7a0fc
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -26,35 +26,46 @@ Med dokumentgenererings-API:t skapas PDF- och Word-dokument från Word-mallar oc
 
 ## Genererar dokument
 
-<table style="table-layout:fixed">
-<tr>
-  <td>
-    <a href="automate-doc-gen.md">
-      <img alt="Automatisera dokumentgenerering" src="assets/automate-doc-gen.png" />
-    </a>
-    <div>
-      <a href="automate-doc-gen.md"><strong>Automatisera dokumentgenerering</strong></a>
-      </div>
-      Lär dig hur du automatiskt genererar dokument i stor skala
-      <br>
-  </td>
- <td>
-       <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png">
-       <div>
-       <br>
- </td>
- <td>
-       <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png">
-       <div>
-       <br>
- </td>
- <td>
-       <img alt="Avgränsare" src="../assets/WhiteBanner_Placeholder.png">
-       <div>
-       <br>
- </td>
-</tr>
-</table>
+<!-- Comment -->
+<!-- CARDS
+
+* https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen
+  {target = _self}
+  {title = Automate document generation}
+  {description = Learn how to automatically generate documents at scale}
+  {image = https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_120e532325e3fdc7f559ad9b446d9ec08c1e239a1.png?width=400&format=webply&optimize=medium}
+  {cta = Watch}
+
+-->
+<!-- End Comment -->
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Automate document generation">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" title="Automatisera dokumentgenerering" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_120e532325e3fdc7f559ad9b446d9ec08c1e239a1.png?width=400&format=webply&optimize=medium" alt="Automatisera dokumentgenerering"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" title="Automatisera dokumentgenerering">Automatisera dokumentgenerering</a>
+                    </p>
+                    <p class="is-size-6">Lär dig hur du automatiskt genererar dokument i stor skala</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 ## Skapa mallar
 

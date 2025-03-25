@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10379
 thumbnail: KT-10379.jpg
 exl-id: 095b705f-c380-42cc-9329-44ef7de655ee
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1955'
 ht-degree: 1%
@@ -31,7 +31,7 @@ I den här praktiska självstudien lär du dig att:
 ### Vad du behöver
 
 * **Autentiseringsuppgifter för provperiod eller produktion för Adobe PDF-tjänster**
-Läs mer om hur du hämtar och konfigurerar autentiseringsuppgifter i Microsoft Power Automate [här](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html).
+Läs mer om hur du hämtar och konfigurerar autentiseringsuppgifter i Microsoft Power Automate [här](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate).
 * **Microsoft Power Automate med premiumanslutningar**
 Lär dig kontrollera licensnivån för Power Automate [här](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types).
 * **OneDrive**
@@ -46,7 +46,7 @@ Det finns två [exempelfiler](assets/sample-assets.zip) som du måste packa upp 
 
 ### Hämtar autentiseringsuppgifter
 
-För att slutföra den här självstudiekursen behöver du dina inloggningsuppgifter som redan har konfigurerats i Microsoft Power Automate för Adobe PDF-tjänster. Om du inte har slutfört det här steget kan du läsa [anvisningarna här](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html).
+För att slutföra den här självstudiekursen behöver du dina inloggningsuppgifter som redan har konfigurerats i Microsoft Power Automate för Adobe PDF-tjänster. Om du inte har slutfört det här steget kan du läsa [anvisningarna här](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate).
 
 ## Del 1: Skapa nytt flöde och konvertera Word till PDF
 

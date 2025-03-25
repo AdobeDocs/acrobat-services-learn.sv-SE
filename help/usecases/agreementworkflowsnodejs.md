@@ -9,7 +9,7 @@ jira: KT-7473
 thumbnail: KT-7473.jpg
 keywords: Utvalt
 exl-id: 44a03420-e963-472b-aeb8-290422c8d767
-source-git-commit: f8a31b8f98d99bf1f3787e0f0f19cc9f26e24d8d
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 0%
@@ -32,7 +32,7 @@ I den här praktiska självstudiekursen lär du dig hur du lägger till PDF-tjä
 
 * [PDF Embed API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [Projektkod](https://github.com/adobe/pdftools-node-sdk-samples)
 
@@ -294,7 +294,7 @@ Lägg till ett `<div />`-element för dokumentet på sidan som visar PDF och ge 
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 ```
 
-Den sista kodbiten du behöver är en funktion som visar dokumentet när Adobe PDF Embed API JavaScript har lästs in. Skapa ett nytt AdobeDC.View-objekt när du får ett meddelande om att skriptet har lästs in via en händelse av typen adobe_dc_view\_sdk.ready. Ditt klient-ID och ID för elementet som skapades tidigare behövs för det här objektet. Hitta ditt klient-ID i [Adobe Developer Console](https://console.adobe.io/). När du visar inställningarna för programmet som du skapade när du skapade autentiseringsuppgifter tidigare visas klient-ID:t där.
+Den sista kodbiten du behöver är en funktion som visar dokumentet när Adobe PDF Embed API JavaScript har lästs in. Skapa ett nytt AdobeDC.View-objekt när du får ett meddelande om att skriptet har lästs in via en händelse av typen adobe_dc_view\_sdk.ready. Ditt klient-ID och ID för elementet som skapades tidigare behövs för det här objektet. Hitta ditt klient-ID i [Adobe Developer Console](https://developer.adobe.com/console/). När du visar inställningarna för programmet som du skapade när du skapade autentiseringsuppgifter tidigare visas klient-ID:t där.
 
 ![Bild av API-klientnyckel](assets/AWNjs_6.png)
 
@@ -312,7 +312,7 @@ Du kan slå på och av olika alternativ och omedelbart se hur de återges. Klick
 
 När ett dokument är klart kan du lägga till digitala signaturer för godkännande med Adobe Sign. Den här funktionen fungerar lite annorlunda än den funktion du har använt hittills. För digitala signaturer måste ett program konfigureras för att använda OAuth för användarautentisering.
 
-Det första steget när du konfigurerar programmet är att [registrera programmet](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md) för att använda OAuth för Adobe Sign. När du har loggat in går du till skärmen där du skapar program genom att klicka på *Konto*, öppna avsnittet *Adobe Sign API* och klicka på *API-program* för att öppna listan över registrerade program.
+Det första steget när du konfigurerar programmet är att [registrera programmet](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/create_app.md) för att använda OAuth för Adobe Sign. När du har loggat in går du till skärmen där du skapar program genom att klicka på *Konto*, öppna avsnittet *Adobe Sign API* och klicka på *API-program* för att öppna listan över registrerade program.
 
 ![Bild från första steget när du registrerar din app](assets/AWNjs_9.png)
 
@@ -519,4 +519,4 @@ Som du kan se på snabbstarterna och den medföljande koden är det enkelt att i
 
 Om du vill identifiera de nödvändiga omfången för ett anrop eller se hur anropet skapas kan du skapa exempelanrop från [REST API-dokumentationen](https://secure.na4.adobesign.com/public/docs/restapi/v6). [Snabbstarterna](https://github.com/adobe/pdftools-node-sdk-samples) demonstrerar också andra funktioner och filformat för API:erna i [!DNL Adobe Acrobat Services].
 
-Du kan lägga till en mängd PDF-funktioner till dina program, så att användarna snabbt och enkelt kan visa och signera sina dokument och mycket mer. Börja med att kolla in [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) i dag.
+Du kan lägga till en mängd PDF-funktioner till dina program, så att användarna snabbt och enkelt kan visa och signera sina dokument och mycket mer. Börja med att kolla in [[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/) i dag.

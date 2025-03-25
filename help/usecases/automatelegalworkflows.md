@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10202
 thumbnail: KT-10202.jpg
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
-source-git-commit: c74a36116349490af29e66fd81ad59c93174c258
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '2826'
 ht-degree: 0%
@@ -362,7 +362,7 @@ var outputFileName = path.join('output', 'salesOrder_'+Date.now()+".docx");
 
 ## Skicka avtal för signering
 
-Med [Adobe Acrobat Sign](https://www.adobe.com/se/sign.html) kan du skicka avtal till en eller flera mottagare så att de kan visa och signera dokument. Tillsammans med en lättanvänd användarupplevelse att skicka ett dokument för signering, finns REST API:er tillgängliga som låter dig ta Word, PDF, HTML och andra format och skicka dem för signering.
+Med [Adobe Acrobat Sign](https://www.adobe.com/acrobat/business/sign.html) kan du skicka avtal till en eller flera mottagare så att de kan visa och signera dokument. Tillsammans med en lättanvänd användarupplevelse att skicka ett dokument för signering, finns REST API:er tillgängliga som låter dig ta Word, PDF, HTML och andra format och skicka dem för signering.
 
 Exemplet nedan visar hur du använder REST API-dokumentationssidan för att ta det tidigare genererade dokumentet och skicka det för signering. Börja med att lära dig hur du gör det via webbgränssnittet i Acrobat Sign och sedan hur du gör det med REST API.
 

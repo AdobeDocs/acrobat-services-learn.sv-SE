@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7487
 thumbnail: KT-7487.jpg
 exl-id: 64ffdacb-d6cb-43e7-ad10-bbd8afc0dbf4
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 0%
@@ -63,7 +63,7 @@ I del 1 lär du dig hur du kommer igång med allt du behöver för delarna 1-3. 
 **Vad du behöver**
 
 * Självstudieresurser [hämtas](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)
-* Adobe ID [skaffa ett här](https://accounts.adobe.com/se)
+* Adobe ID [skaffa ett här](https://account.adobe.com/)
 * Webbserver (nod JS, PHP osv.)
 * Arbetskunskaper om HTML / JavaScript / CSS
 
@@ -75,7 +75,7 @@ I del 1 lär du dig hur du kommer igång med allt du behöver för delarna 1-3. 
 
 ### Hämtar autentiseringsuppgifter
 
-1. Gå till webbplatsen [Adobe.io](https://www.adobe.io/).
+1. Gå till webbplatsen [Adobe.io](https://developer.adobe.com/).
 1. Klicka på **[!UICONTROL Läs mer]** under Skapa engagerande dokumentupplevelser.
 
    ![Skärmbild av knappen Läs mer](assets/ControlPDF_1.png)
@@ -114,7 +114,7 @@ I del 2, du kommer att lära dig hur du enkelt bädda in PDF Embed API i en webb
 
 Vi har skapat kod som du kan använda. Du kan använda din egen kod, men demonstrationerna sker i samband med självstudieresurserna. Hämta exempelkoden [här](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial).
 
-1. Gå till [[!DNL Adobe Acrobat Services] webbplats](https://www.adobe.io/apis/documentcloud/dcsdk/).
+1. Gå till [[!DNL Adobe Acrobat Services] webbplats](https://developer.adobe.com/document-services/homepage/).
 
    ![Skärmbild av [!DNL Adobe Acrobat Services] webbplats](assets/ControlPDF_6.png)
 
@@ -218,7 +218,7 @@ Nu när du har skapat en webbsida där PDF Embed API har renderat ett PDF kan du
 
 Det finns en hel del olika JavaScript-händelser tillgängliga som en del av PDF Embed API. Du kan komma åt dem från dokumentationen för [!DNL Adobe Acrobat Services].
 
-1. Gå till webbplatsen [dokumentation](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html).
+1. Gå till webbplatsen [dokumentation](https://developer.adobe.com/document-services/docs/overview).
 1. Granska de olika händelsetyperna som är tillgängliga som en del av API:et. De är användbara som referens och kommer också att vara till hjälp för dina framtida projekt.
 
    ![Skärmbild av referensguiden](assets/ControlPDF_17.png)
@@ -326,4 +326,4 @@ Nu kan du visa demon.
 
 ## Ytterligare resurser
 
-Ytterligare resurser finns [här](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html).
+Ytterligare resurser finns [här](https://developer.adobe.com/document-services/docs/overview).

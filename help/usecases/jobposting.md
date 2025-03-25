@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-8092
 thumbnail: KT-8092.jpg
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 När du driver en webbplats med flera användare är det viktigt att utforma en upplevelse som säkerställer en smidig upplevelse för alla.
 
-Tänk dig följande scenario: du har en webbplats där arbetsgivare kan [överföra jobbannonser](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html). För arbetssökande är det bekvämt att enkelt visa alla dokument som rör ett inlägg i ett konsekvent format. Det är dock bekvämt för arbetsgivare att bifoga information i vilket filformat de än råkar ha. Du kan underlätta för båda användartyperna genom att automatiskt konvertera alla uppladdade dokument till PDF och bädda in dem online i inlägget.
+Tänk dig följande scenario: du har en webbplats där arbetsgivare kan [överföra jobbannonser](https://developer.adobe.com/document-services/use-cases/content-publishing/job-posting). För arbetssökande är det bekvämt att enkelt visa alla dokument som rör ett inlägg i ett konsekvent format. Det är dock bekvämt för arbetsgivare att bifoga information i vilket filformat de än råkar ha. Du kan underlätta för båda användartyperna genom att automatiskt konvertera alla uppladdade dokument till PDF och bädda in dem online i inlägget.
 
 ## Vad du kan lära dig
 
@@ -37,9 +37,9 @@ Konfigurera ett enkelt Express-baserat Node.js-webbprogram för att starta. [Exp
 
 ## Skapa API-inloggningsuppgifter för Adobe
 
-Först måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API (kostnadsfritt att använda) och Adobe PDF Services API (kostnadsfritt i sex månader och sedan [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion). När du skapar autentiseringsuppgifter för PDF Services API väljer du alternativet &quot;Skapa personligt kodexempel&quot;. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
+Först måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API (kostnadsfritt att använda) och Adobe PDF Services API (kostnadsfritt i sex månader och sedan [betala per användning](https://developer.adobe.com/document-services/pricing/main) för bara \$0,05 per dokumenttransaktion). När du skapar autentiseringsuppgifter för PDF Services API väljer du alternativet &quot;Skapa personligt kodexempel&quot;. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
 
-Du behöver också en API-nyckel för det kostnadsfria Embed API:et. Gå till projektet du skapade från [Projekt](https://console.adobe.io/projects). Klicka sedan på **Lägg till i projekt** och välj **API**. Klicka till sist på **PDF Embed API**.
+Du behöver också en API-nyckel för det kostnadsfria Embed API:et. Gå till projektet du skapade från [Projekt](https://developer.adobe.com/console/projects). Klicka sedan på **Lägg till i projekt** och välj **API**. Klicka till sist på **PDF Embed API**.
 
 Ange domänen för PDF Embed API. API-nyckeln måste vara offentlig (den finns i koden som körs av webbläsaren). Genom att ange en domän ser du till att någon annan i en annan domän inte kan använda API-nyckeln.
 
@@ -274,7 +274,7 @@ Se denna [live-demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/v
 
 ## Nästa steg
 
-I den här praktiska självstudiekursen går vi igenom hur du använder Node.js med [!DNL Acrobat Services] för att konvertera en uppladdad [jobbannons](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html) i olika format till en PDF. PDF som blev resultatet bäddades sedan in i en webbsida. Nu kan du lägga till samma funktion på din webbplats, vilket gör det lättare för arbetsgivare att ladda upp arbetsbeskrivningar, broschyrer och annat för arbetssökande att hitta. Dessa funktioner hjälper alla att få den information som behövs för att hitta ett drömjobb.
+I den här praktiska självstudiekursen går vi igenom hur du använder Node.js med [!DNL Acrobat Services] för att konvertera en uppladdad [jobbannons](https://developer.adobe.com/document-services/use-cases/content-publishing/job-posting) i olika format till en PDF. PDF som blev resultatet bäddades sedan in i en webbsida. Nu kan du lägga till samma funktion på din webbplats, vilket gör det lättare för arbetsgivare att ladda upp arbetsbeskrivningar, broschyrer och annat för arbetssökande att hitta. Dessa funktioner hjälper alla att få den information som behövs för att hitta ett drömjobb.
 
 [!DNL Acrobat Services] hjälper dig att lägga till viktiga funktioner för dokumenthantering på din webbplats eller i din app. Om du vill lära dig mer om vad dessa API:er kan göra kan du läsa följande snabbstartsdokumentation:
 
@@ -282,4 +282,4 @@ I den här praktiska självstudiekursen går vi igenom hur du använder Node.js 
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-Om du vill börja lägga till användarvänliga funktioner för dokumenthantering på din webbplats [registrerar du dig för en kostnadsfri provperiod](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html). Adobe PDF Embed API är alltid kostnadsfritt att använda och Adobe PDF Services API är kostnadsfritt i sex månader. Sedan är det bara \$0,05 per dokumenttransaktion så att du kan [betala allteftersom verksamheten växer](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
+Om du vill börja lägga till användarvänliga funktioner för dokumenthantering på din webbplats [registrerar du dig för en kostnadsfri provperiod](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html). Adobe PDF Embed API är alltid kostnadsfritt att använda och Adobe PDF Services API är kostnadsfritt i sex månader. Sedan är det bara \$0,05 per dokumenttransaktion så att du kan [betala allteftersom verksamheten växer](https://developer.adobe.com/document-services/pricing/main).

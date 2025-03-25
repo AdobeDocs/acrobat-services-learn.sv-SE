@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10203
 thumbnail: KT-10203.jpg
 exl-id: 0186b3ee-4915-4edd-8c05-1cbf65648239
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1434'
 ht-degree: 0%
@@ -35,9 +35,9 @@ Utvecklare kan [registrera sig](https://documentcloud.adobe.com/dc-integration-c
 
 ## Vad är Acrobat Sign?
 
-[Acrobat Sign](https://www.adobe.com/se/sign.html) är världsledande inom tjänster för elektroniska signaturer. Du kan skicka dokument för signering med olika arbetsflöden, inklusive flera signaturer. Acrobat Sign stöder även arbetsflöden som kräver signaturer och ytterligare information. Alla dessa funktioner stöds av en kraftfull instrumentpanel med ett flexibelt redigeringssystem.
+[Acrobat Sign](https://www.adobe.com/acrobat/business/sign.html) är världsledande inom tjänster för elektroniska signaturer. Du kan skicka dokument för signering med olika arbetsflöden, inklusive flera signaturer. Acrobat Sign stöder även arbetsflöden som kräver signaturer och ytterligare information. Alla dessa funktioner stöds av en kraftfull instrumentpanel med ett flexibelt redigeringssystem.
 
-Precis som med [!DNL Acrobat Services] har Acrobat Sign en [kostnadsfri provperiod](https://www.adobe.com/sign.html#sign_free_trial) som gör att utvecklare kan testa signeringsprocessen både via instrumentpanelen och med ett lättanvänt REST-baserat API.
+Precis som med [!DNL Acrobat Services] har Acrobat Sign en [kostnadsfri provperiod](https://www.adobe.com/acrobat/business/sign.html#sign_free_trial) som gör att utvecklare kan testa signeringsprocessen både via instrumentpanelen och med ett lättanvänt REST-baserat API.
 
 ## Ett introduktionsscenario
 
@@ -192,7 +192,7 @@ I den här koden tas de två PDF, de slås samman och resultatet sparas i ett ny
 
 ## Signeringsprocessen
 
-I det sista steget i registreringsprocessen måste medarbetaren signera ett avtal som anger att de har läst och godkänner alla policyer som definieras i. [Acrobat Sign](https://www.adobe.com/se/sign.html) stöder många olika arbetsflöden och integreringar, inklusive ett automatiserat arbetsflöde via ett [API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html). I stort sett kan den sista delen av scenariot kompletteras på följande sätt:
+I det sista steget i registreringsprocessen måste medarbetaren signera ett avtal som anger att de har läst och godkänner alla policyer som definieras i. [Acrobat Sign](https://www.adobe.com/acrobat/business/sign.html) stöder många olika arbetsflöden och integreringar, inklusive ett automatiserat arbetsflöde via ett [API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html). I stort sett kan den sista delen av scenariot kompletteras på följande sätt:
 
 Designa först dokumentet som innehåller formuläret som behöver signeras. Det finns flera sätt att göra det på, bland annat en visuell bild som är utformad på Adobe Sign användarkontrollpanel. Ett annat alternativ är att använda Word-tillägget för dokumentgenerering för att infoga taggarna åt dig. I det här exemplet begärs en signatur och ett datum.
 
@@ -206,6 +206,6 @@ Mallen kan överföras till Acrobat Sign-kontrollpanelen och sedan användas fö
 
 ## Upplev det själv
 
-Allt som beskrivs i den här artikeln kan testas just nu. [!DNL Adobe Acrobat Services] API [gratis provperiod](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) ger dig för närvarande 1 000 kostnadsfria förfrågningar under en sexmånadersperiod. Med Acrobat Sign [kostnadsfria testversion](https://www.adobe.com/sign.html#sign_free_trial) kan du skicka vattenstämplade avtal för teständamål.
+Allt som beskrivs i den här artikeln kan testas just nu. [!DNL Adobe Acrobat Services] API [gratis provperiod](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) ger dig för närvarande 1 000 kostnadsfria förfrågningar under en sexmånadersperiod. Med Acrobat Sign [kostnadsfria testversion](https://www.adobe.com/acrobat/business/sign.html#sign_free_trial) kan du skicka vattenstämplade avtal för teständamål.
 
-Har du några frågor? [Supportforumet](https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK) övervakas dagligen av Adobe-utvecklare och supportpersoner. Om du vill få mer inspiration kan du titta på nästa [Paper Clips](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)-avsnitt. Det hålls regelbundna livemöten med nyheter, demos och samtal med kunder.
+Har du några frågor? [Supportforumet](https://community.adobe.com/t5/acrobat-services-api/ct-p/ct-Document-Cloud-SDK) övervakas dagligen av Adobe-utvecklare och supportpersoner. Om du vill få mer inspiration kan du titta på nästa [Paper Clips](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)-avsnitt. Det hålls regelbundna livemöten med nyheter, demos och samtal med kunder.

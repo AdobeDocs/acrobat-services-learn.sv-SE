@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-9247
 thumbnail: KT-9247.jpg
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: 0f62890207722245f33be41ad4c77ba68bf7a0fc
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%

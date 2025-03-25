@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8090
 thumbnail: KT-8090.jpg
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 0%
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 Elektroniska dokument finns överallt - faktum är att det förmodligen finns [ biljoner PDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world) globalt, och det antalet stiger varje dag. Genom att bädda in ett PDF-visningsprogram på dina webbsidor kan användarna visa dokument utan att designa om HTML och CSS-kod eller hindra åtkomsten till webbplatsen.
 
-Låt oss utforska ett populärt scenario. Ett företag publicerar [informationsdokument på sin webbplats](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)
+Låt oss utforska ett populärt scenario. Ett företag publicerar [informationsdokument på sin webbplats](https://developer.adobe.com/document-services/use-cases/content-publishing/digital-content-publishing)
 för att tillhandahålla kontext för deras program och tjänster. Webbplatsens marknadsförare vill bättre förstå hur användare interagerar med sitt PDF-baserade innehåll och införliva det med sin webbsida och varumärke. De har bestämt sig för att publicera informationsdokumenten som [grupperat innehåll](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.), vilket styr vem som kan hämta dem.
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudiekursen får du lära dig hur du visar inbäddade PDF-dokument på webbsidor med [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html), som är kostnadsfritt och enkelt att använda. I dessa exempel används JavaScript, Node.js, Express.js, HTML och CSS. Du kan se den fullständiga projektkoden på [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1).
+I den här praktiska självstudiekursen får du lära dig hur du visar inbäddade PDF-dokument på webbsidor med [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed), som är kostnadsfritt och enkelt att använda. I dessa exempel används JavaScript, Node.js, Express.js, HTML och CSS. Du kan se den fullständiga projektkoden på [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1).
 
 ## Relevanta API:er och resurser
 
@@ -126,7 +126,7 @@ Kör nu om npm start och öppna <http://localhost:3000> för att visa samlingen 
 
 ![Skärmbild av miniatyrbilder för informationsdokument](assets/ddp_4.png)
 
-I de följande avsnitten förbättrar du webbplatsen och använder [PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) för att visa PDF-dokumenten på webbsidan. PDF Embed API är gratis att använda - du behöver bara få en API-uppgift.
+I de följande avsnitten förbättrar du webbplatsen och använder [PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed) för att visa PDF-dokumenten på webbsidan. PDF Embed API är gratis att använda - du behöver bara få en API-uppgift.
 
 ## Hämta en PDF Embed API-autentiseringsuppgift
 
@@ -547,16 +547,16 @@ Kör nu programmet igen och öppna webbläsarens utvecklarverktyg för att se h�
 
 ![Skärmbild av kod](assets/ddp_16.png)
 
-Du kan skicka dessa data till [Adobe Analytics](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view) eller andra analysverktyg.
+Du kan skicka dessa data till [Adobe Analytics](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api) eller andra analysverktyg.
 
 ## Nästa steg
 
 [!DNL Acrobat Services] API:er hjälper utvecklare att enkelt lösa problem med digital publicering genom ett arbetsflöde som är centrerat kring PDF. Du har sett hur du skapar en webbapp med exempelnoder för att visa en samling informationsdokument. Sedan skaffar du en [kostnadsfri API-uppgift](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) och skapar begränsad åtkomst till informationsdokumenten, som kan visas i ett av fyra [inbäddningslägen](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
 
-Om du samlar ihop det här arbetsflödet kan [den hypotetiska marknadsföraren](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html) samla in kontaktinformation om kundämnen i utbyte mot nedladdningar av faktablad och visa statistik om vem som interagerar med PDF. Du kan infoga dessa funktioner på din webbplats för att driva och övervaka användarengagemang.
+Om du samlar ihop det här arbetsflödet kan [den hypotetiska marknadsföraren](https://developer.adobe.com/document-services/use-cases/content-publishing/digital-content-publishing) samla in kontaktinformation om kundämnen i utbyte mot nedladdningar av faktablad och visa statistik om vem som interagerar med PDF. Du kan infoga dessa funktioner på din webbplats för att driva och övervaka användarengagemang.
 
 Om du är Angular- eller React-utvecklare kan du prova [ytterligare exempel](https://github.com/adobe/pdf-embed-api-samples) om du vill integrera PDF Embed API med React- och Angular-projekt.
 
-Med Adobe kan du bygga upp en komplett kundupplevelse med nyskapande lösningar. Ta en titt på [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) kostnadsfritt. Om du vill utforska vad mer du kan göra kan du prova Adobe PDF Services API med [pay-as-you-gopr](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)[isning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
+Med Adobe kan du bygga upp en komplett kundupplevelse med nyskapande lösningar. Ta en titt på [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/) kostnadsfritt. Om du vill utforska vad mer du kan göra kan du prova Adobe PDF Services API med [pay-as-you-gopr](https://developer.adobe.com/document-services/pricing/main)[isning](https://developer.adobe.com/document-services/pricing/main).
 
 [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) med [!DNL Adobe Acrobat Services] API:er i dag.

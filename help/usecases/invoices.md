@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8145
 thumbnail: KT-8145.jpg
 exl-id: 5871ef8d-be9c-459f-9660-e2c9230a6ceb
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Det är fantastiskt när verksamheten blomstrar men produktiviteten blir lidande när det är dags att förbereda alla dessa fakturor. Att skapa fakturor manuellt är tidskrävande, plus att du löper risken att göra ett fel, potentiellt förlora pengar eller reta upp en kund med ett felaktigt belopp.
 
-Tänk dig Danielle som till exempel arbetar på [redovisningsavdelningen](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html) [på ett medicinskt leverantörsföretag](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html). Det är slutet av månaden, så hon hämtar information från flera olika system, dubbelkontrollerar att den är korrekt och formaterar fakturorna. Efter allt det arbetet är hon äntligen redo att konvertera dokumenten till PDF (så att alla kan visa dem utan att köpa specifik programvara) och skicka en personlig faktura till varje kund.
+Tänk dig Danielle som till exempel arbetar på [redovisningsavdelningen](https://developer.adobe.com/document-services/use-cases/financial/invoices) [på ett medicinskt leverantörsföretag](https://developer.adobe.com/document-services/use-cases/financial/invoices). Det är slutet av månaden, så hon hämtar information från flera olika system, dubbelkontrollerar att den är korrekt och formaterar fakturorna. Efter allt det arbetet är hon äntligen redo att konvertera dokumenten till PDF (så att alla kan visa dem utan att köpa specifik programvara) och skicka en personlig faktura till varje kund.
 
 Även när månadsfaktureringen är klar kan Danielle inte komma undan fakturorna. Vissa kunder har faktureringscykler som inte är månatliga, så hon skapar alltid en faktura åt någon. Ibland redigerar en kund sin faktura och betalar för lite. Danielle lägger sedan tid på att felsöka felmatchningen av fakturan. I den här takten måste hon anlita en assistent för att hålla jämna steg med allt arbete!
 
@@ -37,9 +37,9 @@ Den fullständiga koden för projektet är [tillgänglig på GitHub](https://git
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [Adobe-dokumentgenererings-API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* [Adobe-dokumentgenererings-API](https://developer.adobe.com/document-services/apis/doc-generation)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [Projektkod](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-invoice-generation)
 
@@ -107,7 +107,7 @@ Det här fakturaexemplet innehåller kundinformation, beställda produkter och d
 
 Använd Adobe PDF Services Node.js software development kit (SDK) för att kombinera Microsoft Word- och JSON-dokumenten. Skapa ett Node.js-program för att skapa fakturan med hjälp av dokumentgenererings-API:t.
 
-PDF Services API innehåller dokumentgenereringstjänsten, så du kan använda samma autentiseringsuppgifter för båda. Utnyttja en [sex månaders kostnadsfri testperiod](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) och betala sedan bara $0,05 per dokumenttransaktion.
+PDF Services API innehåller dokumentgenereringstjänsten, så du kan använda samma autentiseringsuppgifter för båda. Utnyttja en [sex månaders kostnadsfri testperiod](https://developer.adobe.com/document-services/pricing/main) och betala sedan bara $0,05 per dokumenttransaktion.
 
 Här är koden för att slå samman PDF:
 
@@ -224,11 +224,11 @@ När du är klar med fakturan kanske du vill skicka den till klienten automatisk
 
 ## Nästa steg
 
-I den här praktiska självstudiekursen har du skapat en enkel app för att hjälpa Danielle med redovisning med [fakturering](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html). Med hjälp av PDF Services API och Document Generation SDK har du fyllt i en Microsoft Word-mall med kundorderinformation från ett JSON-dokument, och skapat en PDF-faktura. Sedan lösenordsskyddade du varje dokument med lösenordsskyddstjänster av [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html).
+I den här praktiska självstudiekursen har du skapat en enkel app för att hjälpa Danielle med redovisning med [fakturering](https://developer.adobe.com/document-services/use-cases/financial/invoices). Med hjälp av PDF Services API och Document Generation SDK har du fyllt i en Microsoft Word-mall med kundorderinformation från ett JSON-dokument, och skapat en PDF-faktura. Sedan lösenordsskyddade du varje dokument med lösenordsskyddstjänster av [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html).
 
 Eftersom Danielle kan generera fakturor automatiskt och inte behöver oroa sig för kunder som redigerar sina fakturor, behöver hon inte anlita en assistent för att hjälpa till med allt manuellt arbete. Hon kan använda sin extra tid till att hitta kostnadsbesparingar i leverantörsreskontrafilerna.
 
-Nu när du har sett hur enkelt det är kan du utöka den här appen med andra Adobe-verktyg för att bädda in fakturor på din webbplats. Detta gör till exempel att kunderna kan se sina fakturor eller saldon när som helst. [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) är kostnadsfritt att använda. Du kan till och med gå vidare till personalavdelningen eller försäljningsavdelningen, hjälpa till att automatisera deras avtal och samla in elektroniska signaturer.
+Nu när du har sett hur enkelt det är kan du utöka den här appen med andra Adobe-verktyg för att bädda in fakturor på din webbplats. Detta gör till exempel att kunderna kan se sina fakturor eller saldon när som helst. [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed) är kostnadsfritt att använda. Du kan till och med gå vidare till personalavdelningen eller försäljningsavdelningen, hjälpa till att automatisera deras avtal och samla in elektroniska signaturer.
 
-Om du vill utforska alla möjligheter och börja skapa en egen praktisk app skapar du ett kostnadsfritt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-konto så att du kommer igång i dag. Testa kostnadsfritt i sex månader och sedan [betala löpande](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)
+Om du vill utforska alla möjligheter och börja skapa en egen praktisk app skapar du ett kostnadsfritt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-konto så att du kommer igång i dag. Testa kostnadsfritt i sex månader och sedan [betala löpande](https://developer.adobe.com/document-services/pricing/main)
 endast $0,05 per dokumenttransaktion när företaget skalas.

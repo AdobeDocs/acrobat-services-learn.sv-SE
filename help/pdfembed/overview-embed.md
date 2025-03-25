@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8117
 thumbnail: KT-8117.jpg
 exl-id: 2fef89cf-640d-4ff4-9282-070bce8bba78
-source-git-commit: 794a87a86a5e75803f86faa5db3fcdce2bcec79a
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%

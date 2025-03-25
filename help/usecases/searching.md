@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8095
 thumbnail: KT-8095.jpg
 exl-id: a22230b5-1ff2-4870-84da-f06a904c99e1
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1298'
 ht-degree: 0%
@@ -135,7 +135,7 @@ Dessa kodfragment installerar programberoenden, inklusive mallmotorn Handlebars 
 
 Dessa API:er automatiserar generering, manipulering och omvandling av PDF-innehåll genom en uppsättning molnbaserade webbtjänster.
 
-För att få autentiseringsuppgifterna måste du [registrera](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK) och slutföra arbetsflödet. PDF Embed API är gratis att använda. PDF Services API och Document Generation API är kostnadsfria i sex månader. När provperioden upphör kan du [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara $0,05 per dokumenttransaktion. Du betalar bara när företaget växer och bearbetar fler avtal.
+För att få autentiseringsuppgifterna måste du [registrera](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK) och slutföra arbetsflödet. PDF Embed API är gratis att använda. PDF Services API och Document Generation API är kostnadsfria i sex månader. När provperioden upphör kan du [betala per användning](https://developer.adobe.com/document-services/pricing/main) för bara $0,05 per dokumenttransaktion. Du betalar bara när företaget växer och bearbetar fler avtal.
 
 ![Skärmbild av att skapa autentiseringsuppgifter](assets/searching_1.png)
 
@@ -431,4 +431,4 @@ Att använda [!DNL Acrobat Services] för dokumenttransformering rekommenderas s
 Nu när du har en god förståelse för hur du använder [!DNL Acrobat Services] API:er kan du utveckla dina färdigheter med övning. Du kan klona databasen som används i den här självstudiekursen och experimentera med några av de kunskaper du just har lärt dig. Ännu bättre är att du kan försöka återskapa programmet samtidigt som du utforskar de obegränsade möjligheterna med [!DNL Acrobat Services] API:er.
 
 Är du redo att aktivera dokumentdelning och granskning i din egen app? Registrera dig för ditt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
-utvecklarkonto. Testa kostnadsfritt i sex månader och sedan [betala löpande](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion när företaget växer.
+utvecklarkonto. Testa kostnadsfritt i sex månader och sedan [betala löpande](https://developer.adobe.com/document-services/pricing/main) för bara \$0,05 per dokumenttransaktion när företaget växer.

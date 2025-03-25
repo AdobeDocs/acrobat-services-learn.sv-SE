@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10382
 thumbnail: KT-10382.jpg
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 1%
@@ -116,7 +116,7 @@ Enligt beskrivningen i början av den här självstudiekursen skapar du ett nytt
 
 Som skärmbilden ovan visar kan du antingen växla till ett arbetskonto eller konfigurera ett nytt organisationskonto. När du har gjort det kan du lägga till åtgärden Adobe PDF-tjänster.
 
-Du kan läsa mer om hur du skapar ditt första Microsoft Power Automate-flöde med [!DNL Adobe Acrobat Services] i [Skapa ditt första arbetsflöde i Microsoft Power Automate](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/create-workflow-power-automate.html).
+Du kan läsa mer om hur du skapar ditt första Microsoft Power Automate-flöde med [!DNL Adobe Acrobat Services] i [Skapa ditt första arbetsflöde i Microsoft Power Automate](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate).
 
 ## Ytterligare resurser
 

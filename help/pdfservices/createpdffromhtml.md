@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-6673
 thumbnail: KT-6673.jpg
 exl-id: 1bd01bb8-ca5e-4a4a-8646-3d97113e2c51
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 0%
@@ -106,11 +106,11 @@ Din PDF skapas på den plats som anges i utdata, vilket som standard är katalog
 
 PDF Services API [Dokumentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [Vanliga frågor](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) om API-frågor för PDF-tjänster
+* [Vanliga frågor](https://community.adobe.com/t5/contentarchivals/contentarchivedpage/message-uid/10726197) om API-frågor för PDF-tjänster
 
 * [Kontakta oss](https://www.adobe.com/go/pdftoolsapi_requestform) om du har frågor om licenser och priser
 
 * Relaterade artiklar:
-  [Det nya PDF Services API har ännu fler funktioner för dokumentarbetsflöden](https://community.adobe.com/t5/document-services-apis/new-pdf-tools-api-brings-more-capabilities-for-document-services/m-p/11294170)
+  [Det nya PDF Services API har ännu fler funktioner för dokumentarbetsflöden](https://community.adobe.com/t5/acrobat-services-api-discussions/new-pdf-tools-api-brings-more-capabilities-for-document-services/m-p/11294170)
 
   [Juli-utgåvan av [!DNL Adobe Acrobat Services]: PDF Embed- och PDF-tjänster](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)

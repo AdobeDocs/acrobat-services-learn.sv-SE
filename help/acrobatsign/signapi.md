@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8089
 thumbnail: KT-8089.jpg
 exl-id: ae1cd9db-9f00-4129-a2a1-ceff1c899a83
-source-git-commit: 2f01f306f5d13bfbaa61442e0e7a89537a62c33c
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1906'
 ht-degree: 0%
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 # Komma igång med Adobe Sign API
 
-[Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html) är ett bra sätt att förbättra hur du hanterar signerade avtal. Utvecklare kan enkelt integrera sina system med Sign API, som ger ett tillförlitligt och enkelt sätt att ladda upp dokument, skicka dem för signering, skicka påminnelser och samla in e-signaturer.
+[Acrobat Sign API](https://developer.adobe.com/adobesign-api/) är ett bra sätt att förbättra hur du hanterar signerade avtal. Utvecklare kan enkelt integrera sina system med Sign API, som ger ett tillförlitligt och enkelt sätt att ladda upp dokument, skicka dem för signering, skicka påminnelser och samla in e-signaturer.
 
 ## Vad du kan lära dig
 
-I den här praktiska självstudiekursen beskrivs hur utvecklare kan använda Sign API för att förbättra program och arbetsflöden som skapats med [!DNL Adobe Acrobat Services]. [!DNL Acrobat Services] innehåller [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html), [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) (kostnadsfritt) och [Adobe Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html).
+I den här praktiska självstudiekursen beskrivs hur utvecklare kan använda Sign API för att förbättra program och arbetsflöden som skapats med [!DNL Adobe Acrobat Services]. [!DNL Acrobat Services] innehåller [Adobe PDF Services API](https://developer.adobe.com/document-services/apis/pdf-services), [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/) (kostnadsfritt) och [Adobe Document Generation API](https://developer.adobe.com/document-services/apis/doc-generation).
 
-Lär dig mer specifikt hur du inkluderar Acrobat Sign API i programmet för att samla in signaturer och annan information, till exempel information om anställda i ett försäkringsformulär. Allmänna steg med förenklade HTTP-begäranden och -svar används. Du kan implementera de här förfrågningarna på ditt favoritspråk. Du kan skapa en PDF med en kombination av [[!DNL Acrobat Services] API:er](https://www.adobe.io/apis/documentcloud/dcsdk/), överföra den till Sign-API:et som ett [tillfälligt](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) dokument och begära slutanvändarsignaturer med avtalet eller [widgeten](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md).
+Lär dig mer specifikt hur du inkluderar Acrobat Sign API i programmet för att samla in signaturer och annan information, till exempel information om anställda i ett försäkringsformulär. Allmänna steg med förenklade HTTP-begäranden och -svar används. Du kan implementera de här förfrågningarna på ditt favoritspråk. Du kan skapa en PDF med en kombination av [[!DNL Acrobat Services] API:er](https://developer.adobe.com/document-services/homepage/), överföra den till Sign-API:et som ett [tillfälligt](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/overview/terminology.md) dokument och begära slutanvändarsignaturer med avtalet eller [widgeten](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/overview/terminology.md).
 
 ## Skapa ett PDF-dokument
 
-Börja med att skapa en Microsoft Word-mall och spara den som en PDF. Du kan också automatisera pipelinen med dokumentgenererings-API för att överföra en mall som har skapats i Word och sedan generera ett PDF-dokument. Dokumentgenererings-API:t ingår i [!DNL Acrobat Services], [kostnadsfritt i sex månader och sedan betala per användning för bara eller $0,05 per dokumenttransaktion](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
+Börja med att skapa en Microsoft Word-mall och spara den som en PDF. Du kan också automatisera pipelinen med dokumentgenererings-API för att överföra en mall som har skapats i Word och sedan generera ett PDF-dokument. Dokumentgenererings-API:t ingår i [!DNL Acrobat Services], [kostnadsfritt i sex månader och sedan betala per användning för bara eller $0,05 per dokumenttransaktion](https://developer.adobe.com/document-services/pricing/main).
 
 I det här exemplet är mallen bara ett enkelt dokument med några fält för undertecknare att fylla i. Namnge fälten nu och infoga sedan de faktiska fälten i den här självstudiekursen.
 
@@ -276,7 +276,7 @@ Som ett alternativ till webbformulär kan du skapa avtal. I följande avsnitt vi
 
 Om du skickar ett dokument till angivna mottagare för signering eller godkännande skapas ett avtal. Du kan spåra status och slutförande av ett avtal med API:er.
 
-Du kan skapa ett avtal med ett [tillfälligt dokument](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [biblioteksdokument](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md) eller URL. I det här exemplet baseras avtalet på `transientDocumentId`, precis som webbformuläret som skapades tidigare.
+Du kan skapa ett avtal med ett [tillfälligt dokument](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [biblioteksdokument](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md) eller URL. I det här exemplet baseras avtalet på `transientDocumentId`, precis som webbformuläret som skapades tidigare.
 
 ```
 POST /api/rest/v6/agreements HTTP/1.1
@@ -434,10 +434,10 @@ Company Name","CBJCHBCAABAA5Z84zy69q_Ilpuy5DzUAahVfcNZillDt"
 
 Med Acrobat Sign API kan du hantera dokument, webbformulär och avtal. De förenklade men kompletta arbetsflödena som skapas med hjälp av webbformulär och avtal görs på ett allmänt sätt som gör att utvecklare kan implementera dem på valfritt språk.
 
-Du hittar exempel på hur Sign API fungerar i [användarhandboken för utvecklare av API](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/api_usage.md) om du vill ha en översikt. Den här dokumentationen innehåller korta artiklar om många av de steg som beskrivs i artikeln samt andra relaterade ämnen.
+Du hittar exempel på hur Sign API fungerar i [användarhandboken för utvecklare av API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/api_usage.md) om du vill ha en översikt. Den här dokumentationen innehåller korta artiklar om många av de steg som beskrivs i artikeln samt andra relaterade ämnen.
 
-Acrobat Sign API finns tillgängligt via flera nivåer av [e-signeringsplaner för en eller flera användare](https://acrobat.adobe.com/se/sv/sign/pricing/plans.html), så att du kan välja en prismodell som passar dina behov bäst. Nu när du vet hur enkelt det är att införliva Sign API i dina appar kan du vara intresserad av andra funktioner som [Acrobat Sign Webhooks](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md), en push-baserad programmeringsmodell. I stället för att kräva att appen utför frekventa kontroller i Acrobat Sign-händelser kan du med webhookar registrera en HTTP-URL som Sign API kör en återanropsbegäran för POST för när en händelse inträffar. Webhookar möjliggör robust programmering genom att driva ditt program med realtids- och direktuppdateringar.
+Acrobat Sign API finns tillgängligt via flera nivåer av [e-signeringsplaner för en eller flera användare](https://acrobat.adobe.com/se/sv/sign/pricing/plans.html), så att du kan välja en prismodell som passar dina behov bäst. Nu när du vet hur enkelt det är att införliva Sign API i dina appar kan du vara intresserad av andra funktioner som [Acrobat Sign Webhooks](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/webhooks.md), en push-baserad programmeringsmodell. I stället för att kräva att appen utför frekventa kontroller i Acrobat Sign-händelser kan du med webhookar registrera en HTTP-URL som Sign API kör en återanropsbegäran för POST för när en händelse inträffar. Webhookar möjliggör robust programmering genom att driva ditt program med realtids- och direktuppdateringar.
 
-Ta en titt på [fördelningspriset](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html), när din sex månader långa kostnadsfria provperiod på Adobe PDF Services API tar slut, och det kostnadsfria Adobe PDF Embed API.
+Ta en titt på [fördelningspriset](https://developer.adobe.com/document-services/pricing/main), när din sex månader långa kostnadsfria provperiod på Adobe PDF Services API tar slut, och det kostnadsfria Adobe PDF Embed API.
 
 Kom igång med [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) om du vill lägga till spännande funktioner som automatiskt dokumentskapande och dokumentsignering i programmet.

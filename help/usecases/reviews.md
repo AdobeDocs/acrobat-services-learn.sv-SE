@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8094
 thumbnail: KT-8094.jpg
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ![Banderoll för användningsfall](assets/UseCaseReviewsHero.jpg)
 
-Samarbete mellan team på distans blev nödvändigt för många företag under covid-19-pandemin. [Att dela och granska digitala dokument](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) innebär en rad utmaningar för team och resurser med flera funktioner.
+Samarbete mellan team på distans blev nödvändigt för många företag under covid-19-pandemin. [Att dela och granska digitala dokument](https://developer.adobe.com/document-services/use-cases/collaboration/review-and-approval) innebär en rad utmaningar för team och resurser med flera funktioner.
 
 Utmaningarna omfattar delning av dokument i olika filformat, effektiv granskning och kommentarer av innehållet samt synkronisering med de senaste redigeringarna. [!DNL Adobe Acrobat Services] API:er har utformats för att programutvecklare ska kunna lösa dessa utmaningar för sina användare.
 
@@ -51,7 +51,7 @@ Programmet har följande funktioner:
 
 ## Skapa API-inloggningsuppgifter för Adobe
 
-Innan du startar koden måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API och Adobe PDF Services API. PDF Embed API är gratis att använda. PDF Services API kan användas kostnadsfritt i sex månader. Sedan kan du växla till en [förskottsbetalningsplan](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) med bara \$0,05 per dokumenttransaktion.
+Innan du startar koden måste du [skapa autentiseringsuppgifter](https://www.adobe.com/go/dcsdks_credentials) för Adobe PDF Embed API och Adobe PDF Services API. PDF Embed API är gratis att använda. PDF Services API kan användas kostnadsfritt i sex månader. Sedan kan du växla till en [förskottsbetalningsplan](https://developer.adobe.com/document-services/pricing/main) med bara \$0,05 per dokumenttransaktion.
 
 När du skapar autentiseringsuppgifter för PDF Services API väljer du alternativet **Skapa personligt kodexempel** och väljer Node.js för språket. Spara ZIP-filen och extrahera pdftools-api-credentials.json och private.key i rotkatalogen i Node.js Express-projektet.
 
@@ -101,7 +101,7 @@ Nu är du redo att arbeta med [!DNL Acrobat Services] API:er.
 
 För den första delen av dokumentarbetsflödet måste slutanvändaren ladda upp dokument för att dela dem. För att aktivera detta lägger du till en överföringsfunktion och konsoliderar de olika dokumentfilformaten till PDF för att förbereda dem för granskningsprocessen.
 
-Börja med att skapa en funktion för att konvertera dokument till PDF baserat på [exempelutdraget för PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html). I det här exemplet visas även utdrag för många andra viktiga funktioner, inklusive optisk teckenläsning (OCR), lösenordsskydd och borttagning samt komprimering.
+Börja med att skapa en funktion för att konvertera dokument till PDF baserat på [exempelutdraget för PDF Services API](https://developer.adobe.com/document-services/apis/pdf-services). I det här exemplet visas även utdrag för många andra viktiga funktioner, inklusive optisk teckenläsning (OCR), lösenordsskydd och borttagning samt komprimering.
 
 ```
 function fileToPDF( filename, outputFilename, callback ) {
@@ -443,8 +443,8 @@ Slutligen lägger du till en länk i huvudwebbsidan index.html till denna /final
 
 ## Nästa steg
 
-Den här praktiska självstudiekursen visar hur [!DNL Acrobat Services] API:er integrerar ett [arbetsflöde för dokumentdelning och granskning](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) i ett webbprogram. Programmet gör det möjligt för distansarbetare att dela filer och samarbeta med sina teammedlemmar, vilket är särskilt användbart för anställda och entreprenörer som arbetar hemifrån.
+Den här praktiska självstudiekursen visar hur [!DNL Acrobat Services] API:er integrerar ett [arbetsflöde för dokumentdelning och granskning](https://developer.adobe.com/document-services/use-cases/collaboration/review-and-approval) i ett webbprogram. Programmet gör det möjligt för distansarbetare att dela filer och samarbeta med sina teammedlemmar, vilket är särskilt användbart för anställda och entreprenörer som arbetar hemifrån.
 
 Du kan använda de här teknikerna för att samarbeta i din app eller utforska SDK-exempel för [PDF Services-noder](https://github.com/adobe/pdftools-node-sdk-samples) och [PDF Embed API-exempel](https://github.com/adobe/pdf-embed-api-samples) på GitHub och få inspiration om hur du kan använda Adobe API:er.
 
-Är du redo att aktivera dokumentdelning och granskning i din egen app? Registrera ditt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-utvecklarkonto. Få tillgång till Adobe PDF Embed utan kostnad och få en sex månader lång kostnadsfri provperiod på de andra API:erna. Efter testperioden kan du [betala per användning](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) för bara \$0,05 per dokumenttransaktion allt eftersom verksamheten växer.
+Är du redo att aktivera dokumentdelning och granskning i din egen app? Registrera ditt [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)-utvecklarkonto. Få tillgång till Adobe PDF Embed utan kostnad och få en sex månader lång kostnadsfri provperiod på de andra API:erna. Efter testperioden kan du [betala per användning](https://developer.adobe.com/document-services/pricing/main) för bara \$0,05 per dokumenttransaktion allt eftersom verksamheten växer.

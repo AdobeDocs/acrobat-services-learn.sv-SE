@@ -7,7 +7,7 @@ level: Beginner, Intermediate, Experienced
 type: Tutorial
 jira: KT-15327
 exl-id: dfd018a7-8e1f-4c00-9e1f-6b7b8435fbfa
-source-git-commit: 0f62890207722245f33be41ad4c77ba68bf7a0fc
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%

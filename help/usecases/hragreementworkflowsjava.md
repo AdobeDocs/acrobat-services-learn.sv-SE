@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7474
 thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
-source-git-commit: ad13c28a0c218fc0027afc02445e5ed532c2340d
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1777'
 ht-degree: 0%
@@ -29,7 +29,7 @@ I den här praktiska självstudiekursen får du lära dig hur du implementerar e
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [Projektkod](https://github.com/dawidborycki/adobe-sign)
 
@@ -392,9 +392,9 @@ Du måste utföra flera steg för att få en auktoriseringstoken:
 
 Registrera först ett [utvecklarkonto](https://acrobat.adobe.com/se/sv/sign/developer-form.html).
 
-Skapa CLIENT-programmet i [Adobe Sign-portalen](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
+Skapa CLIENT-programmet i [Adobe Sign-portalen](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 
-Konfigurera OAuth för programmet enligt beskrivningen [här](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) och [här](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp). Anteckna din klientidentifierare och klienthemlighet. Sedan kan du använda `https://www.google.com` som omdirigerings-URI och följande omfattningar:
+Konfigurera OAuth för programmet enligt beskrivningen [här](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) och [här](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp). Anteckna din klientidentifierare och klienthemlighet. Sedan kan du använda `https://www.google.com` som omdirigerings-URI och följande omfattningar:
 
 * user_login:self
 
@@ -602,4 +602,4 @@ Som du kan se kan du med hjälp av snabbstarterna implementera ett enkelt webbfo
 
 Om du tar exemplet längre kan du skapa formulär som mottagare kan signera på distans och på ett säkert sätt. När du behöver flera signaturer kan du till och med automatiskt dirigera formulär till en rad personer i ett arbetsflöde. Introduktionen av dina anställda har förbättrats och din HR-avdelning kommer att älska dig.
 
-Ta en titt på [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) för att lägga till en mängd PDF-funktioner till dina program i dag.
+Ta en titt på [[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/) för att lägga till en mängd PDF-funktioner till dina program i dag.

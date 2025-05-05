@@ -557,6 +557,6 @@ Om du samlar ihop det här arbetsflödet kan [den hypotetiska marknadsföraren](
 
 Om du är Angular- eller React-utvecklare kan du prova [ytterligare exempel](https://github.com/adobe/pdf-embed-api-samples) om du vill integrera PDF Embed API med React- och Angular-projekt.
 
-Med Adobe kan du bygga upp en komplett kundupplevelse med nyskapande lösningar. Ta en titt på [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/) kostnadsfritt. Om du vill utforska vad mer du kan göra kan du prova Adobe PDF Services API med [pay-as-you-gopr](https://developer.adobe.com/document-services/pricing/main)[isning](https://developer.adobe.com/document-services/pricing/main).
+Med Adobe kan du bygga upp en komplett kundupplevelse med nyskapande lösningar. Ta en titt på [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/) kostnadsfritt. Om du vill utforska vad mer du kan göra kan du prova Adobe PDF Services API med [pay-as-you-gopr](https://developer.adobe.com/document-services/pricing/main) [isning](https://developer.adobe.com/document-services/pricing/main).
 
 [Kom igång](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) med [!DNL Adobe Acrobat Services] API:er i dag.

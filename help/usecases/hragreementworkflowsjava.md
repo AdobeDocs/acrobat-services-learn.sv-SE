@@ -35,7 +35,7 @@ I den här praktiska självstudiekursen får du lära dig hur du implementerar e
 
 ## Genererar API-inloggningsuppgifter
 
-Börja med att registrera dig för den kostnadsfria testversionen av Adobe PDF Services API. Gå till webbplatsen [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) och klicka på knappen *Kom igång* under *Skapa nya autentiseringsuppgifter*. Den kostnadsfria testversionen innehåller 1 000 dokumenttransaktioner som kan användas under sex månader. På nästa sida (se nedan) väljer du tjänsten (PDF Services API), anger inloggningsnamnet (till exempel HRDocumentWFCredentials) och anger en beskrivning.
+Börja med att registrera dig för den kostnadsfria testversionen av Adobe PDF Services API. Gå till webbplatsen [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [&#128279;](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) och klicka på knappen *Kom igång* under *Skapa nya autentiseringsuppgifter*. Den kostnadsfria testversionen innehåller 1 000 dokumenttransaktioner som kan användas under sex månader. På nästa sida (se nedan) väljer du tjänsten (PDF Services API), anger inloggningsnamnet (till exempel HRDocumentWFCredentials) och anger en beskrivning.
 
 Välj språk (Java i det här exemplet) och markera *Skapa personliga kodexempel*. Det sista steget säkerställer att kodexempel redan innehåller den förifyllda filen pdftools-api-credentials.json som du använder tillsammans med den privata nyckeln för att autentisera appen i API:et.
 

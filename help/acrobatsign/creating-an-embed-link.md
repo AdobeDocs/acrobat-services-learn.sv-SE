@@ -23,4 +23,4 @@ Lär dig hur du skapar en inbäddningslänk för OAuth, som är den metod som pr
 >
 >Den här självstudiekursen är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
 
->[!VIDEO](https://video.tv.adobe.com/v/347349?hidetitle=true){trancript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3445412?hidetitle=true&captions=swe){trancript=true}

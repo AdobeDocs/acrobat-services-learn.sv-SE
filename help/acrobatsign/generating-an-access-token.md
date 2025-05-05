@@ -23,4 +23,4 @@ Lär dig hur du genererar en åtkomsttoken som kan användas med Acrobat Sign AP
 >
 >Den här självstudiekursen är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
 
->[!VIDEO](https://video.tv.adobe.com/v/347350?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3444193?hidetitle=true&captions=swe)

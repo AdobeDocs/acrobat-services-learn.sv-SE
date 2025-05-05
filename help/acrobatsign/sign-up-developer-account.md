@@ -23,4 +23,4 @@ Lär dig registrera ett utvecklarkonto för Acrobat Sign som är fullt aktiverat
 >
 >Den här självstudiekursen är särskilt utformad för OEM-partners som skapar och bäddar in en signeringsprocess i sina program.
 
->[!VIDEO](https://video.tv.adobe.com/v/347347?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3445922?hidetitle=true&captions=swe)

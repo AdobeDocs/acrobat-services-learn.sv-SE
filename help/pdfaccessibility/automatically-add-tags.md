@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig tagga automatiskt för tillgänglighet i skala med AI. Märkning minskar automatiskt den tid och kostnad som krävs för att uppfylla kraven.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428310?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3446263?hidetitle=true&captions=swe)

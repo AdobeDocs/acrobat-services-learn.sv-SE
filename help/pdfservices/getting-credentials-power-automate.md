@@ -116,7 +116,7 @@ Enligt beskrivningen i början av den här självstudiekursen skapar du ett nytt
 
 Som skärmbilden ovan visar kan du antingen växla till ett arbetskonto eller konfigurera ett nytt organisationskonto. När du har gjort det kan du lägga till åtgärden Adobe PDF-tjänster.
 
-Du kan läsa mer om hur du skapar ditt första Microsoft Power Automate-flöde med [!DNL Adobe Acrobat Services] i [Skapa ditt första arbetsflöde i Microsoft Power Automate](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate).
+Du kan läsa mer om hur du skapar ditt första Microsoft Power Automate-flöde med [!DNL Adobe Acrobat Services] i [Skapa ditt första arbetsflöde i Microsoft Power Automate](https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate).
 
 ## Ytterligare resurser
 

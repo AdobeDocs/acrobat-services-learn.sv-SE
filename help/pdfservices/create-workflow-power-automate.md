@@ -31,7 +31,7 @@ I den här praktiska självstudien lär du dig att:
 ### Vad du behöver
 
 * **Autentiseringsuppgifter för provperiod eller produktion för Adobe PDF-tjänster**
-Läs mer om hur du hämtar och konfigurerar autentiseringsuppgifter i Microsoft Power Automate [här](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate).
+Läs mer om hur du hämtar och konfigurerar autentiseringsuppgifter i Microsoft Power Automate [här](https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate).
 * **Microsoft Power Automate med premiumanslutningar**
 Lär dig kontrollera licensnivån för Power Automate [här](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types).
 * **OneDrive**
@@ -46,7 +46,7 @@ Det finns två [exempelfiler](assets/sample-assets.zip) som du måste packa upp 
 
 ### Hämtar autentiseringsuppgifter
 
-För att slutföra den här självstudiekursen behöver du dina inloggningsuppgifter som redan har konfigurerats i Microsoft Power Automate för Adobe PDF-tjänster. Om du inte har slutfört det här steget kan du läsa [anvisningarna här](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate).
+För att slutföra den här självstudiekursen behöver du dina inloggningsuppgifter som redan har konfigurerats i Microsoft Power Automate för Adobe PDF-tjänster. Om du inte har slutfört det här steget kan du läsa [anvisningarna här](https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate).
 
 ## Del 1: Skapa nytt flöde och konvertera Word till PDF
 

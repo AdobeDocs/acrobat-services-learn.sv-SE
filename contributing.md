@@ -18,7 +18,7 @@ Detta projekt ansluter sig till Adobe [uppförandekod](code-of-conduct.md). Geno
 
 ## Dokumentation för Bidragsgivarguiden
 
-Se [Bidragsgivarguide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Se [Bidragsgivarguide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
 
 ## Har du frågor?
 
@@ -44,4 +44,4 @@ Vi älskar bidrag från vår gemenskap! Om du vill gå ett steg längre än att 
 
 ## Säkerhetsproblem
 
-Säkerhetsproblem bör inte rapporteras i den här ärendespåraren. I stället [skicka ett problem till våra säkerhetsexperter](https://helpx.adobe.com/security/alertus.html)
+Säkerhetsproblem bör inte rapporteras i den här ärendespåraren. I stället [skicka ett problem till våra säkerhetsexperter](https://helpx.adobe.com/se/security/alertus.html)

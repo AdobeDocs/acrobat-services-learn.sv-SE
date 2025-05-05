@@ -29,11 +29,11 @@ Med dokumentgenererings-API:t skapas PDF- och Word-dokument från Word-mallar oc
 <!-- Comment -->
 <!-- CARDS
 
-* https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen
+* https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen
   {target = _self}
   {title = Automate document generation}
   {description = Learn how to automatically generate documents at scale}
-  {image = https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_120e532325e3fdc7f559ad9b446d9ec08c1e239a1.png?width=400&format=webply&optimize=medium}
+  {image = https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_120e532325e3fdc7f559ad9b446d9ec08c1e239a1.png?width=400&format=webply&optimize=medium}
   {cta = Watch}
 
 -->
@@ -45,8 +45,8 @@ Med dokumentgenererings-API:t skapas PDF- och Word-dokument från Word-mallar oc
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" title="Automatisera dokumentgenerering" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_120e532325e3fdc7f559ad9b446d9ec08c1e239a1.png?width=400&format=webply&optimize=medium" alt="Automatisera dokumentgenerering"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" title="Automatisera dokumentgenerering" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_120e532325e3fdc7f559ad9b446d9ec08c1e239a1.png?width=400&format=webply&optimize=medium" alt="Automatisera dokumentgenerering"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -54,11 +54,11 @@ Med dokumentgenererings-API:t skapas PDF- och Word-dokument från Word-mallar oc
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" title="Automatisera dokumentgenerering">Automatisera dokumentgenerering</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" title="Automatisera dokumentgenerering">Automatisera dokumentgenerering</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du automatiskt genererar dokument i stor skala</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>
@@ -77,8 +77,8 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeroverview" title="Översikt över taggen för dokumentgenerering i Adobe" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_17b19864efffdb1f8c54017812c7de662e17bf163.png?width=400&format=webply&optimize=medium" alt="Översikt över taggen för dokumentgenerering i Adobe"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeroverview" title="Översikt över taggen för dokumentgenerering i Adobe" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_17b19864efffdb1f8c54017812c7de662e17bf163.png?width=400&format=webply&optimize=medium" alt="Översikt över taggen för dokumentgenerering i Adobe"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -86,11 +86,11 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeroverview" target="_self" rel="referrer" title="Översikt över taggen för dokumentgenerering i Adobe">Översikt över taggen för dokumentgenerering i Adobe</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeroverview" target="_self" rel="referrer" title="Översikt över taggen för dokumentgenerering i Adobe">Översikt över taggen för dokumentgenerering i Adobe</a>
                     </p>
                     <p class="is-size-6">Få en översikt över taggen för dokumentgenerering i Adobe som är utformad för att användas med API:et för dokumentgenerering i Adobe</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeroverview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeroverview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>
@@ -100,8 +100,8 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddtexttags" title="Lägga till texttaggar" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_113bb0b6c3dfa1329810d3afbba3498af82c6c875.png?width=400&format=webply&optimize=medium" alt="Lägga till texttaggar"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddtexttags" title="Lägga till texttaggar" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_113bb0b6c3dfa1329810d3afbba3498af82c6c875.png?width=400&format=webply&optimize=medium" alt="Lägga till texttaggar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,11 +109,11 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddtexttags" target="_self" rel="referrer" title="Lägga till texttaggar">Lägga till texttaggar</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddtexttags" target="_self" rel="referrer" title="Lägga till texttaggar">Lägga till texttaggar</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du lägger till texttaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddtexttags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddtexttags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>
@@ -123,8 +123,8 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddimagetags" title="Lägga till bildtaggar" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_1095ed3adad9c9360bb3184dccc41a72a3da94edc.png?width=400&format=webply&optimize=medium" alt="Lägga till bildtaggar"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddimagetags" title="Lägga till bildtaggar" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_1095ed3adad9c9360bb3184dccc41a72a3da94edc.png?width=400&format=webply&optimize=medium" alt="Lägga till bildtaggar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -132,11 +132,11 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddimagetags" target="_self" rel="referrer" title="Lägga till bildtaggar">Lägga till bildtaggar</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddimagetags" target="_self" rel="referrer" title="Lägga till bildtaggar">Lägga till bildtaggar</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du lägger till bildtaggar i Microsoft Word-mallar med taggen för att generera dokument i Adobe för att skicka bilder till dokument dynamiskt</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddimagetags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggeraddimagetags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>
@@ -146,8 +146,8 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggertables" title="Lägga till tabeller och listtaggar" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_1c2cc8e4bf3a85a977104a3d94073c37b93dcfdf9.png?width=400&format=webply&optimize=medium" alt="Lägga till tabeller och listtaggar"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggertables" title="Lägga till tabeller och listtaggar" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_1c2cc8e4bf3a85a977104a3d94073c37b93dcfdf9.png?width=400&format=webply&optimize=medium" alt="Lägga till tabeller och listtaggar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,11 +155,11 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggertables" target="_self" rel="referrer" title="Lägga till tabeller och listtaggar">Lägga till tabeller och listtaggar</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggertables" target="_self" rel="referrer" title="Lägga till tabeller och listtaggar">Lägga till tabeller och listtaggar</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du lägger till tabeller och listtaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att lägga till tabell- eller listrader dynamiskt baserat på data</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggertables" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggertables" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>
@@ -169,8 +169,8 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggercalculations" title="Ställa in numeriska beräkningstaggar" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_1a64d90689430bd8a1f7a272a66f006f0808ab6cf.png?width=400&format=webply&optimize=medium" alt="Ställa in numeriska beräkningstaggar"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggercalculations" title="Ställa in numeriska beräkningstaggar" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_1a64d90689430bd8a1f7a272a66f006f0808ab6cf.png?width=400&format=webply&optimize=medium" alt="Ställa in numeriska beräkningstaggar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -178,11 +178,11 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggercalculations" target="_self" rel="referrer" title="Ställa in numeriska beräkningstaggar">Ställer in numeriska beräkningstaggar</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggercalculations" target="_self" rel="referrer" title="Ställa in numeriska beräkningstaggar">Ställer in numeriska beräkningstaggar</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du ställer in numeriska beräkningstaggar i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att beräkna aggregeringar eller aritmetiska datavärden</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggercalculations" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggercalculations" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>
@@ -192,8 +192,8 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggerconditional" title="Ange villkorligt innehåll" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_145cebc42cffee358ed1beffcd5015ecb595fc82a.png?width=400&format=webply&optimize=medium" alt="Ange villkorligt innehåll"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggerconditional" title="Ange villkorligt innehåll" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/media_145cebc42cffee358ed1beffcd5015ecb595fc82a.png?width=400&format=webply&optimize=medium" alt="Ange villkorligt innehåll"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -201,11 +201,11 @@ Dokumentgenererings-API:t accepterar en dokumentmall (med malltaggar) tillsamman
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggerconditional" target="_self" rel="referrer" title="Ange villkorligt innehåll">Ange villkorsstyrt innehåll</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggerconditional" target="_self" rel="referrer" title="Ange villkorligt innehåll">Ange villkorsstyrt innehåll</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du ställer in avsnitt i Microsoft Word-mallar med taggen för dokumentgenerering i Adobe för att dynamiskt inkludera eller exkludera avsnitt i ett dokument baserat på data</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggerconditional" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/docgen/docgentemplates/taggerconditional" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>

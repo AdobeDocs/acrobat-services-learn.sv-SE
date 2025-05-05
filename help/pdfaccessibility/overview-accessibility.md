@@ -21,11 +21,11 @@ Detta AI-drivna API taggar automatiskt tabeller, stycken, listor, rubriker och a
 <!-- Comment -->
 <!-- CARDS
 
-* https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags
+* https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags
   {target = _self}
   {title = Automatically tag documents for accessibility}
   {description = Learn how to automatically generate documents at scale}
-  {image = https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium}
+  {image = https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium}
   {cta = Watch}
 
 -->
@@ -37,8 +37,8 @@ Detta AI-drivna API taggar automatiskt tabeller, stycken, listor, rubriker och a
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" title="Tagga dokument automatiskt för tillgänglighet" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium" alt="Tagga dokument automatiskt för tillgänglighet"
+                    <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" title="Tagga dokument automatiskt för tillgänglighet" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium" alt="Tagga dokument automatiskt för tillgänglighet"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -46,11 +46,11 @@ Detta AI-drivna API taggar automatiskt tabeller, stycken, listor, rubriker och a
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" title="Tagga dokument automatiskt för tillgänglighet">Tagga dokument automatiskt för tillgänglighet</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" title="Tagga dokument automatiskt för tillgänglighet">Tagga dokument automatiskt för tillgänglighet</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du automatiskt genererar dokument i stor skala</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Titta</span>
                 </a>
             </div>

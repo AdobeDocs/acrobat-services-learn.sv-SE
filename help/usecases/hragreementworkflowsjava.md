@@ -422,7 +422,7 @@ https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobes
 
 Notera värdena som anges för \&lt;YOUR_CODE\> och api_access_point.
 
-Om du vill skicka en begäran om HTTP-POST som tillhandahåller åtkomsttoken ska du använda värdena client ID, \&lt;YOUR_CODE\> och api_access_point. Du kan använda [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html) eller cURL:
+Om du vill skicka en begäran om HTTP-POST som tillhandahåller åtkomsttoken ska du använda värdena client ID, \&lt;YOUR_CODE\> och api_access_point. Du kan använda [Postman](https://helpx.adobe.com/se/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html) eller cURL:
 
 ```
 curl --location --request POST "https://**api.eu1.adobesign.com**/oauth/token"

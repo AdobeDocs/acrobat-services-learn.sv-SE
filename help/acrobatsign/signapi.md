@@ -276,7 +276,7 @@ Som ett alternativ till webbformulär kan du skapa avtal. I följande avsnitt vi
 
 Om du skickar ett dokument till angivna mottagare för signering eller godkännande skapas ett avtal. Du kan spåra status och slutförande av ett avtal med API:er.
 
-Du kan skapa ett avtal med ett [tillfälligt dokument](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [biblioteksdokument](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md) eller URL. I det här exemplet baseras avtalet på `transientDocumentId`, precis som webbformuläret som skapades tidigare.
+Du kan skapa ett avtal med ett [tillfälligt dokument](https://helpx.adobe.com/se/sign/kb/how-to-send-an-agreement-through-REST-API.html), [biblioteksdokument](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md) eller URL. I det här exemplet baseras avtalet på `transientDocumentId`, precis som webbformuläret som skapades tidigare.
 
 ```
 POST /api/rest/v6/agreements HTTP/1.1
